@@ -31,8 +31,8 @@ epithet.0002 = {
 
     immediate = {
 		random_list = {
-			100 = { set_nickname_effect = { NICKNAME = nick_poltroon } }
-			100 = { set_nickname_effect = { NICKNAME = nick_coward } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_poltroon } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_coward } }
 			100 = { set_nickname_effect = { NICKNAME = nick_the_trembler } }
 			100 = { set_nickname_effect = { NICKNAME = nick_the_spineless } }
 		}
@@ -177,9 +177,15 @@ epithet.0008 = {
 	trigger = {
 		age >= 16
 		has_trait = ambitious
+		NOT = { has_trait = lazy }
 	}
 	weight_multiplier = {
 		base = 1
+
+		modifier = {
+			factor = 2
+			has_trait = stubborn
+		}
 	}
 
     immediate = {
@@ -223,6 +229,14 @@ epithet.0011 = {
 	trigger = {
 		age >= 16
 		has_trait = lazy
+		NOR = {
+			has_trait = brave
+			has_trait = wrathful
+			has_trait = lustful
+			has_trait = ambitious
+			has_trait = vengeful
+			has_trait = zealous
+		}
 	}
 	weight_multiplier = {
 		base = 1
@@ -249,6 +263,7 @@ epithet.0012 = {
 		random_list = {
 			100 = { set_nickname_effect = { NICKNAME = nick_the_indecisive } }
 			100 = { set_nickname_effect = { NICKNAME = nick_the_irresolute } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_fickle } }
 		}
     }
 }
@@ -274,6 +289,14 @@ epithet.0014 = {
 	trigger = {
 		age >= 16
 		has_trait = forgiving
+		NOR = {
+			has_trait = wrathful
+			has_trait = ambitious
+			has_trait = deceitful
+			has_trait = arbitrary
+			has_trait = callous
+			has_trait = sadistic
+		}
 	}
 	weight_multiplier = {
 		base = 1
@@ -300,7 +323,7 @@ epithet.0015 = {
 		}
     }
 }
-epithet.00016 = { 
+epithet.0016 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -314,7 +337,7 @@ epithet.00016 = {
 		set_nickname_effect = { NICKNAME = nick_the_generous }
     }
 }
-epithet.00017 = { 
+epithet.0017 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -331,7 +354,7 @@ epithet.00017 = {
 		}
     }
 }
-epithet.00018 = { 
+epithet.0018 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -348,7 +371,7 @@ epithet.00018 = {
 		}
     }
 }
-epithet.00019 = { 
+epithet.0019 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -362,7 +385,7 @@ epithet.00019 = {
 		set_nickname_effect = { NICKNAME = nick_the_deceiver }
     }
 }
-epithet.00020 = { 
+epithet.0020 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -376,7 +399,7 @@ epithet.00020 = {
 		set_nickname_effect = { NICKNAME = nick_the_modest }
     }
 }
-epithet.00021 = { 
+epithet.0021 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -390,7 +413,7 @@ epithet.00021 = {
 		set_nickname_effect = { NICKNAME = nick_the_vainglorious }
     }
 }
-epithet.00022 = { 
+epithet.0022 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -404,7 +427,7 @@ epithet.00022 = {
 		set_nickname_effect = { NICKNAME = nick_the_impartial }
     }
 }
-epithet.00023 = { 
+epithet.0023 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -421,11 +444,12 @@ epithet.00023 = {
 		}
     }
 }
-epithet.00024 = { 
+epithet.0024 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		piety_level >= 5
+		has_religion = religion:christianity_religion
 	}
 	weight_multiplier = {
 		base = 1
@@ -440,102 +464,218 @@ epithet.00024 = {
 		set_nickname_effect = { NICKNAME = nick_the_saint }
     }
 }
-epithet.00025 = { 
+epithet.0025 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = impatient
+		prowess >= 20
+		has_trait = lifestyle_blademaster
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
+
+		modifier = {
+			factor = 2
+			is_martial_higher_stat_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = holy_warrior
+		}
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+		modifier = {
+			factor = 2
+			has_trait = order_member
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = brave
+				has_trait = zealous
+			}
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_skys_blade }
     }
 }
-epithet.00026 = { 
+epithet.0026 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = temperate
+		is_knight = yes
+		OR = {
+			has_trait = adventurer
+			has_trait = pilgrim
+		}
+		prowess >= 15
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wandering_knight }
     }
 }
-epithet.00027 = { 
+epithet.0027 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = gluttonous
+		diplomacy >= 20
+		is_diplomacy_higher_stat_trigger = yes
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = diplomat
+		}
+		modifier = {
+			factor = 2
+			has_council_position = councillor_chancellor
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_diplomat }
     }
 }
-epithet.00028 = { 
+epithet.0028 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = trusting
+		is_knight = yes
+		has_trait = brave
+		prowess >= 15
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reckless
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_battle_forged }
     }
 }
-epithet.00029 = { 
+epithet.0029 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = paranoid
+		martial >= 20
+		is_martial_higher_stat_trigger = yes
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_council_position = councillor_marshal
+		}
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = strategist
+		}
+		modifier = {
+			factor = 2
+			has_trait = flexible_leader
+		}
+		modifier = {
+			factor = 2
+			has_trait = logistician
+		}
+		modifier = {
+			factor = 2
+			has_trait = organizer
+		}
+		modifier = {
+			factor = 2
+			has_trait = cautious_leader
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_master_tactician }
     }
 }
-epithet.00030 = { 
+epithet.0030 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = zealous
+		has_trait = beauty_good
+		has_trait = physique_good
+		has_trait = intellect_good
+		has_weak_trait_trigger = no
+		has_substance_abuse_trait_trigger = no
+		has_unpleasant_appearence_trait_trigger = no
+		has_bad_health_trait_trigger = no
+		has_disease_trait_trigger = no
+		has_infamous_trait_trigger = no
+		has_lunatic_trait_trigger = no
+		has_possessed_trait_trigger = no
+		has_depressed_trait_trigger = no
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = strong
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_parangon }
     }
 }
-epithet.00031 = { 
+epithet.0031 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = cynical
+		has_trait = excommunicated
+		piety_level <= 1
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = heresiarch
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_heretic }
     }
 }
-epithet.00032 = { 
+epithet.0032 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = compassionate
+		dread <= 10
+		tyranny = 0
 	}
 	weight_multiplier = {
 		base = 1
@@ -545,33 +685,51 @@ epithet.00032 = {
 		set_nickname_effect = { NICKNAME = nick_the_nice }
     }
 }
-epithet.00033 = { 
+epithet.0033 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = callous
+		intrigue >= 17
+		is_intrigue_higher_stat_trigger = yes
+		has_trait = torturer
 	}
 	weight_multiplier = {
 		base = 0
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = cynical
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_truth_seeker }
     }
 }
-epithet.00034 = { 
+epithet.0034 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = sadistic
+		prowess >= 20
+		is_knight = yes
+		OR = {
+			has_bad_health_trait_trigger = yes
+			has_disease_trait_trigger = yes
+		}
 	}
 	weight_multiplier = {
-		base = 0
+		base = 2
 	}
 
     immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_broken_blade }
     }
 }
-epithet.00035 = { 
+epithet.0035 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -588,7 +746,7 @@ epithet.00035 = {
 		set_nickname_effect = { NICKNAME = nick_the_cripple }
     }
 }
-epithet.00036 = { 
+epithet.0036 = { 
 	hidden = yes
 	trigger = {
 		age >= 80
@@ -601,7 +759,7 @@ epithet.00036 = {
 		set_nickname_effect = { NICKNAME = nick_the_hoary }
     }
 }
-epithet.00037 = {
+epithet.0037 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -616,7 +774,7 @@ epithet.00037 = {
 		set_nickname_effect = { NICKNAME = nick_the_cannibal }
     }
 }
-epithet.00038 = {
+epithet.0038 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -630,7 +788,7 @@ epithet.00038 = {
 		set_nickname_effect = { NICKNAME = nick_the_pale }
     }
 }
-epithet.00039 = {
+epithet.0039 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -644,7 +802,7 @@ epithet.00039 = {
 		set_nickname_effect = { NICKNAME = nick_one_eyed }
     }
 }
-epithet.00040 = {
+epithet.0040 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -658,7 +816,7 @@ epithet.00040 = {
 		set_nickname_effect = { NICKNAME = nick_one_leg }
     }
 }
-epithet.00041 = { 
+epithet.0041 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -681,7 +839,6 @@ epithet.00041 = {
 		}
 		modifier = {
 			factor = 2
-
 			has_trait = craven
 			has_trait = lazy
 			has_trait = fickle
@@ -692,7 +849,7 @@ epithet.00041 = {
 		set_nickname_effect = { NICKNAME = nick_the_unreliable }
     }
 }
-epithet.00042 = { 
+epithet.0042 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -706,7 +863,7 @@ epithet.00042 = {
 		set_nickname_effect = { NICKNAME = nick_the_bitten }
     }
 }
-epithet.00043 = { 
+epithet.0043 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -771,7 +928,7 @@ epithet.00043 = {
 		set_nickname_effect = { NICKNAME = nick_the_mangled }
     }
 }
-epithet.00044 = {
+epithet.0044 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -785,17 +942,20 @@ epithet.00044 = {
 		set_nickname_effect = { NICKNAME = nick_the_leper }
     }
 }
-epithet.00045 = { 
+epithet.0045 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
 		has_trait = military_engineer
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
+
 		modifier = {
 			factor = 2
-			martial >= 10
+			is_knight = yes
 		}
 	}
 
@@ -803,11 +963,11 @@ epithet.00045 = {
 		set_nickname_effect = { NICKNAME = nick_the_siegemaster }
     }
 }
-epithet.00046 = { 
+epithet.0046 = { 
 	hidden = yes
 	trigger = {
-		age >= 20
-		has_trait = gluttonous
+		age >= 16
+		has_character_modifier = obese_modifier
 	}
 	weight_multiplier = {
 		base = 1
@@ -821,7 +981,7 @@ epithet.00046 = {
 		}
 		modifier = {
 			factor = 2
-			has_character_modifier = obese_modifier
+			has_trait = gluttonous
 		}
 	}
 
@@ -829,13 +989,13 @@ epithet.00046 = {
 		set_nickname_effect = { NICKNAME = nick_the_potbelly }
     }
 }
-epithet.00047 = { 
+epithet.0047 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-
 		OR = { 
 			has_lunatic_trait_trigger = yes
+			has_possessed_trait_trigger = yes
 			AND = {
 				faith = {
 					OR = {
@@ -856,10 +1016,10 @@ epithet.00047 = {
 		set_nickname_effect = { NICKNAME = nick_the_peculiar }
     }
 }
-epithet.00048 = { 
+epithet.0048 = { 
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		has_depressed_trait_trigger = yes
 	}
 	weight_multiplier = {
@@ -882,10 +1042,10 @@ epithet.00048 = {
 		set_nickname_effect = { NICKNAME = nick_the_grim }
     }
 }
-epithet.00049 = { 
+epithet.0049 = { 
 	hidden = yes
 	trigger = {
-		age >= 20
+		age >= 16
 		has_trait = diligent
 	}
 	weight_multiplier = {
@@ -904,7 +1064,7 @@ epithet.00049 = {
 		set_nickname_effect = { NICKNAME = nick_the_stern }
     }
 }
-epithet.00050 = { 
+epithet.0050 = { 
 	hidden = yes
 	trigger = {
 		age >= 12
@@ -921,7 +1081,23 @@ epithet.00050 = {
 		set_nickname_effect = { NICKNAME = nick_the_daft }
     }
 }
-epithet.00052 = { 
+epithet.0051 = { 
+	hidden = yes
+	trigger = {
+		age >= 60
+		learning >= 15
+		is_learning_higher_stat_trigger = yes
+		has_trait = scholar
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wizened }
+    }
+}
+epithet.0052 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -957,7 +1133,7 @@ epithet.00052 = {
 		set_nickname_effect = { NICKNAME = nick_the_mild }
     }
 }
-epithet.00053 = { 
+epithet.0053 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -979,7 +1155,7 @@ epithet.00053 = {
 		set_nickname_effect = { NICKNAME = nick_the_skeleton }
     }
 }
-epithet.00054 = {
+epithet.0054 = {
 	hidden = yes
 	trigger = {
 		age >= 10
@@ -993,7 +1169,7 @@ epithet.00054 = {
 		set_nickname_effect = { NICKNAME = nick_the_thoroughbred }
     }
 }
-epithet.00055 = {
+epithet.0055 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1014,7 +1190,7 @@ epithet.00055 = {
 		set_nickname_effect = { NICKNAME = nick_the_blind }
     }
 }
-epithet.00056 = {
+epithet.0056 = {
 	hidden = yes
 	trigger = {
 		age >= 10
@@ -1032,21 +1208,20 @@ epithet.00056 = {
 		set_nickname_effect = { NICKNAME = nick_the_bastard }
     }
 }
-epithet.00057 = { 
+epithet.0057 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = unyielding_defender
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		is_knight = yes
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 2
-			martial >= 10
-		}
-		modifier = {
-			factor = 2
-			prowess >= 10
+			prowess >= 15
 		}
 	}
 
@@ -1054,7 +1229,7 @@ epithet.00057 = {
 		set_nickname_effect = { NICKNAME = nick_the_bulwark }
     }
 }
-epithet.00058 = {
+epithet.0058 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1068,7 +1243,7 @@ epithet.00058 = {
 		set_nickname_effect = { NICKNAME = nick_the_faceless }
     }
 }
-epithet.00059 = {
+epithet.0059 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -1111,7 +1286,7 @@ epithet.00059 = {
 		set_nickname_effect = { NICKNAME = nick_the_accursed }
 	}
 }
-epithet.00060 = {
+epithet.0060 = {
 	hidden = yes
 	trigger = {
 		has_trait = legitimized_bastard
@@ -1119,18 +1294,13 @@ epithet.00060 = {
 
 	weight_multiplier = {
 		base = 2
-
-		modifier = {
-			factor = 2
-			culture_group = culture_group:frankish_group # Childebert of Austrasia
-		}
 	}
 
 	immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_adopted }
 	}
 }
-epithet.00061 = {
+epithet.0061 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -1139,21 +1309,16 @@ epithet.00061 = {
 
 	weight_multiplier = {
 		base = 2
-
-		modifier = { # Eadwig of England
-			factor = 2
-			culture_group = culture_group:west_germanic_group
-		}
 	}
 
 	immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_all_fair }
 	}
 }
-epithet.00062 = {
+epithet.0062 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		has_trait = lifestyle_hunter
 	}
 	
@@ -1193,7 +1358,7 @@ epithet.00062 = {
 		set_nickname_effect = { NICKNAME = nick_the_hunter }
     }
 }
-epithet.00063 = {
+epithet.0063 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1216,7 +1381,7 @@ epithet.00063 = {
 		set_nickname_effect = { NICKNAME = nick_the_lame }
     }
 }
-epithet.00064 = {
+epithet.0064 = {
 	hidden = yes
 	trigger = {
 		has_character_flag = born_as_taltos
@@ -1230,10 +1395,10 @@ epithet.00064 = {
 		set_nickname_effect = { NICKNAME = nick_the_chosen }
     }
 }
-epithet.00065 = {
+epithet.0065 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		OR = {
 			has_trait = beauty_bad
 			has_trait = disfigured
@@ -1254,15 +1419,15 @@ epithet.00065 = {
 
     immediate = {
 		random_list = {
-			20 = { set_nickname_effect = { NICKNAME = nick_the_hideous } }
-			20 = { set_nickname_effect = { NICKNAME = nick_the_frog } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_hideous } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_frog } }
 		}
     }
 }
-epithet.00066 = {
+epithet.0066 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		OR = {
 			has_trait = diligent
 			has_trait = stubborn
@@ -1296,10 +1461,10 @@ epithet.00066 = {
 		set_nickname_effect = { NICKNAME = nick_the_tenacious }
     }
 }
-epithet.00067 = {
+epithet.0067 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		has_character_modifier = obese_modifier
 	}
 	weight_multiplier = {
@@ -1330,10 +1495,10 @@ epithet.00067 = {
 		set_nickname_effect = { NICKNAME = nick_the_fat }
     }
 }
-epithet.00068 = {
+epithet.0068 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		OR = {
 			has_trait = gluttonous
 			has_trait = drunkard
@@ -1359,10 +1524,10 @@ epithet.00068 = {
 		set_nickname_effect = { NICKNAME = nick_the_drunkard }
     }
 }
-epithet.00069 = {
+epithet.0069 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		OR = {
 			has_character_flag = disease_immunity_smallpox
 			has_character_flag = disease_immunity_bubonic_plague
@@ -1388,7 +1553,7 @@ epithet.00069 = {
 		set_nickname_effect = { NICKNAME = nick_the_resilient }
     }
 }
-epithet.00070 = { 
+epithet.0070 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1406,7 +1571,7 @@ epithet.00070 = {
 		set_nickname_effect = { NICKNAME = nick_the_keen }
     }
 }
-epithet.00071 = { 
+epithet.0071 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1432,7 +1597,7 @@ epithet.00071 = {
 		set_nickname_effect = { NICKNAME = nick_the_commoner }
     }
 }
-epithet.00072 = { 
+epithet.0072 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1458,7 +1623,7 @@ epithet.00072 = {
 		set_nickname_effect = { NICKNAME = nick_the_omniscient }
     }
 }
-epithet.00073 = { 
+epithet.0073 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1489,13 +1654,13 @@ epithet.00073 = {
 
     immediate = {
 		random_list = {
-			20 = { set_nickname_effect = { NICKNAME = nick_the_heartless } }
-			20 = { set_nickname_effect = { NICKNAME = nick_the_cold } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_heartless } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_cold } }
 		}
 
     }
 }
-epithet.00074 = { 
+epithet.0074 = { 
 	hidden = yes
 	trigger = {
 		has_trait = lisping
@@ -1508,29 +1673,23 @@ epithet.00074 = {
 		set_nickname_effect = { NICKNAME = nick_the_slobberer }
     }
 }
-epithet.00075 = { 
+epithet.0075 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		probably_unintelligent_trigger = yes
+		has_trait = trusting
+		has_trait = forgiving
 	}
 	weight_multiplier = {
-		base = 1
-		modifier = {
-			factor = 2
-			has_trait = trusting
-		}
-		modifier = {
-			factor = 2
-			has_trait = forgiving
-		}
+		base = 2
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_gullible }
     }
 }
-epithet.00076 = { 
+epithet.0076 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1556,7 +1715,7 @@ epithet.00076 = {
 		set_nickname_effect = { NICKNAME = nick_the_green_thumb }
     }
 }
-epithet.00077 = { 
+epithet.0077 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1582,14 +1741,15 @@ epithet.00077 = {
 		set_nickname_effect = { NICKNAME = nick_the_all_consuming }
     }
 }
-epithet.00078 = { 
+epithet.0078 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = unyielding_defender
+		prowess >= 15
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 2
 			has_trait = stubborn
@@ -1602,13 +1762,18 @@ epithet.00078 = {
 			factor = 2
 			has_trait = just
 		}
+		modifier = {
+			factor = 2
+			martial >= 15
+			is_martial_higher_stat_trigger = yes
+		}
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_unyielding }
     }
 }
-epithet.00079 = { 
+epithet.0079 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1626,7 +1791,7 @@ epithet.00079 = {
 		set_nickname_effect = { NICKNAME = nick_the_damned }
     }
 }
-epithet.00080 = { 
+epithet.0080 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1643,11 +1808,12 @@ epithet.00080 = {
 		set_nickname_effect = { NICKNAME = nick_the_bowing }
     }
 }
-epithet.00081 = { 
+epithet.0081 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		diplomacy >= 13
+		diplomacy >= 15
+		is_diplomacy_higher_stat_trigger = yes
 	}
 
 	weight_multiplier = {
@@ -1663,13 +1829,18 @@ epithet.00081 = {
 				rank >= 2
 			}
 		}
+		modifier = {
+			factor = 2
+			has_council_position = councillor_chancellor
+		}
+
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_wordsmith }
     }
 }
-epithet.00082 = { 
+epithet.0082 = { 
 	hidden = yes
 	trigger = {
 		probably_unintelligent_trigger = yes
@@ -1680,15 +1851,16 @@ epithet.00082 = {
 
     immediate = {
 		random_list = {
-			20 = { set_nickname_effect = { NICKNAME = nick_scatterbrain } }
-			20 = { set_nickname_effect = { NICKNAME = nick_the_vegetable } }
+			100 = { set_nickname_effect = { NICKNAME = nick_scatterbrain } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_vegetable } }
 		}
     }
 }
-epithet.00083 = { 
+epithet.0083 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
+		learning >= 15
 		OR = {
 			has_trait = scholar
 			has_trait = journaller
@@ -1704,6 +1876,10 @@ epithet.00083 = {
 				has_trait = journaller
 			}
 		}
+		modifier = {
+			factor = 2
+			is_learning_higher_stat_trigger = yes
+		}
 	}
 
     immediate = {
@@ -1713,7 +1889,7 @@ epithet.00083 = {
 		}
     }
 }
-epithet.00084 = { 
+epithet.0084 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1748,13 +1924,10 @@ epithet.00084 = {
 		}
 		modifier = {
 			factor = 2
-			calc_true_if = {
-				amount >= 4
-				has_trait = deceitful
-				has_trait = craven
-				has_trait = fickle
-				has_trait = schemer
-			}
+			has_trait = deceitful
+			has_trait = craven
+			has_trait = fickle
+			has_trait = schemer
 		}
 	}
 
@@ -1762,7 +1935,7 @@ epithet.00084 = {
 		set_nickname_effect = { NICKNAME = nick_the_untrusted }
     }
 }
-epithet.00085 = { 
+epithet.0085 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1785,7 +1958,7 @@ epithet.00085 = {
 		set_nickname_effect = { NICKNAME = nick_the_arbiter }
     }
 }
-epithet.00086 = { 
+epithet.0086 = { 
 	hidden = yes
 	trigger = {
 		age >= 10
@@ -1811,7 +1984,7 @@ epithet.00086 = {
 		set_nickname_effect = { NICKNAME = nick_the_mute }
     }
 }
-epithet.00087 = { 
+epithet.0087 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1825,10 +1998,10 @@ epithet.00087 = {
 		set_nickname_effect = { NICKNAME = nick_the_eunuch }
     }
 }
-epithet.00088 = { 
+epithet.0088 = { 
 	hidden = yes
 	trigger = {
-		age >= 14
+		age >= 16
 		has_trait = dwarf
 	}
 	weight_multiplier = {
@@ -1839,7 +2012,7 @@ epithet.00088 = {
 		set_nickname_effect = { NICKNAME = nick_the_halfman }
     }
 }
-epithet.00089 = { 
+epithet.0089 = { 
 	hidden = yes
 	trigger = {
 		has_trait = clubfooted
@@ -1852,7 +2025,7 @@ epithet.00089 = {
 		set_nickname_effect = { NICKNAME = nick_twist_foot }
     }
 }
-epithet.00090 = { 
+epithet.0090 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1882,7 +2055,7 @@ epithet.00090 = {
 		set_nickname_effect = { NICKNAME = nick_the_squanderer }
     }
 }
-epithet.00091 = { 
+epithet.0091 = { 
 	hidden = yes
 	trigger = {	
 		age >= 16
@@ -1908,7 +2081,7 @@ epithet.00091 = {
 		set_nickname_effect = { NICKNAME = nick_the_surgeon }
     }
 }
-epithet.00092 = { 
+epithet.0092 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1932,12 +2105,9 @@ epithet.00092 = {
 		}
 		modifier = {
 			factor = 2
-			calc_true_if = {
-				amount = 3
-				has_trait = viking
-				has_trait = forder
-				has_trait = adventurer
-			}
+			has_trait = viking
+			has_trait = forder
+			has_trait = adventurer
 		}
 	}
 
@@ -1945,7 +2115,7 @@ epithet.00092 = {
 		set_nickname_effect = { NICKNAME = nick_the_navigator }
     }
 }
-epithet.00093 = { 
+epithet.0093 = { 
 	hidden = yes
 	trigger = {	
 		age >= 16
@@ -1959,7 +2129,7 @@ epithet.00093 = {
 		set_nickname_effect = { NICKNAME = nick_the_unfading }
     }
 }
-epithet.00094 = { 
+epithet.0094 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -1982,7 +2152,7 @@ epithet.00094 = {
 		set_nickname_effect = { NICKNAME = nick_the_bitter }
     }
 }
-epithet.00095 = { 
+epithet.0095 = { 
 	hidden = yes
 	trigger = {	
 		age >= 16
@@ -1996,7 +2166,7 @@ epithet.00095 = {
 		set_nickname_effect = { NICKNAME = nick_the_unfit }
     }
 }
-epithet.00096 = { 
+epithet.0096 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -2018,7 +2188,7 @@ epithet.00096 = {
 		set_nickname_effect = { NICKNAME = nick_the_misbegotten }
     }
 }
-epithet.00097 = { 
+epithet.0097 = { 
 	hidden = yes
 	trigger = {
 		has_trait = stuttering
@@ -2035,7 +2205,7 @@ epithet.00097 = {
 		set_nickname_effect = { NICKNAME = nick_the_stutter }
     }
 }
-epithet.00098 = { 
+epithet.0098 = { 
 	hidden = yes
 	trigger = {
 		has_trait = hunchbacked
@@ -2051,18 +2221,19 @@ epithet.00098 = {
 		}
     }
 }
-epithet.00099 = { 
+epithet.0099 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = lifestyle_blademaster
+		is_knight = yes 
 	}
 	weight_multiplier = {
 		base = 2
 
 		modifier = {
 			factor = 2
-			prowess >= 10
+			prowess >= 15
 		}
 
 		modifier = {
@@ -2080,7 +2251,7 @@ epithet.00099 = {
 		set_nickname_effect = { NICKNAME = nick_the_duelist }
     }
 }
-epithet.00100 = { 
+epithet.0100 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2097,21 +2268,21 @@ epithet.00100 = {
 		set_nickname_effect = { NICKNAME = nick_the_pawn }
     }
 }
-epithet.00101 = { 
+epithet.0101 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = lifestyle_mystic
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_enigmatic }
     }
 }
-epithet.00102 = { 
+epithet.0102 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2136,11 +2307,14 @@ epithet.00102 = {
 		set_nickname_effect = { NICKNAME = nick_the_determined }
     }
 }
-epithet.00103 = { 
+epithet.0103 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait = pilgrim
+		OR = {
+			has_trait = pilgrim
+			has_trait = adventurer
+		}
 	}
 	weight_multiplier = {
 		base = 2
@@ -2150,7 +2324,7 @@ epithet.00103 = {
 		set_nickname_effect = { NICKNAME = nick_the_wayfarer }
     }
 }
-epithet.00104 = { 
+epithet.0104 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2168,7 +2342,7 @@ epithet.00104 = {
 		set_nickname_effect = { NICKNAME = nick_the_suspicious }
     }
 }
-epithet.00105 = { 
+epithet.0105 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2190,7 +2364,7 @@ epithet.00105 = {
 		set_nickname_effect = { NICKNAME = nick_the_rich }
     }
 }
-epithet.00106 = { 
+epithet.0106 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2204,25 +2378,22 @@ epithet.00106 = {
 		set_nickname_effect = { NICKNAME = nick_the_kinslayer }
     }
 }
-epithet.00107 = { 
+epithet.0107 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = cynical
+		piety_level <= 1
 	}
 	weight_multiplier = {
-		base = 1
-		modifier = {
-			factor = 3
-			piety_level <= 0
-		}
+		base = 2
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_skeptic }
     }
 }
-epithet.00108 = { 
+epithet.0108 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -2246,7 +2417,7 @@ epithet.00108 = {
 		set_nickname_effect = { NICKNAME = nick_the_suicidal }
     }
 }
-epithet.00109 = { 
+epithet.0109 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -2271,7 +2442,7 @@ epithet.00109 = {
 		set_nickname_effect = { NICKNAME = nick_dungeon_dweller }
     }
 }
-epithet.00110 = { 
+epithet.0110 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2303,7 +2474,7 @@ epithet.00110 = {
 		set_nickname_effect = { NICKNAME = nick_the_weird }
     }
 }
-epithet.00111 = { 
+epithet.0111 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2321,7 +2492,7 @@ epithet.00111 = {
 		set_nickname_effect = { NICKNAME = nick_the_boring }
     }
 }
-epithet.00112 = { 
+epithet.0112 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2338,7 +2509,7 @@ epithet.00112 = {
 		set_nickname_effect = { NICKNAME = nick_limpfoot }
     }
 }
-epithet.00113 = { 
+epithet.0113 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2365,7 +2536,7 @@ epithet.00113 = {
 		set_nickname_effect = { NICKNAME = nick_mumbling_mouth }
     }
 }
-epithet.00114 = { 
+epithet.0114 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2382,7 +2553,7 @@ epithet.00114 = {
 		set_nickname_effect = { NICKNAME = nick_the_stout }
     }
 }
-epithet.00115 = { 
+epithet.0115 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2396,7 +2567,7 @@ epithet.00115 = {
 		set_nickname_effect = { NICKNAME = nick_the_oaf }
     }
 }
-epithet.00116 = { 
+epithet.0116 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2417,7 +2588,7 @@ epithet.00116 = {
 		set_nickname_effect = { NICKNAME = nick_weak_legs }
     }
 }
-epithet.00117 = {
+epithet.0117 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2428,24 +2599,25 @@ epithet.00117 = {
 		}	
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 	}
 
     immediate = {
 		random_list = {
-			20 = { set_nickname_effect = { NICKNAME = nick_the_frail } }
-			20 = { set_nickname_effect = { NICKNAME = nick_the_weak } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_frail } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_weak } }
 		}
     }
 }
-epithet.00118 = {
+epithet.0118 = {
 	hidden = yes
 	trigger = {
 		age >= 20
 		piety_level >= 3
+		has_trait = zealous
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 2.0
 			piety_level >= 4
@@ -2460,7 +2632,7 @@ epithet.00118 = {
 		set_nickname_effect = { NICKNAME = nick_the_pious }
     }
 }
-epithet.00119 = {
+epithet.0119 = {
 	hidden = yes
 	trigger = {
 		NOT = { age >= 16 }
@@ -2477,7 +2649,7 @@ epithet.00119 = {
 		set_nickname_effect = { NICKNAME = nick_the_young }
     }
 }
-epithet.00120 = {
+epithet.0120 = {
 	hidden = yes
 	trigger = {
 		age >= 55
@@ -2498,7 +2670,7 @@ epithet.00120 = {
 		set_nickname_effect = { NICKNAME = nick_the_old }
     }
 }
-epithet.00121 = {
+epithet.0121 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -2512,14 +2684,15 @@ epithet.00121 = {
 		set_nickname_effect = { NICKNAME = nick_of_the_empty_pockets }
     }
 }
-epithet.00122 = {
+epithet.0122 = {
 	hidden = yes
 	trigger = {
 		age >= 20
 		has_trait = scholar
+		learning >= 17
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 2.0
 			learning >= 20
@@ -2534,14 +2707,14 @@ epithet.00122 = {
 		set_nickname_effect = { NICKNAME = nick_the_scholar }
     }
 }
-epithet.00123 = {
+epithet.0123 = {
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = giant
 	}
 	weight_multiplier = {
-		base = 5
+		base = 4
 		modifier = {
 			factor = 3
 			has_strong_trait_trigger = yes
@@ -2552,7 +2725,7 @@ epithet.00123 = {
 		set_nickname_effect = { NICKNAME = nick_the_giant }
     }
 }
-epithet.00124 = { 
+epithet.0124 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2570,7 +2743,28 @@ epithet.00124 = {
 		set_nickname_effect = { NICKNAME = nick_the_unseeing }
     }
 }
-epithet.00126 = { 
+epithet.0125 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 17
+		has_trait = schemer
+		is_intrigue_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+
+		modifier = {
+			factor = 2
+			has_council_position = councillor_spymaster
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_keeper_of_silence }
+    }
+}
+epithet.0126 = { 
 	hidden = yes
 	trigger = {
 		age >= 10
@@ -2587,7 +2781,7 @@ epithet.00126 = {
 		set_nickname_effect = { NICKNAME = nick_the_ashamed }
     }
 }
-epithet.00127 = { 
+epithet.0127 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2617,7 +2811,7 @@ epithet.00127 = {
 		set_nickname_effect = { NICKNAME = nick_the_uninvolved }
     }
 }
-epithet.00128 = { 
+epithet.0128 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2635,11 +2829,12 @@ epithet.00128 = {
 		set_nickname_effect = { NICKNAME = nick_the_oathbreaker }
     }
 }
-epithet.00129 = { 
+epithet.0129 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		learning >= 20
+		is_learning_higher_stat_trigger = yes
 	}
 	weight_multiplier = {
 		base = 1
@@ -2653,7 +2848,7 @@ epithet.00129 = {
 		set_nickname_effect = { NICKNAME = nick_the_enlightened }
     }
 }
-epithet.00130 = { 
+epithet.0130 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2679,7 +2874,7 @@ epithet.00130 = {
 		set_nickname_effect = { NICKNAME = nick_the_truthspeaker }
     }
 }
-epithet.00131 = { 
+epithet.0131 = { 
 	hidden = yes
 	trigger = {
 		has_trait = gregarious
@@ -2713,7 +2908,7 @@ epithet.00131 = {
 		set_nickname_effect = { NICKNAME = nick_the_affable }
     }
 }
-epithet.00132 = { 
+epithet.0132 = { 
 	hidden = yes
 	trigger = {
 		days_of_continuous_peace <= 365
@@ -2729,52 +2924,40 @@ epithet.00132 = {
 			factor = 2
 			has_trait = wrathful
 		}
-
-		modifier = { # Indulf of Alba
-			factor = 2
-			culture_group = culture_group:west_germanic_group
-		}
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_aggressor }
     }
 }
-epithet.00133 = { 
+epithet.0133 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = ambitious
 	}
 	weight_multiplier = {
-		base = 1
-
-		modifier = { # William of Austria
-			factor = 2
-			culture_group = culture_group:central_germanic_group
-		}
+		base = 2
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_ambitious }
     }
 }
-epithet.00134 = { 
+epithet.0134 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
+		has_trait = theologian
 		has_trait = scholar
+		learning >= 15
 	}
 	weight_multiplier = {
-		base = 2
+		base = 3
 
 		modifier = {
 			factor = 2
-			learning >= 13
-		}
-		modifier = {
-			factor = 2
-			has_trait = theologian
+			learning >= 20
 		}
 		modifier = {
 			factor = 2
@@ -2786,7 +2969,7 @@ epithet.00134 = {
 		set_nickname_effect = { NICKNAME = nick_the_astrologer }
     }
 }
-epithet.00135 = { 
+epithet.0135 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2804,25 +2987,23 @@ epithet.00135 = {
 		set_nickname_effect = { NICKNAME = nick_the_foremost }
     }
 }
-epithet.00136 = { 
+epithet.0136 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_trait_rank = {
-			trait = education_martial
-			rank >= 3
-		}
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		has_trait = strategist
 	}
 	weight_multiplier = {
-		base = 2
+		base = 3
 
 		modifier = {
 			factor = 2
-			martial >= 13
-		}
-		modifier = {
-			factor = 2
-			has_trait = strategist
+			has_trait_rank = {
+				trait = education_martial
+				rank >= 3
+			}
 		}
 	}
 
@@ -2830,7 +3011,7 @@ epithet.00136 = {
 		set_nickname_effect = { NICKNAME = nick_the_strategist }
     }
 }
-epithet.00137 = {
+epithet.0137 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2845,7 +3026,7 @@ epithet.00137 = {
 		set_nickname_effect = { NICKNAME = nick_the_beanstalk }
     }
 }
-epithet.00138 = { 
+epithet.0138 = { 
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -2863,7 +3044,7 @@ epithet.00138 = {
 		set_nickname_effect = { NICKNAME = nick_the_lawful }
     }
 }
-epithet.00139 = { 
+epithet.0139 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2878,7 +3059,7 @@ epithet.00139 = {
 		set_nickname_effect = { NICKNAME = nick_the_bull }
     }
 }
-epithet.00140 = {
+epithet.0140 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -2918,7 +3099,7 @@ epithet.00140 = {
 		set_nickname_effect = { NICKNAME = nick_the_kind }
     }
 }
-epithet.00141 = {
+epithet.0141 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -2958,7 +3139,7 @@ epithet.00141 = {
 		set_nickname_effect = { NICKNAME = nick_the_good }
     }
 }
-epithet.00142 = {
+epithet.0142 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2973,7 +3154,7 @@ epithet.00142 = {
 		set_nickname_effect = { NICKNAME = nick_the_cyclop }
     }
 }
-epithet.00143 = {
+epithet.0143 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -2992,7 +3173,7 @@ epithet.00143 = {
 		set_nickname_effect = { NICKNAME = nick_the_peacock }
     }
 }
-epithet.00144 = {
+epithet.0144 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3026,7 +3207,7 @@ epithet.00144 = {
 		set_nickname_effect = { NICKNAME = nick_the_plaguebearer }
     }
 }
-epithet.00145 = {
+epithet.0145 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -3086,7 +3267,7 @@ epithet.00145 = {
 		set_nickname_effect = { NICKNAME = nick_the_cruel }
     }
 }
-epithet.00146 = { 
+epithet.0146 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3112,7 +3293,7 @@ epithet.00146 = {
 		set_nickname_effect = { NICKNAME = nick_the_tower }
     }
 }
-epithet.00147 = { 
+epithet.0147 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3174,7 +3355,7 @@ epithet.00147 = {
 		set_nickname_effect = { NICKNAME = nick_the_zealot }
     }
 }
-epithet.00148 = { 
+epithet.0148 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3204,7 +3385,7 @@ epithet.00148 = {
 		set_nickname_effect = { NICKNAME = nick_the_mountain }
     }
 }
-epithet.00149 = { 
+epithet.0149 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3226,7 +3407,7 @@ epithet.00149 = {
 		set_nickname_effect = { NICKNAME = nick_the_wine_barrel }
     }
 }
-epithet.00150 = { 
+epithet.0150 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3257,7 +3438,7 @@ epithet.00150 = {
 		set_nickname_effect = { NICKNAME = nick_the_breaker_of_chains }
     }
 }
-epithet.00151 = { 
+epithet.0151 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3276,11 +3457,12 @@ epithet.00151 = {
 		set_nickname_effect = { NICKNAME = nick_the_lusty_leper }
     }
 }
-epithet.00152 = { 
+epithet.0152 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		has_trait = deceitful
 	}
 	weight_multiplier = {
@@ -3307,7 +3489,7 @@ epithet.00152 = {
 		set_nickname_effect = { NICKNAME = nick_the_viper }
     }
 }
-epithet.00153 = { 
+epithet.0153 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3316,9 +3498,13 @@ epithet.00153 = {
 			has_trait = lustful
 			has_trait = seducer
 		}
+		OR = {
+			has_trait = fornicator
+			has_trait = adulterer
+		}
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 2
 			calc_true_if = {
@@ -3326,10 +3512,6 @@ epithet.00153 = {
 				has_trait = lustful
 				has_trait = seducer
 			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = fornicator
 		}
 		modifier = {
 			factor = 3
@@ -3341,11 +3523,12 @@ epithet.00153 = {
 		set_nickname_effect = { NICKNAME = nick_the_wife_thief }
     }
 }
-epithet.00154 = { 
+epithet.0154 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		martial >= 13
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
 		OR = {
 			has_trait = viking
 			has_trait = reaver
@@ -3367,11 +3550,12 @@ epithet.00154 = {
 		set_nickname_effect = { NICKNAME = nick_the_defiler }
     }
 }
-epithet.00155 = { 
+epithet.0155 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		stewardship >= 20
+		is_stewardship_higher_stat_trigger = yes
 		has_trait = education_stewardship_4
 	}
 	weight_multiplier = {
@@ -3402,7 +3586,7 @@ epithet.00155 = {
 		set_nickname_effect = { NICKNAME = nick_midas_reborn }
     }
 }
-epithet.00156 = { 
+epithet.0156 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3421,12 +3605,14 @@ epithet.00156 = {
 		set_nickname_effect = { NICKNAME = nick_the_hound }
     }
 }
-epithet.00157 = { 
+epithet.0157 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		martial >= 10
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
 		has_trait = education_martial
+		is_knight = yes
 	}
 	weight_multiplier = {
 		base = 2
@@ -3436,7 +3622,7 @@ epithet.00157 = {
 		set_nickname_effect = { NICKNAME = nick_the_soldier }
     }
 }
-epithet.00158 = { 
+epithet.0158 = { 
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -3462,7 +3648,7 @@ epithet.00158 = {
 		set_nickname_effect = { NICKNAME = nick_the_kneeler }
     }
 }
-epithet.00159 = { 
+epithet.0159 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3492,11 +3678,12 @@ epithet.00159 = {
 		set_nickname_effect = { NICKNAME = nick_the_lewd_lunatic }
     }
 }
-epithet.00160 = { 
+epithet.0160 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		intrigue >= 10
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		OR = {
 			has_trait = contrite
 			has_trait = deceitful
@@ -3514,11 +3701,12 @@ epithet.00160 = {
 		set_nickname_effect = { NICKNAME = nick_the_mockingbird }
     }
 }
-epithet.00161 = { 
+epithet.0161 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		intrigue >= 12
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		OR = {
 			has_trait = schemer
 			has_trait = deceitful
@@ -3536,11 +3724,12 @@ epithet.00161 = {
 		set_nickname_effect = { NICKNAME = nick_the_schemer }
     }
 }
-epithet.00162 = { 
+epithet.0162 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		intrigue >= 13
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		OR = {
 			has_trait = schemer
 			has_trait = fickle
@@ -3571,7 +3760,7 @@ epithet.00162 = {
 		set_nickname_effect = { NICKNAME = nick_the_riddle }
     }
 }
-epithet.00163 = { 
+epithet.0163 = { 
 	hidden = yes
 	trigger = {	
 		age >= 50
@@ -3601,7 +3790,7 @@ epithet.00163 = {
 		set_nickname_effect = { NICKNAME = nick_the_withered }
     }
 }
-epithet.00164 = { 
+epithet.0164 = { 
 	hidden = yes
 	trigger = {
 		age >= 14
@@ -3616,12 +3805,13 @@ epithet.00164 = {
 		set_nickname_effect = { NICKNAME = nick_the_imp }
     }
 }
-epithet.00165 = { 
+epithet.0165 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = dwarf
 		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 	}
 	weight_multiplier = {
 		base = 2
@@ -3639,7 +3829,7 @@ epithet.00165 = {
 		set_nickname_effect = { NICKNAME = nick_short_shadow }
     }
 }
-epithet.00166 = { 
+epithet.0166 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3661,13 +3851,14 @@ epithet.00166 = {
 		set_nickname_effect = { NICKNAME = nick_the_weasel }
     }
 }
-epithet.00167 = { 
+epithet.0167 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
+		is_intrigue_higher_stat_trigger = yes
 		OR = {
 			has_trait = deceitful
-			intrigue >= 13
+			intrigue >= 15
 		}
 		has_trait_rank = {
 			trait = education_intrigue
@@ -3694,7 +3885,7 @@ epithet.00167 = {
 		set_nickname_effect = { NICKNAME = nick_the_dagger }
     }
 }
-epithet.00168 = { 
+epithet.0168 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3725,11 +3916,11 @@ epithet.00168 = {
 		set_nickname_effect = { NICKNAME = nick_the_silver_blood }
     }
 }
-epithet.00169 = { 
+epithet.0169 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		piety_level >= 1
+		piety_level >= 2
 		has_trait = education_learning
 	}
 	weight_multiplier = {
@@ -3756,12 +3947,13 @@ epithet.00169 = {
 		set_nickname_effect = { NICKNAME = nick_the_preacher }
     }
 }
-epithet.00170 = { 
+epithet.0170 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_government = tribal_government
 		prowess >= 18
+		is_knight = yes
 	}
 	weight_multiplier = {
 		base = 1
@@ -3783,11 +3975,12 @@ epithet.00170 = {
 		set_nickname_effect = { NICKNAME = nick_skull_splitter }
     }
 }
-epithet.00171 = { 
+epithet.0171 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		intrigue >= 16
+		is_intrigue_higher_stat_trigger = yes
 		has_trait_rank = {
 			trait = education_intrigue
 			rank >= 4
@@ -3813,7 +4006,7 @@ epithet.00171 = {
 		set_nickname_effect = { NICKNAME = nick_the_puppetmaster }
     }
 }
-epithet.00172 = {
+epithet.0172 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3823,6 +4016,7 @@ epithet.00172 = {
 			has_trait = aggressive_attacker
 			has_trait = holy_warrior
 		}
+		prowess >= 15
 	}
 	weight_multiplier = {
 		base = 2
@@ -3844,7 +4038,7 @@ epithet.00172 = {
 		set_nickname_effect = { NICKNAME = nick_of_the_ashes }
     }
 }
-epithet.00173 = { 
+epithet.0173 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3871,7 +4065,7 @@ epithet.00173 = {
 		set_nickname_effect = { NICKNAME = nick_the_blasphemer }
     }
 }
-epithet.00174 = { 
+epithet.0174 = { 
 	hidden = yes
 	trigger = {
 		NOT = { age >= 16 }
@@ -3884,11 +4078,11 @@ epithet.00174 = {
 		base = 2
 	}
 
-    immediate = {
+	immediate = {
 		set_nickname_effect = { NICKNAME = nick_little_orphan }
     }
 }
-epithet.00175 = {
+epithet.0175 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3921,7 +4115,23 @@ epithet.00175 = {
 		set_nickname_effect = { NICKNAME = nick_the_incorruptible }
     }
 }
-epithet.00177 = { 
+epithet.0176 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = shy
+		has_trait = calm
+		has_trait = chaste
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_humorless }
+    }
+}
+epithet.0177 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3948,7 +4158,7 @@ epithet.00177 = {
 		set_nickname_effect = { NICKNAME = nick_the_pacific }
     }
 }
-epithet.00178 = { 
+epithet.0178 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -3969,7 +4179,7 @@ epithet.00178 = {
 		set_nickname_effect = { NICKNAME = nick_the_restless }
     }
 }
-epithet.00179 = { 
+epithet.0179 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -3990,7 +4200,7 @@ epithet.00179 = {
 		set_nickname_effect = { NICKNAME = nick_the_immovable }
     }
 }
-epithet.00180 = { 
+epithet.0180 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4008,7 +4218,7 @@ epithet.00180 = {
 		set_nickname_effect = { NICKNAME = nick_the_apathetic }
     }
 }
-epithet.00181 = {
+epithet.0181 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4031,7 +4241,7 @@ epithet.00181 = {
 		set_nickname_effect = { NICKNAME = nick_the_rambunctious }
     }
 }
-epithet.00182 = {
+epithet.0182 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4058,7 +4268,7 @@ epithet.00182 = {
 		set_nickname_effect = { NICKNAME = nick_the_medium }
     }
 }
-epithet.00183 = {
+epithet.0183 = {
 	hidden = yes
 	trigger = {
 		trigger_if = {
@@ -4098,7 +4308,7 @@ epithet.00183 = {
 		set_nickname_effect = { NICKNAME = nick_the_culture }
     }
 }
-epithet.00184 = { 
+epithet.0184 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4113,11 +4323,11 @@ epithet.00184 = {
 		set_nickname_effect = { NICKNAME = nick_the_exhaustless }
     }
 }
-epithet.00185 = {
+epithet.0185 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		martial >= 12
+		martial >= 15
 		OR = {
 			has_strong_trait_trigger = yes
 			has_trait = giant
@@ -4138,7 +4348,7 @@ epithet.00185 = {
 		set_nickname_effect = { NICKNAME = nick_the_brute }
     }
 }
-epithet.00186 = {
+epithet.0186 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -4206,7 +4416,7 @@ epithet.00186 = {
 		}
     }
 }
-epithet.00187 = {
+epithet.0187 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -4223,18 +4433,13 @@ epithet.00187 = {
 			factor = 2.0
 			piety_level >= 5
 		}
-
-		modifier = { # Vladimir I of Kiev
-			factor = 2
-			culture_group = culture_group:east_slavic_group
-		}
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_apostle }
     }
 }
-epithet.00188 = {
+epithet.0188 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -4259,7 +4464,7 @@ epithet.00188 = {
 		set_nickname_effect = { NICKNAME = nick_the_blessed }
     }
 }
-epithet.00189 = {
+epithet.0189 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4279,7 +4484,7 @@ epithet.00189 = {
 		set_nickname_effect = { NICKNAME = nick_the_ogre }
     }
 }
-epithet.00190 = {
+epithet.0190 = {
 	hidden = yes
 	trigger = {
 		OR = {
@@ -4303,7 +4508,7 @@ epithet.00190 = {
 		set_nickname_effect = { NICKNAME = nick_the_bold }
     }
 }
-epithet.00191 = {
+epithet.0191 = {
 	hidden = yes
 	trigger = {
 		age >= 30
@@ -4379,7 +4584,7 @@ epithet.00191 = {
 		set_nickname_effect = { NICKNAME = nick_the_terrible }
     }
 }
-epithet.00192 = {
+epithet.0192 = {
 	hidden = yes
 	trigger = {
 		age >= 30
@@ -4455,7 +4660,7 @@ epithet.00192 = {
 		set_nickname_effect = { NICKNAME = nick_the_tyrant }
     }
 }
-epithet.00193 = {
+epithet.0193 = {
 	hidden = yes
 	trigger = {
 		age >= 30
@@ -4521,6 +4726,7 @@ epithet.00194 = {
 			has_trait = torturer
 			has_trait = deviant
 		}
+		can_get_abrahamic_religeion_nickname_trigger = yes
 	}
 	weight_multiplier = {
 		base = 2
@@ -4545,7 +4751,7 @@ epithet.00194 = {
 		set_nickname_effect = { NICKNAME = nick_the_devil }
     }
 }
-epithet.00195 = {
+epithet.0195 = {
 	hidden = yes
 	trigger = {
 		prestige_level >= 3
@@ -4567,7 +4773,7 @@ epithet.00195 = {
 		set_nickname_effect = { NICKNAME = nick_the_great }
     }
 }
-epithet.00196 = {
+epithet.0196 = {
 	hidden = yes
 	trigger = {
 		has_religion = religion:christianity_religion
@@ -4586,11 +4792,12 @@ epithet.00196 = {
 		set_nickname_effect = { NICKNAME = nick_the_black }
     }
 }
-epithet.00197 = { 
+epithet.0197 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		learning >= 13
+		learning >= 15
+		is_learning_higher_stat_trigger = yes
 		OR = {
 			has_trait = theologian
 			has_trait = scholar
@@ -4612,11 +4819,12 @@ epithet.00197 = {
 		set_nickname_effect = { NICKNAME = nick_the_philosopher }
     }
 }
-epithet.00198 = { 
+epithet.0198 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		intrigue >= 13
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		probably_intelligent_trigger = yes
 	}
 	weight_multiplier = {
@@ -4627,7 +4835,7 @@ epithet.00198 = {
 		set_nickname_effect = { NICKNAME = nick_the_crow }
     }
 }
-epithet.00199 = { 
+epithet.0199 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4642,7 +4850,7 @@ epithet.00199 = {
 		set_nickname_effect = { NICKNAME = nick_the_brilliant }
     }
 }
-epithet.00200 = {
+epithet.0200 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4654,29 +4862,21 @@ epithet.00200 = {
 	}
 	weight_multiplier = {
 		base = 2
-
-		modifier = { # Ref Leopold III and Leopold V, Duke of Austria
-			factor = 2
-			culture_group = culture_group:central_germanic_group
-		}
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_able }
     }
 }
-epithet.00201 = {
+epithet.0201 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		
 		has_trait = arbitrary
 		OR = {
 			dread >= 50
 			tyranny >= low_tyranny
 		}
-		has_strong_trait_trigger = yes
-		can_get_chinese_nickname_trigger = yes
 	}
 	weight_multiplier = {
 		base = 2
@@ -4695,7 +4895,7 @@ epithet.00201 = {
 		set_nickname_effect = { NICKNAME = nick_the_absolutist }
     }
 }
-epithet.00202 = { 
+epithet.0202 = { 
 	hidden = yes
 	trigger = {
 		is_african_culture = no
@@ -4710,7 +4910,7 @@ epithet.00202 = {
 		set_nickname_effect = { NICKNAME = nick_the_african }
     }
 }
-epithet.00203 = { 
+epithet.0203 = { 
 	hidden = yes
 	trigger = {
 		NOT = { culture_group = culture_group:arabic_group }
@@ -4725,7 +4925,7 @@ epithet.00203 = {
 		set_nickname_effect = { NICKNAME = nick_the_arab }
     }
 }
-epithet.00204 = { 
+epithet.0204 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4740,11 +4940,12 @@ epithet.00204 = {
 		set_nickname_effect = { NICKNAME = nick_the_artist_king }
     }
 }
-epithet.00205 = {
+epithet.0205 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		martial >= 13
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
 		has_trait = vengeful
 	}
 	weight_multiplier = {
@@ -4755,7 +4956,7 @@ epithet.00205 = {
 		set_nickname_effect = { NICKNAME = nick_the_avenger }
     }
 }
-epithet.00206 = { 
+epithet.0206 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4775,11 +4976,11 @@ epithet.00206 = {
 		set_nickname_effect = { NICKNAME = nick_the_greathearted }
     }
 }
-epithet.00207 = { 
+epithet.0207 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		martial >= 13
+		prowess >= 20
 		has_trait = lifestyle_blademaster
 	}
 	weight_multiplier = {
@@ -4803,7 +5004,7 @@ epithet.00207 = {
 		set_nickname_effect = { NICKNAME = nick_the_lions_claw }
     }
 }
-epithet.00208 = { 
+epithet.0208 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4839,7 +5040,7 @@ epithet.00208 = {
 		set_nickname_effect = { NICKNAME = nick_thief_of_crowns }
     }
 }
-epithet.00209 = {
+epithet.0209 = {
 	hidden = yes
 	trigger = {
 		dread > 50
@@ -4882,7 +5083,7 @@ epithet.00209 = {
 		}
     }
 }
-epithet.00210 = { 
+epithet.0210 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -4924,7 +5125,7 @@ epithet.00210 = {
 		set_nickname_effect = { NICKNAME = nick_the_executioner }
     }
 }
-epithet.00211 = {
+epithet.0211 = {
 	hidden = yes
 	trigger = {
 		is_female = no
@@ -4944,7 +5145,7 @@ epithet.00211 = {
 		set_nickname_effect = { NICKNAME = nick_the_goliath }
     }
 }
-epithet.00212 = {
+epithet.0212 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -4984,10 +5185,10 @@ epithet.00212 = {
 		}
     }
 }
-epithet.00213 = {
+epithet.0213 = {
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		has_lunatic_trait_trigger = yes
 		has_possessed_trait_trigger = yes
 		has_trait = heresiarch
@@ -5006,17 +5207,18 @@ epithet.00213 = {
 
 	immediate = {
 		random_list = {
-			20 = { set_nickname_effect = { NICKNAME = nick_the_mad } }
-			20 = { set_nickname_effect = { NICKNAME = nick_the_crazy } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_mad } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_crazy } }
 		}
 	}
 }
-epithet.00214 = {
+epithet.0214 = {
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = greedy
-		stewardship >= 10
+		stewardship >= 15
+		is_stewardship_higher_stat_trigger = yes
 		gold >= 1000
 	}
 	weight_multiplier = {
@@ -5043,11 +5245,12 @@ epithet.00214 = {
 		set_nickname_effect = { NICKNAME = nick_the_wealthy }
     }
 }
-epithet.00215 = {
+epithet.0215 = {
 	hidden = yes
 	trigger = {
 		age >= 16
 		learning >= 16
+		is_learning_higher_stat_trigger = yes
 		probably_unintelligent_trigger = no
 		has_trait = lifestyle_mystic
 	}
@@ -5063,7 +5266,7 @@ epithet.00215 = {
 		set_nickname_effect = { NICKNAME = nick_the_wizard }
     }
 }
-epithet.00216 = { 
+epithet.0216 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5087,11 +5290,12 @@ epithet.00216 = {
 		set_nickname_effect = { NICKNAME = nick_the_enchantress }
     }
 }
-epithet.00217 = { 
+epithet.0217 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		intrigue >= 20
+		is_intrigue_higher_stat_trigger = yes
 		has_trait = deceitful
 		has_trait = ambitious
 	}
@@ -5123,11 +5327,11 @@ epithet.00217 = {
 		}
     }
 }
-epithet.00218 = { 
+epithet.0218 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		martial >= 10
+		martial >= 15
 		has_trait = lifestyle_hunter
 		is_female = no
 	}
@@ -5152,7 +5356,7 @@ epithet.00218 = {
 		set_nickname_effect = { NICKNAME = nick_the_huntmaster }
     }
 }
-epithet.00219 = { 
+epithet.0219 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5172,7 +5376,7 @@ epithet.00219 = {
 		set_nickname_effect = { NICKNAME = nick_the_maiden_fair }
     }
 }
-epithet.00220 = { 
+epithet.0220 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5192,13 +5396,15 @@ epithet.00220 = {
 		set_nickname_effect = { NICKNAME = nick_the_braggart }
     }
 }
-epithet.00221 = { 
+epithet.0221 = { 
 	hidden = yes
 	trigger = {
 		age >= 20
+		prestige_level <= 2
 		has_trait = ambitious
 		has_trait = arbitrary
 		NOT = { has_trait = shy }
+		
 	}
 	weight_multiplier = {
 		base = 2
@@ -5264,7 +5470,7 @@ epithet.00223 = {
 		set_nickname_effect = { NICKNAME = nick_the_cuckold }
     }
 }
-epithet.00224 = { 
+epithet.0224 = { 
 	hidden = yes
 	trigger = {
 		NOT = { has_diplomacy_lifestyle_trait_trigger = yes }
@@ -5288,7 +5494,7 @@ epithet.00224 = {
 		set_nickname_effect = { NICKNAME = nick_silent_tongue }
     }
 }
-epithet.00225 = {
+epithet.0225 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5320,11 +5526,12 @@ epithet.00225 = {
 		set_nickname_effect = { NICKNAME = nick_the_carpenter }
     }
 }
-epithet.00226 = {
+epithet.0226 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		learning >= 12
+		learning >= 15
+		is_learning_higher_stat_trigger = yes
 		piety_level >= 2
 		faith = {
 			has_doctrine = eastern_hostility_doctrine
@@ -5366,7 +5573,7 @@ epithet.00226 = {
 		set_nickname_effect = { NICKNAME = nick_the_guru }
     }
 }
-epithet.00227 = { 
+epithet.0227 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5403,7 +5610,7 @@ epithet.00227 = {
 		set_nickname_effect = { NICKNAME = nick_the_black_adder }
     }
 }
-epithet.00228 = {
+epithet.0228 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -5450,7 +5657,7 @@ epithet.00228 = {
 		set_nickname_effect = { NICKNAME = nick_the_wise }
     }
 }
-epithet.00229 = {
+epithet.0229 = {
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -5474,7 +5681,7 @@ epithet.00229 = {
 		set_nickname_effect = { NICKNAME = nick_the_confessor }
     }
 }
-epithet.00230 = {
+epithet.0230 = {
 	hidden = yes
 	trigger = {
 		OR = {
@@ -5495,7 +5702,7 @@ epithet.00230 = {
 		set_nickname_effect = { NICKNAME = nick_the_lion }
     }
 }
-epithet.00231 = {
+epithet.0231 = {
 	hidden = yes
 	trigger = {
 		OR = {
@@ -5521,7 +5728,7 @@ epithet.00231 = {
 		set_nickname_effect = { NICKNAME = nick_the_lionheart }
     }
 }
-epithet.00232 = {
+epithet.0232 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5545,7 +5752,7 @@ epithet.00232 = {
 		set_nickname_effect = { NICKNAME = nick_the_witch }
     }
 }
-epithet.00233 = {
+epithet.0233 = {
 	hidden = yes
 	trigger = {
 		age >= 30
@@ -5574,7 +5781,7 @@ epithet.00233 = {
 		set_nickname_effect = { NICKNAME = nick_the_magnificent }
     }
 }
-epithet.00234 = {
+epithet.0234 = {
 	hidden = yes
 	trigger = {
 		OR = {
@@ -5613,7 +5820,7 @@ epithet.00234 = {
 		set_nickname_effect = { NICKNAME = nick_the_wolf }
     }
 }
-epithet.00235 = { 
+epithet.0235 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5638,7 +5845,7 @@ epithet.00235 = {
 		set_nickname_effect = { NICKNAME = nick_the_fox }
     }
 }
-epithet.00236 = { 
+epithet.0236 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5665,7 +5872,7 @@ epithet.00236 = {
 		set_nickname_effect = { NICKNAME = nick_the_seductress }
     }
 }
-epithet.00237 = { 
+epithet.0237 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5707,7 +5914,7 @@ epithet.00237 = {
 		set_nickname_effect = { NICKNAME = nick_the_steadfast_queen }
     }
 }
-epithet.00238 = { 
+epithet.0238 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5741,11 +5948,12 @@ epithet.00238 = {
 		set_nickname_effect = { NICKNAME = nick_cursed_huntsman }
     }
 }
-epithet.00239 = {
+epithet.0239 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		intrigue >= 10
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		has_trait = disfigured
 		has_trait = deceitful
 	}
@@ -5767,7 +5975,7 @@ epithet.00239 = {
 		set_nickname_effect = { NICKNAME = nick_of_a_thousand_faces }
     }
 }
-epithet.00240 = {
+epithet.0240 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -5792,7 +6000,7 @@ epithet.00240 = {
 		set_nickname_effect = { NICKNAME = nick_the_boar }
     }
 }
-epithet.00241 = { 
+epithet.0241 = { 
 	hidden = yes
 	trigger = {
 		is_female = no
@@ -5812,7 +6020,7 @@ epithet.00241 = {
 		set_nickname_effect = { NICKNAME = nick_count_of_counts }
     }
 }
-epithet.00242 = { 
+epithet.0242 = { 
 	hidden = yes
 	trigger = {
 		is_female = no
@@ -5832,7 +6040,7 @@ epithet.00242 = {
 		set_nickname_effect = { NICKNAME = nick_duke_of_dukes }
     }
 }
-epithet.00243 = { 
+epithet.0243 = { 
 	hidden = yes
 	trigger = {
 		is_female = no
@@ -5852,7 +6060,7 @@ epithet.00243 = {
 		set_nickname_effect = { NICKNAME = nick_king_of_kings }
     }
 }
-epithet.00244 = { 
+epithet.0244 = { 
 	hidden = yes
 	trigger = {
 		is_female = no
@@ -5873,12 +6081,14 @@ epithet.00244 = {
 		set_nickname_effect = { NICKNAME = nick_the_black_prince }
     }
 }
-epithet.00245 = { 
+epithet.0245 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		is_female = no
-		martial >= 13
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		is_knight = yes
 		OR = {
 			has_trait = lifestyle_blademaster
 			has_strong_trait_trigger = yes
@@ -5912,7 +6122,7 @@ epithet.00245 = {
 		set_nickname_effect = { NICKNAME = nick_true_steel }
     }
 }
-epithet.00246 = { 
+epithet.0246 = { 
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -5949,7 +6159,7 @@ epithet.00246 = {
 		set_nickname_effect = { NICKNAME = nick_the_wife_beater }
     }
 }
-epithet.00247 = { 
+epithet.0247 = { 
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -5987,7 +6197,7 @@ epithet.00247 = {
 		set_nickname_effect = { NICKNAME = nick_the_child_beater }
     }
 }
-epithet.00248 = { 
+epithet.0248 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6016,7 +6226,7 @@ epithet.00248 = {
 		set_nickname_effect = { NICKNAME = nick_the_vicar }
     }
 }
-epithet.00249 = { 
+epithet.0249 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6026,7 +6236,7 @@ epithet.00249 = {
 		NOT = { highest_held_title_tier = tier_empire	}
 	}
 	weight_multiplier = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 4
 			has_trait = callous
@@ -6037,7 +6247,7 @@ epithet.00249 = {
 		set_nickname_effect = { NICKNAME = nick_the_snitch }
     }
 }
-epithet.00250 = {
+epithet.0250 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6060,10 +6270,10 @@ epithet.00250 = {
 		set_nickname_effect = { NICKNAME = nick_the_loyal }
     }
 }
-epithet.00251 = { 
+epithet.0251 = { 
 	hidden = yes
 	trigger = {
-		age >= 15
+		age >= 16
 		diplomacy < 10
 		martial < 10
 		stewardship < 10
@@ -6098,7 +6308,7 @@ epithet.00251 = {
 		set_nickname_effect = { NICKNAME = nick_the_good_for_nothing }
     }
 }
-epithet.00252 = {
+epithet.0252 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6140,7 +6350,7 @@ epithet.00252 = {
 		set_nickname_effect = { NICKNAME = nick_the_lord_of_realm }
     }
 }
-epithet.00253 = {
+epithet.0253 = {
 	hidden = yes
 	trigger = {
 		age >= 60
@@ -6181,7 +6391,7 @@ epithet.00253 = {
 		set_nickname_effect = { NICKNAME = nick_the_undying }
     }
 }
-epithet.00254 = { 
+epithet.0254 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6189,7 +6399,7 @@ epithet.00254 = {
 		has_religion = religion:christianity_religion
 		NOT = { has_trait = cynical }
 		piety_level >= 1
-		martial >= 10
+		martial >= 15
 	}
 	weight_multiplier = {
 		base = 3
@@ -6207,8 +6417,28 @@ epithet.00254 = {
 		set_nickname_effect = { NICKNAME = nick_the_templar }
     }
 }
+epithet.0255 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		diplomacy >= 17
+		is_diplomacy_higher_stat_trigger = yes
+		has_council_position = councillor_chancellor
+		NOT = { has_trait = shy }
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+	}
 
-epithet.00256 = { 
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_grandiloquent }
+    }
+}
+epithet.0256 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6227,9 +6457,10 @@ epithet.00256 = {
 			has_trait = witch
 			has_trait = possessed
 		}
+		religion = religion:christianity_religion
 	}
 	weight_multiplier = {
-		base = 3
+		base = 4
 		modifier = {
 			factor = 3
 			has_trait = beauty_good
@@ -6250,12 +6481,12 @@ epithet.00256 = {
 		}
     }
 }
-epithet.00257 = { 
+epithet.0257 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		highest_held_title_tier = tier_duchy
-		prowess >= 12
+		prowess >= 15
 		martial >= 15
 		has_feudal_government_trigger = yes 
 		OR = {
@@ -6296,17 +6527,15 @@ epithet.00257 = {
 		}
     }
 }
-epithet.00258 = { 
+epithet.0258 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		OR = {
-			martial < 7
-			diplomacy < 7
-			stewardship < 7
-			intrigue < 7
-			learning < 7
-		}
+		martial < 7
+		diplomacy < 7
+		stewardship < 7
+		intrigue < 7
+		learning < 7
 	}
 	weight_multiplier = {
 		base = 2
@@ -6328,7 +6557,7 @@ epithet.00258 = {
 		set_nickname_effect = { NICKNAME = nick_the_bad }
     }
 }
-epithet.00259 = { 
+epithet.0259 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6350,13 +6579,14 @@ epithet.00259 = {
 		set_nickname_effect = { NICKNAME = nick_the_fearful }
     }
 }
-epithet.00260 = { 
+epithet.0260 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_unpleasant_appearence_trait_trigger = no
 		has_trait = beauty_good
 		piety_level >= 2
+		religion = religion:christianity_religion
 	}
 	weight_multiplier = {
 		base = 1
@@ -6366,7 +6596,7 @@ epithet.00260 = {
 		set_nickname_effect = { NICKNAME = nick_beauclerk }
     }
 }
-epithet.00261 = { 
+epithet.0261 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6393,7 +6623,7 @@ epithet.00261 = {
 		set_nickname_effect = { NICKNAME = nick_the_beloved }
     }
 }
-epithet.00262 = { 
+epithet.0262 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6410,11 +6640,12 @@ epithet.00262 = {
 		set_nickname_effect = { NICKNAME = nick_the_big_nest }
     }
 }
-epithet.00263 = { 
+epithet.0263 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
-		intrigue >= 13
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 		has_trait = deceitful
 	}
 	weight_multiplier = {
@@ -6442,7 +6673,7 @@ epithet.00263 = {
 		set_nickname_effect = { NICKNAME = nick_wormtongue }
     }
 }
-epithet.00264 = { 
+epithet.0264 = { 
 	hidden = yes
 	trigger = {
 		is_female = yes
@@ -6481,7 +6712,7 @@ epithet.00264 = {
 		set_nickname_effect = { NICKNAME = nick_the_black_widow }
     }
 }
-epithet.00265 = { 
+epithet.0265 = { 
 	hidden = yes
 	trigger = {
 		has_trait = giant
@@ -6496,7 +6727,7 @@ epithet.00265 = {
 		set_nickname_effect = { NICKNAME = nick_the_titan }
     }
 }
-epithet.00266 = { 
+epithet.0266 = { 
 	hidden = yes
 	trigger = {
 		is_female = yes
@@ -6536,7 +6767,7 @@ epithet.00266 = {
 		}
     }
 }
-epithet.00267 = { 
+epithet.0267 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -6579,7 +6810,7 @@ epithet.00267 = {
 		set_nickname_effect = { NICKNAME = nick_merciless_spider }
     }
 }
-epithet.00268 = { 
+epithet.0268 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -6610,7 +6841,7 @@ epithet.00268 = {
 		set_nickname_effect = { NICKNAME = nick_impassible_diplomat }
     }
 }
-epithet.00269 = { 
+epithet.0269 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -6644,7 +6875,7 @@ epithet.00269 = {
 		set_nickname_effect = { NICKNAME = nick_hand_of_vengeance }
     }
 }
-epithet.00270 = { 
+epithet.0270 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -6675,7 +6906,7 @@ epithet.00270 = {
 		set_nickname_effect = { NICKNAME = nick_the_enigma }
     }
 }
-epithet.00271 = { 
+epithet.0271 = { 
 	hidden = yes
 	trigger = {
 		is_martial_higher_stat_trigger = yes
@@ -6706,7 +6937,7 @@ epithet.00271 = {
 		set_nickname_effect = { NICKNAME = nick_of_war_and_love }
     }
 }
-epithet.00272 = { 
+epithet.0272 = { 
 	hidden = yes
 	trigger = {
 		calc_true_if = {
@@ -6732,7 +6963,7 @@ epithet.00272 = {
 		set_nickname_effect = { NICKNAME = nick_the_thrice_damned }
     }
 }
-epithet.00273 = { 
+epithet.0273 = { 
 	hidden = yes
 	trigger = {
 		has_trait = beauty_good_3
@@ -6779,7 +7010,7 @@ epithet.00273 = {
 		set_nickname_effect = { NICKNAME = nick_paragon_humanity }
     }
 }
-epithet.00274 = { 
+epithet.0274 = { 
 	hidden = yes
 	trigger = {
 		is_female = yes
@@ -6794,7 +7025,7 @@ epithet.00274 = {
 		set_nickname_effect = { NICKNAME = nick_muse_of_rebellion }
     }
 }
-epithet.00275 = { 
+epithet.0275 = { 
 	hidden = yes
 	trigger = {
 		any_child = {
@@ -6824,7 +7055,7 @@ epithet.00275 = {
 		}
     }
 }
-epithet.00276 = { 
+epithet.0276 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -6859,7 +7090,7 @@ epithet.00276 = {
 		set_nickname_effect = { NICKNAME = nick_the_grim_reaper }
     }
 }
-epithet.00277 = { 
+epithet.0277 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -6901,11 +7132,13 @@ epithet.00277 = {
 		}
     }
 }
-epithet.00278 = { 
+epithet.0278 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_trait = architect
+		stewardship >= 15
+		is_stewardship_higher_stat_trigger = yes
 	}
 
 	weight_multiplier = {
@@ -6925,40 +7158,28 @@ epithet.00278 = {
 		set_nickname_effect = { NICKNAME = nick_the_builder }
     }
 }
-epithet.00279 = {
+epithet.0279 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		culture = culture:scottish
 		martial >= 15
 		is_martial_higher_stat_trigger = yes
+		OR = {
+			has_trait = strategist
+			has_trait = flexible_leader
+			has_trait = organizer
+			has_trait = cautious_leader
+		}
 	}
 	weight_multiplier = {
 		base = 2
-
-		modifier = {
-			factor = 2
-			has_trait = strategist
-		}
-		modifier = {
-			factor = 2
-			has_trait = flexible_leader
-		}
-		modifier = {
-			factor = 2
-			has_trait = organizer
-		}
-		modifier = {
-			factor = 2
-			has_trait = cautious_leader
-		}
 	}
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_chief }
     }
 }
-epithet.00280 = {
+epithet.0280 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6972,7 +7193,7 @@ epithet.00280 = {
 		set_nickname_effect = { NICKNAME = nick_the_clubfoot }
     }
 }
-epithet.00281 = {
+epithet.0281 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -6995,7 +7216,7 @@ epithet.00281 = {
 		set_nickname_effect = { NICKNAME = nick_the_crowned }
     }
 }
-epithet.00282 = {
+epithet.0282 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7031,7 +7252,7 @@ epithet.00282 = {
 		set_nickname_effect = { NICKNAME = nick_the_crusader }
     }
 }
-epithet.00283 = {
+epithet.0283 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7052,7 +7273,7 @@ epithet.00283 = {
 		set_nickname_effect = { NICKNAME = nick_the_emperor_king }
     }
 }
-epithet.00284 = {
+epithet.0284 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7075,11 +7296,11 @@ epithet.00284 = {
 		set_nickname_effect = { NICKNAME = nick_the_fowler }
     }
 }
-epithet.00285 = {
+epithet.0285 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_religion = religion:christianity_religion
+		can_get_abrahamic_religeion_nickname_trigger = yes
 		prestige_level >= 4
 		piety_level >= 3
 	}
@@ -7091,11 +7312,11 @@ epithet.00285 = {
 		set_nickname_effect = { NICKNAME = nick_the_god_given }
     }
 }
-epithet.00286 = {
+epithet.0286 = {
 	hidden = yes
 	trigger = {
 		age >= 16
-		has_religion = religion:christianity_religion
+		can_get_abrahamic_religeion_nickname_trigger = yes
 		has_trait = zealous
 		piety_level >= 4
 	}
@@ -7107,7 +7328,7 @@ epithet.00286 = {
 		set_nickname_effect = { NICKNAME = nick_the_god_loving }
     }
 }
-epithet.00287 = {
+epithet.0287 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7147,7 +7368,7 @@ epithet.00287 = {
 		set_nickname_effect = { NICKNAME = nick_the_hammer }
     }
 }
-epithet.00288 = {
+epithet.0288 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7162,7 +7383,7 @@ epithet.00288 = {
 		set_nickname_effect = { NICKNAME = nick_the_lisp_and_lame }
     }
 }
-epithet.00289 = {
+epithet.0289 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7210,7 +7431,7 @@ epithet.00289 = {
 		set_nickname_effect = { NICKNAME = nick_the_impaler }
     }
 }
-epithet.00290 = {
+epithet.0290 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7246,7 +7467,7 @@ epithet.00290 = {
 		set_nickname_effect = { NICKNAME = nick_who_fights_alone }
     }
 }
-epithet.00291 = {
+epithet.0291 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7271,7 +7492,7 @@ epithet.00291 = {
 		set_nickname_effect = { NICKNAME = nick_the_virgin_queen }
     }
 }
-epithet.00292 = {
+epithet.0292 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7299,7 +7520,7 @@ epithet.00292 = {
 		set_nickname_effect = { NICKNAME = nick_the_pilgrim }
     }
 }
-epithet.00293 = {
+epithet.0293 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7313,7 +7534,7 @@ epithet.00293 = {
 		set_nickname_effect = { NICKNAME = nick_the_purple_born }
     }
 }
-epithet.00294 = {
+epithet.0294 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7336,7 +7557,7 @@ epithet.00294 = {
 		set_nickname_effect = { NICKNAME = nick_the_sailor_king }
     }
 }
-epithet.00295 = {
+epithet.0295 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7372,7 +7593,7 @@ epithet.00295 = {
 		set_nickname_effect = { NICKNAME = nick_the_mujahib }
     }
 }
-epithet.00296 = {
+epithet.0296 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7392,7 +7613,7 @@ epithet.00296 = {
 		set_nickname_effect = { NICKNAME = nick_bloody_stupid }
     }
 }
-epithet.00297 = {
+epithet.0297 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7401,7 +7622,7 @@ epithet.00297 = {
 		OR = {
 			has_trait = craven
 			has_trait = humble
-			has_trait = trusring
+			has_trait = trusting
 		}
 	}
 	weight_multiplier = {
@@ -7412,7 +7633,7 @@ epithet.00297 = {
 		set_nickname_effect = { NICKNAME = nick_the_king_who_knelt }
     }
 }
-epithet.00298 = {
+epithet.0298 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7437,7 +7658,7 @@ epithet.00298 = {
 		set_nickname_effect = { NICKNAME = nick_the_flayman }
     }
 }
-epithet.00299 = {
+epithet.0299 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7454,7 +7675,7 @@ epithet.00299 = {
 		set_nickname_effect = { NICKNAME = nick_the_lousy }
     }
 }
-epithet.00300 = {
+epithet.0300 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7497,7 +7718,7 @@ epithet.00300 = {
 		set_nickname_effect = { NICKNAME = nick_the_oncoming_storm }
     }
 }
-epithet.00301 = {
+epithet.0301 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7512,7 +7733,7 @@ epithet.00301 = {
 		set_nickname_effect = { NICKNAME = nick_the_lord_of_the_hunt }
     }
 }
-epithet.00302 = {
+epithet.0302 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7533,7 +7754,7 @@ epithet.00302 = {
 		set_nickname_effect = { NICKNAME = nick_the_nightblade }
     }
 }
-epithet.00303 = {
+epithet.0303 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7551,7 +7772,7 @@ epithet.00303 = {
 		set_nickname_effect = { NICKNAME = nick_the_titans_bastard }
     }
 }
-epithet.00304 = {
+epithet.0304 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7568,7 +7789,7 @@ epithet.00304 = {
 		set_nickname_effect = { NICKNAME = nick_the_tireless_pilgrim }
     }
 }
-epithet.00305 = {
+epithet.0305 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7586,7 +7807,7 @@ epithet.00305 = {
 		set_nickname_effect = { NICKNAME = nick_the_boundless }
     }
 }
-epithet.00306 = {
+epithet.0306 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7610,10 +7831,10 @@ epithet.00306 = {
 	}
 
     immediate = {
-		set_nickname_effect = { NICKNAME = nick_the_boundless }
+		set_nickname_effect = { NICKNAME = nick_the_blade_blossom }
     }
 }
-epithet.00276 = { 
+epithet.0307 = { 
 	hidden = yes
 	trigger = {
 		OR = {
@@ -7651,12 +7872,13 @@ epithet.00276 = {
 }
 
 # Cultural - Akan
-epithet.01501 = {
+epithet.1001 = {
 	hidden = yes
 	trigger = {
 		age >= 16
 		has_culture_group = culture_group:akan_group
 		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
 	}
 	weight_multiplier = {
 		base = 2
@@ -7687,7 +7909,7 @@ epithet.01501 = {
 		set_nickname_effect = { NICKNAME = nick_the_anansi }
     }
 }
-epithet.01502 = {
+epithet.1002 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7716,7 +7938,7 @@ epithet.01502 = {
 		set_nickname_effect = { NICKNAME = nick_the_snow_leopard }
     }
 }
-epithet.01503 = {
+epithet.1003 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7733,7 +7955,7 @@ epithet.01503 = {
 		set_nickname_effect = { NICKNAME = nick_twa_akwan }
     }
 }
-epithet.01504 = {
+epithet.1004 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7755,7 +7977,7 @@ epithet.01504 = {
 }
 
 # Cultural - Arabic
-epithet.01601 = {
+epithet.1101 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7773,7 +7995,7 @@ epithet.01601 = {
 		set_nickname_effect = { NICKNAME = nick_the_roc }
     }
 }
-epithet.01602 = {
+epithet.1102 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7810,7 +8032,7 @@ epithet.01602 = {
 		set_nickname_effect = { NICKNAME = nick_the_ifrit }
     }
 }
-epithet.01603 = {
+epithet.1103 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7820,7 +8042,7 @@ epithet.01603 = {
 			tyranny >= low_tyranny
 		}
 		has_trait = one_legged
-		has_trait = scarred
+		has_trait = maimed
 		has_trait = disfigured
 	}
 	weight_multiplier = {
@@ -7830,7 +8052,7 @@ epithet.01603 = {
 		set_nickname_effect = { NICKNAME = nick_the_nasnas }
     }
 }
-epithet.01604 = {
+epithet.1104 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7856,7 +8078,7 @@ epithet.01604 = {
 }
 
 # Cultural - Northern
-epithet.01001 = {
+epithet.1201 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7871,7 +8093,7 @@ epithet.01001 = {
 		set_nickname_effect = { NICKNAME = nick_the_ladder_legs }
     }
 }
-epithet.01002 = { 
+epithet.1202 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7907,7 +8129,7 @@ epithet.01002 = {
 		set_nickname_effect = { NICKNAME = nick_the_kraken }
     }
 }
-epithet.01003 = { 
+epithet.1203 = { 
 	hidden = yes
 	trigger = {
 		age >= 20
@@ -7931,7 +8153,7 @@ epithet.01003 = {
 		set_nickname_effect = { NICKNAME = nick_bloodteeth }
     }
 }
-epithet.01004 = {
+epithet.1204 = {
 	hidden = yes
 	trigger = {
 		can_get_northerner_nickname_trigger = yes
@@ -7954,7 +8176,7 @@ epithet.01004 = {
 		set_nickname_effect = { NICKNAME = nick_the_ironside }
     }
 }
-epithet.01005 = {
+epithet.1205 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -7973,7 +8195,7 @@ epithet.01005 = {
 		set_nickname_effect = { NICKNAME = nick_the_bellower }
     }
 }
-epithet.01006 = {
+epithet.1206 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8010,7 +8232,7 @@ epithet.01006 = {
 		set_nickname_effect = { NICKNAME = nick_god_favored }
     }
 }
-epithet.01007 = {
+epithet.1207 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8047,7 +8269,7 @@ epithet.01007 = {
 		set_nickname_effect = { NICKNAME = nick_brokenbrow }
     }
 }
-epithet.01008 = {
+epithet.1208 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8084,7 +8306,7 @@ epithet.01008 = {
 		set_nickname_effect = { NICKNAME = nick_the_fangbearer }
     }
 }
-epithet.01009 = {
+epithet.1209 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8136,7 +8358,7 @@ epithet.01009 = {
 		set_nickname_effect = { NICKNAME = nick_whispering_raven }
     }
 }
-epithet.01010 = {
+epithet.1210 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8180,7 +8402,7 @@ epithet.01010 = {
 		set_nickname_effect = { NICKNAME = nick_rune_eyes }
     }
 }
-epithet.01011 = {
+epithet.1211 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8226,7 +8448,7 @@ epithet.01011 = {
 		set_nickname_effect = { NICKNAME = nick_doomscourge }
     }
 }
-epithet.01012 = {
+epithet.1212 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8241,7 +8463,7 @@ epithet.01012 = {
 		set_nickname_effect = { NICKNAME = nick_of_the_frost }
     }
 }
-epithet.01013 = {
+epithet.1213 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8270,7 +8492,7 @@ epithet.01013 = {
 		set_nickname_effect = { NICKNAME = nick_betrayer_king }
     }
 }
-epithet.01014 = {
+epithet.1214 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8294,7 +8516,7 @@ epithet.01014 = {
 		set_nickname_effect = { NICKNAME = nick_bearer_of_secrets }
     }
 }
-epithet.01015 = {
+epithet.1215 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8325,7 +8547,7 @@ epithet.01015 = {
 		set_nickname_effect = { NICKNAME = nick_bloodsky }
     }
 }
-epithet.01016 = {
+epithet.1216 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8349,7 +8571,7 @@ epithet.01016 = {
 		set_nickname_effect = { NICKNAME = nick_warrior_poet }
     }
 }
-epithet.01017 = {
+epithet.1217 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8379,7 +8601,7 @@ epithet.01017 = {
 		set_nickname_effect = { NICKNAME = nick_helmsmasher }
     }
 }
-epithet.01018 = {
+epithet.1218 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8412,7 +8634,7 @@ epithet.01018 = {
 		}
     }
 }
-epithet.01019 = {
+epithet.1219 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8436,7 +8658,7 @@ epithet.01019 = {
 		set_nickname_effect = { NICKNAME = nick_the_broad_shouldered }
     }
 }
-epithet.01020 = {
+epithet.1220 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8460,7 +8682,7 @@ epithet.01020 = {
 		set_nickname_effect = { NICKNAME = nick_coal_burner }
     }
 }
-epithet.01021 = {
+epithet.1221 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8489,7 +8711,7 @@ epithet.01021 = {
 		set_nickname_effect = { NICKNAME = nick_bloodfury }
     }
 }
-epithet.01022 = {
+epithet.1222 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8520,7 +8742,7 @@ epithet.01022 = {
 		set_nickname_effect = { NICKNAME = nick_corpse_swallower }
     }
 }
-epithet.01023 = {
+epithet.1223 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8560,7 +8782,7 @@ epithet.01023 = {
 		set_nickname_effect = { NICKNAME = nick_the_valkyrie }
     }
 }
-epithet.01024 = {
+epithet.1224 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8593,7 +8815,7 @@ epithet.01024 = {
 		set_nickname_effect = { NICKNAME = nick_the_white_bear }
     }
 }
-epithet.01025 = {
+epithet.1225 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8626,7 +8848,7 @@ epithet.01025 = {
 		set_nickname_effect = { NICKNAME = nick_the_red_bear }
     }
 }
-epithet.01026 = {
+epithet.1226 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8659,7 +8881,7 @@ epithet.01026 = {
 		set_nickname_effect = { NICKNAME = nick_the_black_bear }
     }
 }
-epithet.01027 = {
+epithet.1227 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8700,7 +8922,7 @@ epithet.01027 = {
 		set_nickname_effect = { NICKNAME = nick_the_broken_bear }
     }
 }
-epithet.01028 = {
+epithet.1228 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8721,7 +8943,7 @@ epithet.01028 = {
 		set_nickname_effect = { NICKNAME = nick_crouchback }
     }
 }
-epithet.01029 = {
+epithet.1229 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8748,7 +8970,7 @@ epithet.01029 = {
 		set_nickname_effect = { NICKNAME = nick_fairhair }
     }
 }
-epithet.01030 = {
+epithet.1230 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8769,7 +8991,7 @@ epithet.01030 = {
 		set_nickname_effect = { NICKNAME = nick_greycloak }
     }
 }
-epithet.01031 = {
+epithet.1231 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8807,7 +9029,7 @@ epithet.01031 = {
 		set_nickname_effect = { NICKNAME = nick_the_redarm }
     }
 }
-epithet.01032 = {
+epithet.1232 = {
 	hidden = yes
 	trigger = {
 		age >= 60
@@ -8839,9 +9061,30 @@ epithet.01032 = {
 		set_nickname_effect = { NICKNAME = nick_the_old_bear }
     }
 }
+epithet.1233 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		can_get_northerner_nickname_trigger = yes
+		learning >= 20
+		is_learning_higher_stat_trigger = yes
+		has_trait = scholar
+		has_trait = overseer
+		has_trait = lifestyle_mystic
+		has_trait = theologian
+	}
+
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_all_seeing }
+    }
+}
 
 # Cultural - East Slavic
-epithet.01101 = {
+epithet.1301 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8880,7 +9123,7 @@ epithet.01101 = {
 }
 
 # Cultural - Iranian
-epithet.01301 = {
+epithet.1401 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8897,7 +9140,7 @@ epithet.01301 = {
 }
 
 # Cultural - West Europe
-epithet.01401 = {
+epithet.1501 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8952,7 +9195,7 @@ epithet.01401 = {
 		set_nickname_effect = { NICKNAME = nick_the_cockatrice }
     }
 }
-epithet.01402 = {
+epithet.1502 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -8985,7 +9228,7 @@ epithet.01402 = {
 		set_nickname_effect = { NICKNAME = nick_the_griffin }
     }
 }
-epithet.01403 = {
+epithet.1503 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9022,7 +9265,7 @@ epithet.01403 = {
 		set_nickname_effect = { NICKNAME = nick_the_hippogriff }
     }
 }
-epithet.01404 = {
+epithet.1504 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9037,7 +9280,7 @@ epithet.01404 = {
 		set_nickname_effect = { NICKNAME = nick_the_phoenix }
     }
 }
-epithet.01405 = {
+epithet.1505 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9057,7 +9300,7 @@ epithet.01405 = {
 		set_nickname_effect = { NICKNAME = nick_the_manticore }
     }
 }
-epithet.01406 = {
+epithet.1506 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9112,7 +9355,7 @@ epithet.01406 = {
 		set_nickname_effect = { NICKNAME = nick_the_basilisk }
     }
 }
-epithet.01407 = {
+epithet.1507 = {
 	hidden = yes
 	trigger = {
 		dread > 50
@@ -9152,7 +9395,7 @@ epithet.01407 = {
 		set_nickname_effect = { NICKNAME = nick_the_wyvern }
     }
 }
-epithet.01408 = { 
+epithet.1508 = { 
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9182,7 +9425,7 @@ epithet.01408 = {
 }
 
 # Cultural - Chinese
-epithet.02001 = {
+epithet.1601 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9198,7 +9441,7 @@ epithet.02001 = {
 		set_nickname_effect = { NICKNAME = nick_the_big_halberd }
     }
 }
-epithet.02002 = {
+epithet.1602 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9217,7 +9460,7 @@ epithet.02002 = {
 		set_nickname_effect = { NICKNAME = nick_the_ferocious_giant }
     }
 }
-epithet.02003 = {
+epithet.1603 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9235,7 +9478,7 @@ epithet.02003 = {
 		set_nickname_effect = { NICKNAME = nick_the_jade_unicorn }
     }
 }
-epithet.02004 = {
+epithet.1604 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9251,7 +9494,7 @@ epithet.02004 = {
 		set_nickname_effect = { NICKNAME = nick_the_prodigy }
     }
 }
-epithet.02005 = {
+epithet.1605 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9267,7 +9510,7 @@ epithet.02005 = {
 		set_nickname_effect = { NICKNAME = nick_the_thunderbolt }
     }
 }
-epithet.02006 = {
+epithet.1606 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9283,7 +9526,7 @@ epithet.02006 = {
 		set_nickname_effect = { NICKNAME = nick_the_timely_rain }
     }
 }
-epithet.02007 = {
+epithet.1607 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9299,7 +9542,7 @@ epithet.02007 = {
 		set_nickname_effect = { NICKNAME = nick_the_turbulent_river_dragon }
     }
 }
-epithet.02008 = {
+epithet.1608 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9322,7 +9565,7 @@ epithet.02008 = {
 		set_nickname_effect = { NICKNAME = nick_the_unrestrained }
     }
 }
-epithet.02009 = {
+epithet.1609 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9341,7 +9584,7 @@ epithet.02009 = {
 		set_nickname_effect = { NICKNAME = nick_the_whirlwind }
     }
 }
-epithet.02010 = {
+epithet.1610 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9357,7 +9600,7 @@ epithet.02010 = {
 		set_nickname_effect = { NICKNAME = nick_the_winged_tiger }
     }
 }
-epithet.02011 = {
+epithet.1611 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9374,7 +9617,7 @@ epithet.02011 = {
 		set_nickname_effect = { NICKNAME = nick_the_silent_tempest }
     }
 }
-epithet.02012 = {
+epithet.1612 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9394,7 +9637,7 @@ epithet.02012 = {
 		set_nickname_effect = { NICKNAME = nick_the_fenghuang }
     }
 }
-epithet.02013 = {
+epithet.1613 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9420,7 +9663,7 @@ epithet.02013 = {
 }
 
 # Cultural - Greco-Roman
-epithet.03001 = {
+epithet.1701 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9450,7 +9693,7 @@ epithet.03001 = {
 		set_nickname_effect = { NICKNAME = nick_the_apostate }
     }
 }
-epithet.03002 = {
+epithet.1702 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9474,7 +9717,7 @@ epithet.03002 = {
 		set_nickname_effect = { NICKNAME = nick_the_hecatoncheires }
     }
 }
-epithet.03003 = {
+epithet.1703 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9505,7 +9748,7 @@ epithet.03003 = {
 		set_nickname_effect = { NICKNAME = nick_the_teumessian_fox }
     }
 }
-epithet.03004 = {
+epithet.1704 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9550,10 +9793,10 @@ epithet.03004 = {
 	}
 
     immediate = {
-		set_nickname_effect = { NICKNAME = nick_the_gorgone }
+		set_nickname_effect = { NICKNAME = nick_the_gorgon }
     }
 }
-epithet.03005 = {
+epithet.1705 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9579,7 +9822,7 @@ epithet.03005 = {
 		set_nickname_effect = { NICKNAME = nick_the_siren }
     }
 }
-epithet.03006 = {
+epithet.1706 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9612,12 +9855,13 @@ epithet.03006 = {
 		set_nickname_effect = { NICKNAME = nick_the_arachne }
     }
 }
-epithet.03007 = {
+epithet.1707 = {
 	hidden = yes
 	trigger = {
 		age >= 16
 		can_get_greco_roman_nickname_trigger = yes
 		martial >= 15
+		is_martial_higher_stat_trigger = yes
 	}
 	weight_multiplier = {
 		base = 2
@@ -9651,7 +9895,7 @@ epithet.03007 = {
 		set_nickname_effect = { NICKNAME = nick_the_myrmidon }
     }
 }
-epithet.03008 = {
+epithet.1708 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9682,7 +9926,7 @@ epithet.03008 = {
 		set_nickname_effect = { NICKNAME = nick_aethon }
     }
 }
-epithet.03009 = {
+epithet.1709 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9702,7 +9946,7 @@ epithet.03009 = {
 		set_nickname_effect = { NICKNAME = nick_alectryon }
     }
 }
-epithet.03010 = {
+epithet.1710 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9727,7 +9971,7 @@ epithet.03010 = {
 		set_nickname_effect = { NICKNAME = nick_caladrius }
     }
 }
-epithet.03011 = {
+epithet.1711 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9760,7 +10004,7 @@ epithet.03011 = {
 		set_nickname_effect = { NICKNAME = nick_the_harpy }
     }
 }
-epithet.03012 = {
+epithet.1712 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9797,7 +10041,7 @@ epithet.03012 = {
 		set_nickname_effect = { NICKNAME = nick_the_strix }
     }
 }
-epithet.03013 = {
+epithet.1713 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9845,7 +10089,7 @@ epithet.03013 = {
 		set_nickname_effect = { NICKNAME = nick_the_cerberus }
     }
 }
-epithet.03014 = {
+epithet.1714 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9889,7 +10133,7 @@ epithet.03014 = {
 		set_nickname_effect = { NICKNAME = nick_the_nemean_lion }
     }
 }
-epithet.03015 = {
+epithet.1715 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9931,7 +10175,7 @@ epithet.03015 = {
 		set_nickname_effect = { NICKNAME = nick_the_androktasiai }
     }
 }
-epithet.03016 = {
+epithet.1716 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -9972,7 +10216,7 @@ epithet.03016 = {
 		set_nickname_effect = { NICKNAME = nick_the_hysminai }
     }
 }
-epithet.03017 = {
+epithet.1717 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10011,50 +10255,7 @@ epithet.03017 = {
 		set_nickname_effect = { NICKNAME = nick_corvinus }
     }
 }
-epithet.03018 = {
-	hidden = yes
-	trigger = {
-		age >= 16
-		can_get_greco_roman_nickname_trigger = yes
-		OR = {
-
-		}
-		NOT = {}
-		has_trait = brave
-		OR = {
-			has_trait = witch
-			OR = {
-				intrigue >= 15
-				is_intrigue_higher_stat_trigger = yes
-			}
-		}
-	}
-	weight_multiplier = {
-		base = 2
-
-		modifier = {
-			factor = 2
-			has_trait = shrewd
-		}
-		modifier = {
-			factor = 2
-			has_trait = overseer
-		}
-		modifier = {
-			factor = 2
-			has_trait = schemer
-		}
-		modifier = {
-			factor = 2
-			has_council_position = councillor_spymaster
-		}
-	}
-
-    immediate = {
-		set_nickname_effect = { NICKNAME = nick_corvinus }
-    }
-}
-epithet.03019 = {
+epithet.1718 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10091,7 +10292,7 @@ epithet.03019 = {
 		set_nickname_effect = { NICKNAME = nick_monomakhos }
     }
 }
-epithet.03020 = {
+epithet.1719 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10114,7 +10315,7 @@ epithet.03020 = {
 		set_nickname_effect = { NICKNAME = nick_the_praetorian }
     }
 }
-epithet.03021 = {
+epithet.1720 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10139,9 +10340,47 @@ epithet.03021 = {
 		set_nickname_effect = { NICKNAME = nick_the_quaestor }
     }
 }
+epithet.1721 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = faith_warrior
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_corinthian }
+    }
+}
+epithet.1722 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 16
+		is_diplomacy_higher_stat_trigger = yes
+		can_get_greco_roman_nickname_trigger = yes
+		is_married = yes
+		piety_level >= 3
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_vestal }
+    }
+}
 
 # Cultural - Goidelic
-epithet.04001 = {
+epithet.1801 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10156,7 +10395,7 @@ epithet.04001 = {
 		set_nickname_effect = { NICKNAME = nick_teller_of_tales }
     }
 }
-epithet.04002 = {
+epithet.1802 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10183,7 +10422,7 @@ epithet.04002 = {
 		set_nickname_effect = { NICKNAME = nick_fae_cursed }
     }
 }
-epithet.04003 = {
+epithet.1803 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10208,7 +10447,7 @@ epithet.04003 = {
 		set_nickname_effect = { NICKNAME = nick_the_salmon_of_knowledge }
     }
 }
-epithet.04004 = {
+epithet.1804 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10247,7 +10486,7 @@ epithet.04004 = {
 }
 
 # Cultural - Scotts
-epithet.05001 = {
+epithet.1901 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10285,7 +10524,7 @@ epithet.05001 = {
 		set_nickname_effect = { NICKNAME = nick_the_kelpie }
     }
 }
-epithet.05002 = {
+epithet.1902 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10318,7 +10557,7 @@ epithet.05002 = {
 		set_nickname_effect = { NICKNAME = nick_the_selkie }
     }
 }
-epithet.05003 = {
+epithet.1903 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10354,7 +10593,7 @@ epithet.05003 = {
 }
 
 # Cultural - Indian
-epithet.07001 = {
+epithet.2001 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10390,7 +10629,7 @@ epithet.07001 = {
 		set_nickname_effect = { NICKNAME = nick_the_vetala }
     }
 }
-epithet.07002 = {
+epithet.2002 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10430,7 +10669,7 @@ epithet.07002 = {
 		set_nickname_effect = { NICKNAME = nick_the_ulama }
     }
 }
-epithet.07003 = {
+epithet.2003 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10462,7 +10701,7 @@ epithet.07003 = {
 		set_nickname_effect = { NICKNAME = nick_the_gandaberunda }
     }
 }
-epithet.07004 = {
+epithet.2004 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10499,8 +10738,8 @@ epithet.07004 = {
     }
 }
 
-# Cultural - Britanny Island
-epithet.08001 = {
+# Cultural - British Isles
+epithet.2101 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10540,7 +10779,7 @@ epithet.08001 = {
 		set_nickname_effect = { NICKNAME = nick_the_bugbear }
     }
 }
-epithet.08002 = {
+epithet.2102 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10581,7 +10820,7 @@ epithet.08002 = {
 		set_nickname_effect = { NICKNAME = nick_the_barghest }
     }
 }
-epithet.08003 = {
+epithet.2103 = {
 	hidden = yes
 	trigger = {
 		age >= 16
@@ -10609,7 +10848,7 @@ epithet.08003 = {
 		set_nickname_effect = { NICKNAME = nick_the_cu_sith }
     }
 }
-epithet.08004 = {
+epithet.2104 = {
 	hidden = yes
 	trigger = {
 		age >= 16

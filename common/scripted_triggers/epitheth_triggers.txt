@@ -127,6 +127,16 @@ can_get_west_europe_nickname_trigger = {
     }
 }
 
+can_get_abrahamic_religeion_nickname_trigger = {
+    OR = {
+        religion = religion:christianity_religion
+        religion = religion:islam_religion
+        religion = religion:judaism_religion
+        religion = religion:dualism_religion
+        religion = religion:yazidi_religion
+    }
+}
+
 is_african_culture = {
     OR = {
         culture_group = culture_group:akan_group
