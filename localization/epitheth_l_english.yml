@@ -6,6 +6,8 @@
  setting_default_epithet_frequency_desc:0 "Epithet will appear as per normal."
  setting_more_epithet_frequency:0 "More"
  setting_more_epithet_frequency_desc:0 "Epithet will appear more often."
+ setting_a_lot_epithet_frequency:0 "A lot more"
+ setting_a_lot_epithet_frequency_desc:0 "Epithet will appear a lot more often."
  rule_epithet_cheats: "Epithet Interaction"
  setting_on_epithet_cheats:0 "On"
  setting_on_epithet_cheats_desc:0 "The players can use the give and remove epithet interactions."

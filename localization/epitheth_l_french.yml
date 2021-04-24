@@ -6,6 +6,8 @@
  setting_default_epithet_frequency_desc:0 "Les épithète apparaîtront comme d'habitude."
  setting_more_epithet_frequency:0 "Souvent"
  setting_more_epithet_frequency_desc:0 "Les épithète apparaîtront plus souvent."
+ setting_a_lot_epithet_frequency:0 "Beaucoup plus souvent"
+ setting_a_lot_epithet_frequency_desc:0 "Les épithète apparaîtront beaucoup plus souvent."
  rule_epithet_cheats: "Interaction Épithèt"
  setting_on_epithet_cheats:1 "Activer"
  setting_on_epithet_cheats_desc:1 "Le joueur peut utiliser l'interaction d'ajouter et de supprimer une épithète."

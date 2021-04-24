@@ -9,9 +9,12 @@
     
     more_epithet_frequency = {
     }
+
+	a_lot_epithet_frequency = {
+	}
 }
 epithet_cheats = {
-	default = on_epithet_cheats
+	default = off_epithet_cheats
 
 	on_epithet_cheats = {
     }

@@ -1,6 +1,30 @@
 ﻿on_birthday = {
 	random_on_action = {
-		chance_to_happen = 33
+		chance_to_happen = 100
+		chance_of_no_event = {
+			value = 0
+			if = {
+				limit = {
+					has_game_rule = fewer_epithet_frequency
+				}
+				add = 97.5 # 2.5%
+			}
+			else_if = {
+				limit = {
+					has_game_rule = more_epithet_frequency
+				}
+				add = 90  # 10%
+			}
+			else_if = {
+				limit = {
+					has_game_rule = a_lot_epithet_frequency
+				}
+				add = 66 # 33%
+			}
+			else = {
+				add = 95 # 5%
+			}
+		}
 		100 = on_check_epithet
 	}
 }
@@ -52,23 +76,29 @@ epithet_random_check = {
 		has_any_nickname = no
 	}
 	random_on_action = {
-		chance_to_happen = 4 # For test
+		chance_to_happen = 100
 		chance_of_no_event = {
 			value = 0
 			if = {
 				limit = {
 					has_game_rule = fewer_epithet_frequency
 				}
-				add = 75 # 1%
+				add = 99 # 1%
 			}
 			else_if = {
 				limit = {
 					has_game_rule = more_epithet_frequency
 				}
-				add = 0  # 4%
+				add = 96  # 4%
+			}
+			else_if = {
+				limit = {
+					has_game_rule = a_lot_epithet_frequency
+				}
+				add = 96  # 4%
 			}
 			else = {
-				add = 50 # 2%
+				add = 98 # 2%
 			}
 		}
 		100 = epithet_selection
