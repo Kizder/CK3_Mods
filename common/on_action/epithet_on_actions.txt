@@ -1,0 +1,660 @@
+﻿on_birthday = {
+	random_on_action = {
+		chance_to_happen = 33
+		100 = on_check_epithet
+	}
+}
+
+on_check_epithet= {
+	trigger = { 
+		prestige_level >= 2
+		has_any_nickname = no 
+	}
+	first_valid_on_action = {
+		epithet_northern_selection
+		epithet_east_slavic_selection
+		epithet_arabic_selection
+		epithet_iranian_selection
+		epithet_west_europe_selection
+		epithet_akan_selection
+		epithet_chinese_selection
+		epithet_greco_roman_selection
+		epithet_goidelic_selection
+		epithet_scottish_selection
+		epithet_indian_selection
+		epithet_brittany_islands_selection
+
+		on_giant_epithet
+		on_dwarf_epithet
+		on_albino_epithet
+		on_prowess_nickname
+	}
+}
+
+on_prestige_level_gain = {
+	trigger = {
+		has_any_nickname = no
+		prestige_level >= 4
+	}
+	on_actions = {
+		epithet_selection
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = {
+		epithet_random_check
+	}
+}
+
+epithet_random_check = {
+	trigger = {
+		has_any_nickname = no
+	}
+	random_on_action = {
+		chance_to_happen = 4 # For test
+		chance_of_no_event = {
+			value = 0
+			if = {
+				limit = {
+					has_game_rule = fewer_epithet_frequency
+				}
+				add = 75 # 1%
+			}
+			else_if = {
+				limit = {
+					has_game_rule = more_epithet_frequency
+				}
+				add = 0  # 4%
+			}
+			else = {
+				add = 50 # 2%
+			}
+		}
+		100 = epithet_selection
+	}
+}
+epithet_selection = {
+	random_events = {
+		100 = epithet.00001
+		100 = epithet.00002
+		100 = epithet.00003
+		100 = epithet.00004
+		100 = epithet.00005
+		100 = epithet.00006
+		100 = epithet.00007
+		100 = epithet.00008
+		100 = epithet.00009
+		100 = epithet.00010
+		100 = epithet.00011
+		100 = epithet.00012
+		100 = epithet.00013
+		100 = epithet.00014
+		100 = epithet.00015
+		100 = epithet.00016
+		100 = epithet.00017
+		100 = epithet.00018
+		100 = epithet.00019
+		100 = epithet.00020
+		100 = epithet.00021
+		100 = epithet.00022
+		100 = epithet.00023
+		100 = epithet.00024
+		100 = epithet.00025
+		100 = epithet.00026
+		100 = epithet.00027
+		100 = epithet.00028
+		100 = epithet.00029
+		100 = epithet.00030
+		100 = epithet.00031
+		100 = epithet.00032
+		100 = epithet.00033
+		100 = epithet.00034
+		100 = epithet.00035
+		100 = epithet.00036
+		100 = epithet.00037
+		100 = epithet.00038
+		100 = epithet.00039
+		100 = epithet.00040
+		100 = epithet.00041
+		100 = epithet.00042
+		100 = epithet.00043
+		100 = epithet.00044
+		100 = epithet.00045
+		100 = epithet.00046
+		100 = epithet.00047
+		100 = epithet.00048
+		100 = epithet.00049
+		100 = epithet.00050
+		100 = epithet.00051
+		100 = epithet.00052
+		100 = epithet.00053
+		100 = epithet.00054
+		100 = epithet.00055
+		100 = epithet.00056
+		100 = epithet.00057
+		100 = epithet.00058
+		100 = epithet.00059
+		100 = epithet.00060
+		100 = epithet.00061
+		100 = epithet.00062
+		100 = epithet.00063
+		100 = epithet.00064
+		100 = epithet.00065
+		100 = epithet.00066
+		100 = epithet.00067
+		100 = epithet.00068
+		100 = epithet.00069
+		100 = epithet.00070
+		100 = epithet.00071
+		100 = epithet.00072
+		100 = epithet.00073
+		100 = epithet.00074
+		100 = epithet.00075
+		100 = epithet.00076
+		100 = epithet.00077
+		100 = epithet.00078
+		100 = epithet.00079
+		100 = epithet.00080
+		100 = epithet.00081
+		100 = epithet.00082
+		100 = epithet.00083
+		100 = epithet.00084
+		100 = epithet.00085
+		100 = epithet.00086
+		100 = epithet.00087
+		100 = epithet.00088
+		100 = epithet.00089
+		100 = epithet.00090
+		100 = epithet.00091
+		100 = epithet.00092
+		100 = epithet.00093
+		100 = epithet.00094
+		100 = epithet.00095
+		100 = epithet.00096
+		100 = epithet.00097
+		100 = epithet.00098
+		100 = epithet.00099
+		100 = epithet.00100
+		100 = epithet.00101
+		100 = epithet.00102
+		100 = epithet.00103
+		100 = epithet.00104
+		100 = epithet.00105
+		100 = epithet.00106
+		100 = epithet.00107
+		100 = epithet.00108
+		100 = epithet.00109
+		100 = epithet.00110
+		100 = epithet.00111
+		100 = epithet.00112
+		100 = epithet.00113
+		100 = epithet.00114
+		100 = epithet.00115
+		100 = epithet.00116
+		100 = epithet.00117
+		100 = epithet.00118
+		100 = epithet.00119
+		100 = epithet.00120
+		100 = epithet.00121
+		100 = epithet.00122
+		100 = epithet.00123
+		100 = epithet.00124
+		100 = epithet.00125
+		100 = epithet.00126
+		100 = epithet.00127
+		100 = epithet.00128
+		100 = epithet.00129
+		100 = epithet.00130
+		100 = epithet.00131
+		100 = epithet.00132
+		100 = epithet.00133
+		100 = epithet.00134
+		100 = epithet.00135
+		100 = epithet.00136
+		100 = epithet.00137
+		100 = epithet.00138
+		100 = epithet.00139
+		100 = epithet.00140
+		100 = epithet.00141
+		100 = epithet.00142
+		100 = epithet.00143
+		100 = epithet.00144
+		100 = epithet.00145
+		100 = epithet.00146
+		100 = epithet.00147
+		100 = epithet.00148
+		100 = epithet.00149
+		100 = epithet.00150
+		100 = epithet.00151
+		100 = epithet.00152
+		100 = epithet.00153
+		100 = epithet.00154
+		100 = epithet.00155
+		100 = epithet.00156
+		100 = epithet.00157
+		100 = epithet.00158
+		100 = epithet.00159
+		100 = epithet.00160
+		100 = epithet.00161
+		100 = epithet.00162
+		100 = epithet.00163
+		100 = epithet.00164
+		100 = epithet.00165
+		100 = epithet.00166
+		100 = epithet.00167
+		100 = epithet.00168
+		100 = epithet.00169
+		100 = epithet.00170
+		100 = epithet.00171
+		100 = epithet.00172
+		100 = epithet.00173
+		100 = epithet.00174
+		100 = epithet.00175
+		100 = epithet.00176
+		100 = epithet.00177
+		100 = epithet.00178
+		100 = epithet.00179
+		100 = epithet.00180
+		100 = epithet.00181
+		100 = epithet.00182
+		100 = epithet.00183
+		100 = epithet.00184
+		100 = epithet.00185
+		100 = epithet.00186
+		100 = epithet.00187
+		100 = epithet.00188
+		100 = epithet.00189
+		100 = epithet.00190
+		100 = epithet.00191
+		100 = epithet.00192
+		100 = epithet.00193
+		100 = epithet.00194
+		100 = epithet.00195
+		100 = epithet.00196
+		100 = epithet.00197
+		100 = epithet.00198
+		100 = epithet.00199
+		100 = epithet.00200
+		100 = epithet.00201
+		100 = epithet.00202
+		100 = epithet.00203
+		100 = epithet.00204
+		100 = epithet.00205
+		100 = epithet.00206
+		100 = epithet.00207
+		100 = epithet.00208
+		100 = epithet.00209
+		100 = epithet.00210
+		100 = epithet.00211
+		100 = epithet.00212
+		100 = epithet.00213
+		100 = epithet.00214
+		100 = epithet.00215
+		100 = epithet.00216
+		100 = epithet.00217
+		100 = epithet.00218
+		100 = epithet.00219
+		100 = epithet.00220
+		100 = epithet.00221
+		100 = epithet.00222
+		100 = epithet.00223
+		100 = epithet.00224
+		100 = epithet.00225
+		100 = epithet.00226
+		100 = epithet.00227
+		100 = epithet.00228
+		100 = epithet.00229
+		100 = epithet.00230
+		100 = epithet.00231
+		100 = epithet.00232
+		100 = epithet.00233
+		100 = epithet.00234
+		100 = epithet.00235
+		100 = epithet.00236
+		100 = epithet.00237
+		100 = epithet.00238
+		100 = epithet.00239
+		100 = epithet.00240
+		100 = epithet.00241
+		100 = epithet.00242
+		100 = epithet.00243
+		100 = epithet.00244
+		100 = epithet.00245
+		100 = epithet.00246
+		100 = epithet.00247
+		100 = epithet.00248
+		100 = epithet.00249
+		100 = epithet.00250
+		100 = epithet.00251
+		100 = epithet.00252
+		100 = epithet.00253
+		100 = epithet.00254
+		100 = epithet.00255
+		100 = epithet.00256
+		100 = epithet.00257
+		100 = epithet.00258
+		100 = epithet.00259
+		100 = epithet.00260
+		100 = epithet.00261
+		100 = epithet.00262
+		100 = epithet.00263
+		100 = epithet.00264
+		100 = epithet.00265
+		100 = epithet.00266
+		100 = epithet.00267
+		100 = epithet.00268
+		100 = epithet.00269
+		100 = epithet.00270
+		100 = epithet.00271
+		100 = epithet.00272
+		100 = epithet.00273
+		100 = epithet.00274
+		100 = epithet.00275
+		100 = epithet.00276
+		100 = epithet.00277
+		100 = epithet.00278
+		100 = epithet.00279
+		100 = epithet.00280
+		100 = epithet.00281
+		100 = epithet.00282
+		100 = epithet.00283
+		100 = epithet.00284
+		100 = epithet.00285
+		100 = epithet.00286
+		100 = epithet.00287
+		100 = epithet.00288
+		100 = epithet.00289
+		100 = epithet.00290
+		100 = epithet.00291
+		100 = epithet.00292
+		100 = epithet.00293
+		100 = epithet.00294
+		100 = epithet.00295
+		100 = epithet.00296
+		100 = epithet.00297
+		100 = epithet.00298
+		100 = epithet.00299
+		100 = epithet.00300
+		100 = epithet.00301
+		100 = epithet.00302
+		100 = epithet.00303
+	}
+}
+
+epithet_northern_selection = {
+	trigger = {
+		can_get_northerner_nickname_trigger = yes
+	}
+	random_events = {
+		100 = epithet.01001
+		100 = epithet.01002
+		100 = epithet.01003
+		100 = epithet.01004
+		100 = epithet.01005
+		100 = epithet.01006
+		100 = epithet.01007
+		100 = epithet.01008
+		100 = epithet.01009
+		100 = epithet.01010
+		100 = epithet.01011
+		100 = epithet.01012
+		100 = epithet.01013
+		100 = epithet.01014
+		100 = epithet.01015
+		100 = epithet.01016
+		100 = epithet.01017
+		100 = epithet.01018
+		100 = epithet.01019
+		100 = epithet.01020
+		100 = epithet.01021
+		100 = epithet.01022
+		100 = epithet.01023
+		100 = epithet.01024
+		100 = epithet.01025
+		100 = epithet.01026
+		100 = epithet.01027
+		100 = epithet.01028
+		100 = epithet.01029
+		100 = epithet.01030
+		100 = epithet.01031
+		100 = epithet.01032
+	}
+}
+
+epithet_east_slavic_selection = {
+	trigger = {
+		culture_group = culture_group:east_slavic_group
+	}
+
+	random_events = {
+		100 = epithet.01101
+	}
+}
+
+epithet_arabic_selection = {
+	trigger = {
+		culture_group = culture_group:arabic_group
+	}
+
+	random_events = {
+		100 = epithet.01601
+		100 = epithet.01602
+		100 = epithet.01603
+		100 = epithet.01604
+	}
+}
+
+epithet_iranian_selection = {
+	trigger = {
+		culture_group = culture_group:iranian_group
+	}
+
+	random_events = {
+		100 = epithet.01301
+	}
+}
+
+epithet_west_europe_selection = {
+	trigger = {
+		can_get_west_europe_nickname_trigger = yes
+	}
+
+	random_events = {
+		100 = epithet.01401
+		100 = epithet.01402
+		100 = epithet.01403
+		100 = epithet.01404
+		100 = epithet.01405
+		100 = epithet.01406
+		100 = epithet.01407
+	}
+}
+
+epithet_akan_selection = {
+	trigger = {
+		has_culture_group = culture_group:akan_group
+	}
+
+	random_events = {
+		100 = epithet.01501
+		100 = epithet.01502
+		100 = epithet.01503
+		100 = epithet.01504
+	}
+}
+
+epithet_chinese_selection = {
+	trigger = {
+		can_get_chinese_nickname_trigger = yes
+	}
+	random_events = {
+		100 = epithet.02001
+		100 = epithet.02002
+		100 = epithet.02003
+		100 = epithet.02004
+		100 = epithet.02005
+		100 = epithet.02006
+		100 = epithet.02007
+		100 = epithet.02008
+		100 = epithet.02009
+		100 = epithet.02010
+		100 = epithet.02011
+		100 = epithet.02012
+		100 = epithet.02013
+	}
+}
+
+epithet_greco_roman_selection = {
+	trigger = {
+		can_get_greco_roman_nickname_trigger = yes
+	}
+	random_events = {
+		100 = epithet.03001
+		100 = epithet.03002
+		100 = epithet.03003
+		100 = epithet.03004
+		100 = epithet.03005
+		100 = epithet.03006
+		100 = epithet.03007
+		100 = epithet.03008
+		100 = epithet.03009
+		100 = epithet.03010
+		100 = epithet.03011
+		100 = epithet.03012
+		100 = epithet.03012
+		100 = epithet.03013
+		100 = epithet.03014
+		100 = epithet.03015
+		100 = epithet.03016
+		100 = epithet.03017
+		100 = epithet.03018
+		100 = epithet.03019
+		100 = epithet.03020
+		100 = epithet.03021
+	}
+}
+
+epithet_goidelic_selection = {
+	trigger = {
+		culture_group = culture_group:goidelic_group
+	}
+	random_events = {
+		100 = epithet.04001
+		100 = epithet.04002
+		100 = epithet.04003
+		100 = epithet.04004
+	}
+}
+
+epithet_scottish_selection = {
+	trigger = {
+		culture = culture:scottish
+	}
+
+	random_events = {
+		100 = epithet.05001
+		100 = epithet.05002
+		100 = epithet.05003
+	}
+}
+
+epithet_indian_selection = {
+	trigger = {
+		can_get_indian_nickname_trigger = yes
+	}
+
+	random_events = {
+		100 = epithet.07001
+		100 = epithet.07002
+		100 = epithet.07003
+		100 = epithet.07004
+	}
+}
+
+epithet_brittany_islands_selection = {
+	trigger = {
+		can_get_north_west_europe_nickname_trigger = yes
+	}
+
+	random_events = {
+		100 = epithet.08001
+		100 = epithet.08002
+		100 = epithet.08003
+		100 = epithet.08004
+	}
+}
+
+on_death = {
+	on_actions = {
+		epithet_preparation_on_death
+	}
+}
+
+epithet_preparation_on_death = {
+	trigger = {
+		has_any_nickname = no
+		is_ruler = yes
+	}
+	effect = {
+		save_scope_as = epithet_receiver
+		save_scope_value_as = { name = prestige_level value = scope:epithet_receiver.prestige_level }
+		save_scope_value_as = { name = piety_level value = scope:epithet_receiver.piety_level }
+		capital_county = {
+			trigger_event = {
+				on_action = epithet_scope_change_on_death
+				days = 1
+			}
+		}
+	}
+}
+
+epithet_scope_change_on_death = {
+	effect = {
+		holder = {
+			trigger_event = {
+				on_action = epithet_random_selection_on_death
+			}
+		}
+	}
+}
+
+epithet_random_selection_on_death = {
+	random_events = {
+		100 = epithet.9001
+		100 = epithet.9002
+		100 = epithet.9003
+		100 = epithet.9004
+		100 = epithet.9005
+		100 = epithet.9006
+		1000 = 0
+	}
+}
+
+on_birth_child = {
+	on_actions = {
+		epithet_preparation_on_birth_child
+	}
+
+	random_on_action = {
+		chance_to_happen = 5
+		100 = epithet_random_selection_on_birth
+	}
+}
+
+epithet_preparation_on_birth_child = {
+	trigger = {
+		scope:mother = {
+			exists = var:dead_spouse
+		}
+	}
+	effect = {
+		add_character_flag = epithet_posthumous
+	}
+}
+
+epithet_random_selection_on_birth = {
+	random_events = {
+		100 = epithet.9101
+	}
+}

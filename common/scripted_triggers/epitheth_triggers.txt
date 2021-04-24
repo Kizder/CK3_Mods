@@ -1,0 +1,198 @@
+﻿has_weak_trait_trigger = {
+    OR = {
+        has_trait = physique_bad
+        has_trait = weak
+    }
+}
+has_strong_trait_trigger = {
+    OR = {
+        has_trait = physique_good
+        has_trait = strong
+    }
+}
+has_feudal_government_trigger = {
+    OR = {
+        has_government = feudal_government
+        has_government = clan_government
+    }
+}
+has_substance_abuse_trait_trigger = {
+    OR = {
+        has_trait = drunkard
+        has_trait = hashishiyah
+    }
+}
+has_unpleasant_appearence_trait_trigger = {
+    OR = {
+		has_trait = beauty_bad
+		has_trait = hunchbacked
+		has_trait = dwarf
+		has_trait = spindly
+		has_trait = scaly
+		has_trait = albino
+        has_trait = inbred
+        has_trait = disfigured
+    }
+}
+has_bad_health_trait_trigger = {
+    OR = {
+        has_trait = wounded_1
+        has_trait = wounded_2
+        has_trait = wounded_3
+        has_trait = sickly
+        has_trait = impotent
+        has_trait = infirm
+        has_trait = incapable
+        has_trait = inbred
+        has_trait = maimed
+        has_trait = blind
+    }
+}
+has_disease_trait_trigger = {
+    OR = {
+        has_trait = ill
+        has_trait = bubonic_plague
+        has_trait = cancer
+        has_trait = consumption
+        has_trait = great_pox
+        has_trait = gout_ridden
+        has_trait = leper
+        has_trait = lovers_pox
+        has_trait = pneumonic
+        has_trait = smallpox
+        has_trait = typhus
+    }
+}
+has_infamous_trait_trigger = {
+    OR = {
+        has_trait = adulterer
+        has_trait = fornicator
+        has_trait = deviant
+        has_trait = kinslayer
+        has_trait = incestuous
+        has_trait = sodomite
+        has_trait = witch
+        has_trait = cannibal
+        has_trait = excommunicated
+        has_trait = murderer
+    }
+}
+can_get_chinese_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:chinese_group
+        culture_group = culture_group:qiangic_group
+        culture = culture:khitan
+        culture = culture:jurchen
+    }
+}
+can_get_northerner_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:north_germanic_group
+        has_religion = religion:germanic_religion
+    }
+}
+can_get_greco_roman_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:byzantine_group
+        culture_group = culture_group:latin_group
+        has_religion = religion:hellenism_religion
+    }
+}
+
+can_get_indian_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:burman_group
+        culture_group = culture_group:dravidian_group
+        culture_group = culture_group:indo_aryan_group
+        has_religion = religion:hinduism_religion
+    }
+}
+
+can_get_north_west_europe_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:brythonic_group
+        culture_group = culture_group:west_germanic_group
+    }
+}
+
+can_get_west_europe_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:brythonic_group
+        culture_group = culture_group:west_germanic_group
+        culture_group = culture_group:central_germanic_group
+        culture_group = culture_group:frankish_group
+        culture_group = culture_group:goidelic_group
+        culture_group = culture_group:iberian_group
+        culture_group = culture_group:latin_group
+    }
+}
+
+is_african_culture = {
+    OR = {
+        culture_group = culture_group:akan_group
+        culture_group = culture_group:berber_group
+        culture_group = culture_group:central_african_group
+        culture_group = culture_group:east_african_group
+        culture_group = culture_group:west_african_group
+        culture_group = culture_group:somalian_group
+        culture_group = culture_group:sahelian_group
+        culture_group = culture_group:senegambian_group
+        culture_group = culture_group:yoruba_group
+    }
+}
+
+has_lunatic_trait_trigger = {
+    OR = {
+        has_trait = lunatic_1
+        has_trait = lunatic_genetic
+    }
+}
+
+has_possessed_trait_trigger = {
+    OR = {
+        has_trait = possessed_1
+        has_trait = possessed_genetic
+    }
+}
+
+has_depressed_trait_trigger = {
+    OR = {
+        has_trait = depressed_1
+        has_trait = depressed_genetic
+    }
+}
+
+is_diplomacy_higher_stat_trigger = {
+    diplomacy >= martial
+    diplomacy >= stewardship
+    diplomacy >= intrigue
+    diplomacy >= learning
+}
+
+is_martial_higher_stat_trigger = {
+    martial >= diplomacy
+    martial >= stewardship
+    martial >= intrigue
+    martial >= learning
+}
+
+is_stewardship_higher_stat_trigger = {
+    stewardship >= diplomacy
+    stewardship >= martial
+    stewardship >= intrigue
+    stewardship >= learning
+}
+
+is_intrigue_higher_stat_trigger = {
+    intrigue >= diplomacy
+    intrigue >= martial
+    intrigue >= stewardship
+    intrigue >= learning
+}
+
+is_learning_higher_stat_trigger = {
+    learning >= diplomacy
+    learning >= martial
+    learning >= stewardship
+    learning >= intrigue
+}

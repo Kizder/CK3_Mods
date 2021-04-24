@@ -1,0 +1,55 @@
+﻿epithet_give_nickname_interaction = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		#scope:recipient = {
+        #    has_any_nickname = no
+        #}
+        has_game_rule = on_epithet_cheats
+    }
+    
+    ai_potential = { always = no }
+	
+	on_accept = {
+		scope:recipient = {
+			remove_nickname = yes
+			trigger_event = {
+               	on_action = epithet_selection
+            }
+			show_as_tooltip = {
+				give_nickname = nick_a_random_nickname
+			}
+		}
+	}
+}
+epithet_remove_nickname_interaction = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		scope:recipient = {
+            has_any_nickname = yes
+        }
+        has_game_rule = on_epithet_cheats
+    }
+    
+    ai_potential = {
+        always = no
+    }
+	
+	on_accept = {
+		scope:recipient = {
+			remove_nickname = yes
+		}
+	}
+}

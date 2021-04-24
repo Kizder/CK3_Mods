@@ -1,0 +1,10923 @@
+﻿namespace = epithet
+
+epithet.0001 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = brave
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_brave } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_fearless } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_valiant } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_valorous } }
+		}
+    }
+}
+epithet.0002 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = craven
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_poltroon } }
+			100 = { set_nickname_effect = { NICKNAME = nick_coward } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_trembler } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_spineless } }
+		}
+    }
+}
+epithet.0003 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = calm
+
+		NOR = {
+			has_trait = brave
+			has_trait = lustful
+			has_trait = ambitious
+			has_trait = vengeful
+			has_trait = impatient
+			has_trait = paranoid
+			has_trait = zealous
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_tranquil } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_undisturbed } }
+		}
+    }
+}
+epithet.0004 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = wrathful
+
+		NOR = {
+			has_trait = trusting
+			has_trait = compassionate
+			has_trait = forgiving
+			has_trait = content
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_angry } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_irascible } }
+		}
+    }
+}
+epithet.0005 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = chaste
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			random_list = {
+				100 = { set_nickname_effect = { NICKNAME = nick_the_austere } }
+				100 = { set_nickname_effect = { NICKNAME = nick_the_prudish } }
+			}
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_prudish }
+		}
+    }
+}
+epithet.0006 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		is_knight = yes
+	}
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = aggressive_attacker
+				has_trait = holy_warrior
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_battler }
+    }
+}
+epithet.0007 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lustful
+		num_of_relation_lover >= 3
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_lecherous } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_dissolute } }
+		}
+    }
+}
+epithet.0008 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = ambitious
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_determined }
+    }
+}
+epithet.0009 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = content
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_satisfied }
+    }
+}
+epithet.0010 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = diligent
+		NOT = {	has_trait = fickle }
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_assidious } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_meticulous } }
+		}
+    }
+}
+epithet.0011 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lazy
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_lethargic } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_indolent } }
+		}
+    }
+}
+epithet.0012 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = fickle
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_indecisive } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_irresolute } }
+		}
+    }
+}
+epithet.0013 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = stubborn
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_stubborn } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_obstinate } }
+		}
+    }
+}
+epithet.0014 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = forgiving
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_clement }
+    }
+}
+epithet.0015 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = vengeful
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_vindictive } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_resentful } }
+		}
+    }
+}
+epithet.00016 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = generous
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_generous }
+    }
+}
+epithet.00017 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = greedy
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_greedy } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_penny_pincher } }
+		}
+    }
+}
+epithet.00018 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = honest
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_authentic } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_frank } }
+		}
+    }
+}
+epithet.00019 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = deceitful
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_deceiver }
+    }
+}
+epithet.00020 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = humble
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_modest }
+    }
+}
+epithet.00021 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = arrogant
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_vainglorious }
+    }
+}
+epithet.00022 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = just
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_impartial }
+    }
+}
+epithet.00023 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = arbitrary
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+	immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_quarreller } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_arbitrary } }
+		}
+    }
+}
+epithet.00024 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 5
+	}
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			factor = 5
+			num_virtuous_traits >= 3
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_saint }
+    }
+}
+epithet.00025 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = impatient
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00026 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = temperate
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00027 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = gluttonous
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00028 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = trusting
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00029 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = paranoid
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00030 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = zealous
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00031 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = cynical
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00032 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = compassionate
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_nice }
+    }
+}
+epithet.00033 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = callous
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00034 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = sadistic
+	}
+	weight_multiplier = {
+		base = 0
+	}
+
+    immediate = {
+    }
+}
+epithet.00035 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = clubfooted
+			has_trait = one_legged
+			has_trait = maimed
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cripple }
+    }
+}
+epithet.00036 = { 
+	hidden = yes
+	trigger = {
+		age >= 80
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hoary }
+    }
+}
+epithet.00037 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = cannibal
+		faith = { NOT = { has_doctrine_parameter = cannibalism_legal } }
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cannibal }
+    }
+}
+epithet.00038 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = albino
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_pale }
+    }
+}
+epithet.00039 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = one_eyed
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_one_eyed }
+    }
+}
+epithet.00040 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = one_legged
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_one_leg }
+    }
+}
+epithet.00041 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = craven
+			has_trait = lazy
+			has_trait = fickle
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = craven
+				has_trait = lazy
+				has_trait = fickle
+			}
+		}
+		modifier = {
+			factor = 2
+
+			has_trait = craven
+			has_trait = lazy
+			has_trait = fickle
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_unreliable }
+    }
+}
+epithet.00042 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = scarred
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bitten }
+    }
+}
+epithet.00043 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = maimed
+			has_trait = scarred
+			has_trait = eunuch
+			has_trait = blind
+			has_trait = one_eyed
+			has_trait = one_legged
+			has_trait = disfigured
+			has_trait = flagellant
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = maimed
+				has_trait = scarred
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = one_eyed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = flagellant
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = maimed
+				has_trait = scarred
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = one_eyed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = flagellant
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 4
+				has_trait = maimed
+				has_trait = scarred
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = one_eyed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = flagellant
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mangled }
+    }
+}
+epithet.00044 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = leper
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_leper }
+    }
+}
+epithet.00045 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = military_engineer
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			martial >= 10
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_siegemaster }
+    }
+}
+epithet.00046 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = gluttonous
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = drunkard
+		}
+		modifier = {
+			factor = 2
+			has_trait = comfort_eater
+		}
+		modifier = {
+			factor = 2
+			has_character_modifier = obese_modifier
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_potbelly }
+    }
+}
+epithet.00047 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+
+		OR = { 
+			has_lunatic_trait_trigger = yes
+			AND = {
+				faith = {
+					OR = {
+						has_doctrine_parameter = homosexuality_shunned
+						has_doctrine_parameter = homosexuality_illegal
+					}
+				}
+				NOT = {	has_sexuality = heterosexual }
+			}
+
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_peculiar }
+    }
+}
+epithet.00048 = { 
+	hidden = yes
+	trigger = {
+		age >= 15
+		has_depressed_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			stress_level >= 1
+		}
+		modifier = {
+			factor = 2
+			stress_level >= 2
+		}
+		modifier = {
+			factor = 2
+			stress_level >= 3
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_grim }
+    }
+}
+epithet.00049 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = diligent
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = arbitrary
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_stern }
+    }
+}
+epithet.00050 = { 
+	hidden = yes
+	trigger = {
+		age >= 12
+		OR = {
+			has_trait = inbred
+			probably_unintelligent_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_daft }
+    }
+}
+epithet.00052 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = humble
+			has_trait = calm
+			has_trait = temperate
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = humble
+				has_trait = calm
+				has_trait = temperate
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = humble
+				has_trait = calm
+				has_trait = temperate
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mild }
+    }
+}
+epithet.00053 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = spindly
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_character_modifier = malnourished_modifier
+		}
+		modifier = {
+			factor = 2
+			has_weak_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_skeleton }
+    }
+}
+epithet.00054 = {
+	hidden = yes
+	trigger = {
+		age >= 10
+		has_trait = pure_blooded
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_thoroughbred }
+    }
+}
+epithet.00055 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = blind
+			has_trait = one_eyed
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = blind
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_blind }
+    }
+}
+epithet.00056 = {
+	hidden = yes
+	trigger = {
+		age >= 10
+		OR = {
+			has_trait = bastard
+			has_trait = bastard_founder
+			has_trait = legitimized_bastard
+		}		
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bastard }
+    }
+}
+epithet.00057 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = unyielding_defender
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			martial >= 10
+		}
+		modifier = {
+			factor = 2
+			prowess >= 10
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bulwark }
+    }
+}
+epithet.00058 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = disfigured
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_faceless }
+    }
+}
+epithet.00059 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		OR = {
+			has_lunatic_trait_trigger = yes
+			AND = {
+				faith = { NOT = { has_doctrine_parameter = spirit_possession_active } }
+				has_possessed_trait_trigger = yes
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_lunatic_trait_trigger = yes
+				has_possessed_trait_trigger = yes
+				has_depressed_trait_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_lunatic_trait_trigger = yes
+				has_possessed_trait_trigger = yes
+				has_depressed_trait_trigger = yes
+			}
+		}
+
+		modifier = {
+			factor = 2
+		}
+	}
+
+	immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_accursed }
+	}
+}
+epithet.00060 = {
+	hidden = yes
+	trigger = {
+		has_trait = legitimized_bastard
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			culture_group = culture_group:frankish_group # Childebert of Austrasia
+		}
+	}
+
+	immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_adopted }
+	}
+}
+epithet.00061 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = beauty_good
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = { # Eadwig of England
+			factor = 2
+			culture_group = culture_group:west_germanic_group
+		}
+	}
+
+	immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_all_fair }
+	}
+}
+epithet.00062 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		has_trait = lifestyle_hunter
+	}
+	
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			add = 1
+			has_trait = hunter_2
+		}
+		modifier = {
+			add = 1
+			has_trait = hunter_3
+		}
+		modifier = {
+			factor = 2
+			has_trait = patient
+		}
+		modifier = {
+			factor = 2
+			has_trait = forest_fighter
+		}
+		modifier = {
+			factor = 2
+			has_trait = jungle_stalker
+		}
+		modifier = {
+			factor = 0.5
+			NOR = {
+				has_trait = infirm
+				has_trait = incapable
+				has_trait = blind
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hunter }
+    }
+}
+epithet.00063 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = clubfooted
+			has_trait = inbred
+			has_trait = maimed
+			has_trait = one_legged
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2.0
+			prestige_level <= 1
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lame }
+    }
+}
+epithet.00064 = {
+	hidden = yes
+	trigger = {
+		has_character_flag = born_as_taltos
+	}
+
+	weight_multiplier = {
+		base = 6
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_chosen }
+    }
+}
+epithet.00065 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		OR = {
+			has_trait = beauty_bad
+			has_trait = disfigured
+			has_trait = inbred
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = beauty_bad_2
+		}
+		modifier = {
+			factor = 2
+			has_trait = beauty_bad_3
+		}
+	}
+
+    immediate = {
+		random_list = {
+			20 = { set_nickname_effect = { NICKNAME = nick_the_hideous } }
+			20 = { set_nickname_effect = { NICKNAME = nick_the_frog } }
+		}
+    }
+}
+epithet.00066 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		OR = {
+			has_trait = diligent
+			has_trait = stubborn
+			has_trait = patient
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = diligent
+				has_trait = stubborn
+				has_trait = patient
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = diligent
+				has_trait = stubborn
+				has_trait = patient
+			}
+
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_tenacious }
+    }
+}
+epithet.00067 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		has_character_modifier = obese_modifier
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			has_trait = gluttonous
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = comfort_eater
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = drunkard
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = inappetetic
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = temperate
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_fat }
+    }
+}
+epithet.00068 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		OR = {
+			has_trait = gluttonous
+			has_trait = drunkard
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 1.5
+			has_trait = gluttonous
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = lifestyle_reveler
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = drunkard
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_drunkard }
+    }
+}
+epithet.00069 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		OR = {
+			has_character_flag = disease_immunity_smallpox
+			has_character_flag = disease_immunity_bubonic_plague
+			has_character_flag = disease_immunity_typhus
+			has_character_flag = disease_immunity_consumption
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 5.0
+			calc_true_if = {
+				amount >= 2
+				has_character_flag = disease_immunity_smallpox
+				has_character_flag = disease_immunity_bubonic_plague
+				has_character_flag = disease_immunity_typhus
+				has_character_flag = disease_immunity_consumption
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_resilient }
+    }
+}
+epithet.00070 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		probably_intelligent_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = scholar
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_keen }
+    }
+}
+epithet.00071 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = peasant_leader
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = stuttering
+		}
+		modifier = {
+			factor = 2
+			has_trait = lisping
+		}
+		modifier = {
+			factor = 2
+			probably_intelligent_trigger = no
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_commoner }
+    }
+}
+epithet.00072 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 25
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 3
+			has_trait = scholar
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_mystic
+		}
+		modifier = {
+			factor = 2
+			probably_intelligent_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_omniscient }
+    }
+}
+epithet.00073 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = sadistic
+			has_trait = callous
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = cynical
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+	}
+
+    immediate = {
+		random_list = {
+			20 = { set_nickname_effect = { NICKNAME = nick_the_heartless } }
+			20 = { set_nickname_effect = { NICKNAME = nick_the_cold } }
+		}
+
+    }
+}
+epithet.00074 = { 
+	hidden = yes
+	trigger = {
+		has_trait = lisping
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_slobberer }
+    }
+}
+epithet.00075 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		probably_unintelligent_trigger = yes
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = trusting
+		}
+		modifier = {
+			factor = 2
+			has_trait = forgiving
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_gullible }
+    }
+}
+epithet.00076 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lifestyle_herbalist
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = diligent
+		}
+		modifier = {
+			factor = 2
+			has_trait = patient
+		}
+		modifier = {
+			factor = 2
+			has_trait = hashishiyah
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_green_thumb }
+    }
+}
+epithet.00077 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = gluttonous
+			has_trait = comfort_eater
+			has_trait = cannibal
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = drunkard
+		}
+		modifier = {
+			factor = 2
+			has_trait = greedy
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_all_consuming }
+    }
+}
+epithet.00078 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = unyielding_defender
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = stubborn
+		}
+		modifier = {
+			factor = 2
+			has_trait = diligent
+		}
+		modifier = {
+			factor = 2
+			has_trait = just
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_unyielding }
+    }
+}
+epithet.00079 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_possessed_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			has_lunatic_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_damned }
+    }
+}
+epithet.00080 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = humble
+			has_trait = hunchbacked
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bowing }
+    }
+}
+epithet.00081 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		diplomacy >= 13
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			probably_intelligent_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait_rank = {
+				trait = education_diplomacy
+				rank >= 2
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wordsmith }
+    }
+}
+epithet.00082 = { 
+	hidden = yes
+	trigger = {
+		probably_unintelligent_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		random_list = {
+			20 = { set_nickname_effect = { NICKNAME = nick_scatterbrain } }
+			20 = { set_nickname_effect = { NICKNAME = nick_the_vegetable } }
+		}
+    }
+}
+epithet.00083 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = scholar
+			has_trait = journaller
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				has_trait = scholar
+				has_trait = journaller
+			}
+		}
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_bookworm } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_bibliophile } }
+		}
+    }
+}
+epithet.00084 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = deceitful
+			has_trait = craven
+			has_trait = fickle
+			has_trait = schemer
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2 
+				has_trait = deceitful
+				has_trait = craven
+				has_trait = fickle
+				has_trait = schemer
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = deceitful
+				has_trait = craven
+				has_trait = fickle
+				has_trait = schemer
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 4
+				has_trait = deceitful
+				has_trait = craven
+				has_trait = fickle
+				has_trait = schemer
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_untrusted }
+    }
+}
+epithet.00085 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = just
+	}
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			factor = 2
+			has_trait = calm
+		}
+		modifier = {
+			factor = 2
+			has_trait = diligent
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_arbiter }
+    }
+}
+epithet.00086 = { 
+	hidden = yes
+	trigger = {
+		age >= 10
+		has_trait = shy
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+		modifier = {
+			factor = 2
+			has_trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mute }
+    }
+}
+epithet.00087 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = eunuch
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_eunuch }
+    }
+}
+epithet.00088 = { 
+	hidden = yes
+	trigger = {
+		age >= 14
+		has_trait = dwarf
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_halfman }
+    }
+}
+epithet.00089 = { 
+	hidden = yes
+	trigger = {
+		has_trait = clubfooted
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_twist_foot }
+    }
+}
+epithet.00090 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = education_stewardship_1
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 0.5
+			has_trait = greedy
+		}
+		modifier = {
+			factor = 2
+			has_trait = gluttonous
+		}
+		modifier = {
+			factor = 2
+			has_trait = generous
+		}
+		modifier = {
+			factor = 3
+			has_trait = profligate
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_squanderer }
+    }
+}
+epithet.00091 = { 
+	hidden = yes
+	trigger = {	
+		age >= 16
+		has_trait = lifestyle_physician
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_herbalist
+		}
+		modifier = {
+			factor = 2
+			has_trait = physician_3
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_surgeon }
+    }
+}
+epithet.00092 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = viking
+			has_trait = forder
+			has_trait = adventurer
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				has_trait = viking
+				has_trait = forder
+				has_trait = adventurer
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 3
+				has_trait = viking
+				has_trait = forder
+				has_trait = adventurer
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_navigator }
+    }
+}
+epithet.00093 = { 
+	hidden = yes
+	trigger = {	
+		age >= 16
+		is_immortal = yes
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_unfading }
+    }
+}
+epithet.00094 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = irritable
+	}
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			factor = 2
+			stress_level >= 1
+		}
+		modifier = {
+			factor = 2
+			stress_level >= 2
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bitter }
+    }
+}
+epithet.00095 = { 
+	hidden = yes
+	trigger = {	
+		age >= 16
+		has_trait = incapable
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_unfit }
+    }
+}
+epithet.00096 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = bastard
+			has_trait = legitimized_bastard
+			has_trait = bastard_founder
+			has_trait = wild_oat
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			has_trait = bastard
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_misbegotten }
+    }
+}
+epithet.00097 = { 
+	hidden = yes
+	trigger = {
+		has_trait = stuttering
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = shy
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_stutter }
+    }
+}
+epithet.00098 = { 
+	hidden = yes
+	trigger = {
+		has_trait = hunchbacked
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_misshapen } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_hunchback } }
+		}
+    }
+}
+epithet.00099 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lifestyle_blademaster
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			prowess >= 10
+		}
+
+		modifier = {
+			factor = 2
+			has_trait = blademaster_3
+		}
+
+		modifier = {
+			factor = 2
+			has_trait = gallant
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_duelist }
+    }
+}
+epithet.00100 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = { 
+			has_trait = craven
+			probably_unintelligent_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_pawn }
+    }
+}
+epithet.00101 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lifestyle_mystic
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_enigmatic }
+    }
+}
+epithet.00102 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = ambitious
+			has_trait = adventurer
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+		modifier = {
+			factor = 2
+			has_trait = stubborn
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_determined }
+    }
+}
+epithet.00103 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = pilgrim
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wayfarer }
+    }
+}
+epithet.00104 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = paranoid
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_suspicious }
+    }
+}
+epithet.00105 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		gold >= 10000
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = greedy
+		}
+		modifier = {
+			factor = 2
+			has_trait = avaricious
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_rich }
+    }
+}
+epithet.00106 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = kinslayer
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_kinslayer }
+    }
+}
+epithet.00107 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = cynical
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			piety_level <= 0
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_skeptic }
+    }
+}
+epithet.00108 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_depressed_trait_trigger = yes
+			has_trait = flagellant
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			has_trait = arbitrary
+		}
+		modifier = {
+			factor = 2
+			has_trait = reckless
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_suicidal }
+    }
+}
+epithet.00109 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = torturer
+			has_trait = overseer
+			is_imprisoned = yes
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_lunatic_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_dungeon_dweller }
+    }
+}
+epithet.00110 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = { 
+			has_trait = lunatic
+			has_trait = possessed
+			AND = {
+				faith = {
+					OR = {
+						has_doctrine_parameter = homosexuality_shunned
+						has_doctrine_parameter = homosexuality_illegal
+					}
+				}
+				NOT = {	has_sexuality = heterosexual }
+			}
+			has_trait = hunchbacked
+			has_trait = spindly
+			has_trait = scaly
+			has_trait = albino
+			has_trait = clubfooted
+			has_trait = stuttering
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_weird }
+    }
+}
+epithet.00111 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = content
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_boring }
+    }
+}
+epithet.00112 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = clubfooted
+			has_trait = one_legged
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_limpfoot }
+    }
+}
+epithet.00113 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = { 
+			has_trait = stuttering
+			has_trait = inbred
+			has_trait = lisping
+			probably_unintelligent_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = shy
+		}
+		modifier = {
+			factor = 2
+			has_diplomacy_lifestyle_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_mumbling_mouth }
+    }
+}
+epithet.00114 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = { 
+			has_character_modifier = obese_modifier
+			has_strong_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_stout }
+    }
+}
+epithet.00115 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		probably_unintelligent_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_oaf }
+    }
+}
+epithet.00116 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = { 
+			has_trait = craven
+			has_weak_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = one_legged
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_weak_legs }
+    }
+}
+epithet.00117 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_weak_trait_trigger = yes
+			has_trait = cancer
+			has_trait = infirm
+		}	
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		random_list = {
+			20 = { set_nickname_effect = { NICKNAME = nick_the_frail } }
+			20 = { set_nickname_effect = { NICKNAME = nick_the_weak } }
+		}
+    }
+}
+epithet.00118 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 3
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 5
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_pious }
+    }
+}
+epithet.00119 = {
+	hidden = yes
+	trigger = {
+		NOT = { age >= 16 }
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			NOT = { age >= 10 }
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_young }
+    }
+}
+epithet.00120 = {
+	hidden = yes
+	trigger = {
+		age >= 55
+	}
+	weight_multiplier = {
+		base = 5
+		modifier = {
+			factor = 2.0
+			age >= 65
+		}
+		modifier = {
+			factor = 10.0
+			age >= 75
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_old }
+    }
+}
+epithet.00121 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		gold <= -10
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_of_the_empty_pockets }
+    }
+}
+epithet.00122 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = scholar
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			learning >= 20
+		}
+		modifier = {
+			factor = 2.0
+			learning >= 26
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_scholar }
+    }
+}
+epithet.00123 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = giant
+	}
+	weight_multiplier = {
+		base = 5
+		modifier = {
+			factor = 3
+			has_strong_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_giant }
+    }
+}
+epithet.00124 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = blind
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = forgiving
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_unseeing }
+    }
+}
+epithet.00126 = { 
+	hidden = yes
+	trigger = {
+		age >= 10
+		OR = {
+			has_trait = disinherited
+			has_trait = denounced
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ashamed }
+    }
+}
+epithet.00127 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = { 
+			has_trait = shy
+			has_trait = craven
+			has_trait = calm
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = trusting
+		}
+		modifier = {
+			factor = 2
+			has_trait = lazy
+		}
+		modifier = {
+			factor = 2
+			has_trait = forgiving
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_uninvolved }
+    }
+}
+epithet.00128 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_character_modifier = broke_truce
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = arbitrary
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_oathbreaker }
+    }
+}
+epithet.00129 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 20
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			has_trait = scholar
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_enlightened }
+    }
+}
+epithet.00130 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = honest
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = gregarious
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_reveler
+		}
+		modifier = {
+			factor = 2
+			has_diplomacy_lifestyle_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_truthspeaker }
+    }
+}
+epithet.00131 = { 
+	hidden = yes
+	trigger = {
+		has_trait = gregarious
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = honest
+		}
+		modifier = {
+			factor = 2
+			has_trait = compassionate
+		}
+		modifier = {
+			factor = 2
+			num_of_relation_friend >= 1
+		}
+		modifier = {
+			factor = 2
+			num_of_relation_friend >= 2
+		}
+		modifier = {
+			factor = 2
+			num_of_relation_friend >= 2
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_affable }
+    }
+}
+epithet.00132 = { 
+	hidden = yes
+	trigger = {
+		days_of_continuous_peace <= 365
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+
+		modifier = { # Indulf of Alba
+			factor = 2
+			culture_group = culture_group:west_germanic_group
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_aggressor }
+    }
+}
+epithet.00133 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = ambitious
+	}
+	weight_multiplier = {
+		base = 1
+
+		modifier = { # William of Austria
+			factor = 2
+			culture_group = culture_group:central_germanic_group
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ambitious }
+    }
+}
+epithet.00134 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = scholar
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			learning >= 13
+		}
+		modifier = {
+			factor = 2
+			has_trait = theologian
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_astrologer }
+    }
+}
+epithet.00135 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = bastard_founder
+			has_trait = heresiarch
+			has_trait = crusader_king
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_foremost }
+    }
+}
+epithet.00136 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait_rank = {
+			trait = education_martial
+			rank >= 3
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			martial >= 13
+		}
+		modifier = {
+			factor = 2
+			has_trait = strategist
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_strategist }
+    }
+}
+epithet.00137 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = giant
+		has_trait = spindly
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_beanstalk }
+    }
+}
+epithet.00138 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = just
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = honest
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lawful }
+    }
+}
+epithet.00139 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = no
+		has_strong_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bull }
+    }
+}
+epithet.00140 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		calc_true_if = {
+			amount >= 2
+			has_trait = compassionate
+			has_trait = calm
+			has_trait = forgiving
+			has_trait = generous
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = compassionate
+				has_trait = calm
+				has_trait = forgiving
+				has_trait = generous
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+				has_trait = vengeful
+				has_trait = wrathful
+				has_trait = greedy
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_kind }
+    }
+}
+epithet.00141 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = just
+		OR = {
+			has_trait = compassionate
+			has_trait = calm
+			has_trait = forgiving
+			has_trait = generous
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = compassionate
+				has_trait = calm
+				has_trait = forgiving
+				has_trait = generous
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+				has_trait = vengeful
+				has_trait = wrathful
+				has_trait = greedy
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_good }
+    }
+}
+epithet.00142 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = giant
+		has_trait = one_eyed
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cyclop }
+    }
+}
+epithet.00143 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = arrogant
+		has_trait = beauty_good
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = gregarious
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_peacock }
+    }
+}
+epithet.00144 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		calc_true_if = {
+			amount >= 2
+			has_trait = gout_ridden
+			has_trait = consumption
+			has_trait = cancer
+			has_trait = typhus
+			has_trait = bubonic_plague
+			has_trait = smallpox
+			has_trait = pneumonic
+			has_trait = great_pox
+			has_trait = early_great_pox
+			has_trait = leper
+		}
+	}
+	weight_multiplier = {
+		base = 5
+		modifier = {
+			factor = 5
+			OR = {
+				has_trait = bubonic_plague
+				has_trait = early_great_pox
+				has_trait = great_pox
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_plaguebearer }
+    }
+}
+epithet.00145 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		NOR = {
+			has_trait = compassionate
+			has_trait = calm
+			has_trait = forgiving
+		}
+		OR = {
+			has_trait = sadistic
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = torturer
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 5.0
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = vengeful
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = greedy
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cruel }
+    }
+}
+epithet.00146 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		NOT = { has_trait = dwarf }
+		OR = {
+			has_trait = giant
+			has_strong_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = giant
+				has_strong_trait_trigger = yes
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_tower }
+    }
+}
+epithet.00147 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 2
+		OR = { 
+			has_trait = zealous
+			has_trait = holy_warrior
+			has_trait = faith_warrior
+			has_trait = theologian
+			has_trait = crusader_king
+			has_trait = order_member
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = zealous
+				has_trait = holy_warrior
+				has_trait = faith_warrior
+				has_trait = theologian
+				has_trait = crusader_king
+				has_trait = order_member
+			}
+		}
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount >= 3
+				has_trait = zealous
+				has_trait = holy_warrior
+				has_trait = faith_warrior
+				has_trait = theologian
+				has_trait = crusader_king
+				has_trait = order_member
+			}
+		}
+		modifier = {
+			factor = 4
+			calc_true_if = {
+				amount >= 4
+				has_trait = zealous
+				has_trait = holy_warrior
+				has_trait = faith_warrior
+				has_trait = theologian
+				has_trait = crusader_king
+				has_trait = order_member
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = excommunicated
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_zealot }
+    }
+}
+epithet.00148 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		NOT = { has_trait = dwarf }
+		OR = {
+			has_trait = giant
+			has_strong_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount >= 2
+				has_trait = giant
+				has_strong_trait_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			prowess >= 13
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mountain }
+    }
+}
+epithet.00149 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = drunkard
+		has_character_modifier = obese_modifier
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = gluttonous
+				has_trait = comfort_eater
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wine_barrel }
+    }
+}
+epithet.00150 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = ambitious
+		has_trait = peasant_leader
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 2
+			has_trait = just
+		}
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+		modifier = {
+			factor = 3
+			is_female = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_breaker_of_chains }
+    }
+}
+epithet.00151 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lustful
+		has_trait = leper
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 2
+			has_trait = seducer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lusty_leper }
+    }
+}
+epithet.00152 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 15
+		has_trait = deceitful
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 4
+			has_trait = scaly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_viper }
+    }
+}
+epithet.00153 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = no
+		OR = { 
+			has_trait = lustful
+			has_trait = seducer
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = lustful
+				has_trait = seducer
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = fornicator
+		}
+		modifier = {
+			factor = 3
+			has_trait = beauty_good
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wife_thief }
+    }
+}
+epithet.00154 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		OR = {
+			has_trait = viking
+			has_trait = reaver
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = strong
+		}
+		modifier = {
+			factor = 3
+			has_trait = berserker
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_defiler }
+    }
+}
+epithet.00155 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		stewardship >= 20
+		has_trait = education_stewardship_4
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = avaricious
+		}
+		modifier = {
+			factor = 2
+			stewardship >= 25
+		}
+		modifier = {
+			factor = 2
+			stewardship >= 30
+		}
+		modifier = {
+			factor = 2
+			stewardship >= 35
+		}
+		modifier = {
+			factor = 2
+			stewardship >= 40
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_midas_reborn }
+    }
+}
+epithet.00156 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_strong_trait_trigger = yes
+		OR = {
+			has_trait = beauty_bad
+			has_trait = scarred
+			has_trait = disfigured
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hound }
+    }
+}
+epithet.00157 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 10
+		has_trait = education_martial
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_soldier }
+    }
+}
+epithet.00158 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		prestige_level <= 2
+		OR = {
+			has_trait = humble
+			has_trait = craven
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				has_trait = humble
+				has_trait = craven
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_kneeler }
+    }
+}
+epithet.00159 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lustful
+		has_lunatic_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = seducer
+		}
+		modifier = {
+			factor = 2
+			has_trait = rakish
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = fornicator
+				has_trait = adulterer
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lewd_lunatic }
+    }
+}
+epithet.00160 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 10
+		OR = {
+			has_trait = contrite
+			has_trait = deceitful
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mockingbird }
+    }
+}
+epithet.00161 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 12
+		OR = {
+			has_trait = schemer
+			has_trait = deceitful
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_schemer }
+    }
+}
+epithet.00162 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 13
+		OR = {
+			has_trait = schemer
+			has_trait = fickle
+			has_trait = shy
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trusting
+		}
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_riddle }
+    }
+}
+epithet.00163 = { 
+	hidden = yes
+	trigger = {	
+		age >= 50
+		has_trait = infirm
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			age >= 60
+		}
+		modifier = {
+			factor = 2
+			age >= 70
+		}
+		modifier = {
+			factor = 2
+			age >= 80
+		}
+		modifier = {
+			factor = 2
+			age >= 90
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_withered }
+    }
+}
+epithet.00164 = { 
+	hidden = yes
+	trigger = {
+		age >= 14
+		has_trait = dwarf
+		num_sinful_traits >= 1
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_imp }
+    }
+}
+epithet.00165 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = dwarf
+		intrigue >= 15
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_short_shadow }
+    }
+}
+epithet.00166 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = deceitful
+		has_trait = craven
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_weasel }
+    }
+}
+epithet.00167 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = deceitful
+			intrigue >= 13
+		}
+		has_trait_rank = {
+			trait = education_intrigue
+			rank >= 2
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = patient
+		}
+		modifier = {
+			factor = 2
+			has_trait = cynical
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_dagger }
+    }
+}
+epithet.00168 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		gold >= 10000
+		dread >= 50
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = greedy
+		}
+		modifier = {
+			factor = 2
+			has_trait = avaricious
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = reaver
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_silver_blood }
+    }
+}
+epithet.00169 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 1
+		has_trait = education_learning
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 2
+			has_trait = theologian
+		}
+		modifier = {
+			factor = 2
+			has_trait = devoted
+		}
+		modifier = {
+			factor = 3
+			has_trait = heresiarch
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_preacher }
+    }
+}
+epithet.00170 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_government = tribal_government
+		prowess >= 18
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 3
+			has_trait = berserker
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_skull_splitter }
+    }
+}
+epithet.00171 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 16
+		has_trait_rank = {
+			trait = education_intrigue
+			rank >= 4
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			has_trait = ambitious
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_puppetmaster }
+    }
+}
+epithet.00172 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = wrathful
+		OR = {
+			has_trait = faith_warrior
+			has_trait = aggressive_attacker
+			has_trait = holy_warrior
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+		modifier = {
+			factor = 2
+			has_trait = reaver
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_of_the_ashes }
+    }
+}
+epithet.00173 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = cynical
+		piety_level <= 3
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			piety_level <= 0
+		}
+		modifier = {
+			factor = 2
+			num_sinful_traits >= 1
+		}
+		modifier = {
+			factor = 2
+			num_sinful_traits >= 2
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_blasphemer }
+    }
+}
+epithet.00174 = { 
+	hidden = yes
+	trigger = {
+		NOT = { age >= 16 }
+		AND = {
+			has_father = no
+			has_mother = no
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_little_orphan }
+    }
+}
+epithet.00175 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = honest
+			has_trait = just
+		}
+		NOR = {
+			has_trait = greedy
+			has_trait = arbitrary
+			has_trait = deceitful
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 4
+			OR = {
+				has_council_position = councillor_chancellor
+				has_council_position = councillor_marshal
+				has_council_position = councillor_steward
+				has_council_position = councillor_spymaster
+				has_council_position = councillor_court_chaplain
+				has_trait = peasant_leader
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_incorruptible }
+    }
+}
+epithet.00177 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = calm
+			has_trait = forgiving
+		}
+		NOT = { has_trait = wrathful }
+		days_of_continuous_peace >= 1825
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			days_of_continuous_peace >= 3650
+		}
+		modifier = {
+			factor = 2
+			days_of_continuous_peace >= 7300
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_pacific }
+    }
+}
+epithet.00178 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = impatient
+			has_trait = diligent
+		}
+		NOR = {
+			has_trait = lazy
+			has_trait = patient
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_restless }
+    }
+}
+epithet.00179 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = stubborn
+			has_trait = zealous
+		}
+		NOT = { has_trait = fickle }
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = calm
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_immovable }
+    }
+}
+epithet.00180 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = content
+			has_trait = calm
+		}
+		NOT = { has_trait = ambitious }
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_apathetic }
+    }
+}
+epithet.00181 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = impatient
+			has_trait = wrathful
+			has_trait = lunatic
+			has_trait = possessed
+		}
+		NOR = {
+			has_trait = patient
+			has_trait = calm
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_rambunctious }
+    }
+}
+epithet.00182 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_possessed_trait_trigger = yes
+		has_trait = lifestyle_mystic
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			faith = {
+				has_doctrine_parameter = spirit_possession_active
+			}
+		}
+		modifier = {
+			factor = 2
+			faith = {
+				has_doctrine_parameter = tenet_esotericism_mystic_education
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_medium }
+    }
+}
+epithet.00183 = {
+	hidden = yes
+	trigger = {
+		trigger_if = {
+			limit = {
+				exists = mother
+				exists = father
+			}
+			NOR = {
+				mother = {
+					culture = root.culture
+				}
+				father = {
+					culture = root.culture
+				}
+			}
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			NOR = {
+				mother = {
+					culture_group = root.culture_group
+				}
+				father = {
+					culture_group = root.culture_group
+				}
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_culture }
+    }
+}
+epithet.00184 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = diligent
+		has_trait = patient
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_exhaustless }
+    }
+}
+epithet.00185 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		OR = {
+			has_strong_trait_trigger = yes
+			has_trait = giant
+		}
+		OR = {
+			has_trait = sadistic
+			has_government = tribal_government
+			faith = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_brute }
+    }
+}
+epithet.00186 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level <= 3
+		OR = {
+			piety_level <= 0
+			AND = {
+				faith = { NOT = { has_doctrine_parameter = deviancy_accepted } }
+				has_trait = deviant
+			}
+			AND = {
+				faith = { NOT = { has_doctrine_parameter = witchcraft_accepted } }
+				has_trait = witch
+			}
+			AND = {
+				faith = { NOT = { has_doctrine_parameter = kinslaying_accepted } }
+				has_trait = kinslayer
+			}
+			AND = {
+				faith = { NOT = { has_doctrine_parameter = spirit_possession_active } }
+				has_trait = possessed
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2.0
+			piety_level <= 0
+		}
+		modifier = {
+			factor = 2.0
+			num_sinful_traits >= 1
+		}
+		modifier = {
+			factor = 2.0
+			num_sinful_traits >= 2
+		}
+		modifier = {
+			factor = 2.0
+			num_sinful_traits >= 3
+		}
+		modifier = {
+			factor = 0.5
+			num_virtuous_traits >= 1
+		}
+		modifier = {
+			factor = 0.5
+			num_virtuous_traits >= 2
+		}
+		modifier = {
+			factor = 0.5
+			num_virtuous_traits >= 3
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = cynical
+		}
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_wicked } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_bewitched } }
+		}
+    }
+}
+epithet.00187 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 3
+		has_religion = religion:christianity_religion
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 5
+		}
+
+		modifier = { # Vladimir I of Kiev
+			factor = 2
+			culture_group = culture_group:east_slavic_group
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_apostle }
+    }
+}
+epithet.00188 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 3
+		faith = {
+			has_doctrine = abrahamic_hostility_doctrine
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 5
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_blessed }
+    }
+}
+epithet.00189 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = giant
+		has_strong_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 5
+			has_trait = cannibal
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ogre }
+    }
+}
+epithet.00190 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = brave
+			has_strong_trait_trigger = yes
+		}
+		NOR = {
+			has_trait = paranoid
+			has_trait = craven
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			NOT = { age >= 15 }
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bold }
+    }
+}
+epithet.00191 = {
+	hidden = yes
+	trigger = {
+		age >= 30
+		OR = {
+			has_trait = wrathful
+			has_trait = lunatic
+			has_trait = sadistic
+			has_trait = torturer
+			has_trait = arbitrary
+			has_trait = stubborn
+			has_trait = deceitful
+			has_trait = paranoid
+			has_trait = callous
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			calc_true_if = {
+				amount >= 2
+				has_trait = wrathful
+				has_trait = lunatic
+				has_trait = sadistic
+				has_trait = torturer
+				has_trait = arbitrary
+				has_trait = stubborn
+				has_trait = deceitful
+				has_trait = paranoid
+				has_trait = callous
+				has_trait = vengeful
+				has_trait = impatient
+			}
+		}
+		modifier = {
+			factor = 2.0
+			calc_true_if = {
+				amount >= 3
+				has_trait = wrathful
+				has_trait = lunatic
+				has_trait = sadistic
+				has_trait = torturer
+				has_trait = arbitrary
+				has_trait = stubborn
+				has_trait = deceitful
+				has_trait = paranoid
+				has_trait = callous
+				has_trait = vengeful
+				has_trait = impatient
+			}
+		}
+		modifier = {
+			factor = 2.0
+			tyranny >= medium_tyranny
+		}
+		modifier = {
+			factor = 2.0
+			tyranny >= high_tyranny
+		}
+		modifier = {
+			factor = 2
+			dread >= 90
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_terrible }
+    }
+}
+epithet.00192 = {
+	hidden = yes
+	trigger = {
+		age >= 30
+		OR = {
+			has_trait = wrathful
+			has_trait = lunatic
+			has_trait = sadistic
+			has_trait = torturer
+			has_trait = arbitrary
+			has_trait = stubborn
+			has_trait = deceitful
+			has_trait = paranoid
+			has_trait = callous
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			calc_true_if = {
+				amount >= 2
+				has_trait = wrathful
+				has_trait = lunatic
+				has_trait = sadistic
+				has_trait = torturer
+				has_trait = arbitrary
+				has_trait = stubborn
+				has_trait = deceitful
+				has_trait = paranoid
+				has_trait = callous
+				has_trait = vengeful
+				has_trait = impatient
+			}
+		}
+		modifier = {
+			factor = 2.0
+			calc_true_if = {
+				amount >= 3
+				has_trait = wrathful
+				has_trait = lunatic
+				has_trait = sadistic
+				has_trait = torturer
+				has_trait = arbitrary
+				has_trait = stubborn
+				has_trait = deceitful
+				has_trait = paranoid
+				has_trait = callous
+				has_trait = vengeful
+				has_trait = impatient
+			}
+		}
+		modifier = {
+			factor = 2.0
+			tyranny >= medium_tyranny
+		}
+		modifier = {
+			factor = 2.0
+			tyranny >= high_tyranny
+		}
+		modifier = {
+			factor = 2
+			dread >= 90
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_tyrant }
+    }
+}
+epithet.00193 = {
+	hidden = yes
+	trigger = {
+		age >= 30
+		OR = {
+			has_trait = wrathful
+			has_trait = lunatic
+			has_trait = sadistic
+			has_trait = torturer
+			has_trait = arbitrary
+			has_trait = stubborn
+			has_trait = deceitful
+			has_trait = paranoid
+			has_trait = callous
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		tyranny >= low_tyranny
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			calc_true_if = {
+				amount >= 2
+				has_trait = wrathful
+				has_trait = lunatic
+				has_trait = sadistic
+				has_trait = torturer
+				has_trait = arbitrary
+				has_trait = stubborn
+				has_trait = deceitful
+				has_trait = paranoid
+				has_trait = callous
+				has_trait = vengeful
+				has_trait = impatient
+			}
+		}
+		modifier = {
+			factor = 2.0
+			tyranny >= medium_tyranny
+		}
+		modifier = {
+			factor = 2.0
+			tyranny >= high_tyranny
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_oppressor }
+    }
+}
+epithet.00194 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		OR = {
+			has_trait = kinslayer
+			has_trait = excommunicated
+			has_trait = torturer
+			has_trait = deviant
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = kinslayer
+				has_trait = excommunicated
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			num_sinful_traits >= 2
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_devil }
+    }
+}
+epithet.00195 = {
+	hidden = yes
+	trigger = {
+		prestige_level >= 3
+		highest_held_title_tier >= tier_duchy
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			prestige_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			prestige_level >= 5
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_great }
+    }
+}
+epithet.00196 = {
+	hidden = yes
+	trigger = {
+		has_religion = religion:christianity_religion
+		OR = {
+			has_trait = kinslayer
+			has_trait = excommunicated
+			has_trait = torturer
+			has_trait = deviant
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_black }
+    }
+}
+epithet.00197 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 13
+		OR = {
+			has_trait = theologian
+			has_trait = scholar
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = cynical
+		}
+		modifier = {
+			factor = 3
+			culture = culture:greek
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_philosopher }
+    }
+}
+epithet.00198 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 13
+		probably_intelligent_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_crow }
+    }
+}
+epithet.00199 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		probably_intelligent_trigger = yes
+		probably_unintelligent_trigger = no
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_brilliant }
+    }
+}
+epithet.00200 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			probably_intelligent_trigger = yes
+			has_trait = diligent
+		}
+		probably_unintelligent_trigger = no
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = { # Ref Leopold III and Leopold V, Duke of Austria
+			factor = 2
+			culture_group = culture_group:central_germanic_group
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_able }
+    }
+}
+epithet.00201 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		
+		has_trait = arbitrary
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+		has_strong_trait_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = overseer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_absolutist }
+    }
+}
+epithet.00202 = { 
+	hidden = yes
+	trigger = {
+		is_african_culture = no
+		exists = capital_province
+		capital_province = { geographical_region = world_africa }
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_african }
+    }
+}
+epithet.00203 = { 
+	hidden = yes
+	trigger = {
+		NOT = { culture_group = culture_group:arabic_group }
+		exists = capital_province
+		capital_province = { geographical_region = world_middle_east_arabia }
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_arab }
+    }
+}
+epithet.00204 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		highest_held_title_tier >= tier_kingdom
+		has_trait = poet
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_artist_king }
+    }
+}
+epithet.00205 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		has_trait = vengeful
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_avenger }
+    }
+}
+epithet.00206 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = brave
+			has_trait = generous
+			has_trait = humble
+			has_trait = compassionate
+		}
+		dread <= 50
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_greathearted }
+    }
+}
+epithet.00207 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		has_trait = lifestyle_blademaster
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 4
+			has_council_position = councillor_marshal
+		}
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lions_claw }
+    }
+}
+epithet.00208 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = peasant_leader
+		highest_held_title_tier = tier_kingdom
+	}
+	weight_multiplier = {
+		base = 3
+
+		modifier = {
+			factor = 2
+			has_trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			intrigue >= 13
+		}
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_thief_of_crowns }
+    }
+}
+epithet.00209 = {
+	hidden = yes
+	trigger = {
+		dread > 50
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		OR = {
+			has_trait = kinslayer
+			has_trait = cannibal
+			has_trait = torturer
+		}
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			add = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 5
+			has_trait = cannibal
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_dragon }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_dragoness }
+		}
+    }
+}
+epithet.00210 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		dread > 50
+		AND = {
+			OR = {
+				has_trait = torturer
+				has_trait = overseer
+			}
+			OR = {
+				has_trait = wrathful
+				has_trait = sadistic
+				has_trait = vengeful
+				has_trait = arbitrary
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = torturer
+				has_trait = overseer
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = craven
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_executioner }
+    }
+}
+epithet.00211 = {
+	hidden = yes
+	trigger = {
+		is_female = no
+		age >= 16
+		has_trait = giant
+		has_trait = strong
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 2
+			has_trait = physique_good
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_goliath }
+    }
+}
+epithet.00212 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 2
+		OR = {
+			has_trait = chaste
+			has_trait = celibate
+			has_trait = devoted
+		}
+		has_religion = religion:christianity_religion
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			piety_level >= 3
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 5
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_monk }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_nun }
+		}
+    }
+}
+epithet.00213 = {
+	hidden = yes
+	trigger = {
+		age >= 15
+		has_lunatic_trait_trigger = yes
+		has_possessed_trait_trigger = yes
+		has_trait = heresiarch
+	}
+	weight_multiplier = {
+		base = 6
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_lunatic_trait_trigger = yes
+				has_possessed_trait_trigger = yes
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			20 = { set_nickname_effect = { NICKNAME = nick_the_mad } }
+			20 = { set_nickname_effect = { NICKNAME = nick_the_crazy } }
+		}
+	}
+}
+epithet.00214 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = greedy
+		stewardship >= 10
+		gold >= 1000
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			has_trait = avaricious
+		}
+		modifier = {
+			factor = 2
+			gold >= 2000
+		}
+		modifier = {
+			factor = 2
+			gold >= 3000
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = profligate
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wealthy }
+    }
+}
+epithet.00215 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 16
+		probably_unintelligent_trigger = no
+		has_trait = lifestyle_mystic
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = witch
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wizard }
+    }
+}
+epithet.00216 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = yes
+		has_trait = beauty_good
+		has_unpleasant_appearence_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = witch
+		}
+		modifier = {
+			factor = 2
+			has_trait = beauty_good_3
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_enchantress }
+    }
+}
+epithet.00217 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 20
+		has_trait = deceitful
+		has_trait = ambitious
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 3
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			intrigue >= 25
+		}
+		modifier = {
+			factor = 2
+			intrigue >= 30
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_king_of_thorns }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_queen_of_thorns }
+		}
+    }
+}
+epithet.00218 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 10
+		has_trait = lifestyle_hunter
+		is_female = no
+	}
+	weight_multiplier = {
+		base = 1
+		
+		modifier = {
+			factor = 2
+			has_trait = hunter_2
+		}
+		modifier = {
+			factor = 2
+			has_trait = hunter_3
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_huntmaster }
+    }
+}
+epithet.00219 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = yes
+		has_trait = beauty_good
+		has_unpleasant_appearence_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 3
+			NOT = { age >= 20 }
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_maiden_fair }
+    }
+}
+epithet.00220 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		prestige_level >= 1
+		has_trait = gregarious
+		has_trait = arrogant
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_diplomacy_lifestyle_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_braggart }
+    }
+}
+epithet.00221 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		has_trait = ambitious
+		has_trait = arbitrary
+		NOT = { has_trait = shy }
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = stubborn
+		}
+		modifier = {
+			factor = 2
+			has_trait = arrogant
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_kingfish }
+    }
+}
+epithet.00222 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 16
+		has_religion = religion:hellenism_religion
+		has_trait = faith_warrior
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_corinthian }
+    }
+}
+epithet.00223 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = no
+		is_married = yes
+		any_child = {
+			even_if_dead = yes
+			has_trait = disputed_heritage
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = chaste
+				has_trait = celibate
+				has_trait = impotent
+				has_trait = eunuch
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cuckold }
+    }
+}
+epithet.00224 = { 
+	hidden = yes
+	trigger = {
+		NOT = { has_diplomacy_lifestyle_trait_trigger = yes }
+		NOT = { has_trait = gregarious }
+		age >= 16
+		has_trait = shy
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_silent_tongue }
+    }
+}
+epithet.00225 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		piety_level >= 2
+		has_trait = architect
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 1.5
+			piety_level >= 3
+		}
+		modifier = {
+			factor = 1.5
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 1.5
+			piety_level >= 5
+		}
+		modifier = {
+			factor = 1.5
+			faith = { has_doctrine = tenet_aniconism }
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_carpenter }
+    }
+}
+epithet.00226 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 12
+		piety_level >= 2
+		faith = {
+			has_doctrine = eastern_hostility_doctrine
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 1.5
+			piety_level >= 3
+		}
+		modifier = {
+			factor = 1.5
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 1.5
+			piety_level >= 5
+		}
+		modifier = {
+			factor = 1.2
+			learning >= 14
+		}
+		modifier = {
+			factor = 1.2
+			learning >= 16
+		}
+		modifier = {
+			factor = 1.2
+			learning >= 18
+		}
+		modifier = {
+			factor = 1.2
+			learning >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_guru }
+    }
+}
+epithet.00227 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = callous
+		highest_held_title_tier >= tier_duchy
+		liege = {
+			player_heir_position = {
+				position >= 1
+				target = root
+			}
+			player_heir_position = {
+				position <= 4
+				target = root
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			intrigue >= 13
+		}
+		modifier = {
+			factor = 3
+			has_trait = scaly
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_black_adder }
+    }
+}
+epithet.00228 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		NOR = {
+			has_trait = arbitrary
+			has_trait = wrathful
+			has_trait = inbred
+			has_trait = incapable
+		}
+		probably_unintelligent_trigger = no
+		OR = {
+			probably_intelligent_trigger = yes
+			has_trait = just
+			has_trait = patient
+			has_trait = calm
+			has_trait = scholar
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			probably_intelligent_trigger = yes
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = just
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = patient
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = calm
+		}
+		modifier = {
+			factor = 2.0
+			has_trait = scholar
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wise }
+    }
+}
+epithet.00229 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 3
+		has_religion = religion:christianity_religion
+		is_female = no
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 5
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_confessor }
+    }
+}
+epithet.00230 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = brave
+			has_strong_trait_trigger = yes
+		}
+		has_trait_rank = {
+			trait = education_martial
+			rank >= 3
+		}
+		has_weak_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lion }
+    }
+}
+epithet.00231 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = brave
+			has_strong_trait_trigger = yes
+		}
+		has_trait_rank = {
+			trait = education_martial
+			rank >= 3
+		}
+		has_weak_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = brave
+			has_strong_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lionheart }
+    }
+}
+epithet.00232 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = lifestyle_mystic
+			has_trait = lifestyle_physician
+			has_trait = lifestyle_herbalist
+			has_trait = witch
+		}
+		piety_level <= 0
+		OR = {
+			tyranny >= low_tyranny
+			has_trait = witch
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_witch }
+    }
+}
+epithet.00233 = {
+	hidden = yes
+	trigger = {
+		age >= 30
+		probably_intelligent_trigger = yes
+		probably_unintelligent_trigger = no
+		OR = {
+			has_trait_rank = {
+				trait = education_martial
+				rank >= 3
+			}
+			has_trait_rank = {
+				trait = education_diplomacy
+				rank >= 3
+			}
+			has_trait_rank = {
+				trait = education_intrigue
+				rank >= 3
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_magnificent }
+    }
+}
+epithet.00234 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					culture_group = culture_group:mongolic_group
+					culture_group = culture_group:turkic_group
+				}
+				NOT = { culture = culture:khitan }
+				OR = {
+					has_trait_rank = {
+						trait = education_martial
+						rank >= 4
+					}
+					probably_intelligent_trigger = yes
+				}
+			}
+			AND = {
+				has_trait = lifestyle_hunter
+				has_trait = torturer
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			OR = {
+				culture_group = culture_group:mongolic_group
+				culture_group = culture_group:turkic_group
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wolf }
+    }
+}
+epithet.00235 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = no
+		has_trait = shrewd
+		capital_province = {
+			NOR = {
+				geographical_region = world_india
+				geographical_region = world_africa
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_trait = intellect_good
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_fox }
+    }
+}
+epithet.00236 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = yes
+		has_unpleasant_appearence_trait_trigger = no
+		OR = { 
+			has_trait = lustful
+			has_trait = seducer
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = seducer
+		}
+		modifier = {
+			factor = 3
+			has_trait = beauty_good
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_seductress }
+    }
+}
+epithet.00237 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = yes
+		highest_held_title_tier = tier_kingdom
+		OR = {
+			has_trait = brave
+			has_trait = wrathful
+			has_trait = diligent
+			has_trait = stubborn
+			has_trait = vengeful
+			has_trait = arbitrary
+			has_trait = zealous
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = overseer
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 2
+				has_trait = brave
+				has_trait = wrathful
+				has_trait = diligent
+				has_trait = stubborn
+				has_trait = vengeful
+				has_trait = arbitrary
+				has_trait = zealous
+			}
+		}	
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_steadfast_queen }
+    }
+}
+epithet.00238 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		prestige_level <= 2
+		has_trait = lifestyle_hunter
+		OR = {
+			has_depressed_trait_trigger = yes
+			has_possessed_trait_trigger = yes
+			has_lunatic_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 4
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = scarred
+				has_trait = one_eyed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = infirm
+				has_trait = blind
+				has_trait = maimed
+				has_trait = wounded
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_cursed_huntsman }
+    }
+}
+epithet.00239 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 10
+		has_trait = disfigured
+		has_trait = deceitful
+	}
+	weight_multiplier = {
+		base = 5
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = callous
+				has_trait = lunatic_1
+				has_trait = lunatic_genetic
+				has_trait = possessed_1
+				has_trait = possessed_genetic
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_of_a_thousand_faces }
+    }
+}
+epithet.00240 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = no
+		has_strong_trait_trigger = yes
+		OR = {
+			has_trait = beauty_bad
+			has_trait = disfigured
+			has_trait = scarred
+		}
+		OR = {
+			has_trait = gluttonous
+			has_trait = impatient
+			has_trait = wrathful
+		}
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_boar }
+    }
+}
+epithet.00241 = { 
+	hidden = yes
+	trigger = {
+		is_female = no
+		has_feudal_government_trigger = yes
+		age >= 16
+		highest_held_title_tier = tier_county
+		any_held_title = {
+			count >= 5
+			tier = tier_county
+		}
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_count_of_counts }
+    }
+}
+epithet.00242 = { 
+	hidden = yes
+	trigger = {
+		is_female = no
+		has_feudal_government_trigger = yes
+		age >= 16
+		highest_held_title_tier = tier_duchy
+		any_held_title = {
+			count >= 4
+			tier = tier_duchy
+		}
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_duke_of_dukes }
+    }
+}
+epithet.00243 = { 
+	hidden = yes
+	trigger = {
+		is_female = no
+		has_feudal_government_trigger = yes
+		age >= 16
+		highest_held_title_tier = tier_kingdom
+		any_held_title = {
+			count >= 4
+			tier = tier_kingdom
+		}
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_king_of_kings }
+    }
+}
+epithet.00244 = { 
+	hidden = yes
+	trigger = {
+		is_female = no
+		OR = {
+			has_trait = legitimized_bastard
+			has_trait = bastard_founder
+		}
+		has_feudal_government_trigger = yes
+		any_heir_title = {
+			tier >= tier_kingdom
+		}
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_black_prince }
+    }
+}
+epithet.00245 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = no
+		martial >= 13
+		OR = {
+			has_trait = lifestyle_blademaster
+			has_strong_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 0.5
+			has_trait = craven
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = blademaster_3
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = wrathful
+				has_trait = brave
+				has_trait = reckless
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_true_steel }
+    }
+}
+epithet.00246 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		OR = {
+			has_trait = wrathful
+			has_trait = sadistic
+			has_trait = irritable
+		}
+		is_female = no
+		is_married = yes
+		NOT = { has_trait = family_first }
+	}
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+		modifier = {
+			factor = 2
+			has_substance_abuse_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lunatic_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = impatient
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wife_beater }
+    }
+}
+epithet.00247 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		OR = {
+			has_trait = wrathful
+			has_trait = sadistic
+			has_trait = irritable
+		}
+		any_child = {
+			is_alive = yes
+		}
+		NOT = { has_trait = family_first }
+	}
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+		modifier = {
+			factor = 2
+			has_substance_abuse_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lunatic_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = impatient
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_child_beater }
+    }
+}
+epithet.00248 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 1
+		faith = faith:catholic
+		is_female = no
+		has_trait = education_learning
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 2
+			has_trait = theologian
+		}
+		modifier = {
+			factor = 2
+			has_trait = devoted
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_vicar }
+    }
+}
+epithet.00249 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = craven
+		has_trait = arbitrary
+		NOT = { highest_held_title_tier = tier_kingdom	}
+		NOT = { highest_held_title_tier = tier_empire	}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 4
+			has_trait = callous
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_snitch }
+    }
+}
+epithet.00250 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = content
+		OR = {
+			has_trait = trusting
+			has_trait = just
+			has_trait = calm
+		}
+		NOT = { 
+			has_trait = deceitful
+		}
+		is_independent_ruler = no
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_loyal }
+    }
+}
+epithet.00251 = { 
+	hidden = yes
+	trigger = {
+		age >= 15
+		diplomacy < 10
+		martial < 10
+		stewardship < 10
+		intrigue < 10
+		learning < 10
+	}
+	weight_multiplier = {
+		base = 5
+		modifier = {
+			factor = 2
+			has_trait = lisping
+		}
+		modifier = {
+			factor = 2
+			has_trait = stuttering
+		}
+		modifier = {
+			factor = 2
+			has_trait = lisping
+		}
+		modifier = {
+			factor = 2
+			probably_intelligent_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = dull
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_good_for_nothing }
+    }
+}
+epithet.00252 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			highest_held_title_tier = tier_county
+			highest_held_title_tier = tier_duchy
+		}
+		realm_size >= 10
+		any_vassal = {
+			count >= 3
+			always = yes
+		}
+		OR = {
+			has_trait = just
+			has_trait = compassionate
+			has_trait = diligent
+			has_trait = gregarious
+		}
+		OR = {
+			has_trait_rank = {
+				trait = education_diplomacy
+				rank >= 4
+			}
+			has_trait_rank = {
+				trait = education_stewardship
+				rank >= 4
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			factor = 3
+			is_female = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lord_of_realm }
+    }
+}
+epithet.00253 = {
+	hidden = yes
+	trigger = {
+		age >= 60
+		OR = {
+			has_character_flag = disease_immunity_smallpox
+			has_character_flag = disease_immunity_bubonic_plague
+			has_character_flag = disease_immunity_typhus
+			has_character_flag = disease_immunity_consumption
+		}
+		OR = {
+			has_trait = one_eyed
+			has_trait = one_legged
+			has_trait = blind
+			has_trait = eunuch
+			has_trait = disfigured
+			has_trait = infirm
+		}
+		has_trait = scarred
+		NOR = {
+			stress_level >= 2
+			has_trait = depressed
+			has_trait = craven
+		}
+	}
+	weight_multiplier = {
+		base = 15
+		modifier = {
+			factor = 2.0
+			age >= 65
+		}
+		modifier = {
+			factor = 10.0
+			age >= 75
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_undying }
+    }
+}
+epithet.00254 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = faith_warrior
+		has_religion = religion:christianity_religion
+		NOT = { has_trait = cynical }
+		piety_level >= 1
+		martial >= 10
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 2
+			has_trait = holy_warrior
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_templar }
+    }
+}
+
+epithet.00256 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		calc_true_if = {
+			amount >= 2
+			has_trait = beauty_good
+			has_trait = seducer
+			has_trait = lustful
+		}
+		NOT = { has_trait = chaste }
+		has_unpleasant_appearence_trait_trigger = no
+		piety_level <= 3
+		OR = {
+			piety_level <= 0
+			has_trait = deviant
+			has_trait = witch
+			has_trait = possessed
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 3
+			has_trait = beauty_good
+			has_trait = seducer
+			has_trait = lustful
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_incubus }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_succubus }
+		}
+    }
+}
+epithet.00257 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		highest_held_title_tier = tier_duchy
+		prowess >= 12
+		martial >= 15
+		has_feudal_government_trigger = yes 
+		OR = {
+			has_trait = reckless
+			has_trait = aggressive_attacker
+		}
+		has_trait_rank = {
+			trait = education_martial
+			rank >= 2
+		}
+		dread >= 50 
+	}
+	weight_multiplier = {
+		base = 6
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = vengeful
+		}
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_duke_of_death }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_duchess_of_pain }
+		}
+    }
+}
+epithet.00258 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			martial < 7
+			diplomacy < 7
+			stewardship < 7
+			intrigue < 7
+			learning < 7
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			has_infamous_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = drunkard
+		}
+		modifier = {
+			factor = 2
+			has_trait = rakish
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bad }
+    }
+}
+epithet.00259 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = paranoid
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_fearful }
+    }
+}
+epithet.00260 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_unpleasant_appearence_trait_trigger = no
+		has_trait = beauty_good
+		piety_level >= 2
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_beauclerk }
+    }
+}
+epithet.00261 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			num_of_relation_lover >= 3
+			num_of_relation_friend >= 3
+		}
+		num_of_relation_rival = 0
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+
+			AND = {
+				num_of_relation_lover >= 3
+				num_of_relation_friend >= 3
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_beloved }
+    }
+}
+epithet.00262 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		any_child = {
+			even_if_dead = yes
+			count >= 10
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_big_nest }
+    }
+}
+epithet.00263 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 13
+		has_trait = deceitful
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = craven
+		}
+		modifier = {
+			factor = 2
+			has_trait = cynical
+		}
+		modifier = {
+			factor = 2
+			has_trait = arrogant
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_wormtongue }
+    }
+}
+epithet.00264 = { 
+	hidden = yes
+	trigger = {
+		is_female = yes
+		scope:spouse = {
+			exists = var:dead_spouse
+		}
+		has_trait = deceitful
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			factor = 2
+			has_trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			intrigue >= 13
+		}
+		modifier = {
+			factor = 2
+			has_trait = arbitrary
+		}
+		modifier = {
+			factor = 2
+			has_trait = cynical
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_black_widow }
+    }
+}
+epithet.00265 = { 
+	hidden = yes
+	trigger = {
+		has_trait = giant
+		has_strong_trait_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_titan }
+    }
+}
+epithet.00266 = { 
+	hidden = yes
+	trigger = {
+		is_female = yes
+		OR = {
+			tyranny >= low_tyranny
+			dread >= 50
+		}
+		any_child = {
+			even_if_dead = yes
+			count >= 4
+		}
+		has_trait = kinslayer
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_character_modifier = mothered_many_children_modifier
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_dark_father }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_dark_mother }
+		}
+    }
+}
+epithet.00267 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = deceitful
+			has_council_position = councillor_spymaster
+			is_intrigue_higher_stat_trigger = yes
+		}
+		OR = {
+			has_trait = wrathful
+			has_trait = stubborn
+			has_trait = vengeful
+			has_trait = zealous
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			intrigue >= 15
+		}
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_merciless_spider }
+    }
+}
+epithet.00268 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = calm
+			has_trait = chaste
+			has_trait = content
+		}
+		OR = {
+			is_diplomacy_higher_stat_trigger = yes
+			has_trait = diplomat
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_council_position = councillor_chancellor
+		}
+		modifier = {
+			factor = 2
+			diplomacy >= 15
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_impassible_diplomat }
+    }
+}
+epithet.00269 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+		}
+		OR = {
+			is_martial_higher_stat_trigger = yes
+			prowess >= 20
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_council_position = councillor_marshal
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_hand_of_vengeance }
+    }
+}
+epithet.00270 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = disfigured
+			has_lunatic_trait_trigger = yes
+			has_possessed_trait_trigger = yes
+		}
+		OR = {
+			has_council_position = councillor_spymaster
+			is_intrigue_higher_stat_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			intrigue >= 15
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_enigma }
+    }
+}
+epithet.00271 = { 
+	hidden = yes
+	trigger = {
+		is_martial_higher_stat_trigger = yes
+		OR = {
+			has_trait = seducer
+			num_of_relation_lover >= 3
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			martial >= 15
+		}
+		modifier = {
+			factor = 2
+			has_trait = strategist
+		}
+		modifier = {
+			factor = 2
+			num_of_relation_lover >= 5
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_of_war_and_love }
+    }
+}
+epithet.00272 = { 
+	hidden = yes
+	trigger = {
+		calc_true_if = {
+			amount = 3
+			has_lunatic_trait_trigger = yes
+			has_possessed_trait_trigger = yes
+			has_depressed_trait_trigger = yes
+			has_trait = denounced
+			has_trait = disinherited
+			has_trait = excommunicated
+			has_disease_trait_trigger = yes
+			has_bad_health_trait_trigger = yes
+			has_unpleasant_appearence_trait_trigger = yes
+			has_substance_abuse_trait_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_thrice_damned }
+    }
+}
+epithet.00273 = { 
+	hidden = yes
+	trigger = {
+		has_trait = beauty_good_3
+		has_trait = physique_good_3
+		has_trait = intellect_good_3
+		has_trait = fecund
+		has_trait = pure_blooded
+	}
+
+	weight_multiplier = {
+		base = 4
+
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = strong
+		}
+		modifier = {
+			factor = 2
+			has_trait = saoshyant_descendant
+		}
+		modifier = {
+			factor = 2
+			has_trait = sayyid
+		}
+		modifier = {
+			factor = 2
+			has_trait = divine_blood
+		}
+		modifier = {
+			factor = 2
+			has_trait = augustus
+		}
+		modifier = {
+			factor = 2
+			has_trait = crusader_king
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_paragon_humanity }
+    }
+}
+epithet.00274 = { 
+	hidden = yes
+	trigger = {
+		is_female = yes
+		has_trait = peasant_leader
+	}
+
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_muse_of_rebellion }
+    }
+}
+epithet.00275 = { 
+	hidden = yes
+	trigger = {
+		any_child = {
+			even_if_dead = yes
+			count >= 10
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = family_first
+		}
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_patriarch }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_matriarch }
+		}
+    }
+}
+epithet.00276 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = kinslayer
+			has_trait = murderer
+		}
+		dread >= 50
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = disfigured
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = spindly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_grim_reaper }
+    }
+}
+epithet.00277 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = kinslayer
+			has_trait = murderer
+			has_trait = cannibal
+		}
+		dread >= 50
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_hunter
+		}
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_bloodthirsty } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_bloody } }
+		}
+    }
+}
+epithet.00278 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = architect
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = administrator
+		}
+		modifier = {
+			factor = 2
+			has_trait = avaricious
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_builder }
+    }
+}
+epithet.00279 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:scottish
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = strategist
+		}
+		modifier = {
+			factor = 2
+			has_trait = flexible_leader
+		}
+		modifier = {
+			factor = 2
+			has_trait = organizer
+		}
+		modifier = {
+			factor = 2
+			has_trait = cautious_leader
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_chief }
+    }
+}
+epithet.00280 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = clubfooted
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_clubfoot }
+    }
+}
+epithet.00281 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			any_held_title = {
+				count >= 3
+				tier = tier_kingdom
+			}
+			any_held_title = {
+				count >= 3
+				tier = tier_empire
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_crowned }
+    }
+}
+epithet.00282 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = faith_warrior
+			has_trait = crusader_king
+			has_trait = order_member
+		}
+		has_religion = religion:christianity_religion
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = devoted
+		}
+		modifier = {
+			factor = 2
+			is_knight = yes
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_crusader }
+    }
+}
+epithet.00283 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		any_held_title = {
+			count >= 1
+			tier = tier_kingdom
+		}
+		any_held_title = {
+			count >= 1
+			tier = tier_empire
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_emperor_king }
+    }
+}
+epithet.00284 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lifestyle_hunter
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = hunter_3
+		}
+		modifier = {
+			factor = 2
+			has_trait = forest_fighter
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_fowler }
+    }
+}
+epithet.00285 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		prestige_level >= 4
+		piety_level >= 3
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_god_given }
+    }
+}
+epithet.00286 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		has_trait = zealous
+		piety_level >= 4
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_god_loving }
+    }
+}
+epithet.00287 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = brave
+			has_trait = vengeful
+			has_trait = wrathful
+		}
+		has_trait = arbitrary
+		OR = {
+			martial >= 15
+			prowess >= 20
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = flexible_leader
+		}
+		modifier = {
+			factor = 2
+			has_trait = holy_warrior
+		}
+		modifier = {
+			factor = 2
+			has_trait = reckless
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hammer }
+    }
+}
+epithet.00288 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = lisping
+		has_trait = clubfooted
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lisp_and_lame }
+    }
+}
+epithet.00289 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		dread >= 50
+		has_trait = callous
+		has_trait = sadistic
+		has_trait = torturer
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = wrathful
+				has_trait = vengeful
+				has_trait = arbitrary
+				has_trait = impatient
+				has_trait = paranoid
+			}
+		}
+		modifier = {
+			factor = 2
+			has_possessed_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lunatic_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = cannibal
+		}
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = irritable
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_impaler }
+    }
+}
+epithet.00290 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 17
+		prowess >= 25
+		has_trait = brave
+		has_trait = aggressive_attacker
+		has_trait = reckless
+		is_knight = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shy
+		}
+		modifier = {
+			factor = 2
+			has_trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = berserker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_who_fights_alone }
+    }
+}
+epithet.00291 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = yes
+		highest_held_title_tier = tier_kingdom
+		has_trait = celibate
+		any_child = {
+			even_if_dead = yes
+			count = 0
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = chaste
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_virgin_queen }
+    }
+}
+epithet.00292 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = pilgrim
+		piety_level >= 4
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+		modifier = {
+			factor = 2
+			has_trait = crusader_king
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_pilgrim }
+    }
+}
+epithet.00293 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = born_in_the_purple
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_purple_born }
+    }
+}
+epithet.00294 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		highest_held_title_tier = tier_kingdom
+		has_trait = adventurer
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = viking
+				has_trait = shieldmaiden
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_sailor_king }
+    }
+}
+epithet.00295 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			has_trait = faith_warrior
+			has_trait = crusader_king
+			has_trait = order_member
+		}
+		has_religion = religion:islam_religion
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = devoted
+		}
+		modifier = {
+			factor = 2
+			is_knight = yes
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mujahib }
+    }
+}
+epithet.00296 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		stewardship <= 8
+		has_trait = architect
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			probably_unintelligent_trigger = no
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_bloody_stupid }
+    }
+}
+epithet.00297 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		highest_held_title_tier = tier_kingdom
+		exists = liege
+		OR = {
+			has_trait = craven
+			has_trait = humble
+			has_trait = trusring
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_king_who_knelt }
+    }
+}
+epithet.00298 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		dread >= 50
+		is_female = no
+		has_trait = torturer
+		OR = {
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_physician
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_flayman }
+    }
+}
+epithet.00299 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		dread <= 50
+		has_trait = craven
+		prestige_level <= 1
+		is_knight = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lousy }
+    }
+}
+epithet.00300 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		dread >= 50
+		has_trait = wrathful
+		OR = {
+			has_trait = callous
+			has_trait = sadistic
+			has_trait = impatient
+			has_trait = arbitrary
+			has_trait = vengeful
+		}
+		NOT = { has_trait = compassionate }
+		NOT = { has_trait = trusting }
+		NOT = { has_trait = just }
+		NOT = { has_trait = humble }
+		NOT = { has_trait = shy }
+		NOT = { has_trait = forgiving }
+		NOT = { has_trait = content }
+		NOT = { has_trait = calm }
+		NOT = { has_trait = craven }
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_lunatic_trait_trigger = yes
+				has_possessed_trait_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = fickle
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_oncoming_storm }
+    }
+}
+epithet.00301 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		highest_held_title_tier = tier_duchy
+		has_trait = hunter_3
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_lord_of_the_hunt }
+    }
+}
+epithet.00302 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 15
+		intrigue >= 15
+		has_trait = lifestyle_blademaster
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_nightblade }
+    }
+}
+epithet.00303 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = giant
+		OR = {
+			has_trait = bastard
+			has_trait = legitimized_bastard
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_titans_bastard }
+    }
+}
+epithet.00304 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = pilgrim
+		has_trait = zealous
+		has_trait = diligent
+		piety_level >= 2
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_tireless_pilgrim }
+    }
+}
+epithet.00305 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = generous
+		OR = {
+			has_trait = lustful
+			has_trait = generous
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_boundless }
+    }
+}
+epithet.00306 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		is_female = yes
+		has_trait = lifestyle_blademaster
+		OR = {
+			has_trait = brave
+			has_trait = wrathful
+			has_trait = vengeful
+		}
+		NOT = { has_trait = craven }
+		prowess >= 20
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			is_martial_higher_stat_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_boundless }
+    }
+}
+epithet.00276 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = kinslayer
+			has_trait = murderer
+		}
+		dread >= 50
+		highest_held_title_tier = tier_kingdom
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = disfigured
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = spindly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_reaper_king }
+    }
+}
+
+# Cultural - Akan
+epithet.01501 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_culture_group = culture_group:akan_group
+		intrigue >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_anansi }
+    }
+}
+epithet.01502 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_culture_group = culture_group:akan_group
+		has_trait = athletic
+		has_trait = winter_soldier
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+		modifier = {
+			factor = 2
+			martial >= 15
+		}
+		modifier = {
+			factor = 2
+			is_knight = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_snow_leopard }
+    }
+}
+epithet.01503 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_culture_group = culture_group:akan_group
+		stewardship >= 17
+		is_stewardship_higher_stat_trigger = yes
+		has_trait = architect
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_twa_akwan }
+    }
+}
+epithet.01504 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_culture_group = culture_group:akan_group
+		OR = {
+			martial >= 17
+			prowess >= 20
+		}
+		is_martial_higher_stat_trigger = yes
+		has_trait = military_engineer
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_toto_abuo }
+    }
+}
+
+# Cultural - Arabic
+epithet.01601 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:arabic_group
+		OR = {
+			has_strong_trait_trigger = yes
+			has_trait = giant
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_roc }
+    }
+}
+epithet.01602 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:arabic_group
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+		OR = {
+			has_trait = deceitful
+			has_trait = callous
+			has_trait = sadistic
+		}
+		num_sinful_traits >= 2
+	}
+	weight_multiplier = {
+		base = 2
+		
+		modifier = {
+			factor = 2
+			has_infamous_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = wrathful
+				has_trait = lustful
+				has_trait = vengeful
+				has_trait = arbitrary
+			}		
+		}
+	}
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ifrit }
+    }
+}
+epithet.01603 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:arabic_group
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+		has_trait = one_legged
+		has_trait = scarred
+		has_trait = disfigured
+	}
+	weight_multiplier = {
+		base = 2
+	}
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_nasnas }
+    }
+}
+epithet.01604 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:arabic_group
+		has_trait = giant
+		has_strong_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = disfigured
+		}
+		modifier = {
+			factor = 2
+			has_trait = beauty_bad
+		}
+	}
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bahamut }
+    }
+}
+
+# Cultural - Northern
+epithet.01001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = giant
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ladder_legs }
+    }
+}
+epithet.01002 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		has_trait = viking
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = berserker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reaver
+		}
+		modifier = {
+			factor = 2
+			has_trait = forder
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_kraken }
+    }
+}
+epithet.01003 = { 
+	hidden = yes
+	trigger = {
+		age >= 20
+		prowess >= 13
+		has_government = tribal_government
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 2
+			has_trait = viking
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_bloodteeth }
+    }
+}
+epithet.01004 = {
+	hidden = yes
+	trigger = {
+		can_get_northerner_nickname_trigger = yes
+		prestige_level >= 2
+		OR = {
+			has_trait = brave
+			has_strong_trait_trigger = yes
+		}
+		has_weak_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2.0
+			NOT = { age >= 20 }
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ironside }
+    }
+}
+epithet.01005 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = gregarious
+		OR = {
+			has_trait = wrathful
+			has_trait = impatient
+		}
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bellower }
+    }
+}
+epithet.01006 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		piety_level >= 2
+		has_trait = brave
+		has_unpleasant_appearence_trait_trigger = no
+		has_bad_health_trait_trigger = no
+		has_disease_trait_trigger = no
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = order_member
+		}
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_god_favored }
+    }
+}
+epithet.01007 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		martial >= 13
+		has_trait = scarred
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			prowess >= 13
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+		modifier = {
+			factor = 2
+			has_trait = viking
+		}
+		modifier = {
+			factor = 2
+			has_trait = berserker
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_brokenbrow }
+    }
+}
+epithet.01008 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		martial >= 13
+		has_trait = lifestyle_blademaster
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			prowess >= 13
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = brave
+		}
+		modifier = {
+			factor = 2
+			has_trait = viking
+		}
+		modifier = {
+			factor = 2
+			has_trait = berserker
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_fangbearer }
+    }
+}
+epithet.01009 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		OR = {
+			intrigue >= 13
+			diplomacy >= 13
+			stewardship >= 13
+			learning >= 13
+		}
+		OR = {
+			has_council_position = councillor_chancellor
+			has_council_position = councillor_marshal
+			has_council_position = councillor_steward
+			has_council_position = councillor_spymaster
+			has_council_position = councillor_court_chaplain
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = one_eyed
+		}
+		modifier = {
+			factor = 2
+			has_trait = diplomat
+		}
+		modifier = {
+			factor = 2
+			has_trait = overseer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_mystic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_whispering_raven }
+    }
+}
+epithet.01010 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		OR = {
+			intrigue >= 13
+			diplomacy >= 13
+			stewardship >= 13
+			learning >= 13
+		}
+		OR = {
+			has_council_position = councillor_chancellor
+			has_council_position = councillor_marshal
+			has_council_position = councillor_steward
+			has_council_position = councillor_spymaster
+			has_council_position = councillor_court_chaplain
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = one_legged
+		}
+		modifier = {
+			factor = 2
+			has_trait = overseer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_mystic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_rune_eyes }
+    }
+}
+epithet.01011 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		martial >= 15
+		OR = {
+			has_trait = lifestyle_blademaster
+			has_trait = berserker
+			has_trait = viking
+			has_trait = shieldmaiden
+		}
+		dread >= 50
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = brave
+				has_trait = wrathful
+				has_trait = vengeful
+				has_trait = arbitrary
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_mystic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_doomscourge }
+    }
+}
+epithet.01012 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_title = title:d_iceland
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_of_the_frost }
+    }
+}
+epithet.01013 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_character_modifier = broke_truce
+		can_get_northerner_nickname_trigger = yes
+		highest_held_title_tier = tier_kingdom
+	}
+	weight_multiplier = {
+		base = 2
+		
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = denounced
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_betrayer_king }
+    }
+}
+epithet.01014 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		intrigue >= 13
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+		
+		modifier = {
+			factor = 2
+			has_council_position = councillor_spymaster
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_bearer_of_secrets }
+    }
+}
+epithet.01015 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		martial >= 13
+		OR = {
+			tyranny >= low_tyranny
+			dread >= 50
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = viking
+				has_trait = berserker
+			}		
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_bloodsky }
+    }
+}
+epithet.01016 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = poet
+		OR = {
+			has_trait = education_martial
+			martial >= 15
+			has_trait = strategist
+				
+			has_trait = berserker
+			has_trait = viking
+			has_trait = shieldmaiden
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_warrior_poet }
+    }
+}
+epithet.01017 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		prowess >= 15
+		martial >= 13
+		OR = {
+			has_trait = berserker
+			has_trait = viking
+			has_trait = shieldmaiden
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reckless
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_helmsmasher }
+    }
+}
+epithet.01018 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		prowess >= 15
+		martial >= 13
+		OR = {
+			has_trait = berserker
+			has_trait = viking
+			has_trait = shieldmaiden
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reckless
+		}
+	}
+
+    immediate = {
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_bloodaxe } }
+			100 = { set_nickname_effect = { NICKNAME = nick_skull_taker } }
+		}
+    }
+}
+epithet.01019 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_strong_trait_trigger = yes
+		has_weak_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_broad_shouldered }
+    }
+}
+epithet.01020 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		has_trait = reaver
+		can_get_northerner_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_coal_burner }
+    }
+}
+epithet.01021 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = murderer 
+		OR = { 
+			has_trait = kinslayer_1 
+			has_trait = kinslayer_2
+			has_trait = kinslayer_3
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_bloodfury }
+    }
+}
+epithet.01022 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = cannibal
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_corpse_swallower }
+    }
+}
+epithet.01023 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		is_female = yes
+		piety_level >= 2
+		has_trait = faith_warrior
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = brave
+				has_trait = zealous
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				martial >= 15
+				prowess >= 20
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_valkyrie }
+    }
+}
+epithet.01024 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = berserker
+		has_trait = albino
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_white_bear }
+    }
+}
+epithet.01025 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = berserker
+		has_trait = cannibal
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_red_bear }
+    }
+}
+epithet.01026 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = berserker
+		dread >= 50
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_black_bear }
+    }
+}
+epithet.01027 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = berserker
+		OR = {
+			has_substance_abuse_trait_trigger = yes
+			has_unpleasant_appearence_trait_trigger = yes
+			has_bad_health_trait_trigger = yes
+			has_disease_trait_trigger = yes
+			has_lunatic_trait_trigger = yes
+			has_possessed_trait_trigger = yes
+			has_depressed_trait_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_broken_bear }
+    }
+}
+epithet.01028 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = hunchbacked
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = dwarf
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_crouchback }
+    }
+}
+epithet.01029 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = beauty_good
+		has_unpleasant_appearence_trait_trigger = no
+		has_bad_health_trait_trigger = no
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = beauty_good_3
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_fairhair }
+    }
+}
+epithet.01030 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		stewardship >= 17
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			is_stewardship_higher_stat_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_greycloak }
+    }
+}
+epithet.01031 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		martial >= 17
+		prowess >= 20
+
+		OR = {
+			has_trait = sadistic
+			has_trait = callous
+		}
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = viking
+				has_trait = shieldmaiden
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = berserker
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_redarm }
+    }
+}
+epithet.01032 = {
+	hidden = yes
+	trigger = {
+		age >= 60
+		can_get_northerner_nickname_trigger = yes
+		has_trait = berserker
+	}
+
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = shieldmaiden
+				has_trait = viking
+			}
+		}
+		modifier = {
+			factor = 2
+			martial >= 17
+		}
+		modifier = {
+			factor = 2
+			prowess >= 20
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_old_bear }
+    }
+}
+
+# Cultural - East Slavic
+epithet.01101 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:east_slavic_group
+		is_female = yes
+		has_trait = lifestyle_mystic
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = witch
+		}
+		modifier = {
+			factor = 2
+			has_trait = scholar
+		}
+		modifier = {
+			factor = 2
+			learning >= 15
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_herbalist
+		}
+		modifier = {
+			factor = 2
+			has_trait = theologian
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_gamayun }
+    }
+}
+
+# Cultural - Iranian
+epithet.01301 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:iranian_group
+		has_trait = reincarnation
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_simurgh }
+    }
+}
+
+# Cultural - West Europe
+epithet.01401 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = deceitful
+			has_trait = cynical
+			has_trait = callous
+			has_trait = sadistic
+		}
+		has_trait = arbitrary
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = wrathful
+				has_trait = vengeful
+				has_trait = deceitful
+				has_trait = cynical
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_possessed_trait_trigger = yes
+				has_lunatic_trait_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = scaly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cockatrice }
+    }
+}
+epithet.01402 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		has_trait =  brave
+		prowess >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 2
+			has_trait = vengeful
+		}
+		modifier = {
+			factor = 2
+			martial >= 15
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_griffin }
+    }
+}
+epithet.01403 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		has_trait =  brave
+		prowess >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = wrathful
+		}
+		modifier = {
+			factor = 2
+			has_trait = vengeful
+		}
+		modifier = {
+			factor = 2
+			martial >= 15
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			culture = culture:french
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hippogriff }
+    }
+}
+epithet.01404 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		has_trait = reincarnation
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_phoenix }
+    }
+}
+epithet.01405 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		num_sinful_traits >= 3
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_infamous_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_manticore }
+    }
+}
+epithet.01406 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = deceitful
+			has_trait = cynical
+			has_trait = callous
+			has_trait = sadistic
+		}
+		has_trait = arbitrary
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount >= 3
+				has_trait = wrathful
+				has_trait = vengeful
+				has_trait = deceitful
+				has_trait = cynical
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_possessed_trait_trigger = yes
+				has_lunatic_trait_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = scaly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_basilisk }
+    }
+}
+epithet.01407 = {
+	hidden = yes
+	trigger = {
+		dread > 50
+		can_get_west_europe_nickname_trigger = yes
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		OR = {
+			has_trait = kinslayer
+			has_trait = cannibal
+			has_trait = torturer
+		}
+	}
+	weight_multiplier = {
+		base = 4
+		modifier = {
+			add = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 5
+			has_trait = cannibal
+		}
+		modifier = {
+			factor = 5
+			has_trait = scaly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_wyvern }
+    }
+}
+epithet.01408 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_west_europe_nickname_trigger = yes
+		prestige_level >= 4
+		probably_unintelligent_trigger = no
+		has_unpleasant_appearence_trait_trigger = no
+		has_weak_trait_trigger = no
+		has_substance_abuse_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = augustus
+		}
+		modifier = {
+			factor = 2
+			has_trait = august
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_augustus }
+    }
+}
+
+# Cultural - Chinese
+epithet.02001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		has_strong_trait_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_big_halberd }
+    }
+}
+epithet.02002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		OR = {
+			has_strong_trait_trigger = yes
+			has_trait = giant
+		}
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ferocious_giant }
+    }
+}
+epithet.02003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		diplomacy >= 16
+		martial >= 16
+		probably_unintelligent_trigger = no
+		has_weak_trait_trigger = no
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_jade_unicorn }
+    }
+}
+epithet.02004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		learning >= 14
+		probably_intelligent_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_prodigy }
+    }
+}
+epithet.02005 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		has_strong_trait_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_thunderbolt }
+    }
+}
+epithet.02006 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		probably_intelligent_trigger = yes
+		has_strong_trait_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_timely_rain }
+    }
+}
+epithet.02007 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		has_strong_trait_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_turbulent_river_dragon }
+    }
+}
+epithet.02008 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		has_strong_trait_trigger = yes
+		calc_true_if = {
+			amount >= 2
+			has_trait = sadistic
+			has_trait = wrathful
+			has_trait = impatient
+			has_trait = vengeful
+		}
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_unrestrained }
+    }
+}
+epithet.02009 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		OR = {
+			has_trait = lifestyle_blademaster
+			has_trait = gallant
+		}
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_whirlwind }
+    }
+}
+epithet.02010 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 12
+		has_strong_trait_trigger = yes
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_winged_tiger }
+    }
+}
+epithet.02011 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 13
+		has_strong_trait_trigger = yes
+		has_trait = shy
+		can_get_chinese_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_silent_tempest }
+    }
+}
+epithet.02012 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_chinese_nickname_trigger = yes
+		highest_held_title_tier >= tier_kingdom
+
+		has_strong_trait_trigger = yes
+		has_trait = brave
+		has_trait = just
+		has_trait = humble
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_fenghuang }
+    }
+}
+epithet.02013 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_chinese_nickname_trigger = yes
+		has_trait = albino
+		OR = {
+			prowess >= 15
+			martial >= 15
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			is_martial_higher_stat_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_white_tiger }
+    }
+}
+
+# Cultural - Greco-Roman
+epithet.03001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		highest_held_title_tier > 3
+		can_get_greco_roman_nickname_trigger = yes
+		NOT = { has_religion = religion:christianity_religion }
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			capital_province = { geographical_region = world_europe_south_italy }
+		}
+		modifier = {
+			factor = 5
+			has_religion = religion:hellenism_religion
+		}
+
+		modifier = {
+			factor = 3
+			has_title = title:e_roman_empire
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_apostate }
+    }
+}
+epithet.03002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = giant
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			culture = culture:greek
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hecatoncheires }
+    }
+}
+epithet.03003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		dread >= 50
+		OR = {
+			has_trait = callous
+			has_trait = sadistic
+			has_trait = arbitrary
+			has_trait = deceitful
+		}
+		has_trait = shrewd
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = reaver
+		}
+		modifier = {
+			factor = 2
+			has_trait = athletic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_teumessian_fox }
+    }
+}
+epithet.03004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+		is_female = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			has_trait = beauty_good
+		}
+		modifier = {
+			factor = 2
+			has_trait = lustful
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = disfigured
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_gorgone }
+    }
+}
+epithet.03005 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = adventurer
+		is_female = yes
+		has_trait = beauty_good
+		has_unpleasant_appearence_trait_trigger = no
+	}
+	weight_multiplier = {
+		base = 4
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = viking
+				has_trait = shieldmaiden
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_siren }
+    }
+}
+epithet.03006 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		intrigue >= 15
+		is_female = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_arachne }
+    }
+}
+epithet.03007 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		martial >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			prowess >= 15
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = aggressive_attacker
+				has_trait = holy_warrior
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_myrmidon }
+    }
+}
+epithet.03008 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		OR = {
+			has_trait = brave
+			has_trait = vengeful
+			has_trait = zealous
+		}
+		NOT = {
+			OR = {
+				has_trait = shy
+				has_trait = craven
+				has_trait = lazy
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_aethon }
+    }
+}
+epithet.03009 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = craven
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = lazy
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_alectryon }
+    }
+}
+epithet.03010 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = albino
+		has_trait = lifestyle_physician
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = scholar
+		}
+		modifier = {
+			factor = 2
+			has_trait = whole_of_body
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_caladrius }
+    }
+}
+epithet.03011 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_unpleasant_appearence_trait_trigger = yes
+		is_female = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = beauty_bad
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_harpy }
+    }
+}
+epithet.03012 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		OR = {
+			has_trait = kinslayer
+			has_trait = murderer
+			has_trait = cannibal
+			num_sinful_traits >= 3
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = cannibal
+		}
+		modifier = {
+			factor = 2
+			has_trait = witch
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_strix }
+    }
+}
+epithet.03013 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		OR = {
+			dread >= 50
+			tyranny >= low_tyranny
+		}
+		OR = {
+			has_trait = brave
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = arbitrary
+			has_trait = callous
+		}
+		martial >= 15
+		is_female = no
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = cannibal
+		}
+		modifier = {
+			factor = 2
+			has_trait = witch
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cerberus }
+    }
+}
+epithet.03014 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = brave
+		OR = {
+			has_trait = sadistic
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = arbitrary
+			has_trait = callous
+		}
+		martial >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+		modifier = {
+			factor = 2
+			prowess >= 15
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+		modifier = {
+			factor = 2
+			has_trait = unyielding_defender
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_nemean_lion }
+    }
+}
+epithet.03015 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = brave
+		is_female = yes
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = arbitrary
+		}
+		OR = {
+			martial >= 17
+			prowess >= 20
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+		modifier = {
+			factor = 2
+			is_knight = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_androktasiai }
+    }
+}
+epithet.03016 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = brave
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = arbitrary
+		}
+		OR = {
+			martial >= 17
+			prowess >= 20
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+		modifier = {
+			factor = 2
+			is_knight = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_blademaster
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hysminai }
+    }
+}
+epithet.03017 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = brave
+		OR = {
+			has_trait = witch
+			OR = {
+				intrigue >= 15
+				is_intrigue_higher_stat_trigger = yes
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = overseer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_council_position = councillor_spymaster
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_corvinus }
+    }
+}
+epithet.03018 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		OR = {
+
+		}
+		NOT = {}
+		has_trait = brave
+		OR = {
+			has_trait = witch
+			OR = {
+				intrigue >= 15
+				is_intrigue_higher_stat_trigger = yes
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			has_trait = overseer
+		}
+		modifier = {
+			factor = 2
+			has_trait = schemer
+		}
+		modifier = {
+			factor = 2
+			has_council_position = councillor_spymaster
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_corvinus }
+    }
+}
+epithet.03019 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 17
+		prowess >= 25
+		has_trait = brave
+		has_trait = aggressive_attacker
+		has_trait = reckless
+		is_knight = yes
+		can_get_greco_roman_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shy
+		}
+		modifier = {
+			factor = 2
+			has_trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = berserker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_monomakhos }
+    }
+}
+epithet.03020 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		martial >= 17
+		prowess >= 25
+		has_trait = brave
+		is_knight = yes
+		can_get_greco_roman_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			is_martial_higher_stat_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_praetorian }
+    }
+}
+epithet.03021 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		stewardship >= 15
+		is_stewardship_higher_stat_trigger = yes
+		can_get_greco_roman_nickname_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = greedy
+		}
+		modifier = {
+			factor = 2
+			has_council_position = councillor_steward
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_quaestor }
+    }
+}
+
+# Cultural - Goidelic
+epithet.04001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_culture_group = culture_group:goidelic_group
+		has_trait = poet
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_teller_of_tales }
+    }
+}
+epithet.04002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:goidelic_group
+		OR = {
+			has_weak_trait_trigger = yes
+			has_unpleasant_appearence_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_bad_health_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_disease_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_fae_cursed }
+    }
+}
+epithet.04003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:goidelic_group
+		probably_unintelligent_trigger = no
+		learning >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = scholar
+		}
+		modifier = {
+			factor = 2
+			has_disease_trait_trigger = yes
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_salmon_of_knowledge }
+    }
+}
+epithet.04004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:goidelic_group
+		has_trait = deceitful
+		intrigue >= 15
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shy
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = forder
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_mystic
+		}
+		modifier = {
+			factor = 2
+			has_trait = athletic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ceffyl_dwr }
+    }
+}
+
+# Cultural - Scotts
+epithet.05001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:scottish
+		is_female = no
+		has_trait = beauty_good
+		has_trait = callous
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = athletic
+		}
+		modifier = {
+			factor = 2
+			has_trait = lifestyle_mystic
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = scaly
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_kelpie }
+    }
+}
+epithet.05002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:scottish
+		is_female = yes
+		has_depressed_trait_trigger = yes
+		has_trait = scaly
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = shy
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_lunatic_trait_trigger = yes
+				has_possessed_trait_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = reclusive
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_selkie }
+    }
+}
+epithet.05003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:scottish
+		is_female = no
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = strategist
+		}
+		modifier = {
+			factor = 2
+			has_trait = flexible_leader
+		}
+		modifier = {
+			factor = 2
+			has_trait = organizer
+		}
+		modifier = {
+			factor = 2
+			has_trait = cautious_leader
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_an_donn }
+    }
+}
+
+# Cultural - Indian
+epithet.07001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_indian_nickname_trigger = yes
+		has_trait = cannibal
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			intrigue >= 15
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_vetala }
+    }
+}
+epithet.07002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_indian_nickname_trigger = yes
+		OR = {
+			has_lunatic_trait_trigger = yes
+			has_possessed_trait_trigger = yes
+			has_depressed_trait_trigger = yes
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = forest_fighter
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 2
+			has_trait = cannibal
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_ulama }
+    }
+}
+epithet.07003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_indian_nickname_trigger = yes
+		has_trait = brave
+		OR = {
+			martial >= 17
+			Prowess >= 20
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = faith_warrior
+		}
+		modifier = {
+			factor = 2
+			has_strong_trait_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = holy_warrior
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_gandaberunda }
+    }
+}
+epithet.07004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_indian_nickname_trigger = yes
+		has_trait = brave
+		OR = {
+			martial >= 17
+			Prowess >= 20
+		}
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = athletic
+		}
+		modifier = {
+			factor = 2
+			has_trait = aggressive_attacker
+		}
+		modifier = {
+			factor = 2
+			has_trait = reaver
+		}
+		modifier = {
+			factor = 2
+			has_trait = organizer
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_garuda_incarnation }
+    }
+}
+
+# Cultural - Britanny Island
+epithet.08001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_north_west_europe_nickname_trigger = yes
+		has_trait = cannibal
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bugbear }
+    }
+}
+epithet.08002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_north_west_europe_nickname_trigger = yes
+		num_sinful_traits >= 3
+		is_female = no
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = murderer
+		}
+		modifier = {
+			factor = 2
+			has_trait = kinslayer
+		}
+		modifier = {
+			factor = 2
+			has_trait = torturer
+		}
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = excommunicated
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_barghest }
+    }
+}
+epithet.08003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_north_west_europe_nickname_trigger = yes
+		has_trait = lifestyle_hunter
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = callous
+		}
+		modifier = {
+			factor = 2
+			has_trait = sadistic
+		}
+		modifier = {
+			factor = 2
+			has_trait = forest_fighter
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_cu_sith }
+    }
+}
+epithet.08004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_north_west_europe_nickname_trigger = yes
+		has_trait = scaly
+		dread >= 50
+	}
+	weight_multiplier = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			has_trait = spindly
+		}
+		modifier = {
+			factor = 2
+			has_trait = giant
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = deceitful
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_knucker }
+    }
+}
+
+# On Death
+epithet.9001 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			trigger_if = {
+				limit = {
+					is_lowborn = no
+				}
+				house = {
+					NOT = {
+						any_house_member = {
+							is_alive = yes
+						}
+					}
+				}
+				# Not house founder
+				OR = {
+					trigger_if = {
+						limit = {
+							exists = father
+						}
+						father.house = {
+							this = scope:epithet_receiver.house
+						}
+					}
+					trigger_if = {
+						limit = {
+							exists = mother
+						}
+						mother.house = {
+							this = scope:epithet_receiver.house
+						}
+					}
+					always = no
+				}	
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 6
+			scope:epithet_receiver = {
+				dynasty = {
+					NOT = {
+						any_dynasty_member = {
+							is_alive = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_last }
+		}
+    }
+}
+epithet.9002 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			has_religion = religion:christianity_religion
+			scope:piety_level >= 2
+			OR = {
+				death_reason = death_dungeon
+				death_reason = death_fight
+				death_reason = death_battle
+				death_reason = death_head_ripped_off
+				death_reason = death_execution
+				death_reason = death_execution_blood_eagle
+				death_reason = death_execution_blood_eagle_killer
+				death_reason = death_execution_blot
+				death_reason = death_execution_killer
+				death_reason = death_whipping
+				death_reason = death_torture
+				death_reason = death_burned
+				death_reason = death_eaten
+				death_reason = death_beaten
+				death_reason = death_sacrificed_to_gods
+				death_reason = death_crucified
+				death_reason = death_burned_witch
+				death_reason = death_pilgrimage_bandit_attack
+				death_reason = death_sun_trial
+			}
+			trigger_if ={
+				limit = {
+					exists = killer
+				}
+				faith = {
+					faith_hostility_level = {
+						target = scope:epithet_receiver.killer.faith
+						value >= faith_hostile_level
+					}
+				}
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				scope:piety_level >= 3
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				scope:piety_level >= 4
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				scope:piety_level >= 5
+			}
+		}
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_martyr }
+		}
+    }
+}
+epithet.9003 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			scope:prestige_level >= 2
+			exists = killer
+			OR = {
+				has_trait = compassionate
+				has_trait = forgiving
+				has_trait = just
+			}
+			NOR = {
+				has_trait = callous
+				has_trait = sadistic
+				has_trait = arbitrary
+				has_trait = vengeful
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				calc_true_if = {
+					amount >= 2
+					has_trait = compassionate
+					has_trait = forgiving
+					has_trait = just
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:epithet_receiver = {
+				scope:prestige_level >= 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:epithet_receiver = {
+				scope:prestige_level >= 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:epithet_receiver = {
+				scope:prestige_level >= 5
+			}
+		}
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_loved_and_killed }
+		}
+    }
+}
+epithet.9004 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			OR = {
+				death_reason = death_fight
+				death_reason = death_battle
+				death_reason = death_head_ripped_off
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_slaughtered }
+		}
+    }
+}
+epithet.9005 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			OR = {
+				death_reason = death_execution
+				death_reason = death_execution_blood_eagle
+				death_reason = death_execution_blood_eagle_killer
+				death_reason = death_execution_blot
+				death_reason = death_execution_killer
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_executed }
+		}
+    }
+}
+epithet.9006 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			prestige_level >= 3
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		random_list = {
+			100 = {
+				scope:epithet_receiver = {
+					set_nickname_effect = { NICKNAME = nick_the_ancient }
+				}
+			}
+			100 = {
+				scope:epithet_receiver = {
+					set_nickname_effect = { NICKNAME = nick_the_elder }
+				}
+			}
+		}
+    }
+}
+
+# On Birth
+epithet.9101 = {
+	hidden = yes
+	trigger = {
+		has_character_flag = epithet_posthumous
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_posthumous }
+    }
+}

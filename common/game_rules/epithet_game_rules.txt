@@ -1,0 +1,21 @@
+﻿epithet_frequency = {
+	default = default_epithet_frequency
+
+	fewer_epithet_frequency = {
+    }
+
+	default_epithet_frequency = {
+	}
+    
+    more_epithet_frequency = {
+    }
+}
+epithet_cheats = {
+	default = on_epithet_cheats
+
+	on_epithet_cheats = {
+    }
+
+	off_epithet_cheats = {
+	}
+}
