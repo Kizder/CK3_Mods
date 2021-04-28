@@ -1,4 +1,8 @@
 ﻿on_birthday = {
+	trigger = {
+		has_any_nickname = no
+		prestige_level >= 2
+	}
 	random_on_action = {
 		chance_to_happen = 100
 		chance_of_no_event = {
@@ -7,51 +11,19 @@
 				limit = {
 					has_game_rule = fewer_epithet_frequency
 				}
-				add = 97.5 # 2.5%
+				add = 95 # 5%
 			}
 			else_if = {
 				limit = {
 					has_game_rule = more_epithet_frequency
 				}
-				add = 90  # 10%
-			}
-			else_if = {
-				limit = {
-					has_game_rule = a_lot_epithet_frequency
-				}
-				add = 66 # 33%
+				add = 80  # 20%
 			}
 			else = {
-				add = 95 # 5%
+				add = 90 # 10%
 			}
 		}
-		100 = on_check_epithet
-	}
-}
-
-on_check_epithet= {
-	trigger = { 
-		prestige_level >= 2
-		has_any_nickname = no 
-	}
-	first_valid_on_action = {
-		epithet_northern_selection
-		epithet_east_slavic_selection
-		epithet_arabic_selection
-		epithet_iranian_selection
-		epithet_west_europe_selection
-		epithet_akan_selection
-		epithet_chinese_selection
-		epithet_greco_roman_selection
-		epithet_goidelic_selection
-		epithet_scottish_selection
-		epithet_indian_selection
-		epithet_brittany_islands_selection
-
-		on_giant_epithet
-		on_dwarf_epithet
-		on_albino_epithet
-		on_prowess_nickname
+		100 = epithet_cultural_religion_random
 	}
 }
 
@@ -61,20 +33,18 @@ on_prestige_level_gain = {
 		prestige_level >= 4
 	}
 	on_actions = {
-		epithet_selection
+		epithet_any_nickname
 	}
 }
 
 yearly_playable_pulse = {
 	on_actions = {
-		epithet_random_check
+		epithet_give_yearly
 	}
 }
 
-epithet_random_check = {
-	trigger = {
-		has_any_nickname = no
-	}
+epithet_give_yearly = {
+	trigger = {	has_any_nickname = no }
 	random_on_action = {
 		chance_to_happen = 100
 		chance_of_no_event = {
@@ -89,22 +59,179 @@ epithet_random_check = {
 				limit = {
 					has_game_rule = more_epithet_frequency
 				}
-				add = 96  # 4%
-			}
-			else_if = {
-				limit = {
-					has_game_rule = a_lot_epithet_frequency
-				}
-				add = 96  # 4%
+				add = 98  # 2%
 			}
 			else = {
-				add = 98 # 2%
+				add = 96 # 4%
 			}
 		}
-		100 = epithet_selection
+		100 = epithet_all_random
 	}
 }
-epithet_selection = {
+
+epithet_any_nickname = {
+	on_actions = {
+		epithet_cultural_religion_random
+		on_giant_epithet
+		epithet_all_random
+	}
+}
+
+epithet_cultural_religion_random = {
+	random_events = {
+		100 = epithet_religion_christianism.0001
+		100 = epithet_religion_christianism.0002
+		100 = epithet_religion_christianism.0003
+		100 = epithet_religion_christianism.0004
+		100 = epithet_religion_christianism.0005
+		100 = epithet_religion_christianism.0006
+		100 = epithet_religion_christianism.0007
+		100 = epithet_religion_christianism.0008
+		100 = epithet_religion_christianism.0009
+		100 = epithet_religion_christianism.0010
+		100 = epithet_religion_christianism.0011
+		100 = epithet_religion_christianism.0012
+		100 = epithet_religion_christianism.0013
+		100 = epithet_religion_christianism.0014
+
+		100 = epithet_religion_abrahamic.0001
+		100 = epithet_religion_abrahamic.0002
+		100 = epithet_religion_abrahamic.0003
+		100 = epithet_religion_abrahamic.0004
+
+		100 = epithet_religion_islam.0001
+
+		100 = epithet_religion_eastern.0001
+
+		100 = epithet_culture_northern.0001
+		100 = epithet_culture_northern.0002
+		100 = epithet_culture_northern.0003
+		100 = epithet_culture_northern.0004
+		100 = epithet_culture_northern.0005
+		100 = epithet_culture_northern.0006
+		100 = epithet_culture_northern.0007
+		100 = epithet_culture_northern.0008
+		100 = epithet_culture_northern.0009
+		100 = epithet_culture_northern.0010
+		100 = epithet_culture_northern.0011
+		100 = epithet_culture_northern.0012
+		100 = epithet_culture_northern.0013
+		100 = epithet_culture_northern.0014
+		100 = epithet_culture_northern.0015
+		100 = epithet_culture_northern.0016
+		100 = epithet_culture_northern.0017
+		100 = epithet_culture_northern.0018
+		100 = epithet_culture_northern.0019
+		100 = epithet_culture_northern.0020
+		100 = epithet_culture_northern.0021
+		100 = epithet_culture_northern.0022
+		100 = epithet_culture_northern.0023
+		100 = epithet_culture_northern.0024
+		100 = epithet_culture_northern.0025
+		100 = epithet_culture_northern.0026
+		100 = epithet_culture_northern.0027
+		100 = epithet_culture_northern.0028
+		100 = epithet_culture_northern.0029
+		100 = epithet_culture_northern.0030
+		100 = epithet_culture_northern.0031
+		100 = epithet_culture_northern.0032
+		100 = epithet_culture_northern.0033
+		100 = epithet_culture_northern.0034
+		100 = epithet_culture_northern.0035
+		100 = epithet_culture_northern.0036
+
+		100 = epithet_culture_greco_roman.0001
+		100 = epithet_culture_greco_roman.0002
+		100 = epithet_culture_greco_roman.0003
+		100 = epithet_culture_greco_roman.0004
+		100 = epithet_culture_greco_roman.0005
+		100 = epithet_culture_greco_roman.0006
+		100 = epithet_culture_greco_roman.0007
+		100 = epithet_culture_greco_roman.0008
+		100 = epithet_culture_greco_roman.0009
+		100 = epithet_culture_greco_roman.0010
+		100 = epithet_culture_greco_roman.0011
+		100 = epithet_culture_greco_roman.0012
+		100 = epithet_culture_greco_roman.0013
+		100 = epithet_culture_greco_roman.0014
+		100 = epithet_culture_greco_roman.0015
+		100 = epithet_culture_greco_roman.0016
+		100 = epithet_culture_greco_roman.0017
+		100 = epithet_culture_greco_roman.0018
+		100 = epithet_culture_greco_roman.0019
+		100 = epithet_culture_greco_roman.0020
+		100 = epithet_culture_greco_roman.0021
+		100 = epithet_culture_greco_roman.0022
+		100 = epithet_culture_greco_roman.0023
+		100 = epithet_culture_greco_roman.0024
+		100 = epithet_culture_greco_roman.0025
+
+		100 = epithet_culture_european.0001
+
+		100 = epithet_culture_asian.0001
+
+		100 = epithet_culture_akan.0001
+		100 = epithet_culture_akan.0002
+		100 = epithet_culture_akan.0003
+		100 = epithet_culture_akan.0004
+
+		100 = epithet_culture_arabic.0001
+		100 = epithet_culture_arabic.0002
+		100 = epithet_culture_arabic.0003
+		100 = epithet_culture_arabic.0004
+
+		100 = epithet_culture_east_slavic.0001
+
+		100 = epithet_culture_iranian.0001
+
+		100 = epithet_culture_west_europe.0001
+		100 = epithet_culture_west_europe.0002
+		100 = epithet_culture_west_europe.0003
+		100 = epithet_culture_west_europe.0004
+		100 = epithet_culture_west_europe.0005
+		100 = epithet_culture_west_europe.0006
+		100 = epithet_culture_west_europe.0007
+		100 = epithet_culture_west_europe.0008
+		100 = epithet_culture_west_europe.0009
+		
+		100 = epithet_culture_chinese.0001
+		100 = epithet_culture_chinese.0002
+		100 = epithet_culture_chinese.0003
+		100 = epithet_culture_chinese.0004
+		100 = epithet_culture_chinese.0005
+		100 = epithet_culture_chinese.0006
+		100 = epithet_culture_chinese.0007
+		100 = epithet_culture_chinese.0008
+		100 = epithet_culture_chinese.0009
+		100 = epithet_culture_chinese.0010
+		100 = epithet_culture_chinese.0011
+		100 = epithet_culture_chinese.0012
+		100 = epithet_culture_chinese.0013
+
+		100 = epithet_culture_goidelic.0001
+		100 = epithet_culture_goidelic.0002
+		100 = epithet_culture_goidelic.0003
+		100 = epithet_culture_goidelic.0004
+
+		100 = epithet_culture_scottish.0001
+		100 = epithet_culture_scottish.0002
+		100 = epithet_culture_scottish.0003
+		100 = epithet_culture_scottish.0004
+
+		100 = epithet_culture_indian.0001
+		100 = epithet_culture_indian.0002
+		100 = epithet_culture_indian.0003
+		100 = epithet_culture_indian.0004
+
+		100 = epithet_culture_british_islands.0001
+		100 = epithet_culture_british_islands.0002
+		100 = epithet_culture_british_islands.0003
+		100 = epithet_culture_british_islands.0004
+	}
+}
+
+epithet_all_random = {
+	trigger = {	has_any_nickname = no }
 	random_events = {
 		100 = epithet.0001
 		100 = epithet.0002
@@ -413,212 +540,11 @@ epithet_selection = {
 		100 = epithet.0305
 		100 = epithet.0306
 		100 = epithet.0307
-	}
-}
-
-epithet_akan_selection = {
-	trigger = {
-		has_culture_group = culture_group:akan_group
-	}
-
-	random_events = {
-		100 = epithet.1001
-		100 = epithet.1002
-		100 = epithet.1003
-		100 = epithet.1004
-	}
-}
-
-epithet_arabic_selection = {
-	trigger = {
-		culture_group = culture_group:arabic_group
-	}
-
-	random_events = {
-		100 = epithet.1101
-		100 = epithet.1102
-		100 = epithet.1103
-		100 = epithet.1104
-	}
-}
-
-epithet_northern_selection = {
-	trigger = {
-		can_get_northerner_nickname_trigger = yes
-	}
-	random_events = {
-		100 = epithet.1201
-		100 = epithet.1202
-		100 = epithet.1203
-		100 = epithet.1204
-		100 = epithet.1205
-		100 = epithet.1206
-		100 = epithet.1207
-		100 = epithet.1208
-		100 = epithet.1209
-		100 = epithet.1210
-		100 = epithet.1211
-		100 = epithet.1212
-		100 = epithet.1213
-		100 = epithet.1214
-		100 = epithet.1215
-		100 = epithet.1216
-		100 = epithet.1217
-		100 = epithet.1218
-		100 = epithet.1219
-		100 = epithet.1220
-		100 = epithet.1221
-		100 = epithet.1222
-		100 = epithet.1223
-		100 = epithet.1224
-		100 = epithet.1225
-		100 = epithet.1226
-		100 = epithet.1227
-		100 = epithet.1228
-		100 = epithet.1229
-		100 = epithet.1230
-		100 = epithet.1231
-		100 = epithet.1232
-		100 = epithet.1233
-	}
-}
-
-epithet_east_slavic_selection = {
-	trigger = {
-		culture_group = culture_group:east_slavic_group
-	}
-
-	random_events = {
-		100 = epithet.1301
-	}
-}
-
-epithet_iranian_selection = {
-	trigger = {
-		culture_group = culture_group:iranian_group
-	}
-
-	random_events = {
-		100 = epithet.1401
-	}
-}
-
-epithet_west_europe_selection = {
-	trigger = {
-		can_get_west_europe_nickname_trigger = yes
-	}
-
-	random_events = {
-		100 = epithet.1501
-		100 = epithet.1502
-		100 = epithet.1503
-		100 = epithet.1504
-		100 = epithet.1505
-		100 = epithet.1506
-		100 = epithet.1507
-		100 = epithet.1508
-	}
-}
-
-epithet_chinese_selection = {
-	trigger = {
-		can_get_chinese_nickname_trigger = yes
-	}
-	random_events = {
-		100 = epithet.1601
-		100 = epithet.1602
-		100 = epithet.1603
-		100 = epithet.1604
-		100 = epithet.1605
-		100 = epithet.1606
-		100 = epithet.1607
-		100 = epithet.1608
-		100 = epithet.1609
-		100 = epithet.1610
-		100 = epithet.1611
-		100 = epithet.1612
-		100 = epithet.1613
-	}
-}
-
-epithet_greco_roman_selection = {
-	trigger = {
-		can_get_greco_roman_nickname_trigger = yes
-	}
-	random_events = {
-		100 = epithet.1701
-		100 = epithet.1702
-		100 = epithet.1703
-		100 = epithet.1704
-		100 = epithet.1705
-		100 = epithet.1706
-		100 = epithet.1707
-		100 = epithet.1708
-		100 = epithet.1709
-		100 = epithet.1710
-		100 = epithet.1711
-		100 = epithet.1712
-		100 = epithet.1712
-		100 = epithet.1713
-		100 = epithet.1714
-		100 = epithet.1715
-		100 = epithet.1716
-		100 = epithet.1717
-		100 = epithet.1718
-		100 = epithet.1719
-		100 = epithet.1720
-		100 = epithet.1721
-		100 = epithet.1722
-	}
-}
-
-epithet_goidelic_selection = {
-	trigger = {
-		culture_group = culture_group:goidelic_group
-	}
-	random_events = {
-		100 = epithet.1801
-		100 = epithet.1802
-		100 = epithet.1803
-		100 = epithet.1804
-	}
-}
-
-epithet_scottish_selection = {
-	trigger = {
-		culture = culture:scottish
-	}
-
-	random_events = {
-		100 = epithet.1901
-		100 = epithet.1902
-		100 = epithet.1903
-	}
-}
-
-epithet_indian_selection = {
-	trigger = {
-		can_get_indian_nickname_trigger = yes
-	}
-
-	random_events = {
-		100 = epithet.2001
-		100 = epithet.2002
-		100 = epithet.2003
-		100 = epithet.2004
-	}
-}
-
-epithet_brittany_islands_selection = {
-	trigger = {
-		can_get_north_west_europe_nickname_trigger = yes
-	}
-
-	random_events = {
-		100 = epithet.2101
-		100 = epithet.2102
-		100 = epithet.2103
-		100 = epithet.2104
+		100 = epithet.0308
+		100 = epithet.0309
+		100 = epithet.0310
+		100 = epithet.0311
+		100 = epithet.0312
 	}
 }
 

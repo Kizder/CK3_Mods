@@ -1,0 +1,206 @@
+﻿on_giant_epithet = {
+	trigger = { 
+		    has_trait = giant 
+		    prestige_level >= 2
+	}
+	first_valid_on_action = {
+		on_diplomacy_giant
+		on_martial_giant
+		on_stewardship_giant
+		on_intrigue_giant
+		on_learning_giant
+		on_prowess_giant
+		on_giant_one_eyed
+		on_giant_cannibal
+		on_giant_albino
+		on_giant_one_legged
+		on_giant_strong
+		on_giant_scaly
+		on_giant_hunchbacked
+	}
+
+	fallback = on_dwarf_epithet
+}
+
+# Diplomatic Giant
+on_diplomacy_giant = {
+	trigger = { 
+		diplomacy >= 25
+		is_diplomacy_higher_stat_trigger = yes
+	}
+
+	random_on_action = {
+		100 = on_cordial_giant
+		100 = on_pleasant_giant
+		100 = on_warm_mountain
+	}
+
+}
+
+on_cordial_giant = {
+	effect = { give_nickname = nick_the_long_winded_giant }
+}
+
+on_pleasant_giant = {
+	effect = { give_nickname = nick_the_eminent_talker }
+}
+
+on_warm_mountain = {
+	effect = { give_nickname = nick_the_warm_mountain }
+}
+
+# Martial Giant
+on_martial_giant = {
+	trigger = { 
+		martial >= 25
+		is_martial_higher_stat_trigger = yes
+	}
+	random_on_action = {
+		100 = on_warmongering_giant
+		100 = on_war_giant
+		100 = on_mountain_that_strikes
+	}
+}
+
+on_warmongering_giant = {
+	effect = { give_nickname = nick_the_warmongering_giant }
+}
+on_war_giant = {
+	effect = { give_nickname = nick_the_war_giant }
+}
+on_mountain_that_strikes = {
+	effect = { give_nickname = nick_the_mountain_that_strikes }
+}
+
+# Stewardship Giant
+on_stewardship_giant = {
+	trigger = { 
+		stewardship >= 25
+		is_stewardship_higher_stat_trigger = yes
+	}
+	random_on_action = {
+		100 = on_golden_giant
+		100 = on_silver_giant
+		100 = on_affluent_mountain
+	}
+}
+
+on_golden_giant = {
+	effect = { give_nickname = nick_the_golden_giant }
+}
+on_silver_giant = {
+	effect = { give_nickname = nick_the_silver_giant }
+}
+on_affluent_mountain = {
+	effect = { give_nickname = nick_the_affluent_mountain }
+}
+
+# Intrigue Giant
+on_intrigue_giant = {
+	trigger = {
+		intrigue >= 25
+		is_intrigue_higher_stat_trigger = yes
+	}
+	random_on_action = {
+		100 = on_shadow_giant
+		100 = on_giant_spider
+		100 = on_hidden_mountain
+	}
+
+}
+
+on_shadow_giant = {
+	effect = { give_nickname = nick_the_shadow_giant }
+}
+
+on_giant_spider = {
+	effect = { give_nickname = nick_the_giant_spider }
+}
+
+on_hidden_mountain = {
+	effect = { give_nickname = nick_the_hidden_mountain }
+}
+
+# Learning Giant
+on_learning_giant = {
+	trigger = {
+		learning >= 25
+		is_intrigue_higher_stat_trigger = yes
+	}
+	random_on_action = {
+		100 = on_wise_giant
+		100 = on_holy_giant
+		100 = on_sacred_mountain
+	}
+
+}
+
+on_wise_giant = {
+	effect = { give_nickname = nick_the_wise_giant }
+}
+on_holy_giant = {
+	effect = { give_nickname = nick_the_holy_giant }
+}
+on_sacred_mountain= {
+	effect = { give_nickname = nick_the_sacred_mountain }
+}
+
+# Prowess Giant
+on_prowess_giant = {
+	trigger = {
+		prowess >= 30
+	}
+	random_on_action = {
+		100 = on_warrior_giant 
+		100 = on_battlefield_giant
+		100 = on_mountain_that_rides	
+	}
+}
+
+on_warrior_giant = {
+	effect = { give_nickname = nick_the_warrior_giant }
+}
+
+on_battlefield_giant = {
+	effect = { give_nickname = nick_the_battlefield_giant }
+}
+
+on_mountain_that_rides = {
+	effect = { give_nickname = nick_the_mountain_that_rides }
+}
+
+# Physical Giant
+on_giant_one_eyed = {
+	trigger = {	has_trait = one_eyed }
+	effect = { give_nickname = nick_the_cyclop }
+}
+
+on_giant_cannibal = {
+	trigger = { has_trait = cannibal }
+	effect = { give_nickname = nick_the_ogre }
+}
+
+on_giant_albino = {
+	trigger = { has_trait = albino }
+	effect = { give_nickname = nick_the_snowy_mountain }
+}
+
+on_giant_one_legged = {
+	trigger = { has_trait = one_legged }
+	effect = { give_nickname = nick_the_wobbly_mountain }
+}
+
+on_giant_strong = {
+	trigger = { has_strong_trait_trigger = yes }
+	effect = { give_nickname = nick_the_titan }
+}
+
+on_giant_scaly = {
+	trigger = { has_trait = scaly }
+	effect = { give_nickname = nick_the_python }
+}
+
+on_giant_hunchbacked = {
+	trigger = { has_trait = hunchbacked }
+	effect = { give_nickname = nick_the_rocky_mountain }
+}

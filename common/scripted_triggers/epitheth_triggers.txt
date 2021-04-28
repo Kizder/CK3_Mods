@@ -127,13 +127,56 @@ can_get_west_europe_nickname_trigger = {
     }
 }
 
-can_get_abrahamic_religeion_nickname_trigger = {
+can_get_european_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:baltic_group
+        culture_group = culture_group:balto_finnic_group
+        culture_group = culture_group:brythonic_group
+        culture_group = culture_group:byzantine_group
+        culture_group = culture_group:central_germanic_group
+        culture_group = culture_group:east_slavic_group
+        culture_group = culture_group:frankish_group
+        culture_group = culture_group:goidelic_group
+        culture_group = culture_group:iberian_group
+        culture_group = culture_group:latin_group
+        culture_group = culture_group:north_germanic_group
+        culture_group = culture_group:south_slavic_group
+        culture_group = culture_group:ugro_permian_group
+        culture_group = culture_group:volga_finnic_group
+        culture_group = culture_group:west_germanic_group
+        culture_group = culture_group:west_slavic_group
+    }
+}
+
+can_get_asian_nickname_trigger = {
+    OR = {
+        culture_group = culture_group:burman_group
+        culture_group = culture_group:chinese_group
+        culture_group = culture_group:dravidian_group
+        culture_group = culture_group:indo_aryan_group
+        culture_group = culture_group:mongolic_group
+        culture_group = culture_group:qiangic_group
+        culture_group = culture_group:tibetan_group
+    }
+}
+
+can_get_abrahamic_religion_nickname_trigger = {
     OR = {
         religion = religion:christianity_religion
         religion = religion:islam_religion
         religion = religion:judaism_religion
         religion = religion:dualism_religion
         religion = religion:yazidi_religion
+    }
+}
+
+can_get_eastern_religion_nickname_trigger = {
+    OR = {
+        religion = religion:buddhism_religion
+        religion = religion:hinduism_religion
+        religion = religion:jainism_religion
+        religion = religion:zoroastrianism_religion
+        religion = religion:taoism_religion
     }
 }
 
@@ -150,6 +193,82 @@ is_african_culture = {
         culture_group = culture_group:yoruba_group
     }
 }
+
+is_king_queen_culture = {
+    OR = {
+        culture = culture:latgalian
+        culture = culture:prussian
+        culture_group = culture_group:balto_finnic_group
+        culture_group = culture_group:brythonic_group
+        culture_group = culture_group:burman_group
+        culture = culture:alan
+        culture = culture:armenian
+        culture = culture:assyrian
+        culture = culture:georgian
+        culture_group = culture_group:central_germanic_group
+        culture_group = culture_group:chinese_group
+        culture = culture:daju
+        culture = culture:nubian
+        culture = culture:welayta
+        culture_group = culture_group:east_slavic_group
+        culture_group = culture_group:frankish_group
+        AND = {
+            culture_group = culture_group:iberian_group
+            has_feudal_government_trigger = yes
+        }
+        culture_group = culture_group:israelite_group
+        AND = {
+            culture_group = culture_group:latin_group
+            NOT = { culture = culture:roman }
+        }
+        culture = culture:hungarian
+        culture_group = culture_group:north_germanic_group
+        culture_group = culture_group:qiangic_group
+        culture_group = culture_group:south_slavic_group
+        culture_group = culture_group:ugro_permian_group
+        culture_group = culture_group:volga_finnic_group
+        culture_group = culture_group:west_germanic_group
+        culture_group = culture_group:west_slavic_group
+    }
+}
+
+is_emperor_empress_culture = {
+    OR = {
+        culture_group = culture_group:baltic_group
+        culture_group = culture_group:balto_finnic_group
+        culture_group = culture_group:brythonic_group
+        culture_group = culture_group:burman_group
+        culture = culture:alan
+        culture = culture:armenian
+        culture = culture:assyrian
+        culture = culture:georgian
+        culture_group = culture_group:chinese_group
+        culture = culture:daju
+        culture = culture:nubian
+        culture = culture:welayta
+        culture = culture:ilmenian
+        culture = culture:severian
+        culture = culture:volhynian
+        culture_group = culture_group:frankish_group
+        AND = {
+            culture_group = culture_group:iberian_group
+            has_feudal_government_trigger = yes
+        }
+        culture_group = culture_group:israelite_group
+        AND = {
+            culture_group = culture_group:latin_group
+            NOT = { culture = culture:roman }
+        }
+        culture_group = culture_group:north_germanic_group
+        culture_group = culture_group:qiangic_group
+        culture_group = culture_group:south_slavic_group
+        culture_group = culture_group:ugro_permian_group
+        culture_group = culture_group:volga_finnic_group
+        culture_group = culture_group:west_germanic_group
+        culture_group = culture_group:west_slavic_group
+    }
+}
+
 
 has_lunatic_trait_trigger = {
     OR = {

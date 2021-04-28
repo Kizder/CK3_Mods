@@ -1,0 +1,461 @@
+﻿##########################################
+namespace = epithet_religion_christianism
+
+# Christianims
+epithet_religion_christianism.0001 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 5
+		has_religion = religion:christianity_religion
+		num_virtuous_traits >= 3
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_saint }
+    }
+}
+
+epithet_religion_christianism.0002 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+        has_religion = religion:christianity_religion
+		piety_level >= 3
+		has_trait = education_learning
+		has_trait = zealous
+		OR = {
+			has_trait = theologian
+			has_trait = devoted
+			has_trait = heresiarch
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_preacher }
+    }
+}
+
+epithet_religion_christianism.0003 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 4
+		has_religion = religion:christianity_religion
+		num_virtuous_traits >= 3
+		learning >= 17
+		is_learning_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_apostle }
+    }
+}
+
+epithet_religion_christianism.0004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		piety_level >= 4
+		num_virtuous_traits >= 3
+		OR = {
+			has_trait = beauty_good
+			has_trait = physique_good
+			has_trait = intellect_good
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_blessed }
+    }
+}
+
+epithet_religion_christianism.0005 = {
+	hidden = yes
+	trigger = {
+		has_religion = religion:christianity_religion
+		OR = {
+			has_trait = kinslayer
+			has_trait = excommunicated
+			has_trait = torturer
+			has_trait = deviant
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_black }
+    }
+}
+
+epithet_religion_christianism.0006 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 3
+		has_trait = chaste
+		has_trait = devoted
+		has_religion = religion:christianity_religion
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_monk }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_nun }
+		}
+    }
+}
+
+epithet_religion_christianism.0007 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		piety_level >= 4
+		highest_held_title_tier >= tier_kingdom
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_anointed }
+    }
+}
+
+epithet_religion_christianism.0008 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		faith = { has_doctrine = tenet_aniconism }
+		piety_level >= 3
+		has_trait = architect
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_carpenter }
+    }
+}
+
+epithet_religion_christianism.0009 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 4
+		diplomacy >= 15
+		is_diplomacy_higher_stat_trigger = yes
+		has_religion = religion:christianity_religion
+		is_female = no
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_confessor }
+    }
+}
+
+epithet_religion_christianism.0010 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		piety_level >= 1
+		has_religion = religion:christianity_religion
+		is_female = no
+		has_trait = education_learning
+		learning >= 15
+		has_council_position = councillor_chancellor
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_vicar }
+    }
+}
+
+epithet_religion_christianism.0011 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		has_trait = faith_warrior
+		piety_level >= 2
+		OR = {
+			martial >= 15
+			AND = {
+				prowess >= 15
+				is_knight = yes
+			}
+			has_trait = holy_warrior
+		}
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_templar }
+    }
+}
+
+epithet_religion_christianism.0012 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		calc_true_if = {
+			amount >= 2
+			has_trait = beauty_good
+			has_trait = seducer
+			has_trait = lustful
+		}
+		NOT = { has_trait = chaste }
+		has_unpleasant_appearence_trait_trigger = no
+		piety_level <= 3
+		OR = {
+			piety_level <= 0
+			has_trait = deviant
+			has_trait = witch
+			has_possessed_trait_trigger = yes
+			num_sinful_traits >= 3
+		}
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_nickname_effect = { NICKNAME = nick_the_incubus }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_succubus }
+		}
+    }
+}
+
+epithet_religion_christianism.0013 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		religion = religion:christianity_religion
+		has_unpleasant_appearence_trait_trigger = no
+		has_trait = beauty_good
+		piety_level >= 2
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_beauclerk }
+    }
+}
+
+epithet_religion_christianism.0014 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		OR = {
+			has_trait = faith_warrior
+			has_trait = crusader_king
+			has_trait = order_member
+		}
+		OR = {
+			martial >= 17
+			AND = {
+				is_knight = yes
+				prowess >= 20
+			}
+		}
+		martial >= 17
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_crusader }
+    }
+}
+
+##########################################
+namespace = epithet_religion_abrahamic
+
+epithet_religion_abrahamic.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		num_sinful_traits >= 3
+		can_get_abrahamic_religion_nickname_trigger = yes
+		OR = {
+			has_trait = wrathful
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		OR = {
+			has_trait = kinslayer
+			has_trait = excommunicated
+			has_trait = torturer
+			has_trait = deviant
+			has_trait = murderer
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = kinslayer
+				has_trait = excommunicated
+			}
+		}
+		modifier = {
+			factor = 2
+		}
+		modifier = {
+			factor = 2
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_devil }
+    }
+}
+
+epithet_religion_abrahamic.0002 = {
+	hidden = yes
+	trigger = {
+		can_get_abrahamic_religion_nickname_trigger = yes
+		is_female = no
+		age >= 16
+		has_trait = giant
+		has_trait = strong
+		has_trait = physique_good
+		dread >= 50
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_goliath }
+    }
+}
+
+epithet_religion_abrahamic.0003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_abrahamic_religion_nickname_trigger = yes
+		prestige_level >= 4
+		piety_level >= 4
+		num_sinful_traits = 0
+		num_virtuous_traits >= 3
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_god_given }
+    }
+}
+
+epithet_religion_abrahamic.0004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_abrahamic_religion_nickname_trigger = yes
+		has_trait = zealous
+		piety_level >= 4
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_god_loving }
+    }
+}
+
+##########################################
+namespace = epithet_religion_islam
+
+epithet_religion_islam.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:islam_religion
+		OR = {
+			has_trait = faith_warrior
+			has_trait = crusader_king
+			has_trait = order_member
+		}
+		is_knight = yes
+		prowess >= 20
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_mujahib }
+    }
+}
+
+##########################################
+namespace = epithet_religion_eastern
+
+epithet_religion_eastern.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_eastern_religion_nickname_trigger = yes
+		learning >= 17
+		is_learning_higher_stat_trigger = yes
+		piety_level >= 3
+		has_trait = theologian
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_guru }
+    }
+}
