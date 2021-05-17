@@ -1,5 +1,6 @@
 ﻿# Used for tooltip
 nick_a_random_nickname = {} 
+nick_test = {}
 
 # Weight 1
 nick_the_brave = {}
@@ -14,7 +15,6 @@ nick_the_tranquil = {}
 nick_the_undisturbed = {}
 nick_the_angry = { is_bad = yes }
 nick_the_irascible = { is_bad = yes }
-nick_the_austere = { is_bad = yes }
 nick_the_prudish = { is_bad = yes }
 nick_the_satisfied = {}
 nick_the_assidious = {}
@@ -49,6 +49,9 @@ nick_the_bowing = { is_bad = yes }
 nick_scatterbrain = { is_bad = yes }
 nick_the_vegetable = { is_bad = yes }
 nick_the_pawn = { is_bad = yes }
+nick_the_pawn_of_location = { is_bad = yes }
+nick_the_pawn_of_capital = { is_bad = yes }
+nick_the_pawn_of_capital_county = { is_bad = yes }
 nick_the_suspicious = { is_bad = yes }
 nick_the_boring = { is_bad = yes }
 nick_the_oaf = { is_bad = yes }
@@ -60,8 +63,27 @@ nick_the_restless = {}
 nick_the_great = {}
 nick_the_brilliant = {}
 nick_the_lowblood = { is_bad = yes }
+nick_the_tall = {}
+nick_the_short = { is_bad = yes }
+nick_the_unsteady = { is_bad = yes }
+nick_the_recluse = {}
+nick_the_wanderer = {}
+nick_the_white = {}
+nick_the_milky = { is_bad = yes }
+nick_the_rake = { is_bad = yes }
+nick_the_crooked = { is_bad = yes }
+nick_the_thin = {}
+nick_the_masked = { is_bad = yes }
+nick_the_berserker = {}
+nick_the_desert_fox = {}
+nick_dead_eye = {}
+nick_the_lizard = {}
+nick_the_lizard_of_location = {}
+nick_the_lizard_of_capital = {}
+nick_the_lizard_of_capital_county = {}
 
 # Weight 2
+nick_the_austere = { is_bad = yes }
 nick_the_determined = {}
 nick_the_heretic = { is_bad = yes }
 nick_the_nice = {}
@@ -84,6 +106,9 @@ nick_the_accursed = { is_bad = yes }
 nick_the_adopted = {}
 nick_the_all_fair = {}
 nick_the_hunter = {}
+nick_the_hunter_of_location = {}
+nick_the_hunter_of_capital = {}
+nick_the_hunter_of_capital_county = {}
 nick_the_lame = { is_bad = yes }
 nick_the_hideous = { is_bad = yes }
 nick_the_frog = { is_bad = yes }
@@ -99,12 +124,17 @@ nick_the_unyielding = {}
 nick_the_damned = { is_bad = yes }
 nick_the_untrusted = { is_bad = yes }
 nick_the_arbiter = {}
+nick_the_arbiter_of_location = {}
+nick_the_arbiter_of_capital = {}
+nick_the_arbiter_of_capital_county = {}
 nick_the_mute = { is_bad = yes }
 nick_the_eunuch = { is_bad = yes }
 nick_the_halfman = { is_bad = yes }
 nick_twist_foot = { is_bad = yes }
-nick_the_squanderer = { is_bad = yes }
 nick_the_surgeon = {}
+nick_the_surgeon_of_location = {}
+nick_the_surgeon_of_capital = {}
+nick_the_surgeon_of_capital_county = {}
 nick_the_navigator = {}
 nick_the_bitter = { is_bad = yes }
 nick_the_unfit = { is_bad = yes }
@@ -116,17 +146,29 @@ nick_the_enigmatic = {}
 nick_the_determined = {}
 nick_the_wayfarer = {}
 nick_the_rich = {}
+nick_the_rich_of_location = {}
+nick_the_rich_of_capital = {}
+nick_the_rich_of_capital_county = {}
 nick_the_kinslayer = { is_bad = yes }
 nick_the_skeptic = { is_bad = yes }
 nick_the_suicidal = { is_bad = yes }
 nick_dungeon_dweller = { is_bad = yes }
 nick_the_weird = { is_bad = yes }
+nick_the_weird_of_location = { is_bad = yes }
+nick_the_weird_of_capital = { is_bad = yes }
+nick_the_weird_of_capital_county = { is_bad = yes }
 nick_limpfoot = { is_bad = yes }
 nick_mumbling_mouth = { is_bad = yes }
 nick_the_stout = {}
 nick_the_young = {}
 nick_the_scholar = {}
+nick_the_scholar_of_location = {}
+nick_the_scholar_of_capital = {}
+nick_the_scholar_of_capital_county = {}
 nick_the_giant = {}
+nick_the_giant_of_location = {}
+nick_the_giant_of_capital = {}
+nick_the_giant_of_capital_county = {}
 nick_the_unseeing = { is_bad = yes }
 nick_the_uninvolved = { is_bad = yes }
 nick_the_enlightened = {}
@@ -136,13 +178,15 @@ nick_the_foremost = {}
 nick_the_lawful = {}
 nick_the_affable = {}
 nick_the_bull = {}
+nick_the_bull_of_location = {}
+nick_the_bull_of_capital = {}
+nick_the_bull_of_capital_county = {}
 nick_the_kind = {}
 nick_the_good = {}
-nick_the_soldier = {}
 nick_the_kneeler = { is_bad = yes }
 nick_the_withered = {}
 nick_the_weasel = { is_bad = yes }
-nick_little_orphan = { is_bad = yes }
+nick_the_orphan = { is_bad = yes }
 nick_the_humorless = { is_bad = yes }
 nick_the_immovable = {}
 nick_the_apathetic = { is_bad = yes }
@@ -159,7 +203,6 @@ nick_the_greathearted = {}
 nick_the_mad = { is_bad = yes }
 nick_the_crazy = { is_bad = yes }
 nick_the_huntmaster = {}
-nick_the_braggart = { is_bad = yes }
 nick_the_ageless = {}
 nick_the_cuckold = { is_bad = yes }
 nick_the_merciless = {}
@@ -182,85 +225,150 @@ nick_the_red_king = {}
 nick_the_vehement = {}
 nick_the_madman = { is_bad = yes }
 nick_the_insatiable = {}
+nick_the_redeemed = {}
+nick_of_two_reflections = {}
+nick_the_troubadour = {}
+nick_the_troubadour_of_location = {}
+nick_the_troubadour_of_capital = {}
+nick_the_troubadour_of_capital_county = {}
+nick_the_bard = {}
+nick_the_bard_of_location = {}
+nick_the_bard_of_capital = {}
+nick_the_bard_of_capital_county = {}
+nick_corpse_eater = { is_bad = yes }
+nick_man_eater = { is_bad = yes }
+nick_pain_lover = { is_bad = yes}
+nick_stormblessed = {}
+nick_the_beguiling = {}
+nick_the_frost_walker = {}
+nick_the_werebear = {}
+nick_the_brash = {}
+nick_the_cabbage = { is_bad = yes }
+nick_the_conqueror = {}
+nick_the_constant = {}
+nick_the_debonaire = {}
 
 # Weight 3
 nick_the_lecherous = { is_bad = yes }
 nick_the_dissolute = { is_bad = yes }
 nick_the_diplomat = {}
-nick_the_broken_blade = {}
+nick_the_diplomat_of_location = {}
+nick_the_diplomat_of_capital = {}
+nick_the_diplomat_of_capital_county = {}
 nick_the_siegemaster = {}
 nick_the_heartless = { is_bad = yes }
+nick_the_heartless_of_location = { is_bad = yes }
+nick_the_heartless_of_capital = { is_bad = yes }
+nick_the_heartless_of_capital_county = { is_bad = yes }
 nick_the_cold = { is_bad = yes }
 nick_the_bookworm = { is_bad = yes }
 nick_the_bibliophile = {}
 nick_the_unfading = {}
-nick_the_sudden_storm = {}
 nick_the_pious = {}
 nick_the_old = {}
 nick_the_ashamed = {is_bad = yes }
 nick_the_oathbreaker = { is_bad = yes }
 nick_the_truthspeaker = {}
 nick_the_astrologer = {}
+nick_the_astrologer_of_location = {}
+nick_the_astrologer_of_capital = {}
+nick_the_astrologer_of_capital_county = {}
 nick_the_beanstalk = { is_bad = yes }
 nick_the_peacock = {}
+nick_the_peacock_of_location = {}
+nick_the_peacock_of_capital = {}
+nick_the_peacock_of_capital_county = {}
 nick_the_tower = {}
+nick_the_tower_of_location = {}
+nick_the_tower_of_capital = {}
+nick_the_tower_of_capital_county = {}
 nick_the_lusty_leper = { is_bad = yes }
 nick_the_wife_thief = { is_bad = yes }
 nick_the_hound = { is_bad = yes }
 nick_the_mockingbird = {}
-nick_the_schemer = {}
-nick_the_riddle = {}
 nick_the_dreadful = { is_bad = yes }
-nick_the_dagger = {}
 nick_the_blasphemer = { is_bad = yes }
-nick_the_incorruptible = {}
 nick_the_wicked = { is_bad = yes }
 nick_the_bewitched = { is_bad = yes }
 nick_the_spiteful = { is_bad = yes }
 nick_the_oppressor = { is_bad = yes }
-nick_the_philosopher = {}
-nick_the_crow = {}
 nick_the_absolutist = { is_bad = yes }
 nick_the_lions_claw = {}
 nick_the_wanderer_bard = {}
-nick_the_wealthy = {}
-nick_the_wizard = {}
 nick_the_enchantress = {}
 nick_the_maiden_fair = {}
-nick_the_kingfish = { is_bad = yes }
-nick_silent_tongue = {}
-nick_the_silencer = {}
 nick_the_night_clad = {}
-nick_the_wise = {}
-nick_the_lion = {}
 nick_the_lionheart = {}
-nick_the_witch = { is_bad = yes }
 nick_the_magnificent = {}
 nick_the_fox = {}
-nick_true_steel = {}
 nick_the_wife_beater = { is_bad = yes }
 nick_the_child_beater = { is_bad = yes }
 nick_the_loyal = {}
-nick_the_murder_king = { is_bad = yes }
 nick_the_fierce = {}
 nick_the_bad = { is_bad = yes }
-nick_the_beloved = {}
 nick_the_big_nest = {}
 nick_wormtongue = { is_bad = yes }
 nick_the_patriarch = {}
 nick_the_matriarch = {}
-nick_the_builder = {}
-nick_the_chief = {}
 nick_the_crowned = {}
 nick_the_scar_striped = {}
 nick_the_emperor_king = {}
-nick_the_hammer = {}
-nick_the_sailor_king = {}
 nick_bloody_stupid = { is_prefix = yes }
-nick_the_king_who_knelt = { is_bad = yes }
-nick_the_flayman = { is_bad = yes }
-nick_the_nightblade = {}
-nick_the_whispering_one = {}
+nick_the_gifted = {}
+nick_the_prevailer = {}
+nick_the_dire = { is_bad = yes }
+nick_the_hidden_hand = {}
+nick_the_hidden_hand_of_liege = {}
+nick_the_city_smasher = {}
+nick_the_unraveler_of_secrets = {}
+nick_witch_king = {}
+nick_ash_skin = {}
+nick_man_of_steel = {}
+nick_the_iron_lady = {}
+nick_bonecrusher = {}
+nick_broken_shield = { is_bad = yes }
+nick_the_ever_wounded = { is_bad = yes }
+nick_the_squanderer = { is_bad = yes }
+nick_the_soldier = {}
+nick_the_soldier_of_location = {}
+nick_the_soldier_of_capital = {}
+nick_the_soldier_of_capital_county = {}
+nick_the_schemer = {}
+nick_the_schemer_of_location = {}
+nick_the_schemer_of_capital = {}
+nick_the_schemer_of_capital_county = {}
+nick_the_philosopher = {}
+nick_the_philosopher_of_location = {}
+nick_the_philosopher_of_capital = {}
+nick_the_philosopher_of_capital_county = {}
+nick_the_braggart = { is_bad = yes }
+nick_the_witch = { is_bad = yes }
+nick_the_witch_of_capital = { is_bad = yes }
+nick_the_witch_of_capital_county = { is_bad = yes }
+nick_the_witch_of_location = { is_bad = yes }
+nick_the_beloved = {}
+nick_the_beloved_of_capital = {}
+nick_the_beloved_of_capital_county = {}
+nick_the_beloved_of_location = {}
+nick_the_leech = { is_bad = yes }
+nick_the_leech_of_location = { is_bad = yes }
+nick_the_leech_of_capital = { is_bad = yes }
+nick_the_leech_of_capital_county = { is_bad = yes }
+nick_the_scorpion = { is_bad = yes }
+nick_the_scorpion_of_location = { is_bad = yes }
+nick_the_scorpion_of_capital = { is_bad = yes }
+nick_the_scorpion_of_capital_county = { is_bad = yes }
+nick_the_broken_visage = { is_bad = yes }
+nick_heart_piercer = {}
+nick_warshrieker = {}
+nick_deathdealer = {}
+nick_the_bear = {}
+nick_the_bear_of_location = {}
+nick_the_bear_of_capital = {}
+nick_the_bear_of_capital_county = {}
+nick_the_bookish = {}
+nick_the_hordechief = {}
+nick_the_courteous = {}
 
 # Weight 4
 nick_the_battler = {}
@@ -269,8 +377,14 @@ nick_battle_forged = {}
 nick_the_truth_seeker = {}
 nick_the_hoary = {}
 nick_the_cannibal = { is_bad = yes }
+nick_the_cannibal_of_capital = { is_bad = yes }
+nick_the_cannibal_of_capital_county = { is_bad = yes }
+nick_the_cannibal_of_location = { is_bad = yes }
 nick_the_wizened = {}
 nick_the_skeleton = { is_bad = yes }
+nick_the_skeleton_of_capital = { is_bad = yes }
+nick_the_skeleton_of_capital_county = { is_bad = yes }
+nick_the_skeleton_of_location = { is_bad = yes }
 nick_the_bulwark = {}
 nick_the_omniscient = {}
 nick_the_wordsmith = {}
@@ -278,6 +392,9 @@ nick_the_duelist = {}
 nick_the_keeper_of_silence = {}
 nick_the_strategist = {}
 nick_the_cyclop = {}
+nick_the_cyclop_of_capital = {}
+nick_the_cyclop_of_capital_county = {}
+nick_the_cyclop_of_location = {}
 nick_the_plaguebearer = { is_bad = yes }
 nick_the_cruel = { is_bad = yes }
 nick_the_zealot = {}
@@ -293,26 +410,23 @@ nick_the_silver_blood = {  is_bad = yes }
 nick_of_the_ashes = {}
 nick_the_pacific = {}
 nick_the_medium = {}
-nick_the_culture = {}
-nick_the_brute = { is_bad = yes }
-nick_the_ogre = { is_bad = yes }
 nick_the_crown_scourge = {}
 nick_thief_of_crowns = { is_bad = yes }
 nick_the_dragon = {}
 nick_the_dragoness = {}
-nick_the_executioner = { is_bad = yes }
 nick_the_wolf = {}
 nick_the_seductress = { is_bad = yes }
 nick_the_steadfast_queen = {}
 nick_cursed_huntsman = { is_bad = yes }
 nick_the_boar = { is_bad = yes }
+nick_the_boar_of_location = { is_bad = yes }
+nick_the_boar_of_capital = { is_bad = yes }
+nick_the_boar_of_capital_county = { is_bad = yes }
 nick_the_black_prince = { is_bad = yes }
 nick_the_lord_of_realm = {}
 nick_the_grandiloquent = {}
 nick_the_black_widow = { is_bad = yes }
 nick_the_pain_artist = {}
-nick_the_dark_mother = { is_bad = yes }
-nick_the_dark_father = { is_bad = yes }
 nick_merciless_spider = { is_bad = yes }
 nick_impassible_diplomat = {}
 nick_hand_of_vengeance = {}
@@ -328,10 +442,66 @@ nick_the_virgin_queen = { is_bad = yes }
 nick_the_siege_tower = {}
 nick_the_oncoming_storm = {}
 nick_the_blade_blossom = {}
+nick_the_dreadsower = {}
+nick_the_warleader = {}
+nick_the_miststalker = {}
+nick_the_sculptor_of_fears = { is_bad = yes }
+nick_the_holy_mason = {}
+nick_the_blind_fury = {}
+nick_blind_sorcerer = {}
+nick_the_great_commoner = {}
+nick_the_great_silent_one = {}
+nick_the_broken_blade = {}
+nick_the_sudden_storm = {}
+nick_the_riddle = {}
+nick_the_dagger = {}
+nick_the_incorruptible = {}
+nick_the_culture = {}
+nick_the_crow = {}
+nick_the_wealthy = {}
+nick_the_wizard = {}
+nick_the_kingfish = { is_bad = yes }
+nick_the_kingfish_of_location = { is_bad = yes }
+nick_the_kingfish_of_capital = { is_bad = yes }
+nick_the_kingfish_of_capital_county = { is_bad = yes }
+nick_silent_tongue = {}
+nick_the_silencer = {}
+nick_the_wise = {}
+nick_the_lion = {}
+nick_the_lion_of_location = {}
+nick_the_lion_of_capital = {}
+nick_the_lion_of_capital_county = {}
+nick_true_steel = {}
+nick_the_builder = {}
+nick_the_builder_of_location = {}
+nick_the_builder_of_capital = {}
+nick_the_builder_of_capital_county = {}
+nick_the_chief = {}
+nick_the_chief_of_location = {}
+nick_the_chief_of_capital = {}
+nick_the_chief_of_capital_county = {}
+nick_the_hammer = {}
+nick_the_hammer_of_location = {}
+nick_the_hammer_of_capital = {}
+nick_the_hammer_of_capital_county = {}
+nick_the_sailor_king = {}
+nick_the_flayman = { is_bad = yes }
+nick_the_nightblade = {}
+nick_thousand_eyed = {}
+nick_who_shakes_the_world = {}
+nick_the_shade = {}
+nick_the_shade_of_location = {}
+nick_the_shade_of_capital = {}
+nick_the_shade_of_capital_county = {}
+nick_the_hungry_mist = {}
+nick_the_bloodsoaked = {}
+nick_the_leopard = {}
+nick_the_leopard_of_location = {}
+nick_the_leopard_of_capital = {}
+nick_the_leopard_of_capital_county = {}
 
 # Weight 5
 nick_the_terrible = { is_bad = yes }
-nick_the_tyrant = { is_bad = yes }
 nick_the_king_of_thorns = {}
 nick_the_queen_of_thorns = {}
 nick_the_black_adder = { is_bad = yes }
@@ -345,18 +515,54 @@ nick_the_duchess_of_pain = {}
 nick_paragon_humanity = {}
 nick_the_impaler = { is_bad = yes }
 nick_the_reaper_king = { is_bad = yes }
+nick_the_black_rose = { is_bad = yes }
+nick_the_arisen = {}
+nick_the_warweaver = { is_bad = yes }
+nick_father_of_the_people = {}
+nick_the_whispering_one = {}
+nick_the_brute = { is_bad = yes }
+nick_the_brute_of_location = { is_bad = yes }
+nick_the_brute_of_capital = { is_bad = yes }
+nick_the_brute_of_capital_county = { is_bad = yes }
+nick_the_ogre = { is_bad = yes }
+nick_the_ogre_of_location = { is_bad = yes }
+nick_the_ogre_of_capital = { is_bad = yes }
+nick_the_ogre_of_capital_county = { is_bad = yes }
+nick_the_tyrant = { is_bad = yes }
+nick_the_tyrant_of_location = { is_bad = yes }
+nick_the_tyrant_of_capital = { is_bad = yes }
+nick_the_tyrant_of_capital_county = { is_bad = yes }
+nick_the_executioner = { is_bad = yes }
+nick_the_executioner_of_location = { is_bad = yes }
+nick_the_executioner_of_capital = { is_bad = yes }
+nick_the_executioner_of_capital_county = { is_bad = yes }
+nick_the_murder_king = { is_bad = yes }
+nick_the_dark_mother = { is_bad = yes }
+nick_the_dark_father = { is_bad = yes }
+nick_the_king_who_knelt = { is_bad = yes }
+nick_the_unscarred = {}
+nick_the_cryptic = {}
+nick_who_smiles_at_death = {}
 
 # Weight 6
 nick_the_skys_blade = {}
 nick_the_master_tactician = {}
 nick_the_parangon = {}
+nick_the_parangon_of_location = {}
+nick_the_parangon_of_capital = {}
+nick_the_parangon_of_capital_county = {}
 nick_the_chosen = {}
+nick_the_chosen_of_fategod = {}
 nick_skull_splitter = {}
 nick_the_puppetmaster = {}
+nick_the_ageless_ascetic = {}
 
 # Weight 10
 nick_the_omnipotent = {}
 nick_the_undying = {}
+
+# Weight 100
+nick_god_among_men = {}
 
 # Religion - Christianism
 nick_the_preacher = {}
@@ -374,6 +580,7 @@ nick_the_incubus = { is_bad = yes }
 nick_the_succubus = { is_bad = yes }
 nick_beauclerk = {}
 nick_the_crusader = {}
+nick_the_missionary = {}
 
 # Religion - Islam
 nick_the_mujahib = {}
@@ -436,6 +643,10 @@ nick_the_winged_tiger = {}
 nick_the_silent_tempest = {}
 nick_the_fenghuang = {}
 nick_the_white_tiger = {}
+nick_the_qilin = {}
+nick_the_jiangshi = { is_bad = yes }
+nick_the_azure_dragon = {}
+nick_the_panther_head = {}
 
 # Cultural - Goidelic
 nick_teller_of_tales = {}
@@ -447,19 +658,37 @@ nick_the_ceffyl_dwr = {}
 nick_the_kelpie = {}
 nick_the_selkie = {}
 nick_an_donn = {}
-nick_the_bruce = {}
 
 # Cultural - Indian
 nick_the_vetala = {}
 nick_the_ulama = {}
 nick_the_gandaberunda = {}
 nick_garuda_incarnation = {}
+nick_mahatma = { is_prefix = yes }
 
 # Cultural - British Islands
 nick_the_bugbear = { is_bad = yes }
 nick_the_barghest = { is_bad = yes }
 nick_the_cu_sith = {}
 nick_the_knucker = {}
+
+# Cultural - Pictish
+nick_the_woad_raider = {}
+
+# Cultural - Latin
+nick_the_condottiere = {}
+
+# Cultural - Persian
+nick_the_immortal = {}
+
+# Cultural - Norman
+nick_the_bruce = {}
+
+# Cultural - Others
+nick_the_al = {} # Armenian/Iranian
+
+# Cultural/Religion - Roman
+nick_the_eagle_bearer = {}
 
 # Culture/Religion - Northern
 nick_weak_legs = { is_bad = yes }
@@ -478,7 +707,7 @@ nick_doomscourge = {}
 nick_betrayer_king = { is_bad = yes }
 nick_bearer_of_secrets = {}
 nick_bloodsky = {}
-nick_warrior_poet = {}
+nick_the_warrior_poet = {}
 nick_helmsmasher = {}
 nick_bloodaxe = {}
 nick_the_broad_shouldered = {}
@@ -499,6 +728,21 @@ nick_the_redarm = {}
 nick_the_old_bear = {}
 nick_all_seeing = {}
 nick_kippling = { is_bad = yes }
+nick_wolf_kissed = {}
+nick_the_huscarl = {}
+nick_bearclaw = {}
+nick_wolfblood = {}
+nick_the_hersir = {}
+nick_the_einherjar = {}
+nick_the_troll = { is_bad = yes }
+nick_the_jotunn = {}
+nick_stoutheart = {}
+nick_blood_ember = {}
+nick_giver_of_rings = {}
+nick_the_polar_kraken = {}
+nick_snakeskin = {}
+nick_barn_lock = {}
+nick_oakenshield = {}
 
 # Cutlture/Religion - Greco-Roman
 nick_midas_reborn = {}
@@ -519,13 +763,40 @@ nick_the_harpy = { is_bad = yes }
 nick_the_strix = { is_bad = yes }
 nick_the_cerberus = {}
 nick_the_nemean_lion = {}
-nick_the_androktasiai = {}
+nick_androktasiai = {}
 nick_the_hysminai = {}
 nick_corvinus = { is_bad = yes }
 nick_monomakhos = {}
 nick_the_praetorian = {}
 nick_the_quaestor = {}
 nick_the_vestal = {}
+nick_the_minotaur = { is_bad =yes }
+nick_the_colossus = {}
+nick_the_hydra = { is_bad = yes }
+nick_the_chimera = { is_bad = yes }
+nick_the_hetaireia = {}
+nick_helepolis = {}
+nick_petrobolos = {}
+nick_the_sphinx = {}
+nick_the_satyr = { is_bad = yes }
+nick_autokrator = {}
+
+# Culture/Religion - Greek
+nick_kataskopos = {}
+
+# Geographical
+nick_the_tiger = {}
+nick_the_tiger_of_location = {}
+nick_the_tiger_of_capital = {}
+nick_the_tiger_of_capital_county = {}
+nick_the_hyena = { is_bad = yes }
+nick_the_hyena_of_location = { is_bad = yes }
+nick_the_hyena_of_capital = { is_bad = yes }
+nick_the_hyena_of_capital_county = { is_bad = yes }
+nick_the_crocodile = {}
+nick_the_crocodile_of_location = {}
+nick_the_crocodile_of_capital = {}
+nick_the_crocodile_of_capital_county = {}
 
 # Physical - Giant
 nick_the_long_winded_giant = {}
@@ -613,6 +884,7 @@ nick_the_slaughtered = {}
 nick_the_executed = {}
 nick_the_ancient = {}
 nick_the_elder = {}
+nick_blessed = { is_prefix = yes }
 
 # On Birth
 nick_the_posthumous = {}

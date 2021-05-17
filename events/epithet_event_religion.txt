@@ -313,6 +313,49 @@ epithet_religion_christianism.0014 = {
     }
 }
 
+epithet_religion_christianism.0015 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_religion = religion:christianity_religion
+		has_council_position = councillor_court_chaplain
+		learning >= 15
+		piety_level >= 2
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_missionary }
+    }
+}
+
+epithet_religion_christianism.0016 = {
+	hidden = yes
+	trigger = {
+		age >= 20
+		piety_level >= 3
+		has_religion = religion:christianity_religion
+		is_female = no
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2.0
+			piety_level >= 4
+		}
+		modifier = {
+			factor = 2.0
+			piety_level >= 5
+		}
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_confessor }
+    }
+}
+
 ##########################################
 namespace = epithet_religion_abrahamic
 

@@ -1,8 +1,4 @@
 ﻿on_birthday = {
-	trigger = {
-		has_any_nickname = no
-		prestige_level >= 2
-	}
 	random_on_action = {
 		chance_to_happen = 100
 		chance_of_no_event = {
@@ -11,19 +7,19 @@
 				limit = {
 					has_game_rule = fewer_epithet_frequency
 				}
-				add = 95 # 5%
+				add = 95 # 1%
 			}
 			else_if = {
 				limit = {
 					has_game_rule = more_epithet_frequency
 				}
-				add = 80  # 20%
+				add = 80  # 2%
 			}
 			else = {
-				add = 90 # 10%
+				add = 90 # 4%
 			}
 		}
-		100 = epithet_cultural_religion_random
+		100 = epithet_any_nickname
 	}
 }
 
@@ -44,7 +40,10 @@ yearly_playable_pulse = {
 }
 
 epithet_give_yearly = {
-	trigger = {	has_any_nickname = no }
+	trigger = {
+		prestige_level >= 2
+		has_any_nickname = no
+	}
 	random_on_action = {
 		chance_to_happen = 100
 		chance_of_no_event = {
@@ -65,19 +64,33 @@ epithet_give_yearly = {
 				add = 96 # 4%
 			}
 		}
-		100 = epithet_all_random
+		100 = epithet_any_nickname
 	}
 }
 
 epithet_any_nickname = {
-	on_actions = {
-		epithet_cultural_religion_random
+	trigger = {
+		prestige_level >= 2
+		has_any_nickname = no
+	}
+
+	first_valid_on_action = {
 		on_giant_epithet
-		epithet_all_random
+		on_dwarf_epithet
+		on_albino_epithet
+		on_prowess_nickname
+	}
+	random_on_action = {
+		100 = epithet_cultural_religion_random
+		100 = epithet_all_random
 	}
 }
 
 epithet_cultural_religion_random = {
+	trigger = {
+		has_any_nickname = no
+		prestige_level >= 2
+	}
 	random_events = {
 		100 = epithet_religion_christianism.0001
 		100 = epithet_religion_christianism.0002
@@ -93,7 +106,9 @@ epithet_cultural_religion_random = {
 		100 = epithet_religion_christianism.0012
 		100 = epithet_religion_christianism.0013
 		100 = epithet_religion_christianism.0014
-
+		100 = epithet_religion_christianism.0015
+		100 = epithet_religion_christianism.0016
+		
 		100 = epithet_religion_abrahamic.0001
 		100 = epithet_religion_abrahamic.0002
 		100 = epithet_religion_abrahamic.0003
@@ -139,6 +154,19 @@ epithet_cultural_religion_random = {
 		100 = epithet_culture_northern.0034
 		100 = epithet_culture_northern.0035
 		100 = epithet_culture_northern.0036
+		100 = epithet_culture_northern.0037
+		100 = epithet_culture_northern.0038
+		100 = epithet_culture_northern.0039
+		100 = epithet_culture_northern.0040
+		100 = epithet_culture_northern.0041
+		100 = epithet_culture_northern.0042
+		100 = epithet_culture_northern.0043
+		100 = epithet_culture_northern.0044
+		100 = epithet_culture_northern.0045
+		100 = epithet_culture_northern.0046
+		100 = epithet_culture_northern.0047
+		100 = epithet_culture_northern.0048
+		100 = epithet_culture_northern.0049
 
 		100 = epithet_culture_greco_roman.0001
 		100 = epithet_culture_greco_roman.0002
@@ -165,6 +193,20 @@ epithet_cultural_religion_random = {
 		100 = epithet_culture_greco_roman.0023
 		100 = epithet_culture_greco_roman.0024
 		100 = epithet_culture_greco_roman.0025
+		100 = epithet_culture_greco_roman.0026
+		100 = epithet_culture_greco_roman.0027
+		100 = epithet_culture_greco_roman.0028
+		100 = epithet_culture_greco_roman.0029
+		100 = epithet_culture_greco_roman.0030
+		100 = epithet_culture_greco_roman.0031
+		100 = epithet_culture_greco_roman.0032
+		100 = epithet_culture_greco_roman.0033
+		100 = epithet_culture_greco_roman.0034
+		100 = epithet_culture_greco_roman.0035
+
+		100 = epithet_culture_roman.0001
+
+		100 = epithet_culture_greek.0001
 
 		100 = epithet_culture_european.0001
 
@@ -193,7 +235,7 @@ epithet_cultural_religion_random = {
 		100 = epithet_culture_west_europe.0007
 		100 = epithet_culture_west_europe.0008
 		100 = epithet_culture_west_europe.0009
-		
+
 		100 = epithet_culture_chinese.0001
 		100 = epithet_culture_chinese.0002
 		100 = epithet_culture_chinese.0003
@@ -207,6 +249,10 @@ epithet_cultural_religion_random = {
 		100 = epithet_culture_chinese.0011
 		100 = epithet_culture_chinese.0012
 		100 = epithet_culture_chinese.0013
+		100 = epithet_culture_chinese.0014
+		100 = epithet_culture_chinese.0015
+		100 = epithet_culture_chinese.0016
+		100 = epithet_culture_chinese.0017
 
 		100 = epithet_culture_goidelic.0001
 		100 = epithet_culture_goidelic.0002
@@ -222,11 +268,27 @@ epithet_cultural_religion_random = {
 		100 = epithet_culture_indian.0002
 		100 = epithet_culture_indian.0003
 		100 = epithet_culture_indian.0004
+		100 = epithet_culture_indian.0005
 
 		100 = epithet_culture_british_islands.0001
 		100 = epithet_culture_british_islands.0002
 		100 = epithet_culture_british_islands.0003
 		100 = epithet_culture_british_islands.0004
+
+		100 = epithet_culture_pictish.0001
+
+		100 = epithet_culture_latin.0001
+
+		100 = epithet_culture_egyptian.0001
+
+		100 = epithet_culture_persian.0001
+
+		100 = epithet_culture_norman.0001
+
+		100 = epithet_geographical.0001
+		100 = epithet_geographical.0002
+		100 = epithet_geographical.0003
+		100 = epithet_geographical.0004
 	}
 }
 
@@ -545,6 +607,76 @@ epithet_all_random = {
 		100 = epithet.0310
 		100 = epithet.0311
 		100 = epithet.0312
+		100 = epithet.0313
+		100 = epithet.0314
+		100 = epithet.0315
+		100 = epithet.0316
+		100 = epithet.0317
+		100 = epithet.0318
+		100 = epithet.0319
+		100 = epithet.0320
+		100 = epithet.0321
+		100 = epithet.0322
+		100 = epithet.0323
+		100 = epithet.0324
+		100 = epithet.0325
+		100 = epithet.0326
+		100 = epithet.0327
+		100 = epithet.0328
+		100 = epithet.0329
+		100 = epithet.0330
+		100 = epithet.0331
+		100 = epithet.0332
+		100 = epithet.0333
+		100 = epithet.0334
+		100 = epithet.0335
+		100 = epithet.0336
+		100 = epithet.0337
+		100 = epithet.0338
+		100 = epithet.0339
+		100 = epithet.0340
+		100 = epithet.0341
+		100 = epithet.0342
+		100 = epithet.0343
+		100 = epithet.0344
+		100 = epithet.0345
+		100 = epithet.0346
+		100 = epithet.0347
+		100 = epithet.0348
+		100 = epithet.0349
+		100 = epithet.0350
+		100 = epithet.0351
+		100 = epithet.0352
+		100 = epithet.0353
+		100 = epithet.0354
+		100 = epithet.0355
+		100 = epithet.0356
+		100 = epithet.0357
+		100 = epithet.0358
+		100 = epithet.0359
+		100 = epithet.0360
+		100 = epithet.0361
+		100 = epithet.0362
+		100 = epithet.0363
+		100 = epithet.0364
+		100 = epithet.0365
+		100 = epithet.0366
+	}
+}
+
+epithet_rare = {
+	trigger = {
+		has_any_nickname = no
+		prestige_level >= 2
+	}
+	random_events = {
+		100 = epithet.0024
+		100 = epithet.0025
+		100 = epithet.0030
+		100 = epithet.0064
+		100 = epithet.0072
+		100 = epithet.0116
+		100 = epithet.0128
 	}
 }
 
@@ -556,6 +688,7 @@ on_death = {
 
 epithet_preparation_on_death = {
 	trigger = {
+		prestige_level >= 3
 		has_any_nickname = no
 		is_ruler = yes
 	}
@@ -590,6 +723,7 @@ epithet_random_selection_on_death = {
 		100 = epithet.9004
 		100 = epithet.9005
 		100 = epithet.9006
+		100 = epithet.9007
 		1000 = 0
 	}
 }

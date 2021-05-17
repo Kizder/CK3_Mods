@@ -10,6 +10,7 @@
     more_epithet_frequency = {
     }
 }
+
 epithet_cheats = {
 	default = off_epithet_cheats
 
@@ -19,3 +20,16 @@ epithet_cheats = {
 	off_epithet_cheats = {
 	}
 }
+
+#epithet_modifier = {
+#	default = on_all_epithet_modifier
+
+#	on_all_epithet_modifier = {
+#	}
+
+#	on_only_bonus_epithet_modifier = {
+#	}
+
+#	off_epithet_modifier = {
+#	}
+#}

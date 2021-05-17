@@ -20,7 +20,6 @@ epithet_culture_northern.0001 = {
 		set_nickname_effect = { NICKNAME = nick_weak_legs }
     }
 }
-
 epithet_culture_northern.0002 = {
 	hidden = yes
 	trigger = {
@@ -49,7 +48,6 @@ epithet_culture_northern.0002 = {
 		set_nickname_effect = { NICKNAME = nick_bloodcloaked }
     }
 }
-
 epithet_culture_northern.0003 = {
 	hidden = yes
 	trigger = {
@@ -65,7 +63,6 @@ epithet_culture_northern.0003 = {
 		set_nickname_effect = { NICKNAME = nick_the_ladder_legs }
     }
 }
-
 epithet_culture_northern.0004 = { 
 	hidden = yes
 	trigger = {
@@ -91,7 +88,6 @@ epithet_culture_northern.0004 = {
 		set_nickname_effect = { NICKNAME = nick_the_kraken }
     }
 }
-
 epithet_culture_northern.0005 = { 
 	hidden = yes
 	trigger = {
@@ -113,7 +109,6 @@ epithet_culture_northern.0005 = {
 		set_nickname_effect = { NICKNAME = nick_bloodteeth }
     }
 }
-
 epithet_culture_northern.0006 = {
 	hidden = yes
 	trigger = {
@@ -133,7 +128,6 @@ epithet_culture_northern.0006 = {
 		set_nickname_effect = { NICKNAME = nick_the_ironside }
     }
 }
-
 epithet_culture_northern.0007 = {
 	hidden = yes
 	trigger = {
@@ -153,7 +147,6 @@ epithet_culture_northern.0007 = {
 		set_nickname_effect = { NICKNAME = nick_the_bellower }
     }
 }
-
 epithet_culture_northern.0008 = {
 	hidden = yes
 	trigger = {
@@ -178,7 +171,6 @@ epithet_culture_northern.0008 = {
 		set_nickname_effect = { NICKNAME = nick_god_favored }
     }
 }
-
 epithet_culture_northern.0009 = {
 	hidden = yes
 	trigger = {
@@ -202,7 +194,6 @@ epithet_culture_northern.0009 = {
 		set_nickname_effect = { NICKNAME = nick_brokenbrow }
     }
 }
-
 epithet_culture_northern.0010 = {
 	hidden = yes
 	trigger = {
@@ -228,7 +219,6 @@ epithet_culture_northern.0010 = {
 		set_nickname_effect = { NICKNAME = nick_the_fangbearer }
     }
 }
-
 epithet_culture_northern.0011 = {
 	hidden = yes
 	trigger = {
@@ -264,7 +254,6 @@ epithet_culture_northern.0011 = {
 		set_nickname_effect = { NICKNAME = nick_whispering_raven }
     }
 }
-
 epithet_culture_northern.0012 = {
 	hidden = yes
 	trigger = {
@@ -288,7 +277,6 @@ epithet_culture_northern.0012 = {
 		set_nickname_effect = { NICKNAME = nick_rune_eyes }
     }
 }
-
 epithet_culture_northern.0013 = {
 	hidden = yes
 	trigger = {
@@ -319,7 +307,6 @@ epithet_culture_northern.0013 = {
 		set_nickname_effect = { NICKNAME = nick_doomscourge }
     }
 }
-
 epithet_culture_northern.0014 = {
 	hidden = yes
 	trigger = {
@@ -335,7 +322,6 @@ epithet_culture_northern.0014 = {
 		set_nickname_effect = { NICKNAME = nick_of_the_frost }
     }
 }
-
 epithet_culture_northern.0015 = {
 	hidden = yes
 	trigger = {
@@ -352,7 +338,6 @@ epithet_culture_northern.0015 = {
 		set_nickname_effect = { NICKNAME = nick_betrayer_king }
     }
 }
-
 epithet_culture_northern.0016 = {
 	hidden = yes
 	trigger = {
@@ -370,7 +355,6 @@ epithet_culture_northern.0016 = {
 		set_nickname_effect = { NICKNAME = nick_bearer_of_secrets }
     }
 }
-
 epithet_culture_northern.0017 = {
 	hidden = yes
 	trigger = {
@@ -396,7 +380,6 @@ epithet_culture_northern.0017 = {
 		set_nickname_effect = { NICKNAME = nick_bloodsky }
     }
 }
-
 epithet_culture_northern.0018 = {
 	hidden = yes
 	trigger = {
@@ -420,10 +403,9 @@ epithet_culture_northern.0018 = {
 	}
 
     immediate = {
-		set_nickname_effect = { NICKNAME = nick_warrior_poet }
+		set_nickname_effect = { NICKNAME = nick_the_warrior_poet }
     }
 }
-
 epithet_culture_northern.0019 = {
 	hidden = yes
 	trigger = {
@@ -448,7 +430,6 @@ epithet_culture_northern.0019 = {
 		set_nickname_effect = { NICKNAME = nick_helmsmasher }
     }
 }
-
 epithet_culture_northern.0020 = {
 	hidden = yes
 	trigger = {
@@ -474,7 +455,6 @@ epithet_culture_northern.0020 = {
 		}
     }
 }
-
 epithet_culture_northern.0021 = {
 	hidden = yes
 	trigger = {
@@ -491,7 +471,6 @@ epithet_culture_northern.0021 = {
 		set_nickname_effect = { NICKNAME = nick_the_broad_shouldered }
     }
 }
-
 epithet_culture_northern.0022 = {
 	hidden = yes
 	trigger = {
@@ -513,7 +492,6 @@ epithet_culture_northern.0022 = {
 		set_nickname_effect = { NICKNAME = nick_coal_burner }
     }
 }
-
 epithet_culture_northern.0023 = {
 	hidden = yes
 	trigger = {
@@ -540,7 +518,6 @@ epithet_culture_northern.0023 = {
 		set_nickname_effect = { NICKNAME = nick_bloodfury }
     }
 }
-
 epithet_culture_northern.0024 = {
 	hidden = yes
 	trigger = {
@@ -557,7 +534,6 @@ epithet_culture_northern.0024 = {
 		set_nickname_effect = { NICKNAME = nick_corpse_swallower }
     }
 }
-
 epithet_culture_northern.0025 = {
 	hidden = yes
 	trigger = {
@@ -584,7 +560,6 @@ epithet_culture_northern.0025 = {
 		set_nickname_effect = { NICKNAME = nick_the_valkyrie }
     }
 }
-
 epithet_culture_northern.0026 = {
 	hidden = yes
 	trigger = {
@@ -603,7 +578,6 @@ epithet_culture_northern.0026 = {
 		set_nickname_effect = { NICKNAME = nick_the_white_bear }
     }
 }
-
 epithet_culture_northern.0027 = {
 	hidden = yes
 	trigger = {
@@ -622,7 +596,6 @@ epithet_culture_northern.0027 = {
 		set_nickname_effect = { NICKNAME = nick_the_red_bear }
     }
 }
-
 epithet_culture_northern.0028 = {
 	hidden = yes
 	trigger = {
@@ -641,7 +614,6 @@ epithet_culture_northern.0028 = {
 		set_nickname_effect = { NICKNAME = nick_the_black_bear }
     }
 }
-
 epithet_culture_northern.0029 = {
 	hidden = yes
 	trigger = {
@@ -671,7 +643,6 @@ epithet_culture_northern.0029 = {
 		set_nickname_effect = { NICKNAME = nick_the_broken_bear }
     }
 }
-
 epithet_culture_northern.0030 = {
 	hidden = yes
 	trigger = {
@@ -691,7 +662,6 @@ epithet_culture_northern.0030 = {
 		set_nickname_effect = { NICKNAME = nick_crouchback }
     }
 }
-
 epithet_culture_northern.0031 = {
 	hidden = yes
 	trigger = {
@@ -714,7 +684,6 @@ epithet_culture_northern.0031 = {
 		set_nickname_effect = { NICKNAME = nick_fairhair }
     }
 }
-
 epithet_culture_northern.0032 = {
 	hidden = yes
 	trigger = {
@@ -732,7 +701,6 @@ epithet_culture_northern.0032 = {
 		set_nickname_effect = { NICKNAME = nick_greycloak }
     }
 }
-
 epithet_culture_northern.0033 = {
 	hidden = yes
 	trigger = {
@@ -760,7 +728,6 @@ epithet_culture_northern.0033 = {
 		set_nickname_effect = { NICKNAME = nick_the_redarm }
     }
 }
-
 epithet_culture_northern.0034 = {
 	hidden = yes
 	trigger = {
@@ -778,7 +745,6 @@ epithet_culture_northern.0034 = {
 		set_nickname_effect = { NICKNAME = nick_the_old_bear }
     }
 }
-
 epithet_culture_northern.0035 = {
 	hidden = yes
 	trigger = {
@@ -800,7 +766,6 @@ epithet_culture_northern.0035 = {
 		set_nickname_effect = { NICKNAME = nick_all_seeing }
     }
 }
-
 epithet_culture_northern.0036 = {
 	hidden = yes
 	trigger = {
@@ -831,6 +796,362 @@ epithet_culture_northern.0036 = {
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_kippling }
+    }
+}
+epithet_culture_northern.0037 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = berserker
+		prowess >= 20
+		NOT = { has_trait = craven }
+	}
+
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_bearclaw }
+    }
+}
+epithet_culture_northern.0038 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		calc_true_if = {
+			amount >= 3
+			has_trait = brave
+			has_trait = calm
+			has_trait = wrathful
+			has_trait = lustful
+			has_trait = ambitious
+			has_trait = diligent
+			has_trait = vengeful
+			has_trait = gregarious
+			has_trait = arbitrary
+			has_trait = patient
+			has_trait = paranoid
+			has_trait = cynical
+		}
+		has_trait = lifestyle_hunter
+		prowess >= 20
+		is_knight = yes
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_wolfblood }
+    }
+}
+epithet_culture_northern.0039 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		OR = {
+			has_trait = viking
+			has_trait = shieldmaiden
+			has_trait = berserker
+		}
+		has_trait = scarred
+		prowess >= 20
+	}
+
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_wolf_kissed }
+    }
+}
+epithet_culture_northern.0040 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		is_female = no
+		has_trait = viking
+		is_knight = yes
+		prowess >= 20
+	}
+
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_huscarl }
+    }
+}
+epithet_culture_northern.0041 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		OR = {
+			has_trait = shieldmaiden
+			has_trait = viking
+		}
+		OR = {
+			is_councillor = yes
+			is_knight = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hersir }
+    }
+}
+epithet_culture_northern.0042 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		is_female = no
+		has_trait = viking
+		martial >= 18
+		is_martial_higher_stat_trigger = yes
+		prowess >= 20
+		piety_level >= 3
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_einherjar }
+    }
+}
+epithet_culture_northern.0043 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = giant
+		has_trait = beauty_bad
+		has_trait = cannibal
+		OR = {
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_troll }
+    }
+}
+epithet_culture_northern.0044 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		has_trait = giant
+		dread >= 50
+	}
+
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_jotunn }
+    }
+}
+epithet_culture_northern.0045 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		calc_true_if = {
+			amount >= 3
+			has_trait = brave
+			has_trait = wrathful
+			has_trait = lustful
+			has_trait = ambitious
+			has_trait = diligent
+			has_trait = stubborn
+			has_trait = vengeful
+			has_trait = gregarious
+			has_trait = honest
+			has_trait = humble
+			has_trait = just
+			has_trait = arbitrary
+			has_trait = zealous
+			has_trait = callous
+		}
+		NOR = { 
+			has_trait = depressed_1
+			has_trait = depressed_genetic
+		}
+		has_substance_abuse_trait_trigger = no
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_stoutheart }
+    }
+}
+epithet_culture_northern.0046 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		dread >= 50
+		has_trait = reaver
+		OR = {
+			has_trait = viking
+			has_trait = shieldmaiden
+			has_trait = aggressive_attacker
+			has_trait = murderer
+		}
+		calc_true_if = {
+			amount >= 3
+			has_trait = brave
+			has_trait = wrathful
+			has_trait = stubborn
+			has_trait = vengeful
+			has_trait = arbitrary
+			has_trait = zealous
+			has_trait = callous
+			has_trait = sadistic
+			has_trait = arrogant
+			has_trait = impatient
+			has_trait = paranoid
+			has_trait = cynical
+		}
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_blood_ember }
+    }
+}
+epithet_culture_northern.0047 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		highest_held_title_tier >= tier_kingdom
+		has_feudal_government_trigger = no
+		OR = {
+			has_trait = generous
+			has_trait = gregarious
+			has_trait = trusting
+		}
+		number_of_knights >= 10
+	}
+
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_giver_of_rings }
+    }
+}
+epithet_culture_northern.0048 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		OR = {
+			has_trait = cautious_leader
+			has_trait = unyielding_defender
+		}
+	}
+
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_oakenshield }
+    }
+}
+epithet_culture_northern.0049 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_northerner_nickname_trigger = yes
+		OR = {
+			has_trait = viking
+			has_trait = shieldmaiden
+			has_trait = berserker
+		}
+		OR = {
+			has_trait = reaver
+			has_trait = forder
+		}
+		OR = {
+			has_trait = winter_soldier
+			has_trait = albino
+			has_title = title:d_iceland
+		}
+		has_strong_trait_trigger = yes
+		has_trait = giant
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_polar_kraken }
+    }
+}
+epithet_culture_northern.0050 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		has_trait = scaly
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_snakeskin }
+    }
+}
+epithet_culture_northern.0051 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		stewardship >= 15
+		has_trait = greedy
+		has_trait = avaricious
+		NOR = {
+			has_trait = improvident
+			has_trait = profligate
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_barn_lock }
     }
 }
 
@@ -1293,7 +1614,7 @@ epithet_culture_greco_roman.0019 = {
 	}
 
     immediate = {
-		set_nickname_effect = { NICKNAME = nick_the_androktasiai }
+		set_nickname_effect = { NICKNAME = nick_androktasiai }
     }
 }
 
@@ -1443,6 +1764,253 @@ epithet_culture_greco_roman.0025 = {
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_vestal }
+    }
+}
+
+epithet_culture_greco_roman.0026 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		is_female = no
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		has_trait = giant
+		has_strong_trait_trigger = yes
+		OR = {
+			has_trait = beauty_bad
+			has_trait = disfigured
+		}
+		has_trait = reclusive
+	}
+	weight_multiplier = {
+		base = 6
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_minotaur }
+    }
+}
+
+epithet_culture_greco_roman.0027 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = giant
+		has_strong_trait_trigger = yes
+		has_trait = calm
+		has_trait = patient
+		has_trait = temperate
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_colossus }
+    }
+}
+
+epithet_culture_greco_roman.0028 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = giant
+		has_trait = scaly
+		has_trait = cannibal
+		dread >= 50
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hydra }
+    }
+}
+
+epithet_culture_greco_roman.0029 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_unpleasant_appearence_trait_trigger = yes
+		OR = {
+			has_trait = kinslayer
+			has_trait = cannibal
+			has_trait = excommunicated
+			has_trait = murderer
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_chimera }
+    }
+}
+
+epithet_culture_greco_roman.0030 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		is_knight = yes
+		prowess >= 20
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_hetaireia }
+    }
+}
+
+epithet_culture_greco_roman.0031 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = giant
+		has_trait = military_engineer
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_helepolis }
+    }
+}
+
+epithet_culture_greco_roman.0032 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		has_trait = military_engineer
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_petrobolos }
+    }
+}
+
+epithet_culture_greco_roman.0033 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		is_female = yes
+		intrigue >= 18
+		has_trait = deceitful
+		has_trait = arbitrary
+		has_trait = callous
+		dread >= 50
+	}
+	weight_multiplier = {
+		base = 5
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_sphinx }
+    }
+}
+
+epithet_culture_greco_roman.0034 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		is_female = no
+		has_trait = lustful
+		has_trait = gluttonous
+		has_trait = gregarious
+		OR = {
+			has_trait = adulterer
+			has_trait = deviant
+			has_trait = drunkard
+			has_trait = rakish
+		}
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_satyr }
+    }
+}
+
+epithet_culture_greco_roman.0035 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greco_roman_nickname_trigger = yes
+		prestige_level >= 4
+		highest_held_title_tier >= tier_empire
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_autokrator }
+    }
+}
+
+##########################################
+namespace = epithet_culture_roman
+
+epithet_culture_roman.0001 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_roman_nickname_trigger = yes
+		is_knight = yes
+		prowess >= 20
+		has_trait = brave
+		has_trait = diligent
+		has_trait = organizer
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_eagle_bearer }
+    }
+}
+
+##########################################
+namespace = epithet_culture_greek
+
+epithet_culture_greek.0001 = { 
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_greek_nickname_trigger = yes
+		intrigue >= 15
+		is_intrigue_higher_stat_trigger = yes
+		has_council_position = councillor_spymaster
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_kataskopos }
     }
 }
 
@@ -2208,6 +2776,97 @@ epithet_culture_chinese.0013 = {
     }
 }
 
+epithet_culture_chinese.0014 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_chinese_nickname_trigger = yes
+		is_female = no
+		has_trait = scaly
+		learning >= 18
+		is_learning_higher_stat_trigger = yes
+		has_trait = lifestyle_mystic
+		has_trait = scholar
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_qilin }
+    }
+}
+
+epithet_culture_chinese.0015 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_chinese_nickname_trigger = yes
+		has_trait = cannibal
+		has_trait = disfigured
+		OR = {
+			has_trait = kinslayer
+			has_trait = murderer
+			has_trait = excommunicated
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_jiangshi }
+    }
+}
+
+epithet_culture_chinese.0016 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_chinese_nickname_trigger = yes
+		is_female = no
+		prestige_level >= 4
+		NOR = {
+			has_trait = craven
+			has_trait = chaste
+			has_trait = lustful
+			has_trait = lazy
+			has_trait = shy
+			has_trait = deceitful
+			has_trait = gluttonous
+			has_trait = paranoid
+			has_trait = callous
+			has_trait = paranoid
+		}
+		num_virtuous_traits >= 3
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_azure_dragon }
+    }
+}
+
+epithet_culture_chinese.0017 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_chinese_nickname_trigger = yes
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		has_strong_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_panther_head }
+    }
+}
+
 ##########################################
 namespace = epithet_culture_goidelic
 
@@ -2502,6 +3161,24 @@ epithet_culture_indian.0004 = {
     }
 }
 
+epithet_culture_indian.0005 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_indian_nickname_trigger = yes
+		piety_level >= 4
+		num_virtuous_traits >= 3
+		num_sinful_traits >= 0
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_mahatma }
+    }
+}
+
 ##########################################
 namespace = epithet_culture_british_islands
 
@@ -2599,5 +3276,352 @@ epithet_culture_british_islands.0004 = {
 
     immediate = {
 		set_nickname_effect = { NICKNAME = nick_the_knucker }
+    }
+}
+
+##########################################
+namespace = epithet_culture_pictish
+
+epithet_culture_pictish.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:pictish
+		is_knight = yes
+		has_feudal_government_trigger = no
+		prowess >= 20
+		OR = {
+			has_trait = reaver
+			has_trait = forest_fighter
+			has_trait = berserker
+			has_trait = shieldmaiden
+			has_trait = viking
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_woad_raider }
+    }
+}
+
+##########################################
+namespace = epithet_culture_latin
+
+epithet_culture_latin.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture_group = culture_group:latin_group
+		has_government = mercenary_government
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_condottiere }
+    }
+}
+
+##########################################
+namespace = epithet_culture_egyptian
+
+epithet_culture_egyptian.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:egyptian
+		is_female = no
+		has_trait = brave
+		has_trait = patient
+		has_trait = just
+		has_strong_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_sphinx }
+    }
+}
+
+##########################################
+namespace = epithet_culture_persian
+
+epithet_culture_persian.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:persian
+		is_knight = yes
+		prowess >= 20
+		has_trait = brave
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_immortal }
+    }
+}
+
+##########################################
+namespace = epithet_culture_norman
+
+epithet_culture_norman.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		culture = culture:norman
+		is_female = no
+		martial >= 15
+		is_martial_higher_stat_trigger = yes
+		has_title = title:k_scotland
+		OR = {
+			has_trait = strategist
+			has_trait = flexible_leader
+			has_trait = organizer
+			has_trait = cautious_leader
+		}
+	}
+	weight_multiplier = {
+		base = 4
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_bruce }
+    }
+}
+
+##########################################
+namespace = epithet_other
+
+epithet_other.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			culture = culture:armenian
+			culture_group = culture_group:iranian_group
+		}
+		has_trait = dwarf
+		num_sinful_traits >= 3
+		has_trait = beauty_bad
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_al }
+    }
+}
+
+##########################################
+namespace = epithet_geographical
+
+epithet_geographical.0001 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_asian_geographical_nickname = yes
+		NOR = {
+			has_trait = craven
+			has_trait = forgiving
+			has_trait = trusting
+			has_trait = compassionate
+		}
+		OR = {
+			AND = {
+				prowess >= 20
+				is_knight = yes
+			}
+			AND = {
+				is_martial_higher_stat_trigger = yes
+				martial >= 15
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 4
+	}
+    immediate = {
+		if = { 
+			limit = { highest_held_title_tier <= tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_tiger_of_location }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_tiger_of_capital }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_duchy }
+			set_nickname_effect = { NICKNAME = nick_the_tiger_of_capital_county }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_tiger }
+		}
+    }
+}
+epithet_geographical.0002 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_north_world_geographical_nickname = yes
+		NOR = {
+			has_trait = craven
+			has_trait = forgiving
+			has_trait = trusting
+			has_trait = compassionate
+		}
+		OR = {
+			AND = {
+				prowess >= 20
+				is_knight = yes
+			}
+			AND = {
+				is_martial_higher_stat_trigger = yes
+				martial >= 15
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 4
+	}
+    immediate = {
+		if = { 
+			limit = { highest_held_title_tier <= tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_leopard_of_location }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_leopard_of_capital }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_duchy }
+			set_nickname_effect = { NICKNAME = nick_the_leopard_of_capital_county }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_leopard }
+		}
+    }
+}
+epithet_geographical.0003 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_north_world_geographical_nickname = yes
+		OR = {
+			has_trait = callous
+			has_trait = sadistic
+			has_trait = cynical
+			has_trait = deceitful
+		}
+		NOR = {
+			has_trait = humble
+			has_trait = honest
+			has_trait = forgiving
+			has_trait = trusting
+			has_trait = compassionate
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+    immediate = {
+		if = { 
+			limit = { highest_held_title_tier <= tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_hyena_of_location }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_hyena_of_capital }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_duchy }
+			set_nickname_effect = { NICKNAME = nick_the_hyena_of_capital_county }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_hyena }
+		}
+    }
+}
+epithet_geographical.0004 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		OR = {
+			is_african_culture = yes
+			is_indian_culture = yes
+			capital_province = { geographical_region = world_india }
+			capital_province = { geographical_region = world_africa }
+		}
+		has_trait = scaly
+		OR = {
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+    immediate = {
+		if = { 
+			limit = { highest_held_title_tier <= tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_crocodile_of_location }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_crocodile_of_capital }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_duchy }
+			set_nickname_effect = { NICKNAME = nick_the_crocodile_of_capital_county }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_crocodile }
+		}
+    }
+}
+epithet_geographical.0005 = {
+	hidden = yes
+	trigger = {
+		age >= 16
+		can_get_africa_geographical_nickname = no
+		NOR = {
+			has_trait = craven
+			has_trait = forgiving
+			has_trait = deceitful
+			has_trait = trusting
+			has_trait = compassionate
+		}
+		has_strong_trait_trigger = yes
+	}
+	weight_multiplier = {
+		base = 3
+	}
+    immediate = {
+		if = { 
+			limit = { highest_held_title_tier <= tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_bear_of_location }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_county }
+			set_nickname_effect = { NICKNAME = nick_the_bear_of_capital }
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_duchy }
+			set_nickname_effect = { NICKNAME = nick_the_bear_of_capital_county }
+		}
+		else = {
+			set_nickname_effect = { NICKNAME = nick_the_bear }
+		}
     }
 }
