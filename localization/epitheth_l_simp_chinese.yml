@@ -1,4 +1,4 @@
-l_simp_chinese:
+﻿l_simp_chinese:
  rule_epithet_frequency:0 "称号"
  setting_fewer_epithet_frequency:0 "更少"
  setting_fewer_epithet_frequency_desc:0 "称号将较少出现。"
@@ -688,7 +688,7 @@ l_simp_chinese:
  nick_the_bear:0 "熊罴"
  nick_blessed:0 "蒙福"
  nick_the_bookish:0 "书卷气"
- nick_the_brash:0 "无礼之人"
+ nick_the_brash:0 "傲慢者"
  nick_the_cabbage:0 "卷心菜"
  nick_the_chosen_of_fategod:0 "[CHARACTER.GetFaith.FateGodName]选民"
  nick_the_hidden_hand_of_liege:0 "[CHARACTER.GetLiege.GetCharacterViewName]的操纵者"
