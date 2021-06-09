@@ -1,14 +1,1 @@
-﻿epithet_prestige_positive = {
-	icon = letter_positive
-	monthly_prestige = 1.0
-}
-
-epithet_prestige_negative = {
-	icon = letter_negative
-	monthly_prestige = -1.0
-}
-
-epithet_dread_positive = {
-	icon = letter_positive
-	dread_baseline_add = 10
-}
+﻿

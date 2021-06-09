@@ -19,7 +19,7 @@
 		scope:recipient = {
 			remove_nickname = yes
 			trigger_event = {
-               	on_action = epithet_any_nickname
+               	on_action = epithet_all_random
             }
 			show_as_tooltip = {
 				give_nickname = nick_a_random_nickname
