@@ -2,7 +2,6 @@
 on_giant_epithet = {
 	trigger = { 
 		    has_trait = giant 
-		    prestige_level >= 2
 	}
 	first_valid_on_action = {
 		on_diplomacy_giant
@@ -210,7 +209,6 @@ on_giant_hunchbacked = {
 on_dwarf_epithet = {
 	trigger = { 
 		has_trait = dwarf 
-		prestige_level >= 2
 	}
 	first_valid_on_action = {
 		on_diplomacy_dwarf
@@ -389,7 +387,6 @@ on_imp = {
 on_albino_epithet = {
 	trigger = { 
 		has_trait = albino
-		prestige_level >= 2
 	}
 	first_valid_on_action =	{
 		on_diplomacy_albino
