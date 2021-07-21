@@ -21,15 +21,15 @@ epithet_cheats = {
 	}
 }
 
-#epithet_modifier = {
-#	default = on_all_epithet_modifier
+epithet_limitation = {
+	default = only_one_epithet
 
-#	on_all_epithet_modifier = {
-#	}
+	once_per_game_epithet = {
+	}
 
-#	on_only_bonus_epithet_modifier = {
-#	}
+	only_one_epithet = {
+	}
 
-#	off_epithet_modifier = {
-#	}
-#}
+	no_limitation_epithet = {
+	}
+}

@@ -7,19 +7,14 @@
 	ignores_pending_interaction_block = yes
 	
 	is_shown = {
-		#scope:recipient = {
-        #    has_any_nickname = no
-        #}
         has_game_rule = on_epithet_cheats
     }
-    
-    ai_potential = { always = no }
-	
+    	
 	on_accept = {
 		scope:recipient = {
 			remove_nickname = yes
 			trigger_event = {
-               	on_action = epithet_all_random
+               	on_action = epithet_grant_interaction
             }
 			show_as_tooltip = {
 				give_nickname = nick_a_random_nickname
@@ -42,14 +37,47 @@ epithet_remove_nickname_interaction = {
         }
         has_game_rule = on_epithet_cheats
     }
-    
-    ai_potential = {
-        always = no
-    }
 	
 	on_accept = {
 		scope:recipient = {
 			remove_nickname = yes
 		}
+	}
+}
+epithet_test_list = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+        has_game_rule = on_epithet_cheats
+    }
+    	
+	on_accept = {
+		scope:recipient = {
+			trigger_event = {
+               	on_action = epithet_grant_test
+            }
+		}
+	}
+}
+
+epithet_test_list2 = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+        has_game_rule = on_epithet_cheats
+    }
+    	
+	on_accept = {
+		clear_global_variable_list = nickname_already_given
 	}
 }

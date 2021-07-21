@@ -1,0 +1,338 @@
+﻿###################################################################
+namespace = epithet_death
+
+## ---------------------------------------------------------------
+epithet_death.0001 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			trigger_if = {
+				limit = {
+					is_lowborn = no
+				}
+				house = {
+					NOT = {
+						any_house_member = {
+							is_alive = yes
+						}
+					}
+				}
+				# Not house founder
+				OR = {
+					trigger_if = {
+						limit = {
+							exists = father
+						}
+						father.house = {
+							this = scope:epithet_receiver.house
+						}
+					}
+					trigger_if = {
+						limit = {
+							exists = mother
+						}
+						mother.house = {
+							this = scope:epithet_receiver.house
+						}
+					}
+					always = no
+				}	
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 2
+		modifier = {
+			factor = 6
+			scope:epithet_receiver = {
+				dynasty = {
+					NOT = {
+						any_dynasty_member = {
+							is_alive = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_last }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0002 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			has_religion = religion:christianity_religion
+			scope:piety_level >= 2
+			OR = {
+				death_reason = death_dungeon
+				death_reason = death_fight
+				death_reason = death_battle
+				death_reason = death_head_ripped_off
+				death_reason = death_execution
+				death_reason = death_execution_blood_eagle
+				death_reason = death_execution_blood_eagle_killer
+				death_reason = death_execution_blot
+				death_reason = death_execution_killer
+				death_reason = death_whipping
+				death_reason = death_torture
+				death_reason = death_burned
+				death_reason = death_eaten
+				death_reason = death_beaten
+				death_reason = death_sacrificed_to_gods
+				death_reason = death_crucified
+				death_reason = death_burned_witch
+				death_reason = death_pilgrimage_bandit_attack
+				death_reason = death_sun_trial
+			}
+			trigger_if ={
+				limit = {
+					exists = killer
+				}
+				faith = {
+					faith_hostility_level = {
+						target = scope:epithet_receiver.killer.faith
+						value >= faith_hostile_level
+					}
+				}
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 3
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				scope:piety_level >= 3
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				scope:piety_level >= 4
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				scope:piety_level >= 5
+			}
+		}
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_martyr }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0003 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			scope:prestige_level >= 2
+			exists = killer
+			OR = {
+				has_trait = compassionate
+				has_trait = forgiving
+				has_trait = just
+			}
+			NOR = {
+				has_trait = callous
+				has_trait = sadistic
+				has_trait = arbitrary
+				has_trait = vengeful
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			scope:epithet_receiver = {
+				calc_true_if = {
+					amount >= 2
+					has_trait = compassionate
+					has_trait = forgiving
+					has_trait = just
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:epithet_receiver = {
+				scope:prestige_level >= 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:epithet_receiver = {
+				scope:prestige_level >= 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:epithet_receiver = {
+				scope:prestige_level >= 5
+			}
+		}
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_loved_and_killed }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0004 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			OR = {
+				death_reason = death_fight
+				death_reason = death_battle
+				death_reason = death_head_ripped_off
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_slaughtered }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0005 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			OR = {
+				death_reason = death_execution
+				death_reason = death_execution_blood_eagle
+				death_reason = death_execution_blood_eagle_killer
+				death_reason = death_execution_blot
+				death_reason = death_execution_killer
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+
+    immediate = {
+		scope:epithet_receiver = {
+			set_nickname_effect = { NICKNAME = nick_the_executed }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0006 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			prestige_level >= 3
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		random_list = {
+			100 = {
+				scope:epithet_receiver = {
+					set_nickname_effect = { NICKNAME = nick_the_ancient }
+				}
+			}
+			100 = {
+				scope:epithet_receiver = {
+					set_nickname_effect = { NICKNAME = nick_the_elder }
+				}
+			}
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0007 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			age <= 25
+			highest_held_title_tier >= tier_duchy
+		}
+	}
+	weight_multiplier = {
+		base = 2
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_the_young }
+    }
+}
+## ---------------------------------------------------------------
+epithet_death.0008 = {
+	hidden = yes
+	trigger = {
+		scope:epithet_receiver = {
+			piety_level >= 5
+			num_virtuous_traits >= 3
+			num_sinful_traits = 0
+		}
+	}
+	weight_multiplier = {
+		base = 3
+	}
+
+    immediate = {
+		set_nickname_effect = { NICKNAME = nick_blessed }
+    }
+}
+
+###################################################################
+namespace = epithet_birth
+
+epithet_birth.0001 = {
+	hidden = yes
+	trigger = {
+		has_character_flag = epithet_posthumous
+
+		OR = {
+			AND = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = nickname_already_given
+						target = flag:nick_the_posthumous
+					}
+				}
+				OR = {
+					has_game_rule = once_per_game_epithet
+					has_game_rule = only_one_epithet
+				}
+			}
+			has_game_rule = no_limitation_epithet
+		}
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = {
+		add_character_flag = { flag = nick_the_posthumous }
+		set_nickname_effect = { NICKNAME = nick_the_posthumous }
+    }
+}

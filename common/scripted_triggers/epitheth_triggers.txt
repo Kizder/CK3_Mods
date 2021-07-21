@@ -517,3 +517,16 @@ is_learning_higher_stat_trigger = {
     learning >= stewardship
     learning >= intrigue
 }
+
+is_good_knight_or_martial_lord = {
+    OR = {
+        AND = {
+            martial >= 17
+            is_martial_higher_stat_trigger = yes
+        }
+        AND = {
+            prowess >= 20
+            is_knight = yes
+        }
+    }
+}

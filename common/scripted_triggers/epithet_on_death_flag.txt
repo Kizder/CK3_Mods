@@ -1,0 +1,21 @@
+﻿##################################################################
+
+epithet_on_death_flag = {
+	trigger = {
+		has_any_nickname = no
+		has_game_rule = only_one_epithet
+	}
+	hidden_effect = {
+		save_scope_as = epithet_receiver
+		every_in_list = {
+			list = nickname_already_given
+			limit = {
+				scope:epithet_receiver = { has_character_flag = this }
+			}
+			remove_list_global_variable = {
+				name = nickname_already_given
+				target = this
+			}
+		}
+	}
+}
