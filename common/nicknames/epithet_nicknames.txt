@@ -1,5 +1,6 @@
 ﻿# Used for test
 nick_test = {}
+nick_test_2 = {}
 
 # Used for tooltip
 nick_a_random_nickname = {} 
@@ -182,12 +183,10 @@ nick_the_brute_of_location = { is_bad = yes }
 nick_the_brute_of_capital = { is_bad = yes }
 nick_the_brute_of_capital_county = { is_bad = yes }
 nick_the_murder_king = { is_bad = yes }
-nick_the_dark_mother = { is_bad = yes }
 nick_the_dark_father = { is_bad = yes }
 nick_the_king_who_knelt = { is_bad = yes }
 nick_the_black = { is_bad = yes }
 nick_the_incubus = { is_bad = yes }
-nick_the_succubus = { is_bad = yes }
 nick_the_devil = { is_bad = yes }
 nick_weak_legs = { is_bad = yes }
 nick_the_imp = { is_bad = yes }
@@ -217,6 +216,15 @@ nick_man_eater = { is_bad = yes }
 nick_the_vicious = { is_bad = yes }
 nick_the_venal = { is_bad = yes }
 nick_the_treacherous = { is_bad = yes }
+nick_the_murderous = { is_bad = yes }
+nick_the_lazy = { is_bad = yes }
+nick_the_arrogant = { is_bad = yes }
+nick_the_gluttonous = { is_bad = yes }
+nick_the_paranoid = { is_bad = yes }
+nick_the_sadistic = { is_bad = yes }
+nick_the_dull = { is_bad = yes }
+nick_the_lewd = { is_bad = yes }
+nick_the_craven = { is_bad = yes }
 
 ## Basic Nickname ##
 nick_the_brave = {}
@@ -368,7 +376,6 @@ nick_the_beloved_of_capital_county = {}
 nick_the_beloved_of_location = {}
 nick_the_broken_visage = {}
 nick_heart_piercer = {}
-nick_warshrieker = {}
 nick_deathdealer = {}
 nick_the_hordechief = {}
 nick_the_courteous = {}
@@ -424,7 +431,6 @@ nick_the_lion_of_location = {}
 nick_the_lion_of_capital = {}
 nick_the_lion_of_capital_county = {}
 nick_the_all_consuming = {}
-nick_bloodcloaked = {}
 nick_the_ladder_legs = {}
 nick_the_bellower = {}
 nick_god_favored = {}
@@ -498,6 +504,64 @@ nick_the_teller_of_tales = {}
 nick_the_colossal = {}
 nick_the_shrewd = {}
 nick_the_thrice_cursed = {}
+nick_son_of_emperors = {}
+nick_grudgebearer = {}
+nick_the_imperishable = {}
+nick_the_monarch_of_the_sky = {}
+nick_ruler_of_the_four_horizons = {}
+nick_the_scholar_king = {}
+nick_the_righteous = {}
+nick_the_despoiler = {}
+nick_the_calm = {}
+nick_the_wrathful = {}
+nick_the_chaste = {}
+nick_the_lustful = {}
+nick_the_content = {}
+nick_the_forgiving = {}
+nick_the_vengeful = {}
+nick_the_gregarious = {}
+nick_the_shy = {}
+nick_the_deceitful = {}
+nick_the_humble = {}
+nick_the_just = {}
+nick_the_patient = {}
+nick_the_impatient = {}
+nick_the_temperate = {}
+nick_the_trusting = {}
+nick_the_zealous = {}
+nick_the_cynical = {}
+nick_the_compassionate = {}
+nick_the_melancholic = {}
+nick_the_lunatic = {}
+nick_the_possessed = {}
+nick_the_albino = {}
+nick_the_pure_blooded = {}
+nick_the_scaly = {}
+nick_the_dwarf = {}
+nick_the_wheezer = {}
+nick_the_spindly = {}
+nick_the_bleeder = {}
+nick_the_scarred = {}
+nick_the_disfigured = {}
+nick_the_abandonned = {}
+nick_the_far_sighted = {}
+nick_the_diligent = {}
+nick_the_artful = {}
+nick_the_charitable = {}
+nick_the_lively = {}
+nick_the_disciplined = {}
+nick_the_fleet_footed = {}
+nick_the_abstemious = {}
+nick_the_dread_aspect = {}
+nick_the_cantankerous = {}
+nick_the_dark_presence = {}
+nick_the_dread_incarnate = {}
+nick_the_fear_incarnate = {}
+nick_the_terror_incarnate = {}
+nick_the_bereft = {}
+nick_sea_legs = {}
+nick_the_trustworthy = {}
+nick_the_honest = {}
 
 ## Rare Nickname ##
 nick_the_terrible = {}
@@ -546,6 +610,11 @@ nick_the_saint = {}
 nick_the_god_given = {}
 nick_the_terrifying = {}
 nick_the_sun_king = {}
+nick_the_celestial_dragon = {}
+nick_the_crimson_king = {}
+nick_who_shall_not_be_named = {}
+nick_the_overtyrant = {}
+nick_the_gold_dragon = {}
 
 ## Stats Nickname ##
 nick_the_viper = {}
@@ -691,6 +760,25 @@ nick_the_white_scholar = {}
 nick_the_martinet = {}
 nick_the_whisperer = {}
 nick_the_astute = {}
+nick_goldgather = {}
+nick_goldtooth = {}
+nick_the_hand_of_liege = {}
+nick_the_golden_tongue = {}
+nick_the_treasurer = {}
+nick_the_purveyor_of_poisons = {}
+nick_the_ingenious_poisoner = {}
+nick_the_master_of_poisons = {}
+nick_the_knowledgeable = {}
+nick_the_scholar_of_the_black_arts = {}
+nick_the_master_of_the_black_arts = {}
+nick_the_smooth_talker = {}
+nick_the_architect = {}
+nick_the_administrator = {}
+nick_the_avaricious = {}
+nick_the_theologian = {}
+nick_the_overseer = {}
+nick_the_torturer = {}
+nick_warshrieker = {}
 
 ### Knight Nickname ##
 nick_the_battler = {}
@@ -840,6 +928,26 @@ nick_the_widowmaker = {}
 nick_the_oathkeeper = {}
 nick_the_sapper = {}
 nick_soft_sword = {}
+nick_black_iron_reaver = {}
+nick_painbringer = {}
+nick_bloodwrath = {}
+nick_bloody_hand = {}
+nick_ironfist = {}
+nick_shieldbreaker = {}
+nick_wintertooth = {}
+nick_the_deadly_blade = {}
+nick_the_ox = {}
+nick_the_ox_of_location = {}
+nick_the_ox_of_capital = {}
+nick_the_ox_of_capital_county = {}
+nick_the_wall_cracker = {}
+nick_the_wall_smasher = {}
+nick_the_aggressive = {}
+nick_the_bestial = {}
+nick_the_battle_lust = {}
+nick_the_warrior_born = {}
+nick_the_gallant = {}
+nick_bloodcloaked = {}
 
 ### Death Nickname ##
 nick_the_last = {}

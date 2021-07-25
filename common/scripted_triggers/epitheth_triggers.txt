@@ -1,4 +1,22 @@
-﻿has_weak_trait_trigger = {
+﻿nickname_already_given_list_trigger = {
+    OR = {
+        AND = {
+            NOT = {
+                is_target_in_global_variable_list = {
+                    name = nickname_already_given
+                    target = flag:$NICKNAME$
+                }
+            }
+            OR = {
+                has_game_rule = once_per_game_epithet
+                has_game_rule = only_one_epithet
+            }
+        }
+        has_game_rule = no_limitation_epithet
+    }
+}
+
+has_weak_trait_trigger = {
     OR = {
         has_trait = physique_bad
         has_trait = weak
@@ -257,7 +275,32 @@ is_councillor = {
         has_council_position = councillor_steward
         has_council_position = councillor_court_chaplain
         has_council_position = councillor_marshal
-        has_council_position = councillor_steward
+        has_council_position = councillor_chancellor
+    }
+}
+
+is_good_councillor = {
+    OR = {
+        AND = {
+            has_council_position = councillor_spymaster
+            intrigue >= 20
+        }
+        AND = {
+            has_council_position = councillor_steward
+            stewardship >= 20
+        }
+        AND = {
+            has_council_position = councillor_court_chaplain
+            learning >= 20
+        }
+        AND = {
+            has_council_position = councillor_marshal
+            martial >= 20
+        }
+        AND = {
+            has_council_position = councillor_chancellor
+            diplomacy >= 20
+        }
     }
 }
 
@@ -529,4 +572,36 @@ is_good_knight_or_martial_lord = {
             is_knight = yes
         }
     }
+}
+
+is_martial_character = {
+    martial >= 17
+    martial >= diplomacy
+    martial >= stewardship
+    martial >= intrigue
+    martial >= learning
+}
+
+is_learning_character = {
+    learning >= 17
+    learning >= diplomacy
+    learning >= stewardship
+    learning >= intrigue
+    learning >= martial
+}
+
+is_learning_character = {
+    intrigue >= 17
+    intrigue >= diplomacy
+    intrigue >= stewardship
+    intrigue >= learning
+    intrigue >= martial
+}
+
+is_stewardship_character = {
+    stewardship >= 17
+    stewardship >= diplomacy
+    stewardship >= intrigue
+    stewardship >= learning
+    stewardship >= martial
 }

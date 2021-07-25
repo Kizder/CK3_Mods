@@ -12,9 +12,9 @@
     	
 	on_accept = {
 		scope:recipient = {
-			remove_nickname = yes
+			remove_epithet = yes
 			trigger_event = {
-               	on_action = epithet_grant_interaction
+               	on_action = epithet_grant_all
             }
 			show_as_tooltip = {
 				give_nickname = nick_a_random_nickname
@@ -40,7 +40,7 @@ epithet_remove_nickname_interaction = {
 	
 	on_accept = {
 		scope:recipient = {
-			remove_nickname = yes
+			remove_epithet = yes
 		}
 	}
 }

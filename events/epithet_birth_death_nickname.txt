@@ -311,28 +311,10 @@ namespace = epithet_birth
 epithet_birth.0001 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_posthumous }
 		has_character_flag = epithet_posthumous
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_posthumous
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 2 }
-    immediate = {
-		add_character_flag = { flag = nick_the_posthumous }
-		set_nickname_effect = { NICKNAME = nick_the_posthumous }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_posthumous } }
 }

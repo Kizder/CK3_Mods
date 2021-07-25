@@ -1,0 +1,25 @@
+﻿give_nickname_character_list = {
+    set_variable = {
+        name = nickname_given
+        value = flag:$NICKNAME$
+      }
+    add_to_global_variable_list = {
+        name = nickname_already_given
+        target = flag:$NICKNAME$
+    }
+}
+
+set_epithet_effect = {
+    give_nickname_character_list = { NICKNAME = $NICKNAME$ }
+    set_nickname_effect = { NICKNAME = $NICKNAME$ }
+}
+
+remove_epithet = {
+    save_scope_as = epithet_receiver
+    remove_list_global_variable = {
+        name = nickname_already_given
+        target = scope:epithet_receiver.var:nickname_given
+    }
+    remove_nickname = yes
+    remove_variable = nickname_given
+}

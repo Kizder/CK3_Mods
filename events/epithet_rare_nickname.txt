@@ -4,6 +4,7 @@
 epithet_rare.0001 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_terrible }
 		calc_true_if = {
 			amount >= 3
 			has_trait = wrathful
@@ -25,34 +26,16 @@ epithet_rare.0001 = {
 			dread >= 60
 			tyranny >= low_tyranny
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_terrible
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_terrible }
-		set_nickname_effect = { NICKNAME = nick_the_terrible }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_terrible } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0002 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_cruel }
 		dread >= 50
 		NOR = {
 			has_trait = compassionate
@@ -74,127 +57,58 @@ epithet_rare.0002 = {
 			has_trait = kinslayer
 
 		}
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_cruel
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4}
-    immediate = {
-		add_character_flag = { flag = nick_the_cruel }
-		set_nickname_effect = { NICKNAME = nick_the_cruel }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_cruel } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0003 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_great }
 		prestige_level >= 4
 		highest_held_title_tier >= tier_kingdom
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_great
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 1 }
-    immediate = {
-		add_character_flag = { flag = nick_the_great }
-		set_nickname_effect = { NICKNAME = nick_the_great }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_great } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0004 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_sculptor_of_fears }
 		dread >= 80
 		has_trait = torturer
 		has_trait = lifestyle_physician
 		has_trait = reaver
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_sculptor_of_fears
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-	immediate = {
-		add_character_flag = { flag = nick_the_sculptor_of_fears }
-		set_nickname_effect = { NICKNAME = nick_the_sculptor_of_fears }
-	}
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_sculptor_of_fears } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0005 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_omnipotent }
 		age >= 16
 		martial >= 25
 		diplomacy >= 25
 		stewardship >= 25
 		learning >= 25
 		intrigue >= 25
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_omnipotent
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 10 }
-    immediate = {
-		add_character_flag = { flag = nick_the_omnipotent }
-		set_nickname_effect = { NICKNAME = nick_the_omnipotent }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_omnipotent } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0006 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_parangon }
 		has_trait = beauty_good_3
 		has_trait = physique_good_3
 		has_trait = intellect_good_3
@@ -207,41 +121,16 @@ epithet_rare.0006 = {
 		has_lunatic_trait_trigger = no
 		has_possessed_trait_trigger = no
 		has_depressed_trait_trigger = no
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_parangon
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 6 }
     immediate = {
-		add_character_flag = { flag = nick_the_parangon }
-		if = { 
-			limit = { highest_held_title_tier <= tier_county }
-			set_nickname_effect = { NICKNAME = nick_the_parangon_of_location }
-		}
-		else_if = {
-			limit = { highest_held_title_tier = tier_county }
-			set_nickname_effect = { NICKNAME = nick_the_parangon_of_capital }
-		}
-		else_if = {
-			limit = { highest_held_title_tier = tier_duchy }
-			set_nickname_effect = { NICKNAME = nick_the_parangon_of_capital_county }
-		}
-		else = {
-			set_nickname_effect = { NICKNAME = nick_the_parangon }
+		give_nickname_character_list = { NICKNAME = nick_the_parangon }
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_parangon_of_location } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_parangon_of_capital } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_parangon_of_capital_county } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_parangon } }
 		}
     }
 }
@@ -249,28 +138,13 @@ epithet_rare.0006 = {
 epithet_rare.0007 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_chosen }
 		has_character_flag = born_as_taltos
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_chosen
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 6 }
     immediate = {
-		add_character_flag = { flag = nick_the_chosen }
+		give_nickname_character_list = { NICKNAME = nick_the_chosen }
 		random_list = {
 			100 = { set_nickname_effect = { NICKNAME = nick_the_chosen } }
 			100 = { set_nickname_effect = { NICKNAME = nick_the_chosen_of_fategod } }
@@ -281,6 +155,7 @@ epithet_rare.0007 = {
 epithet_rare.0008 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_puppetmaster }
 		age >= 16
 		intrigue >= 17
 		is_intrigue_higher_stat_trigger = yes
@@ -298,34 +173,16 @@ epithet_rare.0008 = {
 			num_of_relation_lover >= 3
 			num_of_relation_friend >= 3
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_puppetmaster
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 6 }
-    immediate = {
-		add_character_flag = { flag = nick_the_puppetmaster }
-		set_nickname_effect = { NICKNAME = nick_the_puppetmaster }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_puppetmaster } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0009 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_tyrant }
 		calc_true_if = {
 			amount >= 3
 			has_trait = wrathful
@@ -347,41 +204,16 @@ epithet_rare.0009 = {
 			dread >= 70
 			tyranny >= medium_tyranny
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_tyrant
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
     immediate = {
-		add_character_flag = { flag = nick_the_tyrant }
-		if = { 
-			limit = { highest_held_title_tier <= tier_county }
-			set_nickname_effect = { NICKNAME = nick_the_tyrant_of_location }
-		}
-		else_if = {
-			limit = { highest_held_title_tier = tier_county }
-			set_nickname_effect = { NICKNAME = nick_the_tyrant_of_capital }
-		}
-		else_if = {
-			limit = { highest_held_title_tier = tier_duchy }
-			set_nickname_effect = { NICKNAME = nick_the_tyrant_of_capital_county }
-		}
-		else = {
-			set_nickname_effect = { NICKNAME = nick_the_tyrant }
+		give_nickname_character_list = { NICKNAME = nick_the_tyrant }
+		random_list = {
+			100 = { set_nickname_effect = { NICKNAME = nick_the_tyrant_of_location } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_tyrant_of_capital } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_tyrant_of_capital_county } }
+			100 = { set_nickname_effect = { NICKNAME = nick_the_tyrant } }
 		}
     }
 }
@@ -389,6 +221,7 @@ epithet_rare.0009 = {
 epithet_rare.0010 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_crown_scourge }
 		OR = {
 			has_trait = greatest_of_khans
 			has_trait = peasant_leader
@@ -406,34 +239,16 @@ epithet_rare.0010 = {
 			has_trait = reaver
 			has_trait = cautious_leader
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_crown_scourge
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_crown_scourge }
-		set_nickname_effect = { NICKNAME = nick_the_crown_scourge }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_crown_scourge } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0011 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_dragon }
 		dread > 80
 		has_trait = wrathful
 		has_trait = greedy
@@ -443,34 +258,16 @@ epithet_rare.0011 = {
 			has_trait = cannibal
 			has_trait = torturer
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_dragon
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_dragon }
-		set_nickname_effect = { NICKNAME = nick_the_dragon }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_dragon } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0012 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_king_of_thorns }
 		intrigue >= 20
 		is_intrigue_higher_stat_trigger = yes
 		has_feudal_government_trigger = yes
@@ -480,34 +277,16 @@ epithet_rare.0012 = {
 		has_trait = ambitious
 		has_trait = schemer
 		dread >= 50
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_king_of_thorns
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 10 }
-    immediate = {
-		add_character_flag = { flag = nick_the_king_of_thorns }
-		set_nickname_effect = { NICKNAME = nick_the_king_of_thorns }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_king_of_thorns } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0013 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_black_adder }
 		has_trait = callous
 		intrigue >= 17
 		highest_held_title_tier >= tier_duchy
@@ -523,34 +302,16 @@ epithet_rare.0013 = {
 		}
 		has_trait = scaly
 		has_trait = schemer
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_black_adder
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_black_adder }
-		set_nickname_effect = { NICKNAME = nick_the_black_adder }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_black_adder } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0014 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_steadfast_queen }
 		is_female = yes
 		highest_held_title_tier = tier_kingdom
 		is_king_queen_culture = yes
@@ -567,34 +328,16 @@ epithet_rare.0014 = {
 			has_trait = zealous
 			has_trait = just
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_steadfast_queen
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_steadfast_queen }
-		set_nickname_effect = { NICKNAME = nick_the_steadfast_queen }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_steadfast_queen } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0015 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_count_of_counts }
 		is_female = no
 		has_feudal_government_trigger = yes
 		highest_held_title_tier = tier_county
@@ -603,34 +346,16 @@ epithet_rare.0015 = {
 			count >= 5
 			tier = tier_county
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_count_of_counts
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_count_of_counts }
-		set_nickname_effect = { NICKNAME = nick_count_of_counts }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_count_of_counts } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0016 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_duke_of_dukes }
 		is_female = no
 		has_feudal_government_trigger = yes
 		highest_held_title_tier = tier_duchy
@@ -639,34 +364,16 @@ epithet_rare.0016 = {
 			count >= 4
 			tier = tier_duchy
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_duke_of_dukes
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_duke_of_dukes }
-		set_nickname_effect = { NICKNAME = nick_duke_of_dukes }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_duke_of_dukes } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0017 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_king_of_kings }
 		is_female = no
 		has_feudal_government_trigger = yes
 		is_king_queen_culture = yes
@@ -675,34 +382,16 @@ epithet_rare.0017 = {
 			count >= 4
 			tier = tier_kingdom
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_king_of_kings
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_king_of_kings }
-		set_nickname_effect = { NICKNAME = nick_king_of_kings }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_king_of_kings } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0018 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_lord_of_realm }
 		highest_held_title_tier = tier_duchy
 		realm_size >= 10
 		any_vassal = {
@@ -725,34 +414,16 @@ epithet_rare.0018 = {
 				rank >= 4
 			}
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_lord_of_realm
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_lord_of_realm }
-		set_nickname_effect = { NICKNAME = nick_the_lord_of_realm }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_lord_of_realm } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0019 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_undying }
 		age >= 70
 		OR = {
 			has_trait = one_eyed
@@ -768,34 +439,16 @@ epithet_rare.0019 = {
 			has_depressed_trait_trigger = no
 			has_trait = craven
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_undying
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 10 }
-    immediate = {
-		add_character_flag = { flag = nick_the_undying }
-		set_nickname_effect = { NICKNAME = nick_the_undying }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_undying } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0020 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_duke_of_death }
 		highest_held_title_tier = tier_duchy
 		has_feudal_government_trigger = yes
 		is_duke_culture = yes
@@ -813,67 +466,53 @@ epithet_rare.0020 = {
 			}
 		}
 		dread >= 50
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_duke_of_death
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_duke_of_death }
-		set_nickname_effect = { NICKNAME = nick_the_duke_of_death }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_duke_of_death } }
+}
+## ---------------------------------------------------------------
+epithet_rare.0021 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_gold_dragon }
+		dread > 80
+		has_trait = wrathful
+		has_trait = greedy
+		has_trait = vengeful
+		stewardship >= 17
+		is_stewardship_higher_stat_trigger = yes
+		OR = {
+			has_trait = avaricious
+			has_trait = kinslayer
+			has_trait = cannibal
+			has_trait = torturer
+		}
+	}
+
+	weight_multiplier = { base = 6 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_gold_dragon } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0022 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_paragon_humanity }
 		has_trait = beauty_good_3
 		has_trait = physique_good_3
 		has_trait = intellect_good_3
 		has_trait = fecund
 		has_trait = pure_blooded
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_paragon_humanity
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_paragon_humanity }
-		set_nickname_effect = { NICKNAME = nick_paragon_humanity }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_paragon_humanity } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0023 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_grim_reaper }
 		has_trait = disfigured
 		has_trait = spindly
 		OR = {
@@ -882,34 +521,16 @@ epithet_rare.0023 = {
 			has_trait = torturer
 		}
 		dread >= 80
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_grim_reaper
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_grim_reaper }
-		set_nickname_effect = { NICKNAME = nick_the_grim_reaper }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_grim_reaper } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0024 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_impaler }
 		dread >= 50
 		calc_true_if = {
 			amount >= 3
@@ -931,34 +552,16 @@ epithet_rare.0024 = {
 			has_trait = torturer
 			has_trait = murderer
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_impaler
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_impaler }
-		set_nickname_effect = { NICKNAME = nick_the_impaler }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_impaler } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0025 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_virgin_queen }
 		age >= 30
 		is_female = yes
 		highest_held_title_tier = tier_kingdom
@@ -970,34 +573,15 @@ epithet_rare.0025 = {
 			even_if_dead = yes
 			count = 0
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_virgin_queen
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
-
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_virgin_queen }
-		set_nickname_effect = { NICKNAME = nick_the_virgin_queen }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_virgin_queen } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0026 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_oncoming_storm }
 		dread >= 50
 		has_trait = wrathful
 		OR = {
@@ -1021,34 +605,46 @@ epithet_rare.0026 = {
 			has_lunatic_trait_trigger = yes
 			has_possessed_trait_trigger = yes
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_oncoming_storm
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_oncoming_storm }
-		set_nickname_effect = { NICKNAME = nick_the_oncoming_storm }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_oncoming_storm } }
+}
+## ---------------------------------------------------------------
+epithet_rare.0027 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_overtyrant }
+		dread >= 90
+		highest_held_title_tier >= tier_kingdom
+		tyranny >= medium_tyranny
+		is_independent_ruler = yes
+		has_government = clan_government
+
+		NOR = {
+			has_trait = craven
+			has_trait = calm
+			has_trait = chaste
+			has_trait = content
+			has_trait = forgiving
+			has_trait = generous
+			has_trait = honest
+			has_trait = humble
+			has_trait = just
+			has_trait = temperate
+			has_trait = trusting
+			has_trait = compassionate
+		}
+	}
+
+	weight_multiplier = { base = 6 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_overtyrant } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0028 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_reaper_king }
 		OR = {
 			has_trait = kinslayer
 			has_trait = murderer
@@ -1060,34 +656,16 @@ epithet_rare.0028 = {
 		has_trait = spindly
 		is_king_queen_culture = yes
 		has_feudal_government_trigger = yes
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_reaper_king
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_reaper_king }
-		set_nickname_effect = { NICKNAME = nick_the_reaper_king }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_reaper_king } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0029 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_red_king }
 		is_king_queen_culture = yes
 		has_government = feudal_government
 		martial >= 17
@@ -1096,34 +674,16 @@ epithet_rare.0029 = {
 		has_trait = murderer
 		highest_held_title_tier = tier_kingdom
 		dread >= 80
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_red_king
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_red_king }
-		set_nickname_effect = { NICKNAME = nick_the_red_king }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_red_king } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0030 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_ageless_ascetic }
 		age >= 70
 		has_trait = chaste
 		has_trait = content
@@ -1141,34 +701,16 @@ epithet_rare.0030 = {
 			has_trait = hashishiyah
 			has_trait = profligate
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_ageless_ascetic
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 6 }
-	immediate = {
-		add_character_flag = { flag = nick_the_ageless_ascetic }
-		set_nickname_effect = { NICKNAME = nick_the_ageless_ascetic }
-	}
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_ageless_ascetic } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0031 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_arisen }
 		has_trait = beauty_good
 		has_trait = physique_good
 		has_trait = intellect_good
@@ -1182,34 +724,16 @@ epithet_rare.0031 = {
 		martial >= 15
 		learning >= 15
 		stewardship >= 15
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_arisen
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-	immediate = {
-		add_character_flag = { flag = nick_the_arisen }
-		set_nickname_effect = { NICKNAME = nick_the_arisen }
-	}
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_arisen } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0032 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_father_of_the_people }
 		age >= 50
 		prestige >= 4
 		is_female = no
@@ -1220,100 +744,46 @@ epithet_rare.0032 = {
 		has_trait = compassionate
 		stewardship >= 17
 		is_stewardship_higher_stat_trigger = yes
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_father_of_the_people
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 8 }
-	immediate = {
-		add_character_flag = { flag = nick_father_of_the_people }
-		set_nickname_effect = { NICKNAME = nick_father_of_the_people }
-	}
+    immediate = { set_epithet_effect = { NICKNAME = nick_father_of_the_people } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0033 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_god_among_men }
 		intrigue = 100
 		martial = 100
 		stewardship = 100
 		diplomacy = 100
 		learning = 100
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_god_among_men
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 100 }
-	immediate = {
-		add_character_flag = { flag = nick_god_among_men }
-		set_nickname_effect = { NICKNAME = nick_god_among_men }
-	}
+    immediate = { set_epithet_effect = { NICKNAME = nick_god_among_men } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0034 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_world_emperor }
 		is_emperor_empress_culture = yes
 		any_held_title = {
 			count >= 3
 			tier = tier_empire
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_world_emperor
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-	immediate = {
-		add_character_flag = { flag = nick_the_world_emperor }
-		set_nickname_effect = { NICKNAME = nick_the_world_emperor }
-	}
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_world_emperor } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0035 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_all_seeing }
 		can_get_northerner_nickname_trigger = yes
 		learning >= 20
 		is_learning_higher_stat_trigger = yes
@@ -1321,34 +791,16 @@ epithet_rare.0035 = {
 		has_trait = overseer
 		has_trait = lifestyle_mystic
 		has_trait = theologian
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_all_seeing
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 8 }
-    immediate = {
-		add_character_flag = { flag = nick_all_seeing }
-		set_nickname_effect = { NICKNAME = nick_all_seeing }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_all_seeing } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0036 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_polar_kraken }
 		can_get_northerner_nickname_trigger = yes
 		OR = {
 			has_trait = viking
@@ -1366,34 +818,16 @@ epithet_rare.0036 = {
 		}
 		has_strong_trait_trigger = yes
 		has_trait = giant
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_polar_kraken
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 6 }
-    immediate = {
-		add_character_flag = { flag = nick_the_polar_kraken }
-		set_nickname_effect = { NICKNAME = nick_the_polar_kraken }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_polar_kraken } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0037 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_knucker }
 		can_get_north_west_europe_nickname_trigger = yes
 		has_trait = scaly
 		dread >= 50
@@ -1404,99 +838,45 @@ epithet_rare.0037 = {
 			has_trait = callous
 			has_trait = sadistic
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_knucker
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_knucker }
-		set_nickname_effect = { NICKNAME = nick_the_knucker }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_knucker } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0038 = { 
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_saint }
 		piety_level >= 5
 		has_religion = religion:christianity_religion
 		num_virtuous_traits >= 3
 		num_sinful_traits = 0
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_saint
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_saint }
-		set_nickname_effect = { NICKNAME = nick_the_saint }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_saint } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0039 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_god_given }
 		can_get_abrahamic_religion_nickname_trigger = yes
 		prestige_level >= 4
 		piety_level >= 4
 		num_sinful_traits = 0
 		num_virtuous_traits >= 3
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_god_given
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_god_given }
-		set_nickname_effect = { NICKNAME = nick_the_god_given }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_god_given } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0040 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_terrifying }
 		dread >= 80
 		NOR = {
 			has_trait = compassionate
@@ -1516,58 +896,65 @@ epithet_rare.0040 = {
 			has_trait = torturer
 			has_trait = cannibal
 		}
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_terrifying
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 5 }
-    immediate = {
-		add_character_flag = { flag = nick_the_terrifying }
-		set_nickname_effect = { NICKNAME = nick_the_terrifying }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_terrifying } }
 }
 ## ---------------------------------------------------------------
 epithet_rare.0041 = {
 	hidden = yes
 	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_sun_king }
 		prestige_level >= 5
 		highest_held_title_tier >= tier_kingdom
 		is_king_queen_culture = yes
-
-		OR = {
-			AND = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = nickname_already_given
-						target = flag:nick_the_sun_king
-					}
-				}
-				OR = {
-					has_game_rule = once_per_game_epithet
-					has_game_rule = only_one_epithet
-				}
-			}
-			has_game_rule = no_limitation_epithet
-		}
 	}
 
 	weight_multiplier = { base = 4 }
-    immediate = {
-		add_character_flag = { flag = nick_the_sun_king }
-		set_nickname_effect = { NICKNAME = nick_the_sun_king }
-    }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_sun_king } }
+}
+## ---------------------------------------------------------------
+epithet_rare.0042 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_celestial_dragon }
+		prestige_level >= 5
+		num_virtuous_traits >= 3
+		can_get_chinese_nickname_trigger = yes
+		highest_held_title_tier >= tier_empire
+	}
+
+	weight_multiplier = { base = 4 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_celestial_dragon } }
+}
+## ---------------------------------------------------------------
+epithet_rare.0043 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_crimson_king }
+		is_king_queen_culture = yes
+		has_government = feudal_government
+		martial >= 17
+		is_martial_higher_stat_trigger = yes
+		has_trait = lifestyle_blademaster
+		highest_held_title_tier = tier_kingdom
+		dread >= 50
+	}
+
+	weight_multiplier = { base = 4 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_crimson_king } }
+}
+## ---------------------------------------------------------------
+epithet_rare.0044 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_who_shall_not_be_named }
+		dread >= 90
+		tyranny >= low_tyranny
+		NOT = { exists = liege }
+	}
+
+	weight_multiplier = { base = 4 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_who_shall_not_be_named } }
 }
