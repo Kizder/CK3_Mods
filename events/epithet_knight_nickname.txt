@@ -2628,6 +2628,7 @@ epithet_knight.0151 = {
 	weight_multiplier = { base = 2 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_gallant } }
 }
+## ---------------------------------------------------------------
 epithet_knight.0152 = {
 	hidden = yes
 	trigger = {
@@ -2654,4 +2655,16 @@ epithet_knight.0152 = {
 
 	weight_multiplier = { base = 6 }
     immediate = { set_epithet_effect = { NICKNAME = nick_bloodcloaked } }
+}
+## ---------------------------------------------------------------
+epithet_knight.0153 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_logistician }
+		is_good_knight_or_martial_lord = yes
+		has_trait = logistician
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_logistician } }
 }

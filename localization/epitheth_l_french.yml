@@ -242,6 +242,7 @@
  nick_the_dull:0 "[CHARACTER.Custom('FR_LeLa')] Fade"
  nick_the_lewd:0 "l'Obscène"
  nick_the_craven:0 "[CHARACTER.Custom('FR_LeLa')] Lâche"
+ nick_the_deviant:0 "[CHARACTER.Custom('FR_LeLa')] Déviant[CHARACTER.Custom('FR_E')]"
 
 ###################################### Basic Nicknames ######################################
  nick_the_brave:0 "[CHARACTER.Custom('FR_LeLa')] Brave"
@@ -578,6 +579,7 @@
  nick_sea_legs:0 "Pied-Marin"
  nick_the_trustworthy:0 "[CHARACTER.Custom('FR_LeLa')] Digne de Confiance"
  nick_the_honest:0 "l'Honnête"
+ nick_the_fecund:0 "[CHARACTER.Custom('FR_LeLa')] Fécond[CHARACTER.Custom('FR_E')]"
 
 ###################################### Rare Nicknames ######################################
  nick_the_terrible:0 "[CHARACTER.Custom('FR_LeLa')] Terrible"
@@ -964,6 +966,7 @@
  nick_the_warrior_born:0 "[CHARACTER.Custom('FR_LeLa')] [Select_CString(CHARACTER.IsFemale, 'Guerrière', 'Guerrier' )]-Né[CHARACTER.Custom('FR_E')]"
  nick_the_gallant:0 "[CHARACTER.Custom('FR_LeLa')] Gallant[CHARACTER.Custom('FR_E')]"
  nick_bloodcloaked:0 "Habit-de-Sang"
+ nick_the_logistician:0 "[CHARACTER.Custom('FR_LeLa')] Logisticie[CHARACTER.Custom('FR_NNne')]"
 
 ###################################### Death Nicknames ######################################
  nick_the_last:0 "[CHARACTER.Custom('FR_LeLa')] [Select_CString(CHARACTER.IsFemale, 'Dernière', 'Dernier' )]"

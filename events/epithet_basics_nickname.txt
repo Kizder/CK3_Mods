@@ -4250,3 +4250,18 @@ epithet_basic.0278 = {
 	weight_multiplier = { base = 0.5 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_trustworthy } }
 }
+## ---------------------------------------------------------------
+epithet_basic.0279 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_fecund }
+		has_trait = fecund
+		any_child = {
+			even_if_dead = yes
+			count >= 8
+		}
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_fecund } }
+}

@@ -243,6 +243,7 @@ rule_epithet_frequency:0 "Epithet"
  nick_the_dull:0 "the Dull"
  nick_the_lewd:0 "the Lewd"
  nick_the_craven:0 "the Craven"
+ nick_the_deviant:0 "the Deviant"
 
 ###################################### Basic Nicknames ######################################
  nick_the_brave:0 "the Brave"
@@ -579,6 +580,7 @@ rule_epithet_frequency:0 "Epithet"
  nick_sea_legs:0 "Sea-Legs"
  nick_the_trustworthy:0 "the Trustworthy"
  nick_the_honest:0 "the Honest"
+ nick_the_fecund:0 "the Fecund"
 
 ###################################### Rare Nicknames ######################################
  nick_the_terrible:0 "the Terrible"
@@ -965,6 +967,7 @@ rule_epithet_frequency:0 "Epithet"
  nick_the_warrior_born:0 "the Warrior-Born"
  nick_the_gallant:0 "the Gallant"
  nick_bloodcloaked:0 "Bloodcloaked"
+ nick_the_logistician:0 "the Logistician"
 
 ###################################### Death Nicknames ######################################
  nick_the_last:0 "the Last"

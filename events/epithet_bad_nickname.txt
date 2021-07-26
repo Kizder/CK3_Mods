@@ -2936,3 +2936,17 @@ epithet_bad.0183 = {
 	weight_multiplier = { base = 0.5 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_craven } }
 }
+## ---------------------------------------------------------------
+epithet_bad.0184 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_deviant }
+		AND = {
+			faith = { NOT = { has_doctrine_parameter = deviancy_accepted } }
+			has_trait = deviant
+		}
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_deviant } }
+}

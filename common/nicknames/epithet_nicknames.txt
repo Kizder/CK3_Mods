@@ -225,6 +225,7 @@ nick_the_sadistic = { is_bad = yes }
 nick_the_dull = { is_bad = yes }
 nick_the_lewd = { is_bad = yes }
 nick_the_craven = { is_bad = yes }
+nick_the_deviant = { is_bad = yes }
 
 ## Basic Nickname ##
 nick_the_brave = {}
@@ -562,6 +563,7 @@ nick_the_bereft = {}
 nick_sea_legs = {}
 nick_the_trustworthy = {}
 nick_the_honest = {}
+nick_the_fecund = {}
 
 ## Rare Nickname ##
 nick_the_terrible = {}
@@ -948,6 +950,7 @@ nick_the_battle_lust = {}
 nick_the_warrior_born = {}
 nick_the_gallant = {}
 nick_bloodcloaked = {}
+nick_the_logistician = {}
 
 ### Death Nickname ##
 nick_the_last = {}
