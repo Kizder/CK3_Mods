@@ -1,6 +1,7 @@
 ﻿# Used for test
 nick_test = {}
 nick_test_2 = {}
+nick_custom = {}
 
 # Used for tooltip
 nick_a_random_nickname = {} 
@@ -193,7 +194,6 @@ nick_the_imp = { is_bad = yes }
 nick_betrayer_king = { is_bad = yes }
 nick_the_broken_bear = { is_bad = yes }
 nick_crouchback = { is_bad = yes }
-nick_kippling = { is_bad = yes }
 nick_the_troll = { is_bad = yes }
 nick_the_titans_bastard = { is_bad = yes }
 nick_the_gorgon = { is_bad = yes }
@@ -965,3 +965,135 @@ nick_blessed = { is_prefix = yes }
 
 ### Birth Nickname ##
 nick_the_posthumous = {}
+
+### Custom 1 ##
+nick_golden = {}
+nick_eminent = {}
+nick_warmongering = {}
+nick_shadow = {}
+nick_wise = {}
+nick_bright = {}
+nick_blind = {}
+nick_abandonned = {}
+nick_shrewd = {}
+nick_broken = {}
+nick_crimson = {}
+nick_angry = {}
+nick_stubborn = {}
+nick_fearless = {}
+nick_tall = {}
+nick_recluse = {}
+nick_wandering = {}
+nick_valorous = {}
+nick_valiant = {}
+nick_white = {}
+nick_thin = {}
+nick_masked = {}
+nick_one_eyed = {}
+nick_enigmatic = {}
+nick_withered = {}
+nick_merciless = {}
+nick_short_dressed = {}
+nick_bloodthirsty = {}
+nick_crowned = {}
+nick_winter = {}
+nick_wobbly = {}
+nick_intimidating = {}
+nick_pitiless = {}
+nick_colossal = {}
+nick_wheezing = {}
+nick_scarred = {}
+nick_red = {}
+nick_black = {}
+nick_small = {}
+nick_iron = {}
+nick_cruel = {}
+nick_humble = {}
+nick_passioned = {}
+nick_tranquil = {}
+nick_determined = {}
+nick_silver = {}
+nick_platinum = {}
+nick_affluent = {}
+nick_indecisive = {}
+nick_greedy = {}
+nick_vainglorious = {}
+nick_hunchbacked = {}
+nick_trembling = {}
+nick_spineless = {}
+nick_irascible = {}
+nick_irresolute = {}
+nick_fickle = {}
+nick_daft = {}
+nick_frail = {}
+
+### Custom 2 ##
+nick_giant = {}
+nick_dwarf = {}
+nick_king = {}
+nick_dragon = {}
+nick_bull = {}
+nick_berserker = {}
+nick_lizard = {}
+nick_surgeon = {}
+nick_troubadour = {}
+nick_bard = {}
+nick_peacock = {}
+nick_tower = {}
+nick_enchantress = {}
+nick_fox = {}
+nick_cyclop = {}
+nick_boar = {}
+nick_ogre = {}
+nick_lion = {}
+nick_artist = {}
+nick_witch = {}
+nick_count = {}
+nick_duke = {}
+nick_emperor = {}
+nick_hydra = {}
+nick_chimera = {}
+nick_phoenix = {}
+nick_manticore = {}
+nick_basilisk = {}
+nick_wyvern = {}
+nick_sphinx = {}
+nick_crocodile = {}
+nick_bear = {}
+nick_python = {}
+nick_rose = {}
+nick_snake = {}
+nick_knight = {}
+nick_ox = {}
+nick_scorpion = {}
+nick_mountain = {}
+nick_leopard = {}
+nick_kraken = {}
+nick_valkyrie = {}
+nick_huscarl = {}
+nick_titan = {}
+nick_cerberus = {}
+nick_minotaur = {}
+nick_colossus = {}
+nick_griffin = {}
+nick_hippogriff = {}
+nick_condottiere = {}
+nick_tiger = {}
+nick_crusader = {}
+nick_conqueror = {}
+nick_sword = {}
+nick_wolf = {}
+nick_slayer = {}
+nick_deceiver = {}
+nick_quarreller = {}
+
+### Deleted
+nick_the_african = {}
+nick_the_vindictive = {}
+nick_the_arab = {}
+nick_the_dragoness = {}
+nick_the_queen_of_thorns = {}
+nick_the_duchess_of_pain = {}
+nick_the_dark_mother  = {}
+nick_the_succubus = {}
+nick_kippling = { is_bad = yes }

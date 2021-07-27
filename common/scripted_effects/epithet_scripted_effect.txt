@@ -1,4 +1,18 @@
-﻿give_nickname_character_list = {
+﻿give_custom_epithet_1 = {
+    set_variable = {
+        name = epithet_custom_1
+        value = flag:$TAG$
+      }
+}
+
+give_custom_epithet_2 = {
+    set_variable = {
+        name = epithet_custom_2
+        value = flag:$TAG$
+      }
+}
+
+give_nickname_character_list = {
     set_variable = {
         name = nickname_given
         value = flag:$NICKNAME$

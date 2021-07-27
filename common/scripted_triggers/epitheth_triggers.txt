@@ -590,7 +590,7 @@ is_learning_character = {
     learning >= martial
 }
 
-is_learning_character = {
+is_intrigue_character = {
     intrigue >= 17
     intrigue >= diplomacy
     intrigue >= stewardship
@@ -604,4 +604,12 @@ is_stewardship_character = {
     stewardship >= intrigue
     stewardship >= learning
     stewardship >= martial
+}
+
+is_diplomacy_character = {
+    stewardship >= 17
+    diplomacy >= stewardship
+    diplomacy >= intrigue
+    diplomacy >= learning
+    diplomacy >= martial
 }

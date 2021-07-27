@@ -94,8 +94,30 @@ on_birth_child = {
 ## ---------------------------------------------------------------
 
 epithet_grant_test = {
-	events = {
-		epithet_test.0001
+	on_actions = {
+		epithet_grant_custom_1
+		epithet_grant_custom_2
+	}
+
+	effect = {
+		set_nickname_effect = { NICKNAME = nick_custom }
+	}
+}
+
+epithet_grant_custom_1 = {
+	random_events = {
+		100 = epithet_random_1.0001
+		100 = epithet_random_1.0002
+		100 = epithet_random_1.0003
+		100 = epithet_random_1.0004
+		100 = epithet_random_1.0005
+	}
+}
+
+epithet_grant_custom_2 = {
+	random_events = {
+		100 = epithet_random_2.0001
+		100 = epithet_random_2.0002
 	}
 }
 

@@ -2106,7 +2106,7 @@ epithet_bad.0139 = {
 	trigger = {
 		nickname_already_given_list_trigger = { NICKNAME = nick_the_black_widow }
 		is_female = yes
-		scope:spouse = {
+		any_spouse = {
 			exists = var:dead_spouse
 		}
 		calc_true_if = {
@@ -2428,34 +2428,6 @@ epithet_bad.0154 = {
 
 	weight_multiplier = { base = 2 }
     immediate = { set_epithet_effect = { NICKNAME = nick_crouchback } }
-}
-## ---------------------------------------------------------------
-epithet_bad.0155 = {
-	hidden = yes
-	trigger = {
-		nickname_already_given_list_trigger = { NICKNAME = nick_kippling }
-		can_get_northerner_nickname_trigger = yes
-		calc_true_if = {
-			amount >= 3
-			has_trait = craven
-			has_trait = lazy
-			has_trait = fickle
-			has_trait = stubborn
-			has_trait = vengeful
-			has_trait = greedy
-			has_trait = deceitful
-			has_trait = arbitrary
-		}
-		NOR = {
-			has_trait = honest
-			has_trait = just
-			has_trait = trusting
-			has_trait = compassionate
-		}
-	}
-
-	weight_multiplier = { base = 4 }
-    immediate = { set_epithet_effect = { NICKNAME = nick_kippling } }
 }
 ## ---------------------------------------------------------------
 epithet_bad.0156 = {

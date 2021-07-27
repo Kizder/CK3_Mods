@@ -4,11 +4,20 @@ namespace = epithet_test
 epithet_test.0001 = {
 	hidden = yes
 	trigger = {
-		nickname_already_given_list_trigger = { NICKNAME = nick_test }
 	}
 
 	weight_multiplier = { base = 1 }
-    immediate = { set_epithet_effect = { NICKNAME = nick_test } }
+    immediate = {
+		set_variable = {
+			name = nickname_custom_1
+			value = flag:nick_the_poltroon
+		  }
+		  set_variable = {
+			name = nickname_custom_2
+			value = flag:nick_the_angry
+		  }
+		  set_nickname_effect = { NICKNAME = nick_custom }
+	}
 }
 
 ###################################################################
@@ -444,12 +453,12 @@ epithet_basic.0034 = {
 epithet_basic.0035 = {
 	hidden = yes
 	trigger = {
-		nickname_already_given_list_trigger = { NICKNAME = nick_one_eyed }
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_one_eyed }
 		has_trait = one_eyed
 	}
 
 	weight_multiplier = { base = 0.5 }
-    immediate = { set_epithet_effect = { NICKNAME = nick_one_eyed } }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_one_eyed } }
 }
 ## ---------------------------------------------------------------
 epithet_basic.0036 = {
@@ -2359,6 +2368,7 @@ epithet_basic.0153 = {
 	trigger = {
 		nickname_already_given_list_trigger = { NICKNAME = nick_the_winter_king }
 		has_government = feudal_government
+		highest_held_title_tier = tier_kingdom
 		is_king_queen_culture = yes
 		is_martial_character = yes
 		has_trait = winter_soldier
@@ -3335,6 +3345,7 @@ epithet_basic.0208 = {
 	hidden = yes
 	trigger = {
 		nickname_already_given_list_trigger = { NICKNAME = nick_the_white_rose }
+		is_female = yes
 		has_trait = albino
 		has_trait = beauty_good_3
 	}
