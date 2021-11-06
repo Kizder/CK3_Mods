@@ -24,6 +24,7 @@
 
  nick_a_random_nickname:0 "Un épithète aléatoire"
  nick_test:0 "le Test"
+ nick_test_2:0 "le Test Bis"
  nick_custom:0 "[CHARACTER.Custom('FR_LeLa')] [CHARACTER.MakeScope.Var('nickname_custom_1').GetFlagName] [CHARACTER.MakeScope.Var('nickname_custom_2').GetFlagName]"
 
 ###################################### Bad Nicknames ######################################
@@ -203,7 +204,7 @@
  nick_the_devil:0 "le Diable"
  nick_weak_legs:0 "Jambes-Branlantes"
  nick_the_imp:0 "[CHARACTER.Custom('FR_LeLa')] Diablotin[CHARACTER.Custom('FR_E')]"
- nick_betrayer_king "[Select_CString(CHARACTER.IsFemale, 'Reine', 'Roi' )] Traître"
+ nick_betrayer_king:0 "[Select_CString(CHARACTER.IsFemale, 'Reine', 'Roi' )] Traître"
  nick_the_broken_bear:0 "l'Ours[CHARACTER.Custom('FR_E')] Brisé[CHARACTER.Custom('FR_E')]"
  nick_crouchback:0 "l'Accroupi[CHARACTER.Custom('FR_E')]"
  nick_the_troll:0 "[CHARACTER.Custom('FR_LeLa')] Troll"
@@ -1106,12 +1107,34 @@
  nick_quarreller:0 "[Select_CString(CHARACTER.IsFemale, 'Querelleuse', 'Querelleur' )]"
 
 ###################################### Deleted ###########################################
- nick_the_african:0 "the African"
- nick_the_vindictive:0 "the Vindictive"
- nick_the_arab:0 "the Arab"
- nick_the_dragoness:0 "the Dragoness"
- nick_the_queen_of_thorns:0 "the Queen of Thorns"
- nick_the_duchess_of_pain:0 "the Duchess of Pain"
- nick_the_dark_mother:0 "the Dark Mother"
- nick_the_succubus:0 "the Succubus"
+ nick_the_african:0 "l'Africain"
+ nick_the_vindictive:0 "[Select_CString(CHARACTER.IsFemale, 'la Vindicative', 'le Vindicatif' )]"
+ nick_the_arab:0 "l'Arabe"
+ nick_the_dragoness:0 "la Dragonesse"
+ nick_the_queen_of_thorns:0 "la Reine d'Épines"
+ nick_the_duchess_of_pain:0 "la Duchesse de la Souffrance"
+ nick_the_dark_mother:0 "la Mère Sombre"
+ nick_the_succubus:0 "la Succube"
  nick_kippling:0 "[CHARACTER.Custom('FR_LeLa')] Louche"
+
+######################################
+# Heroes Might
+ nick_the_pixie:0 "[CHARACTER.Custom('FR_LeLa')] Pixie"
+ nick_the_beholder:0 "l'[Select_CString(CHARACTER.IsFemale, 'Observatrice', 'Observateur' )]"
+ nick_the_black_dragon:0 "le Dragon Noir"
+ nick_the_red_dragon:0 "le Dragon Rouge"
+ nick_the_dread_knight:0 "le Chevalier de la Terreur."
+ nick_the_wraith:0 "le Spectre"
+ nick_the_wight:0 "le Wight"
+ nick_the_naga:0 "la Naga"
+ nick_the_goblin:0 "le Goblin"
+ nick_the_leprechaun:0 "le Farfadet"
+ nick_the_djinn:0 "le Djinn"
+ nick_the_rakshasa:0 "le Rakshasa"
+ nick_the_seraph:0 "le Séraphin"
+ nick_the_juggernaut:0 "le Juggernaut"
+ nick_the_lamasu:0 "le Lamasu"
+
+# Posthume
+ nick_the_once_and_forever_prince:0 "le Prince Unique et Éternel"
+ nick_the_nine_days_queen:0 "la Reine des Neuf Jours"
