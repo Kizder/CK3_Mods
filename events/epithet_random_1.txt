@@ -323,7 +323,7 @@ epithet_random_1.1005 = {
 	}
 }
 ## ---------------------------------------------------------------
-epithet_random_1.1005 = { 
+epithet_random_1.1006 = { 
 	hidden = yes
 	trigger = {
 		prowess >= 20
