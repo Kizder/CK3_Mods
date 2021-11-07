@@ -305,6 +305,7 @@ epithet_random_1.1004 = {
 		random_list = {
 			100 = { give_custom_epithet_1 = { NICKNAME = nick_shadow } }
 		}
+	}
 }
 ## ---------------------------------------------------------------
 epithet_random_1.1005 = { 
