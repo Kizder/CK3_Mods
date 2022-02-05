@@ -1,4 +1,22 @@
-﻿nickname_already_given_list_trigger = {
+﻿is_valid_for_epithet_grant_unplayable = {
+    AND = {
+        prestige_level > 3
+        has_any_nickname = no
+        age >= 16
+        is_ruler = no
+    }
+}
+
+is_valid_for_epithet_grant_playable = {
+    AND = {
+        prestige_level > 3
+        has_any_nickname = no
+        age >= 16
+        is_ruler = yes
+    }
+}
+
+nickname_already_given_list_trigger = {
     OR = {
         AND = {
             NOT = {

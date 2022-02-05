@@ -1,4 +1,4 @@
-###################################################################
+﻿###################################################################
 namespace = epithet_random_2
 
 ## ---------------------------------------------------------------
@@ -622,9 +622,247 @@ epithet_random_2.0040 = {
 	weight_multiplier = { base = 3 }
     immediate = { give_custom_epithet_2 = { NICKNAME = nick_crusader } }
 }
+## ---------------------------------------------------------------
+epithet_random_2.0041 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = clubfooted
+			has_trait = one_legged
+			has_trait = maimed
+		}
+	}
 
-############################ Stats ################################
-epithet_random_2.1001 = { 
+	weight_multiplier = { base = 0.5 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_cripple } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0042 = { 
+	hidden = yes
+	trigger = {
+		has_character_modifier = obese_modifier
+		OR = {
+			has_trait = drunkard
+			has_trait = comfort_eater
+			has_trait = gluttonous
+		}
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_potbelly } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0043 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = bastard
+			has_trait = bastard_founder
+			has_trait = legitimized_bastard
+		}
+	}
+
+	weight_multiplier = { base = 0.5 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_bastard } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0044 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			has_trait = beauty_bad
+			has_trait = disfigured
+			has_trait = inbred
+		}
+	}
+
+	weight_multiplier = { base = 0.5 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_frog } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0045 = {
+	hidden = yes
+	trigger = {
+		has_trait = drunkard
+		OR = {
+			has_trait = gluttonous
+			has_trait = lifestyle_reveler
+		}
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_drunkard } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0046 = {
+	hidden = yes
+	trigger = {
+		has_trait = peasant_leader
+		OR = {
+			has_trait = stuttering
+			has_trait = lisping
+			probably_intelligent_trigger = no
+		}
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_commoner } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0047 = { 
+	hidden = yes
+	trigger = {
+		has_trait = deceitful
+		has_trait = craven
+		has_trait = paranoid
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_weasel } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0048 = { 
+	hidden = yes
+	trigger = {
+		has_strong_trait_trigger = yes
+		OR = {
+			has_trait = beauty_bad
+			has_trait = scarred
+			has_trait = disfigured
+		}
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_hound } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0049 = { 
+	hidden = yes
+	trigger = {
+		has_trait = cynical
+		piety_level <= 3
+		num_sinful_traits >= 2
+	}
+
+	weight_multiplier = { base = 3 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_blasphemer } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0050 = {
+	hidden = yes
+	trigger = {
+		calc_true_if = {
+			amount >= 3
+			has_trait = wrathful
+			has_trait = lunatic
+			has_trait = sadistic
+			has_trait = torturer
+			has_trait = arbitrary
+			has_trait = stubborn
+			has_trait = deceitful
+			has_trait = paranoid
+			has_trait = callous
+			has_trait = vengeful
+			has_trait = impatient
+		}
+		tyranny >= low_tyranny
+	}
+
+	weight_multiplier = { base = 3 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_oppressor } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0051 = {
+	hidden = yes
+	trigger = {
+		has_trait = greedy
+		has_trait = deceitful
+		has_trait = gluttonous
+		has_trait = bleeder
+	}
+
+	weight_multiplier = { base = 3 }
+	immediate = { give_custom_epithet_2 = { NICKNAME = nick_leech } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0052 = {
+	hidden = yes
+	trigger = {
+		has_trait = torturer
+		OR = {
+			has_trait = sadistic
+			has_trait = callous
+		}
+	}
+
+	weight_multiplier = { base = 3 }
+	immediate = { give_custom_epithet_2 = { NICKNAME = nick_butcher } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0053 = { 
+	hidden = yes
+	trigger = {
+		has_trait = spindly
+		has_character_modifier = malnourished_modifier
+		has_weak_trait_trigger = yes
+	}
+
+	weight_multiplier = { base = 4 }
+	immediate = { give_custom_epithet_2 = { NICKNAME = nick_skeleton } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0054 = { 
+	hidden = yes
+	trigger = {
+		prestige_level <= 2
+		has_trait = ambitious
+		has_trait = arbitrary
+		OR = {
+			has_trait = stubborn
+			has_trait = arrogant
+		}
+		NOT = { has_trait = shy }
+		tyranny >= low_tyranny
+	}
+
+	weight_multiplier = { base = 4 }
+	immediate = { give_custom_epithet_2 = { NICKNAME = nick_kingfish } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0055 = {
+	hidden = yes
+	trigger = {
+		prowess >= 20
+		OR = {
+			has_strong_trait_trigger = yes
+			has_trait = giant
+		}
+		OR = {
+			has_trait = sadistic
+			has_government = tribal_government
+			faith = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+		}
+		probably_unintelligent_trigger = yes
+	}
+
+	weight_multiplier = { base = 5 }
+	immediate = { give_custom_epithet_2 = { NICKNAME = nick_brute } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0056 = {
+	hidden = yes
+	trigger = {
+		is_knight = yes
+		has_government = feudal_government
+	}
+
+	weight_multiplier = { base = 3 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_knight } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0057 = { 
 	hidden = yes
 	trigger = {	
 		has_trait = physician_3
@@ -633,7 +871,157 @@ epithet_random_2.1001 = {
 	weight_multiplier = { base = 1 }
     immediate = { give_custom_epithet_2 = { NICKNAME = nick_surgeon } }
 }
-epithet_random_2.1002 = {
+## ---------------------------------------------------------------
+epithet_random_2.0058 = {
+	hidden = yes
+	trigger = {
+		has_trait = blademaster_3
+	}
+
+	weight_multiplier = { base = 3 }
+	immediate = {
+		random_list = {
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_sword } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_warrior } }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0059 = { 
+	hidden = yes
+	trigger = {
+		OR = {
+			martial >= 17
+			has_trait = strategist
+		}
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_strategist } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0060 = { 
+	hidden = yes
+	trigger = {
+		stewardship <= 10
+		has_trait = generous
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_wastrel } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0061 = {
+	hidden = yes
+	trigger = {
+		has_lunatic_trait_trigger = yes
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_lunatic } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0062 = {
+	hidden = yes
+	trigger = {
+		has_trait = intellect_good_3
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_genius } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0063 = {
+	hidden = yes
+	trigger = {
+		has_trait = diplomat
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_diplomat } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0064 = {
+	hidden = yes
+	trigger = {
+		has_trait = family_first
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_patriarch } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0065 = {
+	hidden = yes
+	trigger = {
+		has_trait = overseer
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_overseer } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0066 = {
+	hidden = yes
+	trigger = {
+		has_trait = administrator
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_administrator } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0067 = {
+	hidden = yes
+	trigger = {
+		has_trait = architect
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_architect } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0068 = {
+	hidden = yes
+	trigger = {
+		has_trait = schemer
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_schemer } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0069 = {
+	hidden = yes
+	trigger = {
+		has_trait = seducer
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_seducer } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0070 = {
+	hidden = yes
+	trigger = {
+		has_trait = torturer
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_torturer } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0071 = {
+	hidden = yes
+	trigger = {
+		has_trait = scholar
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_scholar } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0072 = {
 	hidden = yes
 	trigger = {
 		martial >= 17
@@ -645,10 +1033,67 @@ epithet_random_2.1002 = {
 			100 = { give_custom_epithet_2 = { NICKNAME = nick_conqueror } }
 			100 = { give_custom_epithet_2 = { NICKNAME = nick_sword } }
 			100 = { give_custom_epithet_2 = { NICKNAME = nick_wolf } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_warrior } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_tactician } }
 		}
     }
 }
-epithet_random_2.1003 = {
+## ---------------------------------------------------------------
+epithet_random_2.0073 = {
+	hidden = yes
+	trigger = {
+		stewardship >= 17
+	}
+
+	weight_multiplier = { base = 3 }
+	immediate = {
+		random_list = {
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_midas } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_midas } }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0074 = {
+	hidden = yes
+	trigger = {
+		faith = { has_doctrine = tenet_hedonistic }
+		has_trait = gluttonous
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_hedonist } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0075 = {
+	hidden = yes
+	trigger = {
+		intrigue >= 17
+	}
+
+	weight_multiplier = { base = 3 }
+	immediate = {
+		random_list = {
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_shadow } }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0076 = {
+	hidden = yes
+	trigger = {
+		learning >= 17
+	}
+
+	weight_multiplier = { base = 3 }
+	immediate = {
+		random_list = {
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_philosopher } }
+		}
+    }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0077 = {
 	hidden = yes
 	trigger = {
 		prowess >= 20
@@ -659,26 +1104,13 @@ epithet_random_2.1003 = {
 		random_list = {
 			100 = { give_custom_epithet_2 = { NICKNAME = nick_sword } }
 			100 = { give_custom_epithet_2 = { NICKNAME = nick_slayer } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_warrior } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_champion } }
 		}
     }
 }
-epithet_random_2.1004 = {
-	hidden = yes
-	trigger = {
-		has_trait = blademaster_3
-	}
-
-	weight_multiplier = { base = 3 }
-	immediate = {
-		random_list = {
-			100 = { give_custom_epithet_2 = { NICKNAME = nick_sword } }
-			100 = { give_custom_epithet_2 = { NICKNAME = nick_sword } }
-		}
-    }
-}
-
-############################ Physical #############################
-epithet_random_2.2001 = { 
+## ---------------------------------------------------------------
+epithet_random_2.0078 = { 
 	hidden = yes
 	trigger = {
 		has_trait = giant
@@ -694,38 +1126,42 @@ epithet_random_2.2001 = {
     }
 }
 ## ---------------------------------------------------------------
-epithet_random_2.2002 = { 
+epithet_random_2.0079 = { 
 	hidden = yes
 	trigger = {
 		has_trait = dwarf
 	}
 
 	weight_multiplier = { base = 2 }
-    immediate = { give_custom_epithet_2 = { NICKNAME = nick_dwarf } }
+	immediate = {
+		random_list = {
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_halfman } }
+			100 = { give_custom_epithet_2 = { NICKNAME = nick_dwarf } }
+		}
+    }
 }
-########################## Personnality ###########################
-epithet_random_2.3001 = { 
+## ---------------------------------------------------------------
+epithet_random_2.0080 = { 
 	hidden = yes
 	trigger = {
 		has_trait = deceitful
 	}
 
 	weight_multiplier = { base = 0.5 }
-    immediate = { set_epithet_effect = { NICKNAME = nick_deceiver } }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_deceiver } }
 }
 ## ---------------------------------------------------------------
-epithet_random_2.3002 = { 
+epithet_random_2.0081 = { 
 	hidden = yes
 	trigger = {
 		has_trait = arbitrary
 	}
 
 	weight_multiplier = { base = 0.5 }
-    immediate = { set_epithet_effect = { NICKNAME = nick_quarreller } }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_quarreller } }
 }
-
-##########################   Infamous   ###########################
-epithet_random_2.4001 = {
+## ---------------------------------------------------------------
+epithet_random_2.0082 = {
 	hidden = yes
 	trigger = {
 		has_trait = witch
@@ -734,8 +1170,8 @@ epithet_random_2.4001 = {
 	weight_multiplier = { base = 0.5 }
     immediate = { give_custom_epithet_2 = { NICKNAME = nick_witch } }
 }
-##########################   Congenital  ##########################
-epithet_random_2.5001 = {
+## ---------------------------------------------------------------
+epithet_random_2.0083 = {
 	hidden = yes
 	trigger = {
 		has_trait = scaly
@@ -749,10 +1185,38 @@ epithet_random_2.5001 = {
 		}
     }
 }
+## ---------------------------------------------------------------
+epithet_random_2.0084 = {
+	hidden = yes
+	trigger = {
+		has_trait = unyielding_defender
+	}
 
-############################   Coping  ############################
-############################   Others  ############################
-epithet_random_2.7001 = {
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_shield } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0085 = {
+	hidden = yes
+	trigger = {
+		has_trait = rough_terrain_expert
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_1 = { NICKNAME = nick_ram } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0086 = {
+	hidden = yes
+	trigger = {
+		has_trait = reaver
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_1 = { NICKNAME = nick_raider } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0087 = {
 	hidden = yes
 	trigger = {
 		has_trait = berserker
@@ -762,7 +1226,7 @@ epithet_random_2.7001 = {
     immediate = { give_custom_epithet_2 = { NICKNAME = nick_berserker } }
 }
 ## ---------------------------------------------------------------
-epithet_random_2.7002 = {
+epithet_random_2.0088 = {
 	hidden = yes
 	trigger = {
 		has_trait = poet
@@ -776,4 +1240,34 @@ epithet_random_2.7002 = {
 			100 = { give_custom_epithet_2 = { NICKNAME = nick_artist } }
 		}
     }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0089 = { 
+	hidden = yes
+	trigger = {
+		has_trait = excommunicated
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_heretic } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0090 = {
+	hidden = yes
+	trigger = {
+		has_trait = leper
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_leper } }
+}
+## ---------------------------------------------------------------
+epithet_random_2.0091 = { 
+	hidden = yes
+	trigger = {
+		has_trait = eunuch
+	}
+
+	weight_multiplier = { base = 1 }
+    immediate = { give_custom_epithet_2 = { NICKNAME = nick_eunuch } }
 }

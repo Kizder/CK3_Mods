@@ -1,14 +1,14 @@
 ﻿give_custom_epithet_1 = {
     set_variable = {
         name = epithet_custom_1
-        value = flag:$TAG$
+        value = flag:$NICKNAME$
       }
 }
 
 give_custom_epithet_2 = {
     set_variable = {
         name = epithet_custom_2
-        value = flag:$TAG$
+        value = flag:$NICKNAME$
       }
 }
 

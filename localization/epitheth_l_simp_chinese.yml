@@ -879,7 +879,7 @@
  setting_no_limitation_epithet:0 "无限制"
  setting_no_limitation_epithet_desc:0 "各个绰号会被多次授予"
  nick_test_2:0 "二次测试"
- nick_custom:0 "[CHARACTER.MakeScope.Var('nickname_custom_1').GetFlagName][CHARACTER.MakeScope.Var('nickname_custom_2').GetFlagName]"
+ nick_custom:0 "[CHARACTER.MakeScope.Var('epithet_custom_1').GetFlagName][CHARACTER.MakeScope.Var('epithet_custom_2').GetFlagName]"
  nick_the_insane:0 "疯癫之人"
  nick_the_broken:0 "坏掉之人"
  nick_the_butcher_of_capital:0 "[CHARACTER.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip]屠夫"

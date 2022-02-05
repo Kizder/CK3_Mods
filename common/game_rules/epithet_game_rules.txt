@@ -9,6 +9,9 @@
     
     more_epithet_frequency = {
     }
+
+	a_lot_more_epithet_frequency = {
+	}
 }
 
 epithet_cheats = {
@@ -31,5 +34,15 @@ epithet_limitation = {
 	}
 
 	no_limitation_epithet = {
+	}
+}
+
+epithet_procedural_nickname = {
+	default = procedural_nickname_on
+
+	procedural_nickname_on = {
+	}
+
+	procedural_nickname_off = {
 	}
 }

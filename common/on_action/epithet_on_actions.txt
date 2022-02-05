@@ -2,28 +2,24 @@
 ## ----------------------- YEARLY EVENTS -------------------------
 ## ---------------------------------------------------------------
 random_yearly_everyone_pulse = {
+	trigger = {
+		is_valid_for_epithet_grant_unplayable = yes
+	}
 	random_on_action = {
 		chance_to_happen = 100
 		chance_of_no_event = {
 			value = 0
 			if = {
-				limit = {
-					OR = {
-						prestige_level < 2
-						has_any_nickname = yes
-						age < 16
-						is_ruler = yes
-					}
-				}
-				add = 100
-			}
-			else_if = {
 				limit = { has_game_rule = fewer_epithet_frequency }
 				add = 99.99
 			}
 			else_if = {
 				limit = { has_game_rule = more_epithet_frequency }
 				add = 99
+			}
+			else_if = {
+				limit = { has_game_rule = a_lot_more_epithet_frequency }
+				add = 95
 			}
 			else = {
 				add = 99.9
@@ -34,21 +30,14 @@ random_yearly_everyone_pulse = {
 }
 
 random_yearly_playable_pulse = {
+	trigger = {
+		is_valid_for_epithet_grant_playable = yes
+	}
 	random_on_action = {
 		chance_to_happen = 100
 		chance_of_no_event = {
 			value = 0
 			if = {
-				limit = {
-					OR = {
-						prestige_level < 2
-						has_any_nickname = yes
-						age < 16
-					}
-				}
-				add = 100
-			}
-			else_if = {
 				limit = { has_game_rule = fewer_epithet_frequency }
 				add = 99.99
 			}
@@ -56,11 +45,15 @@ random_yearly_playable_pulse = {
 				limit = { has_game_rule = more_epithet_frequency }
 				add = 99
 			}
+			else_if = {
+				limit = { has_game_rule = a_lot_more_epithet_frequency }
+				add = 95
+			}
 			else = {
 				add = 99.9
 			}
 		}
-		100 = epithet_grant_all
+		100 = epithet_grant_rare
 	}
 }
 
@@ -68,8 +61,16 @@ random_yearly_playable_pulse = {
 ## ----------------------  ON ACTIONS ----------------------------
 ## ---------------------------------------------------------------
 on_prestige_level_gain = {
-	on_actions = {
-		epithet_grant_rare
+	random_on_action = {
+		chance_to_happen = 100
+		chance_of_no_event = {
+			value = 0
+			if = {
+				limit = { prestige_level < 5 }
+				add = 100
+				}
+			}
+		100 = epithet_grant_rare
 	}
 }
 
@@ -92,34 +93,6 @@ on_birth_child = {
 }
 
 ## ---------------------------------------------------------------
-
-epithet_grant_test = {
-	on_actions = {
-		epithet_grant_custom_1
-		epithet_grant_custom_2
-	}
-
-	effect = {
-		set_nickname_effect = { NICKNAME = nick_custom }
-	}
-}
-
-epithet_grant_custom_1 = {
-	random_events = {
-		100 = epithet_random_1.0001
-		100 = epithet_random_1.0002
-		100 = epithet_random_1.0003
-		100 = epithet_random_1.0004
-		100 = epithet_random_1.0005
-	}
-}
-
-epithet_grant_custom_2 = {
-	random_events = {
-		100 = epithet_random_2.0001
-		100 = epithet_random_2.0002
-	}
-}
 
 on_nicknamed_death = {
 	trigger = {

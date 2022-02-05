@@ -226,6 +226,9 @@ nick_the_dull = { is_bad = yes }
 nick_the_lewd = { is_bad = yes }
 nick_the_craven = { is_bad = yes }
 nick_the_deviant = { is_bad = yes }
+nick_the_incapable = { is_bad = yes }
+nick_the_lich = { is_bad = yes }
+nick_the_archlich = { is_bad = yes }
 
 ## Basic Nickname ##
 nick_the_brave = {}
@@ -564,6 +567,17 @@ nick_sea_legs = {}
 nick_the_trustworthy = {}
 nick_the_honest = {}
 nick_the_fecund = {}
+nick_the_eagle_eyed = {}
+nick_the_raider_king = {}
+nick_the_marauder_king = {}
+nick_the_ascetic = {}
+nick_the_hedonistic = {}
+nick_the_reincarnated = {}
+nick_primus_inter_pares = {}
+nick_father_of_fathers = {}
+nick_shepherd_of_shepherds = {}
+nick_ecumenical_judge = {}
+nick_the_thirteenth_apostles = {}
 
 ## Rare Nickname ##
 nick_the_terrible = {}
@@ -781,6 +795,8 @@ nick_the_theologian = {}
 nick_the_overseer = {}
 nick_the_torturer = {}
 nick_warshrieker = {}
+nick_the_avatar_of_brahma = {}
+nick_the_papar = {}
 
 ### Knight Nickname ##
 nick_the_battler = {}
@@ -951,6 +967,9 @@ nick_the_warrior_born = {}
 nick_the_gallant = {}
 nick_bloodcloaked = {}
 nick_the_logistician = {}
+nick_the_ram = {}
+nick_the_avatar_of_vishnu = {}
+nick_the_avatar_of_shiva = {}
 
 ### Death Nickname ##
 nick_the_last = {}
@@ -966,7 +985,7 @@ nick_blessed = { is_prefix = yes }
 ### Birth Nickname ##
 nick_the_posthumous = {}
 
-### Custom 1 ##
+# ### Custom 1 ##
 nick_golden = {}
 nick_eminent = {}
 nick_warmongering = {}
@@ -1026,8 +1045,68 @@ nick_irresolute = {}
 nick_fickle = {}
 nick_daft = {}
 nick_frail = {}
+nick_unsteady = {}
+nick_milky = {}
+nick_crooked = {}
+nick_pale = {}
+nick_unreliable = {}
+nick_mangled = {}
+nick_grim = {}
+nick_faceless = {}
+nick_accursed = {}
+nick_damned = {}
+nick_untrusted = {}
+nick_misbegotten = {}
+nick_mad = {}
+nick_crazy = {}
+nick_insane = {}
+nick_heartless = {}
+nick_cold = {}
+nick_dreadful = {}
+nick_wicked = {}
+nick_spiteful = {}
+nick_dire = {}
+nick_eagle_eyed = {}
+nick_brave = {}
+nick_craven = {}
+nick_calm = {}
+nick_wrathful = {}
+nick_lustful = {}
+nick_ambitious = {}
+nick_diligent = {}
+nick_lazy = {}
+nick_forgiving = {}
+nick_vengeful = {}
+nick_generous = {}
+nick_gregarious = {}
+nick_deceitful = {}
+nick_arrogant = {}
+nick_just = {}
+nick_arbitrary = {}
+nick_patient = {}
+nick_impatient = {}
+nick_zealous = {}
+nick_sadistic = {}
+nick_reincarnated = {}
+nick_charismatic = {}
+nick_indulgent = {}
+nick_thrifty = {}
+nick_elusive = {}
+nick_insightful = {}
+nick_astute = {}
+nick_melancholic = {}
+nick_lunatic = {}
+nick_possessed = {}
+nick_scaly = {}
+nick_hideous = { is_bad = yes }
+nick_slow = { is_bad = yes }
+nick_delicate = { is_bad = yes }
+nick_strong = {}
+nick_galant = {}
+nick_avaricious = { is_bad = yes }
+nick_torturer = {}
 
-### Custom 2 ##
+# ### Custom 2 ##
 nick_giant = {}
 nick_dwarf = {}
 nick_king = {}
@@ -1086,6 +1165,51 @@ nick_wolf = {}
 nick_slayer = {}
 nick_deceiver = {}
 nick_quarreller = {}
+nick_heretic = {}
+nick_cripple = {}
+nick_leper = {}
+nick_potbelly = {}
+nick_bastard = {}
+nick_frog = {}
+nick_drunkard = {}
+nick_commoner = {}
+nick_eunuch = {}
+nick_halfman = {}
+nick_weasel = {}
+nick_hound = {}
+nick_blasphemer = {}
+nick_oppressor = {}
+nick_shield = {}
+nick_leech = {}
+nick_butcher = {}
+nick_skeleton = {}
+nick_kingfish = {}
+nick_brute = {}
+nick_ram = {}
+nick_raider = {}
+nick_warrior = {}
+nick_soldier = {}
+nick_tactician = {}
+nick_strategist = {}
+nick_wastrel = { is_bad = yes }
+nick_midas = {}
+nick_shadow = {}
+nick_philosopher = {}
+nick_champion = {}
+nick_genius = {}
+nick_diplomat = {}
+nick_patriarch = {}
+nick_overseer = {}
+nick_administrator = {}
+nick_architect = {}
+nick_schemer = { is_bad = yes }
+nick_seducer = { is_bad = yes }
+nick_scholar = {}
+
+### Custom 3 ##
+nick_of_capital = {}
+nick_of_capital_county = {}
+nick_of_location = {}
 
 ### Deleted
 nick_the_african = {}

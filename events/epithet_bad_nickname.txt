@@ -918,7 +918,7 @@ epithet_bad.0069 = {
 		}
 	}
 
-	weight_multiplier = { base = 0.5 }
+	weight_multiplier = { base = 0.1 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_misbegotten } }
 }
 ## ---------------------------------------------------------------
@@ -2430,6 +2430,27 @@ epithet_bad.0154 = {
     immediate = { set_epithet_effect = { NICKNAME = nick_crouchback } }
 }
 ## ---------------------------------------------------------------
+epithet_bad.0155 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_incapable }
+		OR = {
+			has_trait = incapable
+			AND = {
+				martial < 10
+				stewardship < 10
+				intrigue < 10
+				diplomacy < 10
+				learning < 10
+				prowess < 10
+			}
+		}
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_incapable } }
+}
+## ---------------------------------------------------------------
 epithet_bad.0156 = {
 	hidden = yes
 	trigger = {
@@ -2921,4 +2942,29 @@ epithet_bad.0184 = {
 
 	weight_multiplier = { base = 1 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_deviant } }
+}
+## ---------------------------------------------------------------
+epithet_bad.0185 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_lich }
+		age >= 100
+		has_trait = witch
+	}
+
+	weight_multiplier = { base = 5 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_lich } }
+}
+## ---------------------------------------------------------------
+epithet_bad.0186 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_archlich }
+		age >= 110
+		has_trait = witch
+		num_sinful_traits >= 2
+	}
+
+	weight_multiplier = { base = 10 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_archlich } }
 }

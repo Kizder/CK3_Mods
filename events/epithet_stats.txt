@@ -119,6 +119,7 @@ epithet_stats.0008 = {
 	hidden = yes
 	trigger = {
 		nickname_already_given_list_trigger = { NICKNAME = nick_the_astrologer }
+		faith = { has_doctrine = tenet_astrology }
 		has_trait = theologian
 		has_trait = scholar
 		learning >= 17
@@ -2191,4 +2192,33 @@ epithet_stats.0134 = {
 
 	weight_multiplier = { base = 3 }
     immediate = { set_epithet_effect = { NICKNAME = nick_warshrieker } }
+}
+## ---------------------------------------------------------------
+epithet_stats.0135 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_avatar_of_brahma }
+		learning >= 20
+		is_learning_higher_stat_trigger = yes
+		faith = { religion_tag = hinduism_religion }
+		has_trait = lifestyle_mystic
+	}
+
+	weight_multiplier = { base = 4 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_avatar_of_brahma } }
+}
+## ---------------------------------------------------------------
+epithet_stats.0136 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_papar }
+		culture = culture:irish
+		has_trait = devoted
+		learning >= 20
+		location.duchy = title:d_iceland
+		is_female = no
+	}
+
+	weight_multiplier = { base = 6 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_papar } }
 }

@@ -44,40 +44,41 @@ epithet_remove_nickname_interaction = {
 		}
 	}
 }
-epithet_test_list = {
-	category = interaction_category_friendly
-	common_interaction = yes
 
-	auto_accept = yes
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
+# epithet_test_list = {
+# 	category = interaction_category_friendly
+# 	common_interaction = yes
+
+# 	auto_accept = yes
+# 	use_diplomatic_range = no
+# 	ignores_pending_interaction_block = yes
 	
-	is_shown = {
-        has_game_rule = on_epithet_cheats
-    }
+# 	is_shown = {
+#         has_game_rule = on_epithet_cheats
+#     }
     	
-	on_accept = {
-		scope:recipient = {
-			trigger_event = {
-               	on_action = epithet_grant_test
-            }
-		}
-	}
-}
+# 	on_accept = {
+# 		scope:recipient = {
+# 			trigger_event = {
+#                	on_action = epithet_grant_test
+#             }
+# 		}
+# 	}
+# }
 
-epithet_test_list2 = {
-	category = interaction_category_friendly
-	common_interaction = yes
+# epithet_test_list2 = {
+# 	category = interaction_category_friendly
+# 	common_interaction = yes
 
-	auto_accept = yes
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
+# 	auto_accept = yes
+# 	use_diplomatic_range = no
+# 	ignores_pending_interaction_block = yes
 	
-	is_shown = {
-        has_game_rule = on_epithet_cheats
-    }
+# 	is_shown = {
+#         has_game_rule = on_epithet_cheats
+#     }
     	
-	on_accept = {
-		clear_global_variable_list = nickname_already_given
-	}
-}
+# 	on_accept = {
+# 		clear_global_variable_list = nickname_already_given
+# 	}
+# }

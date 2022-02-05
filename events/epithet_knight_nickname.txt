@@ -2668,3 +2668,43 @@ epithet_knight.0153 = {
 	weight_multiplier = { base = 2 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_logistician } }
 }
+## ---------------------------------------------------------------
+epithet_knight.0154 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_ram }
+		is_good_knight_or_martial_lord = yes
+		has_trait = rough_terrain_expert
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_ram } }
+}
+## ---------------------------------------------------------------
+epithet_knight.0155 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_avatar_of_vishnu }
+		is_good_knight_or_martial_lord = yes
+		prowess >= 15
+		has_trait = unyielding_defender
+		faith = { religion_tag = hinduism_religion }
+	}
+
+	weight_multiplier = { base = 3 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_avatar_of_vishnu } }
+}
+## ---------------------------------------------------------------
+epithet_knight.0156 = {
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_avatar_of_shiva }
+		is_good_knight_or_martial_lord = yes
+		prowess >= 15
+		has_trait = aggressive_attacker
+		faith = { religion_tag = hinduism_religion }
+	}
+
+	weight_multiplier = { base = 3 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_avatar_of_shiva } }
+}

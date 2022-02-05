@@ -1,26 +1,4 @@
 ﻿###################################################################
-namespace = epithet_test
-
-epithet_test.0001 = {
-	hidden = yes
-	trigger = {
-	}
-
-	weight_multiplier = { base = 1 }
-    immediate = {
-		set_variable = {
-			name = nickname_custom_1
-			value = flag:nick_the_poltroon
-		  }
-		  set_variable = {
-			name = nickname_custom_2
-			value = flag:nick_the_angry
-		  }
-		  set_nickname_effect = { NICKNAME = nick_custom }
-	}
-}
-
-###################################################################
 namespace = epithet_basic
 
 ## ---------------------------------------------------------------
@@ -31,7 +9,18 @@ epithet_basic.0001 = {
 		has_trait = brave
 	}
 
-	weight_multiplier = { base = 0.5 }
+	weight_multiplier = {
+		base = 0.5
+
+		modifier = {
+			factor = 2
+			has_character_modifier = feast_had_good_fight_modifier
+		}
+		modifier = {
+			factor = 2
+			has_character_modifier = playdate_shown_bravery_modifier
+		}
+	}
     immediate = { set_epithet_effect = { NICKNAME = nick_the_brave } }
 }
 ## ---------------------------------------------------------------
@@ -3246,7 +3235,7 @@ epithet_basic.0200 = {
 		piety_level >= 3
 		has_trait = chaste
 		has_trait = devoted
-		has_religion = religion:christianity_religion
+		faith = { has_doctrine = tenet_monasticism }
 	}
 
 	weight_multiplier = { base = 3 }
@@ -4275,4 +4264,143 @@ epithet_basic.0279 = {
 
 	weight_multiplier = { base = 1 }
     immediate = { set_epithet_effect = { NICKNAME = nick_the_fecund } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0280 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_eagle_eyed }
+		has_trait = hunter_3
+
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_eagle_eyed } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0281 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_raider_king }
+		highest_held_title_tier >= tier_kingdom
+		is_king_queen_culture = yes
+		has_trait = reaver
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_raider_king } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0282 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_marauder_king }
+		highest_held_title_tier >= tier_kingdom
+		is_king_queen_culture = yes
+		has_trait = reaver
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_marauder_king } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0283 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_ascetic }
+		faith = { has_doctrine = tenet_asceticism }
+		has_trait = temperate
+		NOR = {
+			has_trait = gluttonous
+			has_trait = greedy
+			has_trait = lifestyle_reveler
+		}
+	}
+
+	weight_multiplier = { base = 3 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_ascetic } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0284 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_hedonistic }
+		faith = { has_doctrine = tenet_hedonistic }
+		has_trait = gluttonous
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_hedonistic } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0285 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_reincarnated }
+		faith = { has_doctrine = tenet_reincarnation }
+		has_trait = reincarnation
+	}
+
+	weight_multiplier = { base = 10 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_reincarnated } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0286 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_primus_inter_pares }
+		faith = faith:orthodox
+		is_head_of_faith = yes
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_primus_inter_pares } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0287 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_father_of_fathers }
+		faith = faith:coptic
+		is_head_of_faith = yes
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_father_of_fathers } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0288 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_shepherd_of_shepherds }
+		faith = faith:coptic
+		is_head_of_faith = yes
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_shepherd_of_shepherds } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0289 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_ecumenical_judge }
+		faith = faith:coptic
+		is_head_of_faith = yes
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_ecumenical_judge } }
+}
+## ---------------------------------------------------------------
+epithet_basic.0290 = { 
+	hidden = yes
+	trigger = {
+		nickname_already_given_list_trigger = { NICKNAME = nick_the_thirteenth_apostles }
+		faith = faith:coptic
+		is_head_of_faith = yes
+	}
+
+	weight_multiplier = { base = 2 }
+    immediate = { set_epithet_effect = { NICKNAME = nick_the_thirteenth_apostles } }
 }

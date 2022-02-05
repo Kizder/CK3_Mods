@@ -1,6 +1,5 @@
-﻿epithet_grant_all = {
+﻿epithet_grant_rare = {
 	random_events = {
-		###########################################################
 		100 = epithet_rare.0001
 		100 = epithet_rare.0002
 		100 = epithet_rare.0003
@@ -45,7 +44,13 @@
 		100 = epithet_rare.0042
 		100 = epithet_rare.0043
 		100 = epithet_rare.0044
+	}
 
+	fallback = epithet_grant_all
+}
+
+epithet_grant_all = {
+	random_events = {
 		###########################################################
 		100 = epithet_basic.0001
 		100 = epithet_basic.0002
@@ -325,7 +330,19 @@
 		100 = epithet_basic.0276
 		100 = epithet_basic.0277
 		100 = epithet_basic.0278
-		
+		100 = epithet_basic.0279
+		100 = epithet_basic.0280
+		100 = epithet_basic.0281
+		100 = epithet_basic.0282
+		100 = epithet_basic.0283
+		100 = epithet_basic.0284
+		100 = epithet_basic.0285
+		100 = epithet_basic.0286
+		100 = epithet_basic.0287
+		100 = epithet_basic.0288
+		100 = epithet_basic.0289
+		100 = epithet_basic.0290
+
 		###########################################################
 		100 = epithet_stats.0001
 		100 = epithet_stats.0002
@@ -454,6 +471,15 @@
 		100 = epithet_stats.0125
 		100 = epithet_stats.0126
 		100 = epithet_stats.0127
+		100 = epithet_stats.0128
+		100 = epithet_stats.0129
+		100 = epithet_stats.0130
+		100 = epithet_stats.0131
+		100 = epithet_stats.0132
+		100 = epithet_stats.0133
+		100 = epithet_stats.0134
+		100 = epithet_stats.0135
+		100 = epithet_stats.0136
 
 		###########################################################
 		100 = epithet_knight.0001
@@ -606,6 +632,12 @@
 		100 = epithet_knight.0148
 		100 = epithet_knight.0149
 		100 = epithet_knight.0150
+		100 = epithet_knight.0151
+		100 = epithet_knight.0152
+		100 = epithet_knight.0153
+		100 = epithet_knight.0154
+		100 = epithet_knight.0155
+		100 = epithet_knight.0156
 
 		###########################################################
 		100 = epithet_bad.0001
@@ -762,7 +794,7 @@
 		100 = epithet_bad.0152
 		100 = epithet_bad.0153
 		100 = epithet_bad.0154
-		#100 = epithet_bad.0155
+		100 = epithet_bad.0155
 		100 = epithet_bad.0156
 		100 = epithet_bad.0157
 		100 = epithet_bad.0158
@@ -791,6 +823,22 @@
 		100 = epithet_bad.0181
 		100 = epithet_bad.0182
 		100 = epithet_bad.0183
+		100 = epithet_bad.0184
+	}
+
+	#fallback = epithet_grant_test
+}
+
+epithet_grant_test = {
+	trigger = { has_game_rule = procedural_nickname_on }
+
+	on_actions = {
+		epithet_grant_custom_1
+		epithet_grant_custom_2
+	}
+
+	effect = {
+		set_nickname_effect = { NICKNAME = nick_custom }
 	}
 }
 
@@ -925,6 +973,15 @@ epithet_grant_unplayable = {
 		100 = epithet_stats.0125
 		100 = epithet_stats.0126
 		100 = epithet_stats.0127
+		100 = epithet_stats.0128
+		100 = epithet_stats.0129
+		100 = epithet_stats.0130
+		100 = epithet_stats.0131
+		100 = epithet_stats.0132
+		100 = epithet_stats.0133
+		100 = epithet_stats.0134
+		100 = epithet_stats.0135
+		100 = epithet_stats.0136
 
 		###########################################################
 		100 = epithet_knight.0001
@@ -1077,59 +1134,209 @@ epithet_grant_unplayable = {
 		100 = epithet_knight.0148
 		100 = epithet_knight.0149
 		100 = epithet_knight.0150
+		100 = epithet_knight.0151
+		100 = epithet_knight.0152
+		100 = epithet_knight.0153
+		100 = epithet_knight.0154
+		100 = epithet_knight.0155
+		100 = epithet_knight.0156
 	}
 }
 
-epithet_grant_rare = {
-	trigger = {
-		prestige_level >= 4
-		has_any_nickname = no
-	}
-
+epithet_grant_custom_1 = {
 	random_events = {
-		100 = epithet_rare.0001
-		100 = epithet_rare.0002
-		100 = epithet_rare.0003
-		100 = epithet_rare.0004
-		100 = epithet_rare.0005
-		100 = epithet_rare.0006
-		100 = epithet_rare.0007
-		100 = epithet_rare.0008
-		100 = epithet_rare.0009
-		100 = epithet_rare.0010
-		100 = epithet_rare.0011
-		100 = epithet_rare.0012
-		100 = epithet_rare.0013
-		100 = epithet_rare.0014
-		100 = epithet_rare.0015
-		100 = epithet_rare.0016
-		100 = epithet_rare.0017
-		100 = epithet_rare.0018
-		100 = epithet_rare.0019
-		100 = epithet_rare.0020
-		100 = epithet_rare.0021
-		100 = epithet_rare.0022
-		100 = epithet_rare.0023
-		100 = epithet_rare.0024
-		100 = epithet_rare.0025
-		100 = epithet_rare.0026
-		100 = epithet_rare.0027
-		100 = epithet_rare.0028
-		100 = epithet_rare.0029
-		100 = epithet_rare.0030
-		100 = epithet_rare.0031
-		100 = epithet_rare.0032
-		100 = epithet_rare.0033
-		100 = epithet_rare.0034
-		100 = epithet_rare.0035
-		100 = epithet_rare.0036
-		100 = epithet_rare.0037
-		100 = epithet_rare.0038
-		100 = epithet_rare.0039
-		100 = epithet_rare.0040
-		100 = epithet_rare.0041
-		100 = epithet_rare.0042
-		100 = epithet_rare.0043
-		100 = epithet_rare.0044
+		100 = epithet_random_1.0001
+		100 = epithet_random_1.0002
+		100 = epithet_random_1.0003
+		100 = epithet_random_1.0004
+		100 = epithet_random_1.0005
+		100 = epithet_random_1.0006
+		100 = epithet_random_1.0007
+		100 = epithet_random_1.0008
+		100 = epithet_random_1.0009
+		100 = epithet_random_1.0010
+		100 = epithet_random_1.0011
+		100 = epithet_random_1.0012
+		100 = epithet_random_1.0013
+		100 = epithet_random_1.0014
+		100 = epithet_random_1.0015
+		100 = epithet_random_1.0016
+		100 = epithet_random_1.0017
+		100 = epithet_random_1.0018
+		100 = epithet_random_1.0019
+		100 = epithet_random_1.0020
+		100 = epithet_random_1.0021
+		100 = epithet_random_1.0022
+		100 = epithet_random_1.0023
+		100 = epithet_random_1.0024
+		100 = epithet_random_1.0025
+		100 = epithet_random_1.0026
+		100 = epithet_random_1.0027
+		100 = epithet_random_1.0028
+		100 = epithet_random_1.0029
+		100 = epithet_random_1.0030
+		100 = epithet_random_1.0031
+		100 = epithet_random_1.0032
+		100 = epithet_random_1.0033
+		100 = epithet_random_1.0034
+		100 = epithet_random_1.0035
+		100 = epithet_random_1.0036
+		100 = epithet_random_1.0037
+		100 = epithet_random_1.0038
+		100 = epithet_random_1.0039
+		100 = epithet_random_1.0040
+		100 = epithet_random_1.0041
+		100 = epithet_random_1.0042
+		100 = epithet_random_1.0043
+		100 = epithet_random_1.0044
+		100 = epithet_random_1.0045
+		100 = epithet_random_1.0046
+		100 = epithet_random_1.0047
+		100 = epithet_random_1.0048
+		100 = epithet_random_1.0049
+		100 = epithet_random_1.0050
+		100 = epithet_random_1.0051
+		100 = epithet_random_1.0052
+		100 = epithet_random_1.0053
+		100 = epithet_random_1.0054
+		100 = epithet_random_1.0055
+		100 = epithet_random_1.0056
+		100 = epithet_random_1.0057
+		100 = epithet_random_1.0058
+		100 = epithet_random_1.0059
+		100 = epithet_random_1.0060
+		100 = epithet_random_1.0061
+		100 = epithet_random_1.0062
+		100 = epithet_random_1.0063
+		100 = epithet_random_1.0064
+		100 = epithet_random_1.0065
+		100 = epithet_random_1.0066
+		100 = epithet_random_1.0067
+		100 = epithet_random_1.0068
+		100 = epithet_random_1.0069
+		100 = epithet_random_1.0070
+		100 = epithet_random_1.0071
+		100 = epithet_random_1.0072
+		100 = epithet_random_1.0073
+		100 = epithet_random_1.0074
+		100 = epithet_random_1.0075
+		100 = epithet_random_1.0076
+		100 = epithet_random_1.0077
+		100 = epithet_random_1.0078
+		100 = epithet_random_1.0079
+		100 = epithet_random_1.0080
+		100 = epithet_random_1.0081
+		100 = epithet_random_1.0082
+		100 = epithet_random_1.0083
+		100 = epithet_random_1.0084
+		100 = epithet_random_1.0085
+		100 = epithet_random_1.0086
+		100 = epithet_random_1.0087
+		100 = epithet_random_1.0088
+		100 = epithet_random_1.0089
+		100 = epithet_random_1.0090
+		100 = epithet_random_1.0091
+		100 = epithet_random_1.0092
+		100 = epithet_random_1.0093
+		100 = epithet_random_1.0094
+		100 = epithet_random_1.0095
+		100 = epithet_random_1.0096
+	}
+}
+
+epithet_grant_custom_2 = {
+	random_events = {
+		100 = epithet_random_2.0001
+		100 = epithet_random_2.0002
+		100 = epithet_random_2.0002
+		100 = epithet_random_2.0003
+		100 = epithet_random_2.0004
+		100 = epithet_random_2.0005
+		100 = epithet_random_2.0006
+		100 = epithet_random_2.0007
+		100 = epithet_random_2.0008
+		100 = epithet_random_2.0009
+		100 = epithet_random_2.0010
+		100 = epithet_random_2.0011
+		100 = epithet_random_2.0012
+		100 = epithet_random_2.0013
+		100 = epithet_random_2.0014
+		100 = epithet_random_2.0015
+		100 = epithet_random_2.0016
+		100 = epithet_random_2.0017
+		100 = epithet_random_2.0018
+		100 = epithet_random_2.0019
+		100 = epithet_random_2.0020
+		100 = epithet_random_2.0021
+		100 = epithet_random_2.0022
+		100 = epithet_random_2.0023
+		100 = epithet_random_2.0024
+		100 = epithet_random_2.0025
+		100 = epithet_random_2.0026
+		100 = epithet_random_2.0027
+		100 = epithet_random_2.0028
+		100 = epithet_random_2.0029
+		100 = epithet_random_2.0030
+		100 = epithet_random_2.0031
+		100 = epithet_random_2.0032
+		100 = epithet_random_2.0033
+		100 = epithet_random_2.0034
+		100 = epithet_random_2.0035
+		100 = epithet_random_2.0036
+		100 = epithet_random_2.0037
+		100 = epithet_random_2.0038
+		100 = epithet_random_2.0039
+		100 = epithet_random_2.0040
+		100 = epithet_random_2.0041
+		100 = epithet_random_2.0042
+		100 = epithet_random_2.0043
+		100 = epithet_random_2.0044
+		100 = epithet_random_2.0045
+		100 = epithet_random_2.0046
+		100 = epithet_random_2.0047
+		100 = epithet_random_2.0048
+		100 = epithet_random_2.0049
+		100 = epithet_random_2.0050
+		100 = epithet_random_2.0051
+		100 = epithet_random_2.0052
+		100 = epithet_random_2.0053
+		100 = epithet_random_2.0054
+		100 = epithet_random_2.0055
+		100 = epithet_random_2.0056
+		100 = epithet_random_2.0057
+		100 = epithet_random_2.0058
+		100 = epithet_random_2.0059
+		100 = epithet_random_2.0060
+		100 = epithet_random_2.0061
+		100 = epithet_random_2.0062
+		100 = epithet_random_2.0063
+		100 = epithet_random_2.0064
+		100 = epithet_random_2.0065
+		100 = epithet_random_2.0066
+		100 = epithet_random_2.0067
+		100 = epithet_random_2.0068
+		100 = epithet_random_2.0069
+		100 = epithet_random_2.0070
+		100 = epithet_random_2.0071
+		100 = epithet_random_2.0072
+		100 = epithet_random_2.0073
+		100 = epithet_random_2.0074
+		100 = epithet_random_2.0075
+		100 = epithet_random_2.0076
+		100 = epithet_random_2.0077
+		100 = epithet_random_2.0078
+		100 = epithet_random_2.0079
+		100 = epithet_random_2.0080
+		100 = epithet_random_2.0081
+		100 = epithet_random_2.0082
+		100 = epithet_random_2.0083
+		100 = epithet_random_2.0084
+		100 = epithet_random_2.0085
+		100 = epithet_random_2.0086
+		100 = epithet_random_2.0087
+		100 = epithet_random_2.0088
+		100 = epithet_random_2.0089
+		100 = epithet_random_2.0090
+		100 = epithet_random_2.0091
 	}
 }
