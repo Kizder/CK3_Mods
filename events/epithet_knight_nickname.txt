@@ -656,7 +656,7 @@ epithet_knight.0036 = {
 	hidden = yes
 	trigger = {
 		nickname_already_given_list_trigger = { NICKNAME = nick_the_leopard }
-		can_get_north_world_geographical_nickname = yes
+		can_get_north_world_geographical_location_nickname = yes
 		NOR = {
 			has_trait = craven
 			has_trait = forgiving
@@ -1850,7 +1850,7 @@ epithet_knight.0103 = {
 	hidden = yes
 	trigger = {
 		nickname_already_given_list_trigger = { NICKNAME = nick_the_tiger }
-		can_get_asian_geographical_nickname = yes
+		can_get_asian_geographical_location_nickname = yes
 		NOR = {
 			has_trait = craven
 			has_trait = forgiving
